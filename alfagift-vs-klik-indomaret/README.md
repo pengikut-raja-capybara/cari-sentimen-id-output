@@ -59,8 +59,8 @@ Pastikan Anda telah menginstal Python (minimal versi 3.8) pada sistem Anda.
 
 ### 1. Kloning Repositori
 ```bash
-git clone <url-repository>
-cd alfagift-vs-klik-indomaret
+git clone https://github.com/pengikut-raja-capybara/cari-sentimen-id-output.git
+cd cari-sentimen-id-output/alfagift-vs-klik-indomaret
 ```
 
 ### 2. Instalasi Library Dependensi
@@ -86,7 +86,7 @@ Jalankan script ReportLab untuk merender dokumen PDF laporan komparatif 12 halam
 ```bash
 python generate_pdf.py
 ```
-Setelah script selesai berjalan, file laporan baru akan diperbarui di [comparative_analysis_report.pdf](file:///d:/UNSIA/review-analysis/alfagift-vs-klik-indomaret/comparative_analysis_report.pdf).
+Setelah script selesai berjalan, file laporan baru akan diperbarui di [comparative_analysis_report.pdf](comparative_analysis_report.pdf).
 
 ---
 
