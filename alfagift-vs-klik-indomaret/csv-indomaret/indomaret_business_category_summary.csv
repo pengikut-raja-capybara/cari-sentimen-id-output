@@ -1,0 +1,52 @@
+sentiment,business_category,merge_group,review_count_all,review_count_confident,share_confident,avg_score,example_sub_issues
+negatif,Performa Aplikasi,PERFORMANCE_BUG,6565,6428,0.9791,1.12,"Aplikasi lambat dan kendala saat proses pembayaran, Aplikasi berjalan sangat lambat dan tidak responsif, Aplikasi lambat dan sulit digunakan"
+negatif,Layanan Pengiriman,DELIVERY_ISSUE,4252,4204,0.9887,1.11,"Keterlambatan pengiriman dan pembatalan pesanan sepihak, Pesanan dibatalkan sepihak tanpa konfirmasi dan stok tidak akurat, Durasi pengiriman barang sangat lambat"
+negatif,Pengalaman Pengguna,UI_UX_ISSUE,1613,1591,0.9864,1.13,"Update aplikasi membuat navigasi dan fitur menjadi sulit, Hilangnya fitur promosi dan kalah bersaing dengan kompetitor"
+negatif,Kualitas Aplikasi,PERFORMANCE_BUG,787,784,0.9962,1.06,"Aplikasi sering mengalami eror dan tidak stabil, Aplikasi berjalan sangat lambat atau lag, Bug aplikasi menghambat proses belanja pengguna"
+negatif,Masalah Akses Akun,LOGIN_ERROR,650,648,0.9969,1.12,"Pengguna gagal melakukan login ke dalam aplikasi, Aplikasi tidak dapat dibuka atau diakses"
+negatif,Akses Akun,LOGIN_ERROR,536,532,0.9925,1.16,Kesulitan dalam proses pendaftaran dan login akun
+negatif,Promosi dan Harga,PRICE_DISCREPANCY,267,266,0.9963,1.13,Perbedaan harga aplikasi dengan harga di toko fisik
+negatif,Layanan Pembayaran,REFUND_ISSUE,189,188,0.9947,1.11,Kendala pengembalian dana dan status pesanan
+negatif,Kepuasan Pelanggan,GENERAL_COMPLAINT,180,180,1.0,1.03,Kekecewaan terhadap kualitas layanan secara umum
+negatif,Layanan Pelanggan,SERVICE_QUALITY,177,177,1.0,1.06,Pelayanan CS dan staf toko yang buruk
+negatif,Manajemen Stok Produk,INVENTORY_ISSUE,123,122,0.9919,1.2,Ketidaksesuaian stok barang di aplikasi dengan ketersediaan fisik
+negatif,Kepuasan Pengguna,POSITIVE_FEEDBACK,79,79,1.0,1.11,"Ulasan positif mengenai manfaat dan kemudahan aplikasi, Ulasan positif singkat mengenai kualitas aplikasi"
+negatif,Pengalaman Pengguna,USER_EXPERIENCE_ISSUE,71,70,0.9859,1.01,"Aplikasi dianggap menyulitkan alur kerja karyawan, Keluhan mengenai kerumitan dan performa aplikasi yang lambat"
+negatif,Metode Pembayaran,PAYMENT_ERROR,64,64,1.0,1.31,Hilangnya opsi pembayaran Akulaku Paylater setelah pembaruan aplikasi
+negatif,Stabilitas Sistem,PERFORMANCE_BUG,58,58,1.0,1.07,Aplikasi sering mengalami gangguan saat periode promo besar
+negatif,Lain-lain / Noise,OVERALL_SATISFACTION,53,0,0.0,1.06,Ulasan umum/noise
+negatif,Layanan Pelanggan,CS_SERVICE_ISSUE,45,45,1.0,1.16,Respon customer care lambat dan komplain tidak ditanggapi
+negatif,Layanan Operasional,OPERATIONAL_ISSUE,21,20,0.9524,1.29,Perilaku kurir atau staf toko yang tidak profesional
+netral,Stabilitas Aplikasi,PERFORMANCE_BUG,407,403,0.9902,3.0,"Aplikasi lambat dan kendala pada sistem pembayaran, Aplikasi sangat lambat dan sering mengalami buffering, Loading aplikasi lama dan sering terjadi error"
+netral,Manajemen Stok dan Layanan,ORDER_MANAGEMENT_ISSUE,327,322,0.9847,3.0,"Ketidakjelasan stok barang dan kurangnya fitur komunikasi toko, Ketersediaan stok barang tidak akurat dan layanan pengiriman"
+netral,Promosi dan Penawaran,PROMOTION_ERROR,175,173,0.9886,3.0,Fitur tebus murah dan promo tidak muncul setelah update
+netral,Performa Aplikasi,PERFORMANCE_BUG,131,129,0.9847,3.0,"Aplikasi terasa lambat dan kurang responsif, Aplikasi mengalami delay dan sangat lambat, Aplikasi terasa lambat dan memerlukan optimasi performa"
+netral,Layanan Pengiriman,DELIVERY_DELAY,76,75,0.9868,3.0,Keterlambatan pengiriman barang tidak sesuai estimasi waktu
+netral,Sistem Pembayaran,PAYMENT_ERROR,62,62,1.0,3.0,Kendala pada metode pembayaran pihak ketiga
+netral,Ulasan Umum,GENERAL_FEEDBACK,50,48,0.96,3.0,Ulasan positif singkat mengenai aplikasi
+netral,Aksesibilitas Aplikasi,LOGIN_ERROR,48,48,1.0,3.0,Aplikasi tidak bisa dibuka atau gagal login
+netral,Stabilitas Sistem,SYSTEM_ERROR,38,38,1.0,3.0,Aplikasi sering mengalami error
+netral,Manajemen Pembaruan,UPDATE_ISSUE,30,30,1.0,3.0,Frekuensi pembaruan aplikasi terlalu sering
+netral,Transaksi dan Pembayaran,TRANSACTION_ERROR,27,27,1.0,3.0,Kendala saat melakukan transaksi atau pendaftaran
+netral,Layanan Pengiriman,DELIVERY_ISSUE,23,23,1.0,3.0,"Pembatalan pesanan sepihak dan keterlambatan pengiriman, Durasi pengiriman barang yang terlalu lama"
+netral,Promosi dan Biaya,PROMO_ISSUE,21,21,1.0,3.0,Keluhan mengenai syarat minimal belanja gratis ongkir
+netral,Harga dan Produk,PRICE_DISCREPANCY,19,19,1.0,3.0,Perbedaan harga antara aplikasi dan toko fisik
+netral,Akses Akun,LOGIN_ERROR,18,18,1.0,3.0,Kesulitan saat proses login atau masuk akun
+netral,Pengalaman Pengguna,UI_UX_ISSUE,17,17,1.0,3.0,Tampilan baru aplikasi dianggap lebih rumit
+netral,Pengalaman Pengguna,USER_EXPERIENCE,14,14,1.0,3.0,Ulasan positif mengenai kemudahan belanja online
+netral,Integrasi Sistem,INTEGRATION_ISSUE,11,11,1.0,3.0,Integrasi antar aplikasi dan sinkronisasi data produk
+netral,Fitur Pembayaran,PAYMENT_FEATURE,10,10,1.0,3.0,Permintaan penambahan metode pembayaran dan fitur pembatalan
+netral,Lain-lain / Noise,OVERALL_SATISFACTION,2,0,0.0,3.0,Ulasan umum/noise
+positif,Kepuasan Pengguna,GENERAL_SATISFACTION,7581,7226,0.9532,4.97,"Ulasan positif umum mengenai aplikasi, Ulasan positif singkat dan apresiatif, Aplikasi dirasakan sangat membantu pengguna"
+positif,Pengalaman Pengguna,USER_EXPERIENCE,6984,6942,0.994,4.98,"Kemudahan berbelanja online dari rumah, Solusi belanja praktis tanpa keluar rumah, Efisiensi belanja yang mudah, cepat, dan hemat"
+positif,Promosi dan Penawaran,PROMOTION_FEEDBACK,2313,2296,0.9927,4.98,Kemudahan belanja dengan banyak promo menarik
+positif,Operasional dan Teknis,TECHNICAL_ISSUE,1537,1515,0.9857,4.61,"Keluhan stok kosong, bug, dan performa aplikasi"
+positif,Layanan Pengiriman,DELIVERY_SERVICE,1309,1302,0.9947,4.97,"Pengiriman cepat dengan kurir yang ramah, Pengiriman cepat dan tepat waktu"
+positif,Ulasan Umum,GENERAL_FEEDBACK,1054,1026,0.9734,4.95,"Harapan positif untuk perkembangan aplikasi, Apresiasi atas bantuan aplikasi, Ulasan positif singkat"
+positif,Layanan Pelanggan,CUSTOMER_SERVICE,573,573,1.0,4.97,Pelayanan yang cepat dan responsif
+positif,Kepuasan Pengguna,POSITIVE_FEEDBACK,531,517,0.9736,4.93,"Ulasan positif mengenai kualitas aplikasi, Pengalaman penggunaan aplikasi yang memuaskan, Sentimen positif terhadap layanan aplikasi"
+positif,Promosi dan Diskon,PROMOTION_OFFER,521,520,0.9981,4.98,Tersedia banyak promo menarik
+positif,Harga dan Nilai,PRICING_VALUE,170,170,1.0,4.96,Harga aplikasi lebih murah dibanding toko fisik
+positif,Lain-lain / Noise,OVERALL_SATISFACTION,80,0,0.0,4.97,Ulasan umum/noise
+positif,Kemudahan Penggunaan,USER_EXPERIENCE,79,79,1.0,4.96,Aplikasi memudahkan proses belanja online
+positif,Promosi dan Harga,PRICING_SATISFACTION,25,25,1.0,5.0,Kepuasan terhadap harga produk yang terjangkau

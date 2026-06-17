@@ -1,0 +1,1320 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laporan Analisis Komparatif: Alfagift vs Klik Indomaret</title>
+
+    <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <style>
+      /* ==========================================================================
+           1. RESET & VARIABLE DEFINITIONS
+           ========================================================================== */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --bg-primary: #0f172a; /* Slate 900 */
+        --bg-secondary: #1e293b; /* Slate 800 */
+        --bg-tertiary: #0b0f19; /* Ultra Dark */
+        --border-color: #334155; /* Slate 700 */
+        --text-primary: #f8fafc; /* Slate 50 */
+        --text-secondary: #94a3b8; /* Slate 400 */
+        --text-muted: #64748b; /* Slate 500 */
+
+        --brand-alfa: #ef4444; /* Alfamart Red */
+        --brand-alfa-light: #fca5a5;
+        --brand-indo: #3b82f6; /* Klik Indomaret Blue */
+        --brand-indo-light: #93c5fd;
+        --accent-teal: #10b981; /* Accent Green/Teal */
+        --accent-purple: #8b5cf6;
+
+        --sidebar-width: 280px;
+        --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+      }
+
+      /* Light Mode Variables Override */
+      body.light-theme {
+        --bg-primary: #f8fafc; /* Slate 50 */
+        --bg-secondary: #ffffff; /* White */
+        --bg-tertiary: #f1f5f9; /* Slate 100 */
+        --border-color: #e2e8f0; /* Slate 200 */
+        --text-primary: #0f172a; /* Slate 900 */
+        --text-secondary: #475569; /* Slate 600 */
+        --text-muted: #94a3b8; /* Slate 400 */
+
+        --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: var(--bg-primary);
+        color: var(--text-primary);
+        line-height: 1.6;
+        overflow-x: hidden;
+        transition: var(--transition-smooth);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-weight: 700;
+        letter-spacing: -0.025em;
+      }
+
+      /* ==========================================================================
+           2. SIDEBAR NAVIGATION
+           ========================================================================== */
+      aside {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: var(--sidebar-width);
+        height: 100vh;
+        background-color: var(--bg-secondary);
+        border-right: 1px solid var(--border-color);
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        padding: 1.25rem 1rem;
+        overflow-y: auto;
+        transition: var(--transition-smooth);
+      }
+
+      .brand-logo {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 1.25rem;
+      }
+
+      .brand-logo i {
+        font-size: 1.25rem;
+        color: var(--accent-teal);
+      }
+
+      .brand-logo span {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-weight: 800;
+        font-size: 1rem;
+        color: var(--text-primary);
+        letter-spacing: 0.05em;
+      }
+
+      nav {
+        display: flex;
+        flex-direction: column;
+        gap: 0.15rem;
+        flex-grow: 1;
+      }
+
+      nav a {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.45rem 0.75rem;
+        color: var(--text-secondary);
+        text-decoration: none;
+        border-radius: 0.375rem;
+        font-size: 0.8rem;
+        font-weight: 500;
+        transition: var(--transition-smooth);
+      }
+
+      nav a:hover,
+      nav a.active {
+        background-color: var(--bg-primary);
+        color: var(--text-primary);
+      }
+
+      nav a.active {
+        border-left: 3px solid var(--accent-teal);
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        font-weight: 600;
+      }
+
+      .nav-category {
+        font-size: 0.65rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--text-muted);
+        margin: 0.75rem 0 0.2rem 0.5rem;
+        font-weight: 700;
+      }
+
+      .theme-toggle-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 0.5rem;
+        background-color: var(--bg-primary);
+        border: 1px solid var(--border-color);
+        color: var(--text-primary);
+        border-radius: 0.375rem;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 0.775rem;
+        margin-top: 1rem;
+        transition: var(--transition-smooth);
+      }
+
+      .theme-toggle-btn:hover {
+        opacity: 0.9;
+      }
+
+      /* ==========================================================================
+           3. MAIN CONTENT LAYOUT
+           ========================================================================== */
+      main {
+        margin-left: var(--sidebar-width);
+        padding: 2.5rem 3.5rem;
+        min-height: 100vh;
+        transition: var(--transition-smooth);
+      }
+
+      /* Responsive Sidebar Collapsed Mode for Tablets/Mobile */
+      @media (max-width: 1024px) {
+        aside {
+          left: -100%;
+        }
+        aside.open {
+          left: 0;
+        }
+        main {
+          margin-left: 0;
+          padding: 1.5rem;
+        }
+        .mobile-header {
+          display: flex !important;
+        }
+      }
+
+      /* Mobile Header */
+      .mobile-header {
+        display: none;
+        align-items: center;
+        justify-content: space-between;
+        background-color: var(--bg-secondary);
+        border-bottom: 1px solid var(--border-color);
+        padding: 1rem 1.5rem;
+        position: sticky;
+        top: 0;
+        z-index: 90;
+        margin-bottom: 1.5rem;
+      }
+
+      .mobile-header .menu-toggle {
+        font-size: 1.25rem;
+        cursor: pointer;
+        color: var(--text-primary);
+      }
+
+      /* ==========================================================================
+           4. HERO SECTIONS & COVERS
+           ========================================================================== */
+      .hero {
+        background: linear-gradient(135deg, #0b0f19 0%, #1e293b 100%);
+        border-radius: 1rem;
+        padding: 3.5rem;
+        border: 1px solid var(--border-color);
+        margin-bottom: 2.5rem;
+        position: relative;
+        overflow: hidden;
+      }
+
+      body.light-theme .hero {
+        background: linear-gradient(135deg, #e2e8f0 0%, #f8fafc 100%);
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: -10%;
+        right: -10%;
+        width: 300px;
+        height: 300px;
+        background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+        border-radius: 50%;
+        pointer-events: none;
+      }
+
+      .hero-brand {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        color: var(--accent-teal);
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+      }
+
+      .hero-title {
+        font-size: 2.5rem;
+        line-height: 1.15;
+        margin-bottom: 1.25rem;
+        background: linear-gradient(to right, var(--text-primary), var(--text-secondary));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      body.light-theme .hero-title {
+        background: none;
+        -webkit-text-fill-color: initial;
+        color: var(--text-primary);
+      }
+
+      .hero-subtitle {
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+        max-width: 750px;
+        margin-bottom: 2.5rem;
+      }
+
+      .metadata-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        border-top: 1px solid var(--border-color);
+        padding-top: 2rem;
+      }
+
+      .meta-item h5 {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        color: var(--text-muted);
+        margin-bottom: 0.5rem;
+        letter-spacing: 0.05em;
+      }
+
+      .meta-item p {
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: var(--text-primary);
+      }
+
+      /* ==========================================================================
+           5. SECTION LAYOUTS & CONTAINERS
+           ========================================================================== */
+      section {
+        padding: 3rem 0;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      section:last-of-type {
+        border-bottom: none;
+      }
+
+      .section-header {
+        margin-bottom: 2rem;
+      }
+
+      .section-tag {
+        display: inline-block;
+        background-color: var(--bg-tertiary);
+        border: 1px solid var(--border-color);
+        color: var(--text-secondary);
+        font-size: 0.75rem;
+        font-weight: 600;
+        padding: 0.25rem 0.75rem;
+        border-radius: 9999px;
+        margin-bottom: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .section-title {
+        font-size: 1.75rem;
+        color: var(--text-primary);
+      }
+
+      .intro-text {
+        font-size: 1.05rem;
+        color: var(--text-secondary);
+        margin-bottom: 2rem;
+        max-width: 850px;
+      }
+
+      /* ==========================================================================
+           6. COMPONENT DESIGNS (CARDS, GRIDS)
+           ========================================================================== */
+      .grid-2 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 2rem;
+      }
+
+      .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+      }
+
+      @media (max-width: 768px) {
+        .grid-2,
+        .grid-3 {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .card {
+        background-color: var(--bg-secondary);
+        border: 1px solid var(--border-color);
+        border-radius: 0.75rem;
+        padding: 1.75rem;
+        box-shadow: var(--card-shadow);
+        transition: var(--transition-smooth);
+      }
+
+      .card:hover {
+        transform: translateY(-4px);
+        border-color: var(--text-muted);
+      }
+
+      .card-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .card-title i {
+        color: var(--accent-teal);
+      }
+
+      /* Brand Colors Highlights */
+      .card.alfa-card {
+        border-top: 4px solid var(--brand-alfa);
+      }
+      .card.indo-card {
+        border-top: 4px solid var(--brand-indo);
+      }
+
+      .card p {
+        font-size: 0.925rem;
+        color: var(--text-secondary);
+      }
+
+      /* KPI Score Cards */
+      .kpi-score-container {
+        display: flex;
+        align-items: baseline;
+        gap: 0.5rem;
+        margin: 1rem 0;
+      }
+
+      .kpi-score {
+        font-size: 2.25rem;
+        font-weight: 800;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        color: var(--text-primary);
+      }
+
+      .kpi-label {
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+
+      /* Bullet List styling */
+      .bullet-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .bullet-list li {
+        position: relative;
+        padding-left: 1.5rem;
+        font-size: 0.925rem;
+        color: var(--text-secondary);
+      }
+
+      .bullet-list li::before {
+        content: "•";
+        position: absolute;
+        left: 0.25rem;
+        color: var(--accent-teal);
+        font-weight: bold;
+        font-size: 1.2rem;
+        top: -0.15rem;
+      }
+
+      .bullet-list li strong {
+        color: var(--text-primary);
+      }
+
+      /* Review Quotes Blocks */
+      .quote-box {
+        background-color: var(--bg-tertiary);
+        border-left: 3px solid var(--accent-teal);
+        padding: 1rem;
+        border-radius: 0 0.5rem 0.5rem 0;
+        margin-top: 1rem;
+        font-style: italic;
+        font-size: 0.875rem;
+        color: var(--text-secondary);
+      }
+
+      .quote-box strong {
+        font-style: normal;
+        color: var(--text-primary);
+        display: block;
+        margin-bottom: 0.25rem;
+      }
+
+      /* ==========================================================================
+           7. TABLES STYLE
+           ========================================================================== */
+      .table-responsive {
+        width: 100%;
+        overflow-x: auto;
+        margin: 2rem 0;
+        border-radius: 0.75rem;
+        border: 1px solid var(--border-color);
+        box-shadow: var(--card-shadow);
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+        font-size: 0.9rem;
+        background-color: var(--bg-secondary);
+      }
+
+      th {
+        background-color: var(--bg-tertiary);
+        color: var(--text-primary);
+        font-weight: 700;
+        padding: 1rem 1.25rem;
+        border-bottom: 1px solid var(--border-color);
+        font-family: "Plus Jakarta Sans", sans-serif;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        letter-spacing: 0.05em;
+      }
+
+      td {
+        padding: 1rem 1.25rem;
+        border-bottom: 1px solid var(--border-color);
+        color: var(--text-secondary);
+        vertical-align: middle;
+      }
+
+      tr:last-child td {
+        border-bottom: none;
+      }
+
+      tr:hover td {
+        background-color: var(--bg-tertiary);
+        color: var(--text-primary);
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      .text-bold {
+        font-weight: 600;
+        color: var(--text-primary);
+      }
+
+      /* ==========================================================================
+           8. CHART & IMAGE GALLERIES
+           ========================================================================== */
+      .chart-box {
+        background-color: var(--bg-secondary);
+        border: 1px solid var(--border-color);
+        border-radius: 0.75rem;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1.5rem;
+        box-shadow: var(--card-shadow);
+      }
+
+      .chart-box img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 0.5rem;
+        transition: var(--transition-smooth);
+      }
+
+      .chart-box img:hover {
+        transform: scale(1.015);
+      }
+
+      .chart-caption {
+        font-size: 0.775rem;
+        color: var(--text-muted);
+        margin-top: 1rem;
+        text-align: center;
+        font-weight: 500;
+      }
+
+      .visuals-stack {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+      }
+
+      .visuals-row {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+      }
+
+      @media (max-width: 992px) {
+        .visuals-row {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* Alert Callouts */
+      .alert-callout {
+        background-color: rgba(239, 68, 68, 0.08);
+        border: 1px dashed rgba(239, 68, 68, 0.3);
+        border-left: 4px solid var(--brand-alfa);
+        padding: 1.25rem;
+        border-radius: 0.5rem;
+        margin: 1.5rem 0;
+        color: var(--text-secondary);
+      }
+
+      body.light-theme .alert-callout {
+        background-color: rgba(239, 68, 68, 0.03);
+      }
+
+      .alert-callout-title {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 0.5rem;
+        font-size: 0.95rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      /* Back to top btn */
+      .back-to-top {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        background-color: var(--accent-teal);
+        color: #ffffff;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        z-index: 99;
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition-smooth);
+        border: none;
+      }
+
+      .back-to-top.show {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .back-to-top:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Mobile Header -->
+    <div class="mobile-header">
+      <div class="brand-logo">
+        <i class="fa-solid fa-chart-line"></i>
+        <span>CaRI Sentiment ID</span>
+      </div>
+      <div class="menu-toggle" id="menuToggle">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <aside id="sidebar">
+      <div class="brand-logo">
+        <i class="fa-solid fa-chart-line"></i>
+        <span>CaRI Sentiment ID</span>
+      </div>
+
+      <nav>
+        <span class="nav-category">Ikhtisar & KPI</span>
+        <a href="#cover" class="active"><i class="fa-solid fa-book-open"></i> Pendahuluan</a>
+        <a href="#kpi-retail"><i class="fa-solid fa-table-list"></i> KPI Retail Experience</a>
+
+        <span class="nav-category">1. Retail Experience</span>
+        <a href="#tren-sentimen"><i class="fa-solid fa-chart-area"></i> Tren Sentimen & Rating</a>
+        <a href="#kekuatan-masalah"><i class="fa-solid fa-arrows-split-up-and-left"></i> Analisis Ulasan Utama</a>
+        <a href="#promo-harga"><i class="fa-solid fa-tags"></i> Promo, Harga & Value</a>
+        <a href="#stok-loyalitas"><i class="fa-solid fa-boxes-stacked"></i> Stok & Loyalitas</a>
+        <a href="#pengiriman-omnichannel"><i class="fa-solid fa-truck-ramp-box"></i> Pengiriman & Omnichannel</a>
+
+        <span class="nav-category">2. Digital Service</span>
+        <a href="#kpi-digital"><i class="fa-solid fa-laptop-code"></i> KPI Layanan Digital</a>
+        <a href="#respons-cs"><i class="fa-solid fa-headset"></i> Respon CS & Saluran</a>
+        <a href="#apk-anomali"><i class="fa-solid fa-bug"></i> APK & Anomali Spike</a>
+      </nav>
+
+      <button class="theme-toggle-btn" id="themeToggleBtn"><i class="fa-solid fa-sun"></i> Mode Terang</button>
+    </aside>
+
+    <!-- Main Content Panel -->
+    <main>
+      <!-- ==========================================
+             PAGE 1: COVER
+             ========================================== -->
+      <section id="cover" class="hero">
+        <div class="hero-brand">CaRI Sentiment ID</div>
+        <h1 class="hero-title">LAPORAN ANALISIS KOMPARATIF<br />ALFAGIFT VS KLIK INDOMARET</h1>
+        <p class="hero-subtitle">Analisis Pengalaman Pengguna Ritel dan Kinerja Layanan Digital Berbasis Ulasan Google Play Store (Rentang Data 15 Juni 2023 – 14 Juni 2026)</p>
+
+        <div class="metadata-grid">
+          <div class="meta-item">
+            <h5>Disiapkan untuk</h5>
+            <p>Publik / Umum</p>
+          </div>
+          <div class="meta-item">
+            <h5>Sumber Data</h5>
+            <p>Google Play Store Reviews</p>
+          </div>
+          <div class="meta-item">
+            <h5>Metodologi NLP</h5>
+            <p>BERTopic + IndoBERT + Cosine Centroid</p>
+          </div>
+          <div class="meta-item">
+            <h5>Dibuat</h5>
+            <p>17 Juni 2026</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+             PAGE 2: Pendauluan & KPI Retail Experience
+             ========================================== -->
+      <section id="kpi-retail">
+        <div class="section-header">
+          <span class="section-tag">Pengantar & KPI</span>
+          <h2 class="section-title">Metodologi & KPI Utama Retail Experience</h2>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3 class="card-title"><i class="fa-solid fa-circle-info"></i> Disclaimer Metodologi</h3>
+            <p>
+              Laporan komparatif ini disusun menggunakan data ulasan pengguna aplikasi Alfagift dan Klik Indomaret yang dipublikasikan di Google Play Store selama periode tiga tahun. Klasifikasi
+              kategori ulasan dan analisis sentimen dilakukan secara otomatis menggunakan pemodelan bahasa alami (NLP) berbasis algoritma <strong>BERTopic</strong> yang dikombinasikan dengan
+              <strong>IndoBERT Embeddings</strong> dan pencocokan <strong>Cosine Centroid</strong> untuk memastikan pengelompokan topik yang akurat.
+            </p>
+            <p style="margin-top: 0.75rem; font-size: 0.8rem; color: var(--text-muted)">
+              Hasil analisis otomatis berbasis AI bersifat indikatif dan tidak menggantikan verifikasi atau penilaian profesional masing-masing pihak.
+            </p>
+          </div>
+          <div class="card">
+            <h3 class="card-title"><i class="fa-solid fa-bullseye"></i> Tujuan Laporan</h3>
+            <p>
+              Laporan ini bertujuan untuk memetakan secara objektif perbandingan pengalaman pengguna (retail experience) dan kinerja pelayanan digital (digital service response) dari kedua platform
+              ritel modern tersebut. Fokus analisis diarahkan pada identifikasi pola ulasan positif, kategori keluhan negatif utama, serta respon dari masing-masing unit layanan pelanggan dalam
+              menanggapi keluhan pengguna di Google Play Store.
+            </p>
+          </div>
+        </div>
+
+        <h3 style="margin-top: 2.5rem; margin-bottom: 1rem; font-family: &quot;Plus Jakarta Sans&quot;">Tabel KPI Retail Experience (2023–2026)</h3>
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Parameter Pengalaman Pengguna</th>
+                <th class="text-center">Aplikasi Alfagift</th>
+                <th class="text-center">Aplikasi Klik Indomaret</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-bold">Total Volume Ulasan</td>
+                <td class="text-center">93.649 ulasan</td>
+                <td class="text-center">39.993 ulasan</td>
+              </tr>
+              <tr>
+                <td class="text-bold">Rata-rata Rating (Weighted)</td>
+                <td class="text-center">4,37 dari 5,00</td>
+                <td class="text-center">3,37 dari 5,00</td>
+              </tr>
+              <tr>
+                <td class="text-bold">Proporsi Ulasan Positif</td>
+                <td class="text-center" style="color: var(--accent-teal); font-weight: 600">77.713 ulasan (82,98%)</td>
+                <td class="text-center" style="color: var(--accent-teal); font-weight: 600">22.757 ulasan (56,90%)</td>
+              </tr>
+              <tr>
+                <td class="text-bold">Proporsi Ulasan Netral</td>
+                <td class="text-center">2.092 ulasan (2,23%)</td>
+                <td class="text-center">1.506 ulasan (3,77%)</td>
+              </tr>
+              <tr>
+                <td class="text-bold">Proporsi Ulasan Negatif</td>
+                <td class="text-center" style="color: var(--brand-alfa); font-weight: 600">13.844 ulasan (14,78%)</td>
+                <td class="text-center" style="color: var(--brand-alfa); font-weight: 600">15.730 ulasan (39,33%)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="card" style="margin-top: 1.5rem">
+          <h4 style="margin-bottom: 0.75rem; color: var(--text-primary)">Analisis Rating & Sentimen Umum</h4>
+          <p>
+            Berdasarkan data akumulasi ulasan selama periode 2023–2026, Alfagift mencatat volume ulasan yang lebih tinggi dengan indeks kepuasan pengguna yang tecermin dari rata-rata rating 4,37 serta
+            dominasi sentimen positif mencapai 82,98%. Sebaliknya, Klik Indomaret mencatat total ulasan sebanyak 39.993 dengan rata-rata rating berada pada angka 3,37. Selisih kepuasan tersebut
+            dipengaruhi oleh proporsi sentimen negatif pada Klik Indomaret yang mencatat angka 39,33%, lebih tinggi dibandingkan proporsi sentimen negatif Alfagift yang berada pada angka 14,78%.
+          </p>
+        </div>
+      </section>
+
+      <!-- ==========================================
+             PAGE 3: Tren Sentimen & Rating
+             ========================================== -->
+      <section id="tren-sentimen">
+        <div class="section-header">
+          <span class="section-tag">Visualisasi Tren</span>
+          <h2 class="section-title">1. Retail experience: tren sentimen &amp; rating</h2>
+        </div>
+        <p class="intro-text">
+          Grafik di bawah menggambarkan perbandingan tren sentimen tahunan serta pergerakan rata-rata rating dari aplikasi Alfagift dan Klik Indomaret selama periode analisis 2023–2026. Data ini
+          memperlihatkan fluktuasi kepuasan pengguna dari waktu ke waktu yang dipengaruhi oleh stabilitas sistem aplikasi dan dinamika operasional masing-masing platform.
+        </p>
+
+        <div class="grid-2">
+          <div class="chart-box">
+            <img src="images/sentiment_comparison.png" alt="Sentiment Comparison Chart" />
+            <div class="chart-caption">Bagan 1: Perbandingan Proporsi Sentimen Ulasan (2023–2026)</div>
+          </div>
+          <div class="chart-box">
+            <img src="images/rating_trend.png" alt="Rating Trend Chart" />
+            <div class="chart-caption">Bagan 2: Tren Pergerakan Rating Bulanan (2023–2026)</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+             PAGE 4 & 5: Ulasan Negatif & Positif
+             ========================================== -->
+      <section id="kekuatan-masalah">
+        <div class="section-header">
+          <span class="section-tag">Analisis Kategori</span>
+          <h2 class="section-title">1. Retail experience: masalah utama (negatif) vs kekuatan utama (positif)</h2>
+        </div>
+
+        <p class="intro-text">
+          Analisis ulasan negatif menunjukkan perbedaan karakteristik masalah utama antara kedua aplikasi. Klik Indomaret didominasi oleh kendala teknis sistem internal, sedangkan Alfagift lebih
+          banyak dikeluhkan terkait layanan fisik pengiriman.
+        </p>
+
+        <div class="grid-2">
+          <!-- Keluhan Negatif Card -->
+          <div class="card alfa-card">
+            <h3 class="card-title" style="color: var(--brand-alfa)"><i class="fa-solid fa-triangle-exclamation"></i> Kategori Keluhan Terbanyak (Negatif)</h3>
+            <ul class="bullet-list" style="margin-top: 1rem; margin-bottom: 1.5rem">
+              <li>
+                <strong>Alfagift:</strong> Didominasi kendala operasional pada <strong>Layanan Pengiriman</strong> (5.645 ulasan) dan <strong>Manajemen Akun</strong> (2.489 ulasan). Kategori dengan
+                rating terendah adalah Kualitas Aplikasi (1,07) serta Program Promosi &amp; Cashback (1,07).
+              </li>
+              <li>
+                <strong>Klik Indomaret:</strong> Didominasi masalah teknis pada <strong>Performa Aplikasi</strong> (6.565 ulasan) dan <strong>Layanan Pengiriman</strong> (4.252 ulasan). Kategori
+                dengan rating terendah adalah Pengalaman Pengguna/UI-UX (1,01) dan Kepuasan Pelanggan umum (1,03).
+              </li>
+            </ul>
+            <div class="chart-box">
+              <img src="images/top_negative_categories.png" alt="Top Negative Categories" />
+              <div class="chart-caption">Bagan 3: Perbandingan Volume Keluhan Negatif Per Kategori</div>
+            </div>
+          </div>
+
+          <!-- Kekuatan Positif Card -->
+          <div class="card indo-card">
+            <h3 class="card-title" style="color: var(--brand-indo)"><i class="fa-solid fa-circle-check"></i> Pilar Utama Ulasan Positif</h3>
+            <ul class="bullet-list" style="margin-top: 1rem; margin-bottom: 1.5rem">
+              <li>
+                <strong>Alfagift:</strong> Kategori Kepuasan Pengguna (28.416 ulasan) dan Pengalaman Pengguna belanja online (21.085 ulasan) mendominasi secara signifikan. Layanan Pengiriman &amp;
+                Promo menyumbang 16.299 ulasan positif dengan rating rata-rata 4,99.
+              </li>
+              <li>
+                <strong>Klik Indomaret:</strong> Didominasi oleh Kepuasan Pengguna (7.581 ulasan) dan Pengalaman Pengguna (6.984 ulasan). Mencatat apresiasi pada Promosi &amp; Penawaran (2.313 ulasan;
+                rating 4,98) serta Layanan Pengiriman (1.309 ulasan; rating 4,97).
+              </li>
+            </ul>
+            <div class="chart-box">
+              <img src="images/top_positive_categories.png" alt="Top Positive Categories" />
+              <div class="chart-caption">Bagan 4: Perbandingan Volume Ulasan Positif Per Kategori</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+             PAGE 6: Promo, Harga & Value
+             ========================================== -->
+      <section id="promo-harga">
+        <div class="section-header">
+          <span class="section-tag">Value Proposition</span>
+          <h2 class="section-title">1. Retail experience: promo, harga &amp; value</h2>
+        </div>
+
+        <div class="grid-2">
+          <div>
+            <p class="intro-text">Respon pengguna terhadap program promosi dan kebijakan harga memperlihatkan kontras yang signifikan antara kedua platform ritel.</p>
+
+            <div class="card alfa-card" style="margin-bottom: 1.5rem">
+              <h4 style="margin-bottom: 0.5rem; color: var(--brand-alfa)">Evaluasi Promo &amp; Harga Alfagift</h4>
+              <ul class="bullet-list">
+                <li>
+                  <strong>Sentimen Positif:</strong> Sangat tinggi pada Layanan Pengiriman &amp; Promo (16.299 ulasan) serta Harga &amp; Promosi (1.456 ulasan; rating 5,00), didorong oleh gratis
+                  ongkir tanpa syarat ketat dan diskon langsung.
+                </li>
+                <li><strong>Sentimen Negatif:</strong> Tercatat keluhan minor terkait voucher atau poin tidak berfungsi pada kategori Promosi &amp; Loyalitas (644 ulasan).</li>
+              </ul>
+            </div>
+
+            <div class="card indo-card">
+              <h4 style="margin-bottom: 0.5rem; color: var(--brand-indo)">Evaluasi Promo &amp; Harga Klik Indomaret</h4>
+              <ul class="bullet-list">
+                <li><strong>Sentimen Positif:</strong> Terkonsentrasi pada Promosi &amp; Penawaran (2.313 ulasan) dan Promosi &amp; Diskon (521 ulasan).</li>
+                <li>
+                  <strong>Sentimen Negatif:</strong> Keluhan menonjol pada Promosi &amp; Harga (267 ulasan; rating 1,13) akibat ketidaksesuaian harga katalog vs toko fisik, serta tidak munculnya fitur
+                  tebus murah setelah update.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="chart-box">
+            <img src="images/promo_value.png" alt="Promo and Value Chart" />
+            <div class="chart-caption">Bagan 5: Ulasan Terkait Promosi, Harga &amp; Value (2023–2026)</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+             PAGE 7: Stok, Fulfillment & Loyalty
+             ========================================== -->
+      <section id="stok-loyalitas">
+        <div class="section-header">
+          <span class="section-tag">Operasional Toko</span>
+          <h2 class="section-title">1. Retail experience: stok, fulfillment &amp; loyalty</h2>
+        </div>
+
+        <div class="grid-2">
+          <div class="chart-box">
+            <img src="images/stock_loyalty.png" alt="Stock and Loyalty Chart" />
+            <div class="chart-caption">Bagan 6: Volume Keluhan Terkait Ketersediaan Stok &amp; Loyalitas</div>
+          </div>
+
+          <div>
+            <p class="intro-text">Pemenuhan pesanan dan program loyalitas pelanggan menjadi indikator penting dalam menjaga retensi pengguna di kedua aplikasi.</p>
+
+            <div class="card" style="margin-bottom: 1.5rem">
+              <h4 style="margin-bottom: 0.75rem"><i class="fa-solid fa-boxes-stacked"></i> Manajemen Stok &amp; Ketersediaan Produk</h4>
+              <ul class="bullet-list">
+                <li><strong>Alfagift:</strong> Keluhan Ketersediaan Produk (278 ulasan negatif; rating 1,16) berfokus pada stok kosong item promo tebus murah dan persediaan air galon.</li>
+                <li>
+                  <strong>Klik Indomaret:</strong> Keluhan Manajemen Stok (123 ulasan negatif; rating 1,20) berpusat pada ketidaksesuaian stok aplikasi vs gerai fisik, yang memicu pembatalan pesanan
+                  sepihak oleh sistem tanpa konfirmasi.
+                </li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h4 style="margin-bottom: 0.75rem"><i class="fa-solid fa-award"></i> Program Loyalitas &amp; Poin Reward</h4>
+              <ul class="bullet-list">
+                <li>
+                  <strong>Alfagift:</strong> Keluhan poin error/gagal tukar voucher tercatat di kategori Promosi &amp; Loyalitas (644 ulasan) dan Program Loyalitas (201 ulasan; rating 1,14). Namun,
+                  ulasan positif loyalitas merek (Brand Loyalty) terkumpul 84 ulasan dengan rating 5,00.
+                </li>
+                <li><strong>Klik Indomaret:</strong> Tidak memiliki kategori loyalitas khusus; keluhan poin hilang menyatu dalam isu umum operasional pasca update aplikasi.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+             PAGE 8: Pengiriman & Omnichannel
+             ========================================== -->
+      <section id="pengiriman-omnichannel">
+        <div class="section-header">
+          <span class="section-tag">Logistik Fisik</span>
+          <h2 class="section-title">1. Retail experience: pengiriman &amp; omnichannel</h2>
+        </div>
+
+        <div class="grid-2">
+          <div>
+            <p class="intro-text">Layanan logistik pengiriman dan integrasi online-to-offline (omnichannel) merupakan titik temu vital bagi kepuasan pelanggan e-grocery.</p>
+
+            <div class="card" style="margin-bottom: 1.5rem">
+              <h4 style="margin-bottom: 0.75rem"><i class="fa-solid fa-truck"></i> Performa Layanan Pengiriman (Logistik)</h4>
+              <ul class="bullet-list">
+                <li>
+                  <strong>Alfagift:</strong> Kategori Layanan Pengiriman mengumpulkan 5.645 ulasan negatif (rating 1,16) akibat keterlambatan dan status pelacakan tidak akurat. Namun, terdapat 632
+                  ulasan positif (rating 4,99) yang mengapresiasi keandalan kurir.
+                </li>
+                <li>
+                  <strong>Klik Indomaret:</strong> Layanan Pengiriman mencatat 4.252 ulasan negatif (rating 1,11) karena keterlambatan pengiriman, diimbangi 1.309 ulasan positif (rating 4,97) yang
+                  memuji keramahan kurir gerai.
+                </li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h4 style="margin-bottom: 0.75rem"><i class="fa-solid fa-store"></i> Tantangan Integrasi Omnichannel</h4>
+              <ul class="bullet-list">
+                <li>
+                  <strong>Disparitas Harga:</strong> Isu ketidaksesuaian harga antara katalog aplikasi dan toko fisik dikeluhkan pengguna Klik Indomaret (267 ulasan) serta Alfagift (106 ulasan).
+                </li>
+                <li>
+                  <strong>Cakupan Layanan &amp; Staf:</strong> Alfagift mencatat 160 keluhan terkait area pengiriman terbatas. Klik Indomaret menerima 21 ulasan negatif terkait perilaku staf toko atau
+                  kurir.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="chart-box">
+            <img src="images/delivery_omnichannel.png" alt="Delivery and Omnichannel Chart" />
+            <div class="chart-caption">Bagan 7: Perbandingan Kinerja Pengiriman &amp; Integrasi Fisik</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+             PAGE 9: KPI Kinerja Digital Service & Response
+             ========================================== -->
+      <section id="kpi-digital">
+        <div class="section-header">
+          <span class="section-tag">Digital Service &amp; CS</span>
+          <h2 class="section-title">2. Digital service &amp; response: KPI</h2>
+        </div>
+
+        <p class="intro-text">
+          Tabel di bawah memaparkan parameter kinerja layanan digital, termasuk statistik penanganan keluhan negatif di Google Play Store oleh tim Customer Service (CS) dari masing-masing platform.
+        </p>
+
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Parameter Layanan Digital</th>
+                <th class="text-center">Aplikasi Alfagift</th>
+                <th class="text-center">Aplikasi Klik Indomaret</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-bold">Volume Ulasan Negatif Teranalisis</td>
+                <td class="text-center">13.844 ulasan</td>
+                <td class="text-center">15.730 ulasan</td>
+              </tr>
+              <tr>
+                <td class="text-bold">Rasio Balasan Admin CS</td>
+                <td class="text-center" style="color: var(--accent-teal); font-weight: 600">10.111 ulasan (73,04%)</td>
+                <td class="text-center" style="color: var(--brand-alfa); font-weight: 600">6.798 ulasan (43,22%)</td>
+              </tr>
+              <tr>
+                <td class="text-bold">Median Waktu Tunda Tanggapan</td>
+                <td class="text-center">10,93 jam</td>
+                <td class="text-center" style="color: var(--accent-teal); font-weight: 600">0,33 jam (20 menit)</td>
+              </tr>
+              <tr>
+                <td class="text-bold">Rasio Pengalihan Kanal Eksternal</td>
+                <td class="text-center">45,17% dari total balasan</td>
+                <td class="text-center">95,03% dari total balasan</td>
+              </tr>
+              <tr>
+                <td class="text-bold">Isu Teknis Utama Pengguna</td>
+                <td class="text-center">Performa Aplikasi (1.016 ulasan)<br />Aksesibilitas Aplikasi (709 ulasan)</td>
+                <td class="text-center">Performa Aplikasi (6.565 ulasan)<br />Kualitas Aplikasi (787 ulasan)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="visuals-row">
+          <div>
+            <div class="card" style="margin-bottom: 1.5rem">
+              <h4 style="margin-bottom: 0.5rem"><i class="fa-solid fa-triangle-exclamation"></i> Kategori Kendala Teknis Utama</h4>
+              <ul class="bullet-list">
+                <li>
+                  <strong>Alfagift:</strong> Berpusat pada Performa Aplikasi (1.016 ulasan negatif; rating 1,13) dan Aksesibilitas Aplikasi (709 ulasan negatif; rating 1,18) akibat respon lambat dan
+                  kegagalan memuat katalog.
+                </li>
+                <li>
+                  <strong>Klik Indomaret:</strong> Mengalami kendala performa lebih masif pada Performa Aplikasi (6.565 ulasan negatif; rating 1,12) dan Kualitas Aplikasi (787 ulasan negatif; rating
+                  1,06) berupa lag berat dan kegagalan sistem pembayaran.
+                </li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h4 style="margin-bottom: 0.5rem; color: var(--accent-teal)"><i class="fa-solid fa-shield-halved"></i> Isu Keamanan &amp; Akses Aplikasi (Alfagift)</h4>
+              <p>
+                Berdasarkan kumpulan ulasan pengguna, pembaruan keamanan Alfagift dinilai semakin sensitif dalam mendeteksi kondisi perangkat dan memunculkan pesan kesalahan Error 70007 pada sebagian
+                pengguna. Keluhan yang muncul menyebut bahwa perangkat dianggap ter-root atau tidak aman meskipun pengguna merasa tidak pernah melakukan root, dan beberapa di antaranya mengaitkan
+                kejadian ini dengan penggunaan VPN, pengaktifan USB debugging, atau aplikasi utilitas tertentu. Akibat pesan kesalahan tersebut, aplikasi tidak dapat digunakan sebagaimana mestinya
+                pada perangkat yang terdampak, sehingga pengguna kehilangan akses ke layanan Alfagift meskipun aplikasi sudah terpasang.
+              </p>
+              <div class="quote-box">
+                <strong>Ulasan Pengguna Alfagift:</strong>
+                "Mendeteksi root, jls tidak root ponsel saya. Meski vpn tunnel sdh di force close, usb debug nonaktif"
+              </div>
+            </div>
+          </div>
+
+          <div class="chart-box">
+            <img src="images/tech_issues.png" alt="Tech Issues Chart" />
+            <div class="chart-caption">Bagan 8: Detail Keluhan Teknis &amp; Isu Keamanan</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+             PAGE 10 & 11: Respons CS di Play Store
+             ========================================== -->
+      <section id="respons-cs">
+        <div class="section-header">
+          <span class="section-tag">Analisis CS</span>
+          <h2 class="section-title">2. Digital service: respons CS di Play Store &amp; Detil Kanal</h2>
+        </div>
+
+        <p class="intro-text">Strategi respon layanan pelanggan (CS) dari kedua ritel menunjukkan perbedaan mendasar dalam penanganan keluhan publik.</p>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3 class="card-title"><i class="fa-solid fa-reply-all"></i> Perbandingan Rasio &amp; Kecepatan Respon</h3>
+            <ul class="bullet-list" style="margin-bottom: 1.5rem">
+              <li><strong>Alfagift CS:</strong> Merespon hingga <strong>73,04%</strong> ulasan negatif (10.111 ulasan dibalas), namun dengan median waktu tunda respon yang cukup lama (10,93 jam).</li>
+              <li>
+                <strong>Klik Indomaret CS:</strong> Hanya membalas <strong>43,22%</strong> keluhan (6.798 ulasan dibalas), tetapi mencatat waktu respon sangat cepat dengan median
+                <strong>0,33 jam (20 menit)</strong>.
+              </li>
+            </ul>
+            <div class="chart-box">
+              <img src="images/cs_performance_rr_delay.png" alt="CS Performance Chart" />
+              <div class="chart-caption">Bagan 9: Kinerja Respon CS – Reply Rate &amp; Delay</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title"><i class="fa-solid fa-route"></i> Alur Resolusi &amp; Saluran Pengalihan</h3>
+            <ul class="bullet-list" style="margin-bottom: 1.5rem">
+              <li>
+                <strong>Alfagift CS:</strong> Mengarahkan 45,17% keluhan ke asisten virtual 'Shalma' via DM Instagram resmi. CS menyertakan <strong>kode tiket unik</strong> (contoh: <em>#3896583</em>)
+                langsung pada balasan untuk mempermudah pelacakan tanpa pengulangan informasi.
+              </li>
+              <li>
+                <strong>Klik Indomaret CS:</strong> Mengarahkan 95,03% keluhan secara generik ke saluran telepon resmi (021-1500-280) atau email (customercare@klikindomaret.com) tanpa disertai nomor
+                tiket pelacakan.
+              </li>
+            </ul>
+
+            <div class="chart-box">
+              <img src="images/cs_redirection_channels.png" alt="CS Redirection Channels" />
+              <div class="chart-caption">Bagan 11: Saluran Penanganan Keluhan (Redirection Channel)</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chart-box" style="margin-top: 2rem">
+          <img src="images/cs_category_rr.png" alt="CS Category Reply Rate" style="max-height: 250px" />
+          <div class="chart-caption">Bagan 10: Rasio Balasan CS Per Kategori Keluhan Utama</div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+             PAGE 12: APK, Anomali & Ringkasan
+             ========================================== -->
+      <section id="apk-anomali">
+        <div class="section-header">
+          <span class="section-tag">Anomali &amp; Ringkasan</span>
+          <h2 class="section-title">2. Digital service: APK, anomali &amp; ringkasan</h2>
+        </div>
+
+        <div class="grid-2">
+          <div>
+            <div class="card" style="margin-bottom: 1.5rem">
+              <h4 style="margin-bottom: 0.5rem"><i class="fa-solid fa-code-branch"></i> Versi APK dengan Keluhan Tertinggi</h4>
+              <ul class="bullet-list">
+                <li><strong>Alfagift:</strong> Keluhan terpusat pada versi <strong>4.37.0</strong> (652 ulasan), <strong>4.27.1</strong> (622 ulasan), dan <strong>4.47.1</strong> (569 ulasan).</li>
+                <li><strong>Klik Indomaret:</strong> Ulasan negatif menumpuk pada rilis versi <strong>2512100</strong> (1.240 ulasan) dan <strong>2501210</strong> (674 ulasan).</li>
+              </ul>
+            </div>
+
+            <div class="card" style="margin-bottom: 1.5rem">
+              <h4 style="margin-bottom: 0.5rem"><i class="fa-solid fa-chart-line-up"></i> Analisis Spike / Anomali Lini Masa</h4>
+              <ul class="bullet-list">
+                <li>
+                  <strong>Alfagift:</strong> Lonjakan keluhan pada April-Mei terkait pendaftaran event 'Alfamart Run' akibat server lumpuh saat <i>war tiket</i>:
+                  <i>'Aplikasi lemot daftar alfamart Run aja, kaga jelas sistem nya jelek'</i>.
+                </li>
+                <li>
+                  <strong>Klik Indomaret:</strong> Spike ekstrem pada Februari 2026 (2.633 keluhan) terkait rilis versi baru, serta kelumpuhan berkala saat event Harbolnas (9.9, 12.12):
+                  <i>'Saat event harbolnas selalu macet nih aplikasi'</i>.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="chart-box">
+            <img src="images/spike_timeline.png" alt="Spike Timeline Chart" />
+            <div class="chart-caption">Bagan 12: Lini Masa Keluhan Negatif Bulanan &amp; Ulasan Paksaan</div>
+          </div>
+        </div>
+
+        <!-- Forced Ratings Callout -->
+        <div class="alert-callout">
+          <div class="alert-callout-title"><i class="fa-solid fa-circle-exclamation"></i> Anomali Rating Bintang 5 Paksaan (Klik Indomaret)</div>
+          <p>
+            Berdasarkan salah satu ulasan pengguna, terdapat rating bintang 5 yang isi teksnya justru berisi keluhan teknis dan menyebut adanya instruksi dari atasan agar karyawan memberikan rating
+            tinggi. Ulasan tersebut menuliskan bahwa rating bintang 5 diberikan bukan karena kepuasan, melainkan karena tekanan internal, dan mengkritik praktik tersebut sebagai bentuk manipulasi
+            ulasan.
+          </p>
+          <div class="quote-box" style="background-color: rgba(239, 68, 68, 0.05); border-left-color: var(--brand-alfa)">
+            <strong>Ulasan Pengguna Klik Indomaret:</strong>
+            "Terpaksa kasih bintang 5 karna dipaksa atasan... kalau mau rating bagus perbaiki sistem bukan manipulasi review"
+          </div>
+        </div>
+
+        <!-- Ringkasan Akhir Laporan -->
+        <div class="card" style="background: linear-gradient(135deg, var(--bg-secondary) 0%, rgba(16, 185, 129, 0.05) 100%)">
+          <h3 class="card-title" style="color: var(--accent-teal)"><i class="fa-solid fa-square-poll-vertical"></i> Ringkasan Komparatif</h3>
+          <p>
+            Alfagift unggul secara volume dan kepuasan umum (rating 4,37) dengan CS yang responsif (rasio balasan 73,04%) namun lambat tanggap (delay 10,93 jam). Sebaliknya, Klik Indomaret (rating
+            3,37) menghadapi kendala stabilitas aplikasi yang tinggi, dengan CS berasio rendah (43,22%) namun sangat cepat membalas (delay 20 menit) menggunakan pengalihan komunikasi generik ke
+            saluran privasi eksternal.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Scroll to Top button -->
+    <button class="back-to-top" id="backToTopBtn">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script>
+      // ==========================================
+      // 1. Theme Toggle Logic
+      // ==========================================
+      const body = document.body;
+      const themeToggleBtn = document.getElementById("themeToggleBtn");
+
+      themeToggleBtn.addEventListener("click", () => {
+        body.classList.toggle("light-theme");
+
+        if (body.classList.contains("light-theme")) {
+          themeToggleBtn.innerHTML = '<i class="fa-solid fa-moon"></i> Mode Gelap';
+        } else {
+          themeToggleBtn.innerHTML = '<i class="fa-solid fa-sun"></i> Mode Terang';
+        }
+      });
+
+      // ==========================================
+      // 2. Mobile Menu Toggle Logic
+      // ==========================================
+      const menuToggle = document.getElementById("menuToggle");
+      const sidebar = document.getElementById("sidebar");
+
+      menuToggle.addEventListener("click", () => {
+        sidebar.classList.toggle("open");
+      });
+
+      // Close sidebar on clicking any link on mobile
+      document.querySelectorAll("nav a").forEach((link) => {
+        link.addEventListener("click", () => {
+          sidebar.classList.remove("open");
+        });
+      });
+
+      // ==========================================
+      // 3. Active Link Highlight on Scroll
+      // ==========================================
+      const sections = document.querySelectorAll("section");
+      const navLinks = document.querySelectorAll("nav a");
+
+      window.addEventListener("scroll", () => {
+        let currentSection = "";
+
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+
+          // Offset adjustment for header heights
+          if (window.scrollY >= sectionTop - 150) {
+            currentSection = section.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${currentSection}`) {
+            link.classList.add("active");
+          }
+        });
+      });
+
+      // ==========================================
+      // 4. Back To Top Button Logic
+      // ==========================================
+      const backToTopBtn = document.getElementById("backToTopBtn");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 400) {
+          backToTopBtn.classList.add("show");
+        } else {
+          backToTopBtn.classList.remove("show");
+        }
+      });
+
+      backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    </script>
+  </body>
+</html>

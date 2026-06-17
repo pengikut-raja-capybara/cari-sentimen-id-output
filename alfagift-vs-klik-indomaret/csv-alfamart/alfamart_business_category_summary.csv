@@ -1,0 +1,65 @@
+sentiment,business_category,merge_group,review_count_all,review_count_confident,share_confident,avg_score,example_sub_issues
+negatif,Layanan Pengiriman,DELIVERY_ISSUE,5645,5601,0.9922,1.16,"Keterlambatan pengiriman dan status pesanan tidak akurat, Proses pengiriman pesanan sangat lambat, Durasi pengiriman barang terlalu lama"
+negatif,Manajemen Akun,ACCOUNT_ACCESS,2489,2467,0.9912,1.2,Akun pengguna tidak aktif atau gagal login
+negatif,Performa Aplikasi,PERFORMANCE_BUG,1016,1012,0.9961,1.13,"Aplikasi berjalan lambat setelah pembaruan, Aplikasi mengalami error dan tidak bisa dibuka"
+negatif,Aksesibilitas Aplikasi,REGISTRATION_ISSUE,709,705,0.9944,1.18,Kesulitan dalam pendaftaran dan akses aplikasi
+negatif,Promosi dan Loyalitas,VOUCHER_POINT_ISSUE,644,642,0.9969,1.17,Voucher tidak berfungsi dan poin tidak masuk
+negatif,Transaksi dan Pembayaran,PAYMENT_ISSUE,422,422,1.0,1.22,Gagal menerima OTP dan kendala metode pembayaran
+negatif,Akses Akun,LOGIN_ERROR,397,395,0.995,1.16,"Kendala saat melakukan proses login ke aplikasi, Kesulitan teknis saat login dan pendaftaran akun"
+negatif,Layanan Pelanggan,CUSTOMER_SERVICE,393,392,0.9975,1.11,Respon layanan pelanggan lambat dan tidak responsif
+negatif,Ketersediaan Produk,PRODUCT_AVAILABILITY,278,277,0.9964,1.16,"Produk rokok sulit ditemukan atau tidak tersedia, Stok produk tebus murah dan galon sering kosong"
+negatif,Stabilitas Aplikasi,PERFORMANCE_BUG,254,254,1.0,1.22,Aplikasi sering mengalami error dan keluar sendiri
+negatif,Kebijakan Pembayaran,PAYMENT_POLICY,242,240,0.9917,1.19,Keberatan terhadap minimal belanja untuk metode COD
+negatif,Kualitas Aplikasi,USER_EXPERIENCE,209,209,1.0,1.07,Pengguna merasa aplikasi tidak memberikan manfaat
+negatif,Program Loyalitas,LOYALTY_POINT_ISSUE,201,198,0.9851,1.14,Poin tidak masuk atau gagal ditukarkan
+negatif,Layanan Pelanggan,SERVICE_QUALITY,199,199,1.0,1.09,Pelayanan kurir dan staf toko tidak memuaskan
+negatif,Pengiriman,DELIVERY_COVERAGE,160,156,0.975,1.23,Lokasi alamat tidak tercover pengiriman aplikasi
+negatif,Manajemen Harga dan Promosi,PRICE_DISCREPANCY,106,106,1.0,1.1,Ketidaksesuaian harga aplikasi dengan harga di toko fisik
+negatif,Fitur Aplikasi,ORDER_MANAGEMENT,105,104,0.9905,1.3,Ketiadaan fitur pembatalan pesanan mandiri oleh pengguna
+negatif,Program Promosi dan Cashback,PROMO_ISSUE,84,83,0.9881,1.07,Syarat dan ketentuan promo cashback yang menyulitkan pengguna
+negatif,Antarmuka Pengguna,UI_BUG,77,77,1.0,1.21,Gambar produk tidak muncul pada katalog aplikasi
+negatif,Layanan Keuangan Digital,PAYMENT_SERVICE,67,67,1.0,1.19,Kendala teknis dan pilihan nominal top up e-wallet
+negatif,Layanan Pelanggan,REFUND_ISSUE,60,60,1.0,1.1,Proses pengembalian dana yang memakan waktu lama
+negatif,Operasional Toko,STORE_OPERATIONS,34,34,1.0,1.09,Keluhan terkait perilaku pegawai dan parkir liar
+negatif,Layanan Pengiriman,DELIVERY_SERVICE,23,23,1.0,1.17,Pelayanan dan durasi pengiriman pesanan yang lambat
+negatif,Lain-lain / Noise,OVERALL_SATISFACTION,17,0,0.0,1.24,Ulasan umum/noise
+negatif,Pengalaman Pengguna,GENERAL_FEEDBACK,13,13,1.0,1.15,Keluhan teknis aplikasi dan ketersediaan stok produk
+netral,Layanan Pengiriman,DELIVERY_ISSUE,516,511,0.9903,3.0,"Keterlambatan pengiriman dan kurangnya notifikasi kurir, Keluhan durasi pengiriman yang sangat lama, Alamat tidak tercover layanan pengiriman padahal sebelumnya bisa"
+netral,Manajemen Akun dan Transaksi,TRANSACTION_SYNC_ERROR,410,408,0.9951,3.0,"Struk belanja dan poin tidak masuk ke aplikasi, Riwayat pesanan dan e-struk tidak terlihat"
+netral,Stabilitas Aplikasi,APP_CRASH,288,287,0.9965,3.0,Aplikasi tidak dapat dibuka atau diakses
+netral,Manajemen Akun dan Transaksi,LOGIN_ERROR,264,260,0.9848,3.0,Kendala login dan error saat proses checkout
+netral,Stabilitas Aplikasi,PERFORMANCE_BUG,101,101,1.0,3.0,"Performa aplikasi lambat dan kendala fitur chat, Aplikasi berjalan lambat dan sering meminta update"
+netral,Antarmuka Pengguna,UI_BUG,97,97,1.0,3.0,Gambar produk tidak muncul di katalog
+netral,Performa Aplikasi,PERFORMANCE_BUG,77,76,0.987,3.0,"Aplikasi sering mengalami error dan force close, Aplikasi berjalan lambat atau lemot, Aplikasi sering lag dan kendala pemindaian barcode"
+netral,Kepuasan Pelanggan,POSITIVE_FEEDBACK,76,66,0.8684,3.0,Ulasan positif mengenai performa aplikasi
+netral,Sistem Pembayaran,PAYMENT_ISSUE,67,67,1.0,3.0,"Kesulitan pembatalan pesanan dan kendala pengembalian dana, Kendala saat melakukan checkout dengan metode COD"
+netral,Aksesibilitas Aplikasi,APP_CRASH,32,32,1.0,3.0,Aplikasi tidak dapat dibuka atau diakses
+netral,Sistem Pembayaran,PAYMENT_FEATURE,31,31,1.0,3.0,Permintaan penambahan metode pembayaran QRIS dan penyesuaian COD
+netral,Pengalaman Pengguna Umum,GENERAL_FEEDBACK,22,22,1.0,3.0,"Pengguna baru mencoba fitur aplikasi, Saran perbaikan promosi dan kualitas layanan"
+netral,Katalog Produk,PRODUCT_RESTRICTION,20,20,1.0,3.0,Kendala tidak bisa membeli produk rokok
+netral,Pengalaman Pengguna,POSITIVE_FEEDBACK,20,20,1.0,3.0,Ulasan positif mengenai kemudahan berbelanja
+netral,Layanan Pelanggan,SERVICE_COMPLAINT,15,15,1.0,3.0,Keluhan terkait pelayanan toko dan pengiriman
+netral,Manajemen Akun Pengguna,ACCOUNT_ACCESS_ISSUE,13,12,0.9231,3.0,Akun dinonaktifkan atau tidak terdaftar secara sistem
+netral,Tampilan Antarmuka Aplikasi,UI_DISPLAY_ISSUE,13,13,1.0,3.0,Gambar produk tidak muncul di aplikasi
+netral,Layanan Pelanggan dan Operasional,SERVICE_QUALITY,11,11,1.0,3.0,Respons layanan pelanggan dan stok barang kurang optimal
+netral,Sistem Pembayaran,PAYMENT_FAILURE,9,9,1.0,3.0,Kegagalan transaksi pembayaran secara berulang
+netral,Kompatibilitas Perangkat,COMPATIBILITY_ISSUE,8,8,1.0,3.0,Aplikasi tidak dapat diinstal pada perangkat Android terbaru
+netral,Lain-lain / Noise,OVERALL_SATISFACTION,2,0,0.0,3.0,Ulasan umum/noise
+positif,Kepuasan Pengguna,GENERAL_FEEDBACK,28416,27165,0.956,4.99,"Ulasan positif umum terhadap aplikasi, Kepuasan menyeluruh terhadap layanan dan promo, Ulasan positif singkat"
+positif,Pengalaman Pengguna,USER_EXPERIENCE,21085,20991,0.9955,4.99,"Kemudahan berbelanja online melalui aplikasi, Aplikasi sangat membantu aktivitas belanja, Kemudahan penggunaan antarmuka aplikasi"
+positif,Layanan Pengiriman dan Promo,DELIVERY_PROMO,16299,16224,0.9954,4.99,"Kecepatan pengiriman dan ketersediaan promo, Ketersediaan dan variasi promo menarik"
+positif,Pengalaman Pengguna,GENERAL_POSITIVE_FEEDBACK,3014,2994,0.9934,4.99,"Ulasan positif umum mengenai kualitas aplikasi, Aplikasi sangat membantu dan mempermudah proses belanja, Apresiasi terhadap pelayanan Alfamart secara umum"
+positif,Masalah Teknis dan Layanan,TECHNICAL_ISSUE,2355,2318,0.9843,4.59,"Kendala login, bug aplikasi, dan keluhan layanan"
+positif,Layanan Pelanggan,CUSTOMER_SERVICE,1467,1460,0.9952,4.99,Kualitas pelayanan staf toko yang ramah
+positif,Harga dan Promosi,PRICE_SATISFACTION,1456,1446,0.9931,5.0,Kepuasan pelanggan terhadap harga produk yang terjangkau
+positif,Layanan Pelanggan,GENERAL_POSITIVE_FEEDBACK,930,926,0.9957,4.99,Harapan dan dukungan positif untuk kemajuan perusahaan
+positif,Kualitas Produk,PRODUCT_QUALITY,761,758,0.9961,5.0,Ketersediaan produk lengkap dan kualitas barang yang baik
+positif,Logistik dan Pengiriman,DELIVERY_SPEED,632,630,0.9968,4.99,Kecepatan dan ketepatan waktu pengantaran pesanan
+positif,Kepuasan Pengguna,POSITIVE_FEEDBACK,250,248,0.992,4.96,"Ulasan positif umum dan kepuasan pelanggan, Pemberian rating bintang lima oleh pengguna, Ulasan positif umum dalam berbagai bahasa"
+positif,Kemudahan Penggunaan,USER_CONVENIENCE,205,203,0.9902,5.0,Kemudahan belanja dari rumah dengan layanan praktis
+positif,Logistik dan Pengiriman,DELIVERY_SERVICE,168,166,0.9881,4.99,Layanan pengantaran pesanan sampai ke depan rumah
+positif,Lain-lain / Noise,OVERALL_SATISFACTION,157,0,0.0,4.98,Ulasan umum/noise
+positif,Harga dan Promosi,PROMOTION_FEEDBACK,156,156,1.0,4.95,Harapan peningkatan promo dan cashback yang lebih baik
+positif,Ketersediaan Produk,PRODUCT_AVAILABILITY,154,154,1.0,4.99,"Kelengkapan stok dan variasi produk di aplikasi, Satu aplikasi untuk memenuhi semua kebutuhan belanja"
+positif,Kemudahan Penggunaan,USER_EXPERIENCE,124,121,0.9758,4.98,"Aplikasi membantu mempermudah proses belanja harian, Kemudahan pengalaman belanja online di aplikasi"
+positif,Loyalitas Pelanggan,BRAND_LOYALTY,84,84,1.0,5.0,Sentimen positif dan loyalitas terhadap brand
