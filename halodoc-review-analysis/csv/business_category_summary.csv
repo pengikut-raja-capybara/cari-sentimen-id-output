@@ -1,0 +1,43 @@
+sentiment,business_category,merge_group,review_count_all,review_count_confident,share_confident,avg_score,example_sub_issues
+negatif,Layanan Konsultasi Medis,PAYMENT_CONSULTATION_ERROR,629,614,0.9762,1.15,"Saldo terpotong namun sesi konsultasi tidak dapat diakses, Dokter tidak merespons dan pengembalian dana tidak diproses, Sesi chat terputus otomatis dan dana tidak dikembalikan"
+negatif,Layanan Konsultasi Medis,CONSULTATION_QUALITY_ISSUE,268,267,0.9963,1.17,"Kualitas konsultasi rendah dan ketersediaan obat tidak memadai, Sesi konsultasi berakhir prematur dan dokter tidak responsif, Durasi konsultasi terlalu singkat dan jawaban dokter tidak memuaskan"
+negatif,Layanan Pengiriman Obat,DELIVERY_DELAY_ISSUE,198,198,1.0,1.14,"Pengiriman obat sangat lambat dan sistem pelacakan bermasalah, Ketiadaan opsi pengiriman instan dan durasi pengiriman lama"
+negatif,Layanan Pengiriman Obat,DELIVERY_LOGISTICS_ISSUE,120,120,1.0,1.17,"Algoritma pemilihan apotek terlalu jauh dari lokasi, Kendala pengiriman dan kurir tidak menghubungi penerima, Stok obat tidak update dan pengiriman sangat lambat"
+negatif,Layanan Pengiriman Obat,PAYMENT_DELIVERY_ISSUE,84,84,1.0,1.17,Kegagalan transaksi pembayaran dan lambatnya respon layanan pelanggan
+negatif,Layanan Konsultasi Medis,CONSULTATION_PAYMENT_ISSUE,80,80,1.0,1.09,"Dokter sibuk setelah pembayaran berhasil tanpa refund, Ketidakjelasan status dokter sibuk setelah bayar"
+negatif,Layanan Konsultasi Medis,CONSULTATION_SERVICE_QUALITY,50,50,1.0,1.02,"Dokter tidak merespon chat hingga waktu berakhir, Sesi konsultasi diakhiri sepihak oleh dokter"
+negatif,Stabilitas Aplikasi,APP_PERFORMANCE_BUG,24,24,1.0,1.46,Aplikasi tidak bisa diakses atau login
+negatif,Kualitas Layanan Medis,DOCTOR_SERVICE_QUALITY,23,23,1.0,1.17,"Ketidakpuasan terhadap respon dan kompetensi dokter, Respon dokter lambat dan tidak profesional, Dokter tidak merespon saat sesi konsultasi aktif"
+negatif,Layanan Farmasi,PHARMACY_DELIVERY_ISSUE,13,13,1.0,1.08,"Obat tidak dikirim dan dana tidak dikembalikan, Stok obat tidak tersedia dan kendala pengiriman resep"
+negatif,Layanan Pembayaran dan Refund,REFUND_ISSUE,12,12,1.0,1.08,Dana tidak kembali setelah konsultasi gagal atau terputus
+negatif,Layanan Pelanggan,CUSTOMER_SUPPORT_ISSUE,8,8,1.0,1.0,Lambatnya respon CS dan kendala pengembalian dana
+negatif,Promosi dan Voucher,PROMO_ERROR,8,8,1.0,1.12,Voucher atau promo tidak dapat digunakan
+negatif,Kebijakan Harga,PRICING_POLICY,7,7,1.0,1.29,Keberatan atas biaya konsultasi dokter
+negatif,Aksesibilitas Aplikasi,APP_TECHNICAL_ISSUE,4,4,1.0,1.25,"Kendala login, OTP, dan fitur kalender menstruasi"
+netral,Layanan Konsultasi Dokter,CONSULTATION_SERVICE_QUALITY,66,66,1.0,3.0,"Durasi konsultasi chat terlalu singkat dan dokter lambat merespons, Dokter tidak merespons setelah pembayaran berhasil, Dokter kurang ramah dan lambat membalas pesan"
+netral,Aksesibilitas Aplikasi,APP_TECHNICAL_ISSUE,30,30,1.0,3.0,"Aplikasi error, force close, dan gagal login OTP, Fitur aplikasi tidak responsif dan kendala navigasi"
+netral,Layanan Pengiriman Obat,DELIVERY_LOGISTICS_ISSUE,27,27,1.0,3.0,"Pengiriman obat lama dan kendala pencarian driver, Kendala pengiriman, pembatalan pesanan, dan informasi ED obat"
+netral,Sistem Pembayaran,PAYMENT_METHOD_ISSUE,24,24,1.0,3.0,"Keterbatasan metode pembayaran dan transfer bank, Kegagalan transaksi pembayaran dan kendala saldo"
+netral,Layanan Pengiriman dan Logistik,MAPS_LOCATION_ISSUE,19,18,0.9474,3.0,"Ketidakakuratan titik lokasi GPS pada peta, Permintaan peningkatan akurasi lokasi"
+netral,Pengalaman Pengguna,GENERAL_FEEDBACK,16,15,0.9375,3.0,Ulasan positif umum mengenai aplikasi
+netral,Pengalaman Pengguna,POSITIVE_FEEDBACK,11,11,1.0,3.0,"Ulasan positif mengenai manfaat aplikasi, Ulasan positif dan keluhan umum aplikasi"
+netral,Layanan Pengiriman dan Logistik,DELIVERY_AND_PHARMACY_ISSUE,9,9,1.0,3.0,Masalah ongkir driver dan ketersediaan stok apotek
+netral,Layanan Konsultasi Medis,CONSULTATION_RESPONSE_TIME,8,8,1.0,3.0,Respon dokter lambat saat sesi konsultasi
+netral,Sistem Pembayaran dan Promosi,PAYMENT_PROMO_ISSUE,8,8,1.0,3.0,Kendala penggunaan kupon dan saldo
+netral,Layanan Konsultasi Medis,CONSULTATION_SESSION_LIMIT,7,7,1.0,3.0,Sesi konsultasi berakhir otomatis terlalu cepat
+netral,Lain-lain / Noise,OVERALL_SATISFACTION,3,0,0.0,3.0,Ulasan umum/noise
+positif,Kepuasan Pengguna Umum,GENERAL_POSITIVE_FEEDBACK,6599,6356,0.9632,4.95,"Ulasan positif mengenai manfaat aplikasi secara umum, Ulasan positif singkat mengenai kualitas aplikasi, Ulasan kepuasan pengguna yang sangat positif"
+positif,Layanan Konsultasi Medis,DOCTOR_SERVICE_QUALITY,1957,1946,0.9944,4.95,"Kualitas pelayanan dan keramahan dokter saat konsultasi, Apresiasi terhadap sikap ramah dokter"
+positif,Layanan Konsultasi Medis,CONSULTATION_SERVICE,1751,1744,0.996,4.93,"Kemudahan akses konsultasi dokter secara online, Efektivitas solusi dan kemudahan akses berobat, Durasi konsultasi chat dan kecepatan respon dokter"
+positif,Pengalaman Pengguna,POSITIVE_FEEDBACK,780,764,0.9795,4.95,"Aplikasi sangat membantu dan bermanfaat bagi pengguna, Apresiasi terhadap layanan konsultasi dan kecepatan kerja, Harapan positif dan manfaat aplikasi bagi kesehatan"
+positif,Layanan Konsultasi Medis,RESPONSE_TIME_EFFICIENCY,597,595,0.9966,4.96,Kecepatan respon dokter dalam memberikan layanan
+positif,Layanan Konsultasi Medis,SERVICE_QUALITY_SATISFACTION,421,421,1.0,4.96,Kepuasan terhadap kualitas pelayanan secara keseluruhan
+positif,Pengalaman Pengguna,USER_EXPERIENCE,364,356,0.978,4.97,"Aplikasi mudah digunakan dan praktis, Aplikasi memudahkan akses layanan kesehatan"
+positif,Kepuasan Pengguna,POSITIVE_FEEDBACK,279,272,0.9749,4.94,"Ucapan terima kasih kepada Halodoc, Apresiasi layanan yang sangat membantu, Ucapan terima kasih umum"
+positif,Layanan Kesehatan,SERVICE_CONVENIENCE,266,266,1.0,4.96,Kemudahan akses berobat tanpa harus antre di rumah sakit
+positif,Layanan Farmasi,DELIVERY_PERFORMANCE,256,253,0.9883,4.92,Kecepatan dan ketepatan pengiriman pesanan obat
+positif,Layanan Logistik,LOGISTICS_ISSUE,228,227,0.9956,4.62,Kendala pengiriman obat dan sistem pemilihan apotek
+positif,Kualitas Layanan Konsultasi,DOCTOR_SERVICE_QUALITY,156,156,1.0,4.94,"Penjelasan dokter yang detail dan jelas, Dokter responsif dan informatif"
+positif,Kualitas Layanan Konsultasi,POSITIVE_FEEDBACK,115,114,0.9913,4.96,Apresiasi terhadap bantuan layanan aplikasi
+positif,Lain-lain / Noise,OVERALL_SATISFACTION,64,0,0.0,4.92,Ulasan umum/noise
+positif,Promosi dan Harga,PROMO_REQUEST,40,40,1.0,4.82,Permintaan penambahan promo dan gratis ongkir

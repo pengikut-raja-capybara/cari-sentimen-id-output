@@ -1,0 +1,3773 @@
+{
+  "meta": {
+    "app_name": "Halodoc: Dokter, Obat & Lab",
+    "generated_at": "2026-06-22T23:41:50",
+    "csv_output_dir": "output\\csv",
+    "top_n": 10,
+    "date_range": {
+      "start": "2023-06-15",
+      "end": "2026-06-15"
+    }
+  },
+  "overview": {
+    "total_reviews": 15629,
+    "sentiment_distribution": {
+      "positif": {
+        "count": 13873,
+        "pct": 88.76,
+        "avg_score": 4.94
+      },
+      "negatif": {
+        "count": 1528,
+        "pct": 9.78,
+        "avg_score": 1.15
+      },
+      "netral": {
+        "count": 228,
+        "pct": 1.46,
+        "avg_score": 3.0
+      }
+    },
+    "confidence_stats": {
+      "overall_confident_rate": 0.9754,
+      "by_sentiment": {
+        "positif": 0.9738,
+        "negatif": 0.9895,
+        "netral": 0.9781
+      }
+    },
+    "rating_distribution_raw": {
+      "1": 1300,
+      "2": 228,
+      "3": 228,
+      "4": 799,
+      "5": 13074
+    }
+  },
+  "topic_analysis": {
+    "positif": {
+      "total_topics": 29,
+      "total_reviews": 13809,
+      "topics": [
+        {
+          "rank": 1,
+          "topic_id": 0,
+          "topic_name": "Membantu Sangat Sekali",
+          "business_category": "Kepuasan Pengguna Umum",
+          "sub_issue": "Ulasan positif mengenai manfaat aplikasi secara umum",
+          "review_count": 2679,
+          "pct": 19.31,
+          "avg_score": 4.96,
+          "total_thumbs_up": 147
+        },
+        {
+          "rank": 2,
+          "topic_id": 1,
+          "topic_name": "Good Ok Bagus",
+          "business_category": "Kepuasan Pengguna Umum",
+          "sub_issue": "Ulasan positif singkat mengenai kualitas aplikasi",
+          "review_count": 2247,
+          "pct": 16.2,
+          "avg_score": 4.93,
+          "total_thumbs_up": 104
+        },
+        {
+          "rank": 3,
+          "topic_id": 2,
+          "topic_name": "Konsultasi Untuk Membantu",
+          "business_category": "Layanan Konsultasi Medis",
+          "sub_issue": "Kemudahan akses konsultasi dokter secara online",
+          "review_count": 1271,
+          "pct": 9.16,
+          "avg_score": 4.95,
+          "total_thumbs_up": 457
+        },
+        {
+          "rank": 4,
+          "topic_id": 3,
+          "topic_name": "Ramah Dan Dokter",
+          "business_category": "Layanan Konsultasi Medis",
+          "sub_issue": "Kualitas pelayanan dan keramahan dokter saat konsultasi",
+          "review_count": 1181,
+          "pct": 8.51,
+          "avg_score": 4.94,
+          "total_thumbs_up": 1184
+        },
+        {
+          "rank": 5,
+          "topic_id": 4,
+          "topic_name": "Mantap Banget Keren",
+          "business_category": "Kepuasan Pengguna Umum",
+          "sub_issue": "Ulasan kepuasan pengguna yang sangat positif",
+          "review_count": 1110,
+          "pct": 8.0,
+          "avg_score": 4.96,
+          "total_thumbs_up": 153
+        },
+        {
+          "rank": 6,
+          "topic_id": 5,
+          "topic_name": "Dokternya Ramah Dokter",
+          "business_category": "Layanan Konsultasi Medis",
+          "sub_issue": "Apresiasi terhadap sikap ramah dokter",
+          "review_count": 776,
+          "pct": 5.59,
+          "avg_score": 4.95,
+          "total_thumbs_up": 138
+        },
+        {
+          "rank": 7,
+          "topic_id": 6,
+          "topic_name": "Respon Cepat Fast",
+          "business_category": "Layanan Konsultasi Medis",
+          "sub_issue": "Kecepatan respon dokter dalam memberikan layanan",
+          "review_count": 597,
+          "pct": 4.3,
+          "avg_score": 4.96,
+          "total_thumbs_up": 363
+        },
+        {
+          "rank": 8,
+          "topic_id": 7,
+          "topic_name": "Terima Kasih Terimakasih",
+          "business_category": "Kepuasan Pengguna Umum",
+          "sub_issue": "Ucapan terima kasih atas bantuan layanan aplikasi",
+          "review_count": 563,
+          "pct": 4.06,
+          "avg_score": 4.96,
+          "total_thumbs_up": 204
+        },
+        {
+          "rank": 9,
+          "topic_id": 8,
+          "topic_name": "Pelayanan Pelayanannya Puas",
+          "business_category": "Layanan Konsultasi Medis",
+          "sub_issue": "Kepuasan terhadap kualitas pelayanan secara keseluruhan",
+          "review_count": 421,
+          "pct": 3.03,
+          "avg_score": 4.96,
+          "total_thumbs_up": 72
+        },
+        {
+          "rank": 10,
+          "topic_id": 9,
+          "topic_name": "Solusi Tepat Penanganan",
+          "business_category": "Layanan Konsultasi Medis",
+          "sub_issue": "Efektivitas solusi dan kemudahan akses berobat",
+          "review_count": 328,
+          "pct": 2.36,
+          "avg_score": 4.94,
+          "total_thumbs_up": 181
+        },
+        {
+          "rank": 11,
+          "topic_id": 10,
+          "topic_name": "Aplikasi Ini Yang",
+          "business_category": "Pengalaman Pengguna",
+          "sub_issue": "Aplikasi sangat membantu dan bermanfaat bagi pengguna",
+          "review_count": 321,
+          "pct": 2.31,
+          "avg_score": 4.96,
+          "total_thumbs_up": 55
+        },
+        {
+          "rank": 12,
+          "topic_id": 11,
+          "topic_name": "Antri Perlu Asuransi",
+          "business_category": "Layanan Kesehatan",
+          "sub_issue": "Kemudahan akses berobat tanpa harus antre di rumah sakit",
+          "review_count": 266,
+          "pct": 1.92,
+          "avg_score": 4.96,
+          "total_thumbs_up": 47
+        },
+        {
+          "rank": 13,
+          "topic_id": 12,
+          "topic_name": "Pengiriman Cepat Sesuai",
+          "business_category": "Layanan Farmasi",
+          "sub_issue": "Kecepatan dan ketepatan pengiriman pesanan obat",
+          "review_count": 256,
+          "pct": 1.85,
+          "avg_score": 4.92,
+          "total_thumbs_up": 43
+        },
+        {
+          "rank": 14,
+          "topic_id": 13,
+          "topic_name": "Mudah Praktis Dan",
+          "business_category": "Pengalaman Pengguna",
+          "sub_issue": "Aplikasi mudah digunakan dan praktis",
+          "review_count": 234,
+          "pct": 1.69,
+          "avg_score": 4.97,
+          "total_thumbs_up": 49
+        },
+        {
+          "rank": 15,
+          "topic_id": 14,
+          "topic_name": "Tidak Di Tapi",
+          "business_category": "Layanan Logistik",
+          "sub_issue": "Kendala pengiriman obat dan sistem pemilihan apotek",
+          "review_count": 228,
+          "pct": 1.64,
+          "avg_score": 4.62,
+          "total_thumbs_up": 791
+        },
+        {
+          "rank": 16,
+          "topic_id": 15,
+          "topic_name": "Halodoc Trimakasih Pakai",
+          "business_category": "Pengalaman Pengguna",
+          "sub_issue": "Apresiasi terhadap layanan konsultasi dan kecepatan kerja",
+          "review_count": 161,
+          "pct": 1.16,
+          "avg_score": 4.99,
+          "total_thumbs_up": 6
+        },
+        {
+          "rank": 17,
+          "topic_id": 16,
+          "topic_name": "Semoga Sembuh Sehat",
+          "business_category": "Pengalaman Pengguna",
+          "sub_issue": "Harapan positif dan manfaat aplikasi bagi kesehatan",
+          "review_count": 155,
+          "pct": 1.12,
+          "avg_score": 4.92,
+          "total_thumbs_up": 81
+        },
+        {
+          "rank": 18,
+          "topic_id": 17,
+          "topic_name": "Baru Menit Coba",
+          "business_category": "Layanan Konsultasi Medis",
+          "sub_issue": "Durasi konsultasi chat dan kecepatan respon dokter",
+          "review_count": 152,
+          "pct": 1.1,
+          "avg_score": 4.75,
+          "total_thumbs_up": 174
+        },
+        {
+          "rank": 19,
+          "topic_id": 18,
+          "topic_name": "Mantul Set Sat",
+          "business_category": "Pengalaman Pengguna",
+          "sub_issue": "Kepuasan umum pengguna terhadap layanan",
+          "review_count": 143,
+          "pct": 1.03,
+          "avg_score": 4.94,
+          "total_thumbs_up": 2
+        },
+        {
+          "rank": 20,
+          "topic_id": 19,
+          "topic_name": "Memudahkan Simple Mudah",
+          "business_category": "Pengalaman Pengguna",
+          "sub_issue": "Aplikasi memudahkan akses layanan kesehatan",
+          "review_count": 130,
+          "pct": 0.94,
+          "avg_score": 4.96,
+          "total_thumbs_up": 3
+        },
+        {
+          "rank": 21,
+          "topic_id": 20,
+          "topic_name": "Helpfull Helpful Very",
+          "business_category": "Kualitas Layanan Konsultasi",
+          "sub_issue": "Apresiasi terhadap bantuan layanan aplikasi",
+          "review_count": 115,
+          "pct": 0.83,
+          "avg_score": 4.96,
+          "total_thumbs_up": 14
+        },
+        {
+          "rank": 22,
+          "topic_id": 21,
+          "topic_name": "Halodoc Terimakasih Kasih",
+          "business_category": "Kepuasan Pengguna",
+          "sub_issue": "Ucapan terima kasih kepada Halodoc",
+          "review_count": 82,
+          "pct": 0.59,
+          "avg_score": 4.98,
+          "total_thumbs_up": 10
+        },
+        {
+          "rank": 23,
+          "topic_id": 22,
+          "topic_name": "Jelas Padat Singkat",
+          "business_category": "Kualitas Layanan Konsultasi",
+          "sub_issue": "Penjelasan dokter yang detail dan jelas",
+          "review_count": 82,
+          "pct": 0.59,
+          "avg_score": 4.96,
+          "total_thumbs_up": 64
+        },
+        {
+          "rank": 24,
+          "topic_id": 23,
+          "topic_name": "Membatu Membntu Mmbntu",
+          "business_category": "Kepuasan Pengguna",
+          "sub_issue": "Apresiasi layanan yang sangat membantu",
+          "review_count": 75,
+          "pct": 0.54,
+          "avg_score": 4.92,
+          "total_thumbs_up": 0
+        },
+        {
+          "rank": 25,
+          "topic_id": 24,
+          "topic_name": "Responsif Dokternya Dokter",
+          "business_category": "Kualitas Layanan Konsultasi",
+          "sub_issue": "Dokter responsif dan informatif",
+          "review_count": 74,
+          "pct": 0.53,
+          "avg_score": 4.92,
+          "total_thumbs_up": 3
+        },
+        {
+          "rank": 26,
+          "topic_id": 25,
+          "topic_name": "Kasih Terima Terimakasih",
+          "business_category": "Kepuasan Pengguna",
+          "sub_issue": "Ucapan terima kasih umum",
+          "review_count": 68,
+          "pct": 0.49,
+          "avg_score": 4.93,
+          "total_thumbs_up": 3
+        },
+        {
+          "rank": 27,
+          "topic_id": 26,
+          "topic_name": "Promo Mahal Membanyaki",
+          "business_category": "Promosi dan Harga",
+          "sub_issue": "Permintaan penambahan promo dan gratis ongkir",
+          "review_count": 40,
+          "pct": 0.29,
+          "avg_score": 4.82,
+          "total_thumbs_up": 53
+        },
+        {
+          "rank": 28,
+          "topic_id": 27,
+          "topic_name": "Alhamdulillah Masya Allah",
+          "business_category": "Kepuasan Pengguna",
+          "sub_issue": "Ungkapan syukur atas kesembuhan",
+          "review_count": 31,
+          "pct": 0.22,
+          "avg_score": 4.94,
+          "total_thumbs_up": 0
+        },
+        {
+          "rank": 29,
+          "topic_id": 28,
+          "topic_name": "Berbicara Bintang Halo",
+          "business_category": "Kepuasan Pengguna",
+          "sub_issue": "Pemberian rating tinggi sebagai apresiasi",
+          "review_count": 23,
+          "pct": 0.17,
+          "avg_score": 4.96,
+          "total_thumbs_up": 17
+        }
+      ],
+      "category_concentration": {
+        "top_3_categories": [
+          "Kepuasan Pengguna Umum",
+          "Layanan Konsultasi Medis",
+          "Pengalaman Pengguna"
+        ],
+        "top_3_pct": 90.3
+      }
+    },
+    "negatif": {
+      "total_topics": 30,
+      "total_reviews": 1528,
+      "topics": [
+        {
+          "rank": 1,
+          "topic_id": 0,
+          "topic_name": "Tidak Bisa Aplikasi",
+          "business_category": "Layanan Konsultasi Medis",
+          "sub_issue": "Saldo terpotong namun sesi konsultasi tidak dapat diakses",
+          "review_count": 371,
+          "pct": 24.28,
+          "avg_score": 1.13,
+          "total_thumbs_up": 398
+        },
+        {
+          "rank": 2,
+          "topic_id": 1,
+          "topic_name": "Banget Tidak Saya",
+          "business_category": "Layanan Pengiriman Obat",
+          "sub_issue": "Pengiriman obat sangat lambat dan sistem pelacakan bermasalah",
+          "review_count": 138,
+          "pct": 9.03,
+          "avg_score": 1.16,
+          "total_thumbs_up": 344
+        },
+        {
+          "rank": 3,
+          "topic_id": 2,
+          "topic_name": "Tidak Nya Saja",
+          "business_category": "Layanan Konsultasi Medis",
+          "sub_issue": "Dokter tidak merespons dan pengembalian dana tidak diproses",
+          "review_count": 137,
+          "pct": 8.97,
+          "avg_score": 1.14,
+          "total_thumbs_up": 151
+        },
+        {
+          "rank": 4,
+          "topic_id": 3,
+          "topic_name": "Yang Obat Tidak",
+          "business_category": "Layanan Konsultasi Medis",
+          "sub_issue": "Kualitas konsultasi rendah dan ketersediaan obat tidak memadai",
+          "review_count": 113,
+          "pct": 7.4,
+          "avg_score": 1.17,
+          "total_thumbs_up": 230
+        },
+        {
+          "rank": 5,
+          "topic_id": 4,
+          "topic_name": "Saya Sudah Bayar",
+          "business_category": "Layanan Konsultasi Medis",
+          "sub_issue": "Sesi konsultasi berakhir prematur dan dokter tidak responsif",
+          "review_count": 92,
+          "pct": 6.02,
+          "avg_score": 1.22,
+          "total_thumbs_up": 154
+        },
+        {
+          "rank": 6,
+          "topic_id": 5,
+          "topic_name": "Sudah Tidak Halodoc",
+          "business_category": "Layanan Pengiriman Obat",
+          "sub_issue": "Kegagalan transaksi pembayaran dan lambatnya respon layanan pelanggan",
+          "review_count": 84,
+          "pct": 5.5,
+          "avg_score": 1.17,
+          "total_thumbs_up": 213
+        },
+        {
+          "rank": 7,
+          "topic_id": 6,
+          "topic_name": "Menit Konsultasi Saya",
+          "business_category": "Layanan Konsultasi Medis",
+          "sub_issue": "Durasi konsultasi terlalu singkat dan jawaban dokter tidak memuaskan",
+          "review_count": 63,
+          "pct": 4.12,
+          "avg_score": 1.11,
+          "total_thumbs_up": 208
+        },
+        {
+          "rank": 8,
+          "topic_id": 7,
+          "topic_name": "Error Gratis Tiba",
+          "business_category": "Layanan Konsultasi Medis",
+          "sub_issue": "Sesi chat terputus otomatis dan dana tidak dikembalikan",
+          "review_count": 61,
+          "pct": 3.99,
+          "avg_score": 1.25,
+          "total_thumbs_up": 81
+        },
+        {
+          "rank": 9,
+          "topic_id": 8,
+          "topic_name": "Pengiriman Obat Sampai",
+          "business_category": "Layanan Pengiriman Obat",
+          "sub_issue": "Ketiadaan opsi pengiriman instan dan durasi pengiriman lama",
+          "review_count": 60,
+          "pct": 3.93,
+          "avg_score": 1.08,
+          "total_thumbs_up": 81
+        },
+        {
+          "rank": 10,
+          "topic_id": 9,
+          "topic_name": "Saldo Halodoc Tidak",
+          "business_category": "Layanan Konsultasi Medis",
+          "sub_issue": "Sesi dibatalkan sepihak oleh sistem meski sudah membayar",
+          "review_count": 60,
+          "pct": 3.93,
+          "avg_score": 1.15,
+          "total_thumbs_up": 86
+        },
+        {
+          "rank": 11,
+          "topic_id": 10,
+          "topic_name": "Korlap Sibuk Terpotong",
+          "business_category": "Layanan Konsultasi Medis",
+          "sub_issue": "Dokter sibuk setelah pembayaran berhasil tanpa refund",
+          "review_count": 58,
+          "pct": 3.8,
+          "avg_score": 1.07,
+          "total_thumbs_up": 56
+        },
+        {
+          "rank": 12,
+          "topic_id": 11,
+          "topic_name": "Apotek Kirim Jauh",
+          "business_category": "Layanan Pengiriman Obat",
+          "sub_issue": "Algoritma pemilihan apotek terlalu jauh dari lokasi",
+          "review_count": 41,
+          "pct": 2.68,
+          "avg_score": 1.32,
+          "total_thumbs_up": 31
+        },
+        {
+          "rank": 13,
+          "topic_id": 12,
+          "topic_name": "Buang Balas Uang",
+          "business_category": "Layanan Konsultasi Medis",
+          "sub_issue": "Dokter tidak merespon chat hingga waktu berakhir",
+          "review_count": 35,
+          "pct": 2.29,
+          "avg_score": 1.03,
+          "total_thumbs_up": 43
+        },
+        {
+          "rank": 14,
+          "topic_id": 13,
+          "topic_name": "Saya Kurir Pesanan",
+          "business_category": "Layanan Pengiriman Obat",
+          "sub_issue": "Kendala pengiriman dan kurir tidak menghubungi penerima",
+          "review_count": 25,
+          "pct": 1.64,
+          "avg_score": 1.04,
+          "total_thumbs_up": 69
+        },
+        {
+          "rank": 15,
+          "topic_id": 14,
+          "topic_name": "Driver Gosend Di",
+          "business_category": "Layanan Pengiriman Obat",
+          "sub_issue": "Stok obat tidak update dan pengiriman sangat lambat",
+          "review_count": 24,
+          "pct": 1.57,
+          "avg_score": 1.08,
+          "total_thumbs_up": 30
+        },
+        {
+          "rank": 16,
+          "topic_id": 15,
+          "topic_name": "Kenapa Di Bisa",
+          "business_category": "Stabilitas Aplikasi",
+          "sub_issue": "Aplikasi tidak bisa diakses atau login",
+          "review_count": 24,
+          "pct": 1.57,
+          "avg_score": 1.46,
+          "total_thumbs_up": 30
+        },
+        {
+          "rank": 17,
+          "topic_id": 16,
+          "topic_name": "Bayar Sibuk Dokter",
+          "business_category": "Layanan Konsultasi Medis",
+          "sub_issue": "Ketidakjelasan status dokter sibuk setelah bayar",
+          "review_count": 22,
+          "pct": 1.44,
+          "avg_score": 1.14,
+          "total_thumbs_up": 58
+        },
+        {
+          "rank": 18,
+          "topic_id": 17,
+          "topic_name": "Apotik Malam Hari",
+          "business_category": "Layanan Pengiriman Obat",
+          "sub_issue": "Keterbatasan pilihan pengiriman dan apotek tutup",
+          "review_count": 18,
+          "pct": 1.18,
+          "avg_score": 1.17,
+          "total_thumbs_up": 118
+        },
+        {
+          "rank": 19,
+          "topic_id": 18,
+          "topic_name": "Like Konsultasi Dan",
+          "business_category": "Layanan Konsultasi Medis",
+          "sub_issue": "Sesi konsultasi diakhiri sepihak oleh dokter",
+          "review_count": 15,
+          "pct": 0.98,
+          "avg_score": 1.0,
+          "total_thumbs_up": 25
+        },
+        {
+          "rank": 20,
+          "topic_id": 19,
+          "topic_name": "Tanggal Sampai Jam",
+          "business_category": "Layanan Pengiriman Obat",
+          "sub_issue": "Estimasi pengiriman obat melampaui jadwal",
+          "review_count": 12,
+          "pct": 0.79,
+          "avg_score": 1.08,
+          "total_thumbs_up": 26
+        },
+        {
+          "rank": 21,
+          "topic_id": 20,
+          "topic_name": "Refund Aneh Giliran",
+          "business_category": "Layanan Pembayaran dan Refund",
+          "sub_issue": "Dana tidak kembali setelah konsultasi gagal atau terputus",
+          "review_count": 12,
+          "pct": 0.79,
+          "avg_score": 1.08,
+          "total_thumbs_up": 4
+        },
+        {
+          "rank": 22,
+          "topic_id": 21,
+          "topic_name": "Yang Review Dokter",
+          "business_category": "Kualitas Layanan Medis",
+          "sub_issue": "Ketidakpuasan terhadap respon dan kompetensi dokter",
+          "review_count": 9,
+          "pct": 0.59,
+          "avg_score": 1.11,
+          "total_thumbs_up": 16
+        },
+        {
+          "rank": 23,
+          "topic_id": 22,
+          "topic_name": "Evoucher Service Kendala",
+          "business_category": "Layanan Pelanggan",
+          "sub_issue": "Lambatnya respon CS dan kendala pengembalian dana",
+          "review_count": 8,
+          "pct": 0.52,
+          "avg_score": 1.0,
+          "total_thumbs_up": 36
+        },
+        {
+          "rank": 24,
+          "topic_id": 23,
+          "topic_name": "Iklan Tipu Mitra",
+          "business_category": "Promosi dan Voucher",
+          "sub_issue": "Voucher atau promo tidak dapat digunakan",
+          "review_count": 8,
+          "pct": 0.52,
+          "avg_score": 1.12,
+          "total_thumbs_up": 2
+        },
+        {
+          "rank": 25,
+          "topic_id": 24,
+          "topic_name": "Menunggu Obat Disuru",
+          "business_category": "Layanan Farmasi",
+          "sub_issue": "Obat tidak dikirim dan dana tidak dikembalikan",
+          "review_count": 7,
+          "pct": 0.46,
+          "avg_score": 1.14,
+          "total_thumbs_up": 5
+        },
+        {
+          "rank": 26,
+          "topic_id": 25,
+          "topic_name": "50 Bayar Ribu",
+          "business_category": "Kebijakan Harga",
+          "sub_issue": "Keberatan atas biaya konsultasi dokter",
+          "review_count": 7,
+          "pct": 0.46,
+          "avg_score": 1.29,
+          "total_thumbs_up": 66
+        },
+        {
+          "rank": 27,
+          "topic_id": 26,
+          "topic_name": "Saya Sapa Bu",
+          "business_category": "Kualitas Layanan Medis",
+          "sub_issue": "Dokter tidak merespon saat sesi konsultasi aktif",
+          "review_count": 7,
+          "pct": 0.46,
+          "avg_score": 1.29,
+          "total_thumbs_up": 53
+        },
+        {
+          "rank": 28,
+          "topic_id": 27,
+          "topic_name": "Sia2 Chat Respon",
+          "business_category": "Kualitas Layanan Medis",
+          "sub_issue": "Respon dokter lambat dan tidak profesional",
+          "review_count": 7,
+          "pct": 0.46,
+          "avg_score": 1.14,
+          "total_thumbs_up": 3
+        },
+        {
+          "rank": 29,
+          "topic_id": 28,
+          "topic_name": "Antibiotik Obat Pasien",
+          "business_category": "Layanan Farmasi",
+          "sub_issue": "Stok obat tidak tersedia dan kendala pengiriman resep",
+          "review_count": 6,
+          "pct": 0.39,
+          "avg_score": 1.0,
+          "total_thumbs_up": 5
+        },
+        {
+          "rank": 30,
+          "topic_id": 29,
+          "topic_name": "Kalender Menstruasi Login",
+          "business_category": "Aksesibilitas Aplikasi",
+          "sub_issue": "Kendala login, OTP, dan fitur kalender menstruasi",
+          "review_count": 4,
+          "pct": 0.26,
+          "avg_score": 1.25,
+          "total_thumbs_up": 15
+        }
+      ],
+      "category_concentration": {
+        "top_3_categories": [
+          "Layanan Konsultasi Medis",
+          "Layanan Pengiriman Obat",
+          "Stabilitas Aplikasi"
+        ],
+        "top_3_pct": 95.09
+      }
+    },
+    "netral": {
+      "total_topics": 18,
+      "total_reviews": 225,
+      "topics": [
+        {
+          "rank": 1,
+          "topic_id": 0,
+          "topic_name": "Dokter Saya Yang",
+          "business_category": "Layanan Konsultasi Dokter",
+          "sub_issue": "Durasi konsultasi chat terlalu singkat dan dokter lambat merespons",
+          "review_count": 35,
+          "pct": 15.35,
+          "avg_score": 3.0,
+          "total_thumbs_up": 88
+        },
+        {
+          "rank": 2,
+          "topic_id": 3,
+          "topic_name": "Chat Bayar Dokter",
+          "business_category": "Layanan Konsultasi Dokter",
+          "sub_issue": "Dokter tidak merespons setelah pembayaran berhasil",
+          "review_count": 21,
+          "pct": 9.21,
+          "avg_score": 3.0,
+          "total_thumbs_up": 53
+        },
+        {
+          "rank": 3,
+          "topic_id": 2,
+          "topic_name": "Kenapa Saya Hp",
+          "business_category": "Aksesibilitas Aplikasi",
+          "sub_issue": "Aplikasi error, force close, dan gagal login OTP",
+          "review_count": 19,
+          "pct": 8.33,
+          "avg_score": 3.0,
+          "total_thumbs_up": 10
+        },
+        {
+          "rank": 4,
+          "topic_id": 9,
+          "topic_name": "Pengiriman Kasihan Apotik",
+          "business_category": "Layanan Pengiriman Obat",
+          "sub_issue": "Pengiriman obat lama dan kendala pencarian driver",
+          "review_count": 16,
+          "pct": 7.02,
+          "avg_score": 3.0,
+          "total_thumbs_up": 18
+        },
+        {
+          "rank": 5,
+          "topic_id": 1,
+          "topic_name": "Bagus Lumayan Ok",
+          "business_category": "Pengalaman Pengguna",
+          "sub_issue": "Ulasan positif umum mengenai aplikasi",
+          "review_count": 16,
+          "pct": 7.02,
+          "avg_score": 3.0,
+          "total_thumbs_up": 0
+        },
+        {
+          "rank": 6,
+          "topic_id": 4,
+          "topic_name": "Pembayaran Bank Lewat",
+          "business_category": "Sistem Pembayaran",
+          "sub_issue": "Keterbatasan metode pembayaran dan transfer bank",
+          "review_count": 14,
+          "pct": 6.14,
+          "avg_score": 3.0,
+          "total_thumbs_up": 8
+        },
+        {
+          "rank": 7,
+          "topic_id": 5,
+          "topic_name": "Kalender Nya Di",
+          "business_category": "Aksesibilitas Aplikasi",
+          "sub_issue": "Fitur aplikasi tidak responsif dan kendala navigasi",
+          "review_count": 11,
+          "pct": 4.82,
+          "avg_score": 3.0,
+          "total_thumbs_up": 83
+        },
+        {
+          "rank": 8,
+          "topic_id": 8,
+          "topic_name": "Pilihan Yang Bisa",
+          "business_category": "Layanan Pengiriman Obat",
+          "sub_issue": "Kendala pengiriman, pembatalan pesanan, dan informasi ED obat",
+          "review_count": 11,
+          "pct": 4.82,
+          "avg_score": 3.0,
+          "total_thumbs_up": 25
+        },
+        {
+          "rank": 9,
+          "topic_id": 11,
+          "topic_name": "Saldo Update Sering",
+          "business_category": "Sistem Pembayaran",
+          "sub_issue": "Kegagalan transaksi pembayaran dan kendala saldo",
+          "review_count": 10,
+          "pct": 4.39,
+          "avg_score": 3.0,
+          "total_thumbs_up": 7
+        },
+        {
+          "rank": 10,
+          "topic_id": 7,
+          "topic_name": "Ramah Pasien Dokternya",
+          "business_category": "Layanan Konsultasi Dokter",
+          "sub_issue": "Dokter kurang ramah dan lambat membalas pesan",
+          "review_count": 10,
+          "pct": 4.39,
+          "avg_score": 3.0,
+          "total_thumbs_up": 1
+        },
+        {
+          "rank": 11,
+          "topic_id": 10,
+          "topic_name": "Alamat Maps Sesuai",
+          "business_category": "Layanan Pengiriman dan Logistik",
+          "sub_issue": "Ketidakakuratan titik lokasi GPS pada peta",
+          "review_count": 10,
+          "pct": 4.39,
+          "avg_score": 3.0,
+          "total_thumbs_up": 28
+        },
+        {
+          "rank": 12,
+          "topic_id": 14,
+          "topic_name": "Lain Ongkir Tolong",
+          "business_category": "Layanan Pengiriman dan Logistik",
+          "sub_issue": "Masalah ongkir driver dan ketersediaan stok apotek",
+          "review_count": 9,
+          "pct": 3.95,
+          "avg_score": 3.0,
+          "total_thumbs_up": 10
+        },
+        {
+          "rank": 13,
+          "topic_id": 15,
+          "topic_name": "Mohon Lokasi Akurat",
+          "business_category": "Layanan Pengiriman dan Logistik",
+          "sub_issue": "Permintaan peningkatan akurasi lokasi",
+          "review_count": 9,
+          "pct": 3.95,
+          "avg_score": 3.0,
+          "total_thumbs_up": 0
+        },
+        {
+          "rank": 14,
+          "topic_id": 17,
+          "topic_name": "Responnya Terkait Sangat",
+          "business_category": "Layanan Konsultasi Medis",
+          "sub_issue": "Respon dokter lambat saat sesi konsultasi",
+          "review_count": 8,
+          "pct": 3.51,
+          "avg_score": 3.0,
+          "total_thumbs_up": 5
+        },
+        {
+          "rank": 15,
+          "topic_id": 6,
+          "topic_name": "Kuponnya Dipakai Kurang",
+          "business_category": "Sistem Pembayaran dan Promosi",
+          "sub_issue": "Kendala penggunaan kupon dan saldo",
+          "review_count": 8,
+          "pct": 3.51,
+          "avg_score": 3.0,
+          "total_thumbs_up": 0
+        },
+        {
+          "rank": 16,
+          "topic_id": 12,
+          "topic_name": "Berakhir Foto Selesai",
+          "business_category": "Layanan Konsultasi Medis",
+          "sub_issue": "Sesi konsultasi berakhir otomatis terlalu cepat",
+          "review_count": 7,
+          "pct": 3.07,
+          "avg_score": 3.0,
+          "total_thumbs_up": 3
+        },
+        {
+          "rank": 17,
+          "topic_id": 13,
+          "topic_name": "Membantu Terimakasih Sangat",
+          "business_category": "Pengalaman Pengguna",
+          "sub_issue": "Ulasan positif mengenai manfaat aplikasi",
+          "review_count": 6,
+          "pct": 2.63,
+          "avg_score": 3.0,
+          "total_thumbs_up": 14
+        },
+        {
+          "rank": 18,
+          "topic_id": 16,
+          "topic_name": "Berguna Buat Sakit",
+          "business_category": "Pengalaman Pengguna",
+          "sub_issue": "Ulasan positif dan keluhan umum aplikasi",
+          "review_count": 5,
+          "pct": 2.19,
+          "avg_score": 3.0,
+          "total_thumbs_up": 0
+        }
+      ],
+      "category_concentration": {
+        "top_3_categories": [
+          "Layanan Konsultasi Dokter",
+          "Aksesibilitas Aplikasi",
+          "Layanan Pengiriman dan Logistik"
+        ],
+        "top_3_pct": 55.11
+      }
+    }
+  },
+  "business_categories": {
+    "by_sentiment": {
+      "positif": [
+        {
+          "category": "Kepuasan Pengguna Umum",
+          "review_count": 6599,
+          "pct": 47.57,
+          "avg_score": 4.95,
+          "share_confident": 0.9632
+        },
+        {
+          "category": "Layanan Konsultasi Medis",
+          "review_count": 4726,
+          "pct": 34.07,
+          "avg_score": 4.94,
+          "share_confident": 0.9958
+        },
+        {
+          "category": "Pengalaman Pengguna",
+          "review_count": 1144,
+          "pct": 8.25,
+          "avg_score": 4.96,
+          "share_confident": 0.979
+        },
+        {
+          "category": "Kepuasan Pengguna",
+          "review_count": 279,
+          "pct": 2.01,
+          "avg_score": 4.94,
+          "share_confident": 0.9749
+        },
+        {
+          "category": "Kualitas Layanan Konsultasi",
+          "review_count": 271,
+          "pct": 1.95,
+          "avg_score": 4.95,
+          "share_confident": 0.9963
+        },
+        {
+          "category": "Layanan Kesehatan",
+          "review_count": 266,
+          "pct": 1.92,
+          "avg_score": 4.96,
+          "share_confident": 1.0
+        },
+        {
+          "category": "Layanan Farmasi",
+          "review_count": 256,
+          "pct": 1.85,
+          "avg_score": 4.92,
+          "share_confident": 0.9883
+        },
+        {
+          "category": "Layanan Logistik",
+          "review_count": 228,
+          "pct": 1.64,
+          "avg_score": 4.62,
+          "share_confident": 0.9956
+        },
+        {
+          "category": "Lain-lain / Noise",
+          "review_count": 64,
+          "pct": 0.46,
+          "avg_score": 4.92,
+          "share_confident": 0.0
+        },
+        {
+          "category": "Promosi dan Harga",
+          "review_count": 40,
+          "pct": 0.29,
+          "avg_score": 4.82,
+          "share_confident": 1.0
+        }
+      ],
+      "negatif": [
+        {
+          "category": "Layanan Konsultasi Medis",
+          "review_count": 1027,
+          "pct": 67.21,
+          "avg_score": 1.14,
+          "share_confident": 0.9844
+        },
+        {
+          "category": "Layanan Pengiriman Obat",
+          "review_count": 402,
+          "pct": 26.31,
+          "avg_score": 1.16,
+          "share_confident": 1.0
+        },
+        {
+          "category": "Stabilitas Aplikasi",
+          "review_count": 24,
+          "pct": 1.57,
+          "avg_score": 1.46,
+          "share_confident": 1.0
+        },
+        {
+          "category": "Kualitas Layanan Medis",
+          "review_count": 23,
+          "pct": 1.51,
+          "avg_score": 1.17,
+          "share_confident": 1.0
+        },
+        {
+          "category": "Layanan Farmasi",
+          "review_count": 13,
+          "pct": 0.85,
+          "avg_score": 1.08,
+          "share_confident": 1.0
+        },
+        {
+          "category": "Layanan Pembayaran dan Refund",
+          "review_count": 12,
+          "pct": 0.79,
+          "avg_score": 1.08,
+          "share_confident": 1.0
+        },
+        {
+          "category": "Layanan Pelanggan",
+          "review_count": 8,
+          "pct": 0.52,
+          "avg_score": 1.0,
+          "share_confident": 1.0
+        },
+        {
+          "category": "Promosi dan Voucher",
+          "review_count": 8,
+          "pct": 0.52,
+          "avg_score": 1.12,
+          "share_confident": 1.0
+        },
+        {
+          "category": "Kebijakan Harga",
+          "review_count": 7,
+          "pct": 0.46,
+          "avg_score": 1.29,
+          "share_confident": 1.0
+        },
+        {
+          "category": "Aksesibilitas Aplikasi",
+          "review_count": 4,
+          "pct": 0.26,
+          "avg_score": 1.25,
+          "share_confident": 1.0
+        }
+      ],
+      "netral": [
+        {
+          "category": "Layanan Konsultasi Dokter",
+          "review_count": 66,
+          "pct": 28.95,
+          "avg_score": 3.0,
+          "share_confident": 1.0
+        },
+        {
+          "category": "Aksesibilitas Aplikasi",
+          "review_count": 30,
+          "pct": 13.16,
+          "avg_score": 3.0,
+          "share_confident": 1.0
+        },
+        {
+          "category": "Layanan Pengiriman dan Logistik",
+          "review_count": 28,
+          "pct": 12.28,
+          "avg_score": 3.0,
+          "share_confident": 0.9643
+        },
+        {
+          "category": "Layanan Pengiriman Obat",
+          "review_count": 27,
+          "pct": 11.84,
+          "avg_score": 3.0,
+          "share_confident": 1.0
+        },
+        {
+          "category": "Pengalaman Pengguna",
+          "review_count": 27,
+          "pct": 11.84,
+          "avg_score": 3.0,
+          "share_confident": 0.963
+        },
+        {
+          "category": "Sistem Pembayaran",
+          "review_count": 24,
+          "pct": 10.53,
+          "avg_score": 3.0,
+          "share_confident": 1.0
+        },
+        {
+          "category": "Layanan Konsultasi Medis",
+          "review_count": 15,
+          "pct": 6.58,
+          "avg_score": 3.0,
+          "share_confident": 1.0
+        },
+        {
+          "category": "Sistem Pembayaran dan Promosi",
+          "review_count": 8,
+          "pct": 3.51,
+          "avg_score": 3.0,
+          "share_confident": 1.0
+        },
+        {
+          "category": "Lain-lain / Noise",
+          "review_count": 3,
+          "pct": 1.32,
+          "avg_score": 3.0,
+          "share_confident": 0.0
+        }
+      ]
+    },
+    "cross_sentiment": [
+      {
+        "category": "Kepuasan Pengguna Umum",
+        "positif": 6599,
+        "negatif": 0,
+        "netral": 0,
+        "total": 6599,
+        "net_sentiment_ratio": 1.0
+      },
+      {
+        "category": "Layanan Konsultasi Medis",
+        "positif": 4726,
+        "negatif": 1027,
+        "netral": 15,
+        "total": 5768,
+        "net_sentiment_ratio": 0.6413
+      },
+      {
+        "category": "Pengalaman Pengguna",
+        "positif": 1144,
+        "negatif": 0,
+        "netral": 27,
+        "total": 1171,
+        "net_sentiment_ratio": 0.9769
+      },
+      {
+        "category": "Layanan Pengiriman Obat",
+        "positif": 0,
+        "negatif": 402,
+        "netral": 27,
+        "total": 429,
+        "net_sentiment_ratio": -0.9371
+      },
+      {
+        "category": "Kepuasan Pengguna",
+        "positif": 279,
+        "negatif": 0,
+        "netral": 0,
+        "total": 279,
+        "net_sentiment_ratio": 1.0
+      },
+      {
+        "category": "Kualitas Layanan Konsultasi",
+        "positif": 271,
+        "negatif": 0,
+        "netral": 0,
+        "total": 271,
+        "net_sentiment_ratio": 1.0
+      },
+      {
+        "category": "Layanan Farmasi",
+        "positif": 256,
+        "negatif": 13,
+        "netral": 0,
+        "total": 269,
+        "net_sentiment_ratio": 0.9033
+      },
+      {
+        "category": "Layanan Kesehatan",
+        "positif": 266,
+        "negatif": 0,
+        "netral": 0,
+        "total": 266,
+        "net_sentiment_ratio": 1.0
+      },
+      {
+        "category": "Layanan Logistik",
+        "positif": 228,
+        "negatif": 0,
+        "netral": 0,
+        "total": 228,
+        "net_sentiment_ratio": 1.0
+      },
+      {
+        "category": "Lain-lain / Noise",
+        "positif": 64,
+        "negatif": 0,
+        "netral": 3,
+        "total": 67,
+        "net_sentiment_ratio": 0.9552
+      },
+      {
+        "category": "Layanan Konsultasi Dokter",
+        "positif": 0,
+        "negatif": 0,
+        "netral": 66,
+        "total": 66,
+        "net_sentiment_ratio": 0.0
+      },
+      {
+        "category": "Promosi dan Harga",
+        "positif": 40,
+        "negatif": 0,
+        "netral": 0,
+        "total": 40,
+        "net_sentiment_ratio": 1.0
+      },
+      {
+        "category": "Aksesibilitas Aplikasi",
+        "positif": 0,
+        "negatif": 4,
+        "netral": 30,
+        "total": 34,
+        "net_sentiment_ratio": -0.1176
+      },
+      {
+        "category": "Layanan Pengiriman dan Logistik",
+        "positif": 0,
+        "negatif": 0,
+        "netral": 28,
+        "total": 28,
+        "net_sentiment_ratio": 0.0
+      },
+      {
+        "category": "Sistem Pembayaran",
+        "positif": 0,
+        "negatif": 0,
+        "netral": 24,
+        "total": 24,
+        "net_sentiment_ratio": 0.0
+      },
+      {
+        "category": "Stabilitas Aplikasi",
+        "positif": 0,
+        "negatif": 24,
+        "netral": 0,
+        "total": 24,
+        "net_sentiment_ratio": -1.0
+      },
+      {
+        "category": "Kualitas Layanan Medis",
+        "positif": 0,
+        "negatif": 23,
+        "netral": 0,
+        "total": 23,
+        "net_sentiment_ratio": -1.0
+      },
+      {
+        "category": "Layanan Pembayaran dan Refund",
+        "positif": 0,
+        "negatif": 12,
+        "netral": 0,
+        "total": 12,
+        "net_sentiment_ratio": -1.0
+      },
+      {
+        "category": "Layanan Pelanggan",
+        "positif": 0,
+        "negatif": 8,
+        "netral": 0,
+        "total": 8,
+        "net_sentiment_ratio": -1.0
+      },
+      {
+        "category": "Promosi dan Voucher",
+        "positif": 0,
+        "negatif": 8,
+        "netral": 0,
+        "total": 8,
+        "net_sentiment_ratio": -1.0
+      },
+      {
+        "category": "Sistem Pembayaran dan Promosi",
+        "positif": 0,
+        "negatif": 0,
+        "netral": 8,
+        "total": 8,
+        "net_sentiment_ratio": 0.0
+      },
+      {
+        "category": "Kebijakan Harga",
+        "positif": 0,
+        "negatif": 7,
+        "netral": 0,
+        "total": 7,
+        "net_sentiment_ratio": -1.0
+      }
+    ]
+  },
+  "cs_performance": {
+    "overall": {
+      "total_negative_reviews": 1528,
+      "total_replied": 1525,
+      "avg_reply_rate": 99.8,
+      "median_reply_delay_hours": 0.63,
+      "avg_wa_redirect_rate": 99.67
+    },
+    "by_category": [
+      {
+        "category": "Layanan Konsultasi Medis",
+        "total_neg": 1027,
+        "replied": 1024,
+        "reply_rate": 99.71,
+        "delay_hours": 0.55,
+        "wa_redirect_rate": 99.61
+      },
+      {
+        "category": "Layanan Pengiriman Obat",
+        "total_neg": 402,
+        "replied": 402,
+        "reply_rate": 100.0,
+        "delay_hours": 0.77,
+        "wa_redirect_rate": 99.75
+      },
+      {
+        "category": "Stabilitas Aplikasi",
+        "total_neg": 24,
+        "replied": 24,
+        "reply_rate": 100.0,
+        "delay_hours": 2.05,
+        "wa_redirect_rate": 100.0
+      },
+      {
+        "category": "Kualitas Layanan Medis",
+        "total_neg": 23,
+        "replied": 23,
+        "reply_rate": 100.0,
+        "delay_hours": 1.04,
+        "wa_redirect_rate": 100.0
+      },
+      {
+        "category": "Layanan Farmasi",
+        "total_neg": 13,
+        "replied": 13,
+        "reply_rate": 100.0,
+        "delay_hours": 0.45,
+        "wa_redirect_rate": 100.0
+      },
+      {
+        "category": "Layanan Pembayaran dan Refund",
+        "total_neg": 12,
+        "replied": 12,
+        "reply_rate": 100.0,
+        "delay_hours": 0.18,
+        "wa_redirect_rate": 100.0
+      },
+      {
+        "category": "Layanan Pelanggan",
+        "total_neg": 8,
+        "replied": 8,
+        "reply_rate": 100.0,
+        "delay_hours": 0.41,
+        "wa_redirect_rate": 100.0
+      },
+      {
+        "category": "Promosi dan Voucher",
+        "total_neg": 8,
+        "replied": 8,
+        "reply_rate": 100.0,
+        "delay_hours": 0.16,
+        "wa_redirect_rate": 100.0
+      },
+      {
+        "category": "Kebijakan Harga",
+        "total_neg": 7,
+        "replied": 7,
+        "reply_rate": 100.0,
+        "delay_hours": 0.65,
+        "wa_redirect_rate": 100.0
+      },
+      {
+        "category": "Aksesibilitas Aplikasi",
+        "total_neg": 4,
+        "replied": 4,
+        "reply_rate": 100.0,
+        "delay_hours": 0.61,
+        "wa_redirect_rate": 100.0
+      }
+    ],
+    "best_performers": {
+      "fastest_reply": {
+        "category": "Promosi dan Voucher",
+        "delay_hours": 0.16
+      },
+      "highest_reply_rate": {
+        "category": "Layanan Pengiriman Obat",
+        "rate": 100.0
+      }
+    },
+    "worst_performers": {
+      "slowest_reply": {
+        "category": "Stabilitas Aplikasi",
+        "delay_hours": 2.05
+      },
+      "lowest_reply_rate": {
+        "category": "Layanan Konsultasi Medis",
+        "rate": 99.71
+      }
+    }
+  },
+  "keyword_analysis": {
+    "positif": [
+      {
+        "keyword": "bagus",
+        "topic_count": 5,
+        "weighted_review_count": 6778
+      },
+      {
+        "keyword": "membantu",
+        "topic_count": 4,
+        "weighted_review_count": 4834
+      },
+      {
+        "keyword": "bermanfaat",
+        "topic_count": 3,
+        "weighted_review_count": 3155
+      },
+      {
+        "keyword": "konsultasi",
+        "topic_count": 4,
+        "weighted_review_count": 2941
+      },
+      {
+        "keyword": "terbantu",
+        "topic_count": 1,
+        "weighted_review_count": 2679
+      },
+      {
+        "keyword": "berguna",
+        "topic_count": 1,
+        "weighted_review_count": 2679
+      },
+      {
+        "keyword": "cepat",
+        "topic_count": 6,
+        "weighted_review_count": 2612
+      },
+      {
+        "keyword": "ramah",
+        "topic_count": 4,
+        "weighted_review_count": 2452
+      },
+      {
+        "keyword": "good",
+        "topic_count": 2,
+        "weighted_review_count": 2362
+      },
+      {
+        "keyword": "best",
+        "topic_count": 2,
+        "weighted_review_count": 2329
+      },
+      {
+        "keyword": "the",
+        "topic_count": 2,
+        "weighted_review_count": 2329
+      },
+      {
+        "keyword": "ok",
+        "topic_count": 1,
+        "weighted_review_count": 2247
+      },
+      {
+        "keyword": "oke",
+        "topic_count": 1,
+        "weighted_review_count": 2247
+      },
+      {
+        "keyword": "terbaik",
+        "topic_count": 1,
+        "weighted_review_count": 2247
+      },
+      {
+        "keyword": "nice",
+        "topic_count": 1,
+        "weighted_review_count": 2247
+      },
+      {
+        "keyword": "top",
+        "topic_count": 1,
+        "weighted_review_count": 2247
+      },
+      {
+        "keyword": "dokternya",
+        "topic_count": 3,
+        "weighted_review_count": 2031
+      },
+      {
+        "keyword": "puas",
+        "topic_count": 2,
+        "weighted_review_count": 1531
+      },
+      {
+        "keyword": "memuaskan",
+        "topic_count": 2,
+        "weighted_review_count": 1531
+      },
+      {
+        "keyword": "respon",
+        "topic_count": 2,
+        "weighted_review_count": 1373
+      },
+      {
+        "keyword": "disaat",
+        "topic_count": 1,
+        "weighted_review_count": 1271
+      },
+      {
+        "keyword": "mantap",
+        "topic_count": 1,
+        "weighted_review_count": 1110
+      },
+      {
+        "keyword": "keren",
+        "topic_count": 1,
+        "weighted_review_count": 1110
+      },
+      {
+        "keyword": "mantab",
+        "topic_count": 1,
+        "weighted_review_count": 1110
+      },
+      {
+        "keyword": "pokoknya",
+        "topic_count": 1,
+        "weighted_review_count": 1110
+      },
+      {
+        "keyword": "recommended",
+        "topic_count": 1,
+        "weighted_review_count": 1110
+      },
+      {
+        "keyword": "penjelasan",
+        "topic_count": 2,
+        "weighted_review_count": 858
+      },
+      {
+        "keyword": "detail",
+        "topic_count": 2,
+        "weighted_review_count": 858
+      },
+      {
+        "keyword": "terima",
+        "topic_count": 3,
+        "weighted_review_count": 713
+      },
+      {
+        "keyword": "kasih",
+        "topic_count": 3,
+        "weighted_review_count": 713
+      },
+      {
+        "keyword": "terimakasih",
+        "topic_count": 3,
+        "weighted_review_count": 713
+      },
+      {
+        "keyword": "fast",
+        "topic_count": 1,
+        "weighted_review_count": 597
+      },
+      {
+        "keyword": "tanggap",
+        "topic_count": 1,
+        "weighted_review_count": 597
+      },
+      {
+        "keyword": "responnya",
+        "topic_count": 1,
+        "weighted_review_count": 597
+      },
+      {
+        "keyword": "dok",
+        "topic_count": 1,
+        "weighted_review_count": 563
+      },
+      {
+        "keyword": "pelayanan",
+        "topic_count": 1,
+        "weighted_review_count": 421
+      },
+      {
+        "keyword": "pelayanannya",
+        "topic_count": 1,
+        "weighted_review_count": 421
+      },
+      {
+        "keyword": "mudah",
+        "topic_count": 2,
+        "weighted_review_count": 364
+      },
+      {
+        "keyword": "praktis",
+        "topic_count": 2,
+        "weighted_review_count": 364
+      },
+      {
+        "keyword": "simple",
+        "topic_count": 2,
+        "weighted_review_count": 364
+      },
+      {
+        "keyword": "solusi",
+        "topic_count": 1,
+        "weighted_review_count": 328
+      },
+      {
+        "keyword": "penanganan",
+        "topic_count": 1,
+        "weighted_review_count": 328
+      },
+      {
+        "keyword": "berobat",
+        "topic_count": 1,
+        "weighted_review_count": 328
+      },
+      {
+        "keyword": "akurat",
+        "topic_count": 1,
+        "weighted_review_count": 328
+      },
+      {
+        "keyword": "antri",
+        "topic_count": 1,
+        "weighted_review_count": 266
+      },
+      {
+        "keyword": "asuransi",
+        "topic_count": 1,
+        "weighted_review_count": 266
+      },
+      {
+        "keyword": "rumah",
+        "topic_count": 1,
+        "weighted_review_count": 266
+      },
+      {
+        "keyword": "repot",
+        "topic_count": 1,
+        "weighted_review_count": 266
+      },
+      {
+        "keyword": "pengiriman",
+        "topic_count": 1,
+        "weighted_review_count": 256
+      },
+      {
+        "keyword": "sesuai",
+        "topic_count": 1,
+        "weighted_review_count": 256
+      },
+      {
+        "keyword": "pesanan",
+        "topic_count": 1,
+        "weighted_review_count": 256
+      },
+      {
+        "keyword": "barang",
+        "topic_count": 1,
+        "weighted_review_count": 256
+      },
+      {
+        "keyword": "obatnya",
+        "topic_count": 1,
+        "weighted_review_count": 256
+      },
+      {
+        "keyword": "ribet",
+        "topic_count": 1,
+        "weighted_review_count": 234
+      },
+      {
+        "keyword": "pembayaran",
+        "topic_count": 1,
+        "weighted_review_count": 228
+      },
+      {
+        "keyword": "sembuh",
+        "topic_count": 2,
+        "weighted_review_count": 186
+      },
+      {
+        "keyword": "trimakasih",
+        "topic_count": 1,
+        "weighted_review_count": 161
+      },
+      {
+        "keyword": "pakai",
+        "topic_count": 1,
+        "weighted_review_count": 161
+      },
+      {
+        "keyword": "semoga",
+        "topic_count": 1,
+        "weighted_review_count": 155
+      },
+      {
+        "keyword": "sehat",
+        "topic_count": 1,
+        "weighted_review_count": 155
+      },
+      {
+        "keyword": "lekas",
+        "topic_count": 1,
+        "weighted_review_count": 155
+      },
+      {
+        "keyword": "kedepannya",
+        "topic_count": 1,
+        "weighted_review_count": 155
+      },
+      {
+        "keyword": "berkah",
+        "topic_count": 1,
+        "weighted_review_count": 155
+      },
+      {
+        "keyword": "menit",
+        "topic_count": 1,
+        "weighted_review_count": 152
+      },
+      {
+        "keyword": "coba",
+        "topic_count": 1,
+        "weighted_review_count": 152
+      },
+      {
+        "keyword": "30",
+        "topic_count": 1,
+        "weighted_review_count": 152
+      },
+      {
+        "keyword": "cuman",
+        "topic_count": 1,
+        "weighted_review_count": 152
+      },
+      {
+        "keyword": "mencoba",
+        "topic_count": 1,
+        "weighted_review_count": 152
+      },
+      {
+        "keyword": "mudahan",
+        "topic_count": 1,
+        "weighted_review_count": 152
+      },
+      {
+        "keyword": "mantul",
+        "topic_count": 1,
+        "weighted_review_count": 143
+      },
+      {
+        "keyword": "set",
+        "topic_count": 1,
+        "weighted_review_count": 143
+      },
+      {
+        "keyword": "sat",
+        "topic_count": 1,
+        "weighted_review_count": 143
+      },
+      {
+        "keyword": "gercep",
+        "topic_count": 1,
+        "weighted_review_count": 143
+      },
+      {
+        "keyword": "mantaf",
+        "topic_count": 1,
+        "weighted_review_count": 143
+      },
+      {
+        "keyword": "bguss",
+        "topic_count": 1,
+        "weighted_review_count": 143
+      },
+      {
+        "keyword": "mntap",
+        "topic_count": 1,
+        "weighted_review_count": 143
+      },
+      {
+        "keyword": "joss",
+        "topic_count": 1,
+        "weighted_review_count": 143
+      },
+      {
+        "keyword": "josss",
+        "topic_count": 1,
+        "weighted_review_count": 143
+      },
+      {
+        "keyword": "kecee",
+        "topic_count": 1,
+        "weighted_review_count": 143
+      },
+      {
+        "keyword": "memudahkan",
+        "topic_count": 1,
+        "weighted_review_count": 130
+      },
+      {
+        "keyword": "gampang",
+        "topic_count": 1,
+        "weighted_review_count": 130
+      },
+      {
+        "keyword": "dipermudah",
+        "topic_count": 1,
+        "weighted_review_count": 130
+      },
+      {
+        "keyword": "easy",
+        "topic_count": 1,
+        "weighted_review_count": 130
+      },
+      {
+        "keyword": "mempermudah",
+        "topic_count": 1,
+        "weighted_review_count": 130
+      },
+      {
+        "keyword": "akses",
+        "topic_count": 1,
+        "weighted_review_count": 130
+      },
+      {
+        "keyword": "helpfull",
+        "topic_count": 1,
+        "weighted_review_count": 115
+      },
+      {
+        "keyword": "helpful",
+        "topic_count": 1,
+        "weighted_review_count": 115
+      },
+      {
+        "keyword": "very",
+        "topic_count": 1,
+        "weighted_review_count": 115
+      },
+      {
+        "keyword": "sok",
+        "topic_count": 1,
+        "weighted_review_count": 115
+      },
+      {
+        "keyword": "and",
+        "topic_count": 1,
+        "weighted_review_count": 115
+      },
+      {
+        "keyword": "service",
+        "topic_count": 1,
+        "weighted_review_count": 115
+      },
+      {
+        "keyword": "ai",
+        "topic_count": 1,
+        "weighted_review_count": 115
+      },
+      {
+        "keyword": "thank",
+        "topic_count": 1,
+        "weighted_review_count": 115
+      },
+      {
+        "keyword": "that",
+        "topic_count": 1,
+        "weighted_review_count": 115
+      },
+      {
+        "keyword": "doc",
+        "topic_count": 2,
+        "weighted_review_count": 105
+      },
+      {
+        "keyword": "halo",
+        "topic_count": 2,
+        "weighted_review_count": 105
+      },
+      {
+        "keyword": "untung",
+        "topic_count": 1,
+        "weighted_review_count": 82
+      },
+      {
+        "keyword": "haldoc",
+        "topic_count": 1,
+        "weighted_review_count": 82
+      },
+      {
+        "keyword": "padat",
+        "topic_count": 1,
+        "weighted_review_count": 82
+      },
+      {
+        "keyword": "singkat",
+        "topic_count": 1,
+        "weighted_review_count": 82
+      },
+      {
+        "keyword": "penjelasannya",
+        "topic_count": 1,
+        "weighted_review_count": 82
+      },
+      {
+        "keyword": "lengkap",
+        "topic_count": 1,
+        "weighted_review_count": 82
+      },
+      {
+        "keyword": "detil",
+        "topic_count": 1,
+        "weighted_review_count": 82
+      },
+      {
+        "keyword": "membatu",
+        "topic_count": 1,
+        "weighted_review_count": 75
+      },
+      {
+        "keyword": "membntu",
+        "topic_count": 1,
+        "weighted_review_count": 75
+      },
+      {
+        "keyword": "mmbntu",
+        "topic_count": 1,
+        "weighted_review_count": 75
+      },
+      {
+        "keyword": "mmbantu",
+        "topic_count": 1,
+        "weighted_review_count": 75
+      },
+      {
+        "keyword": "mambantu",
+        "topic_count": 1,
+        "weighted_review_count": 75
+      },
+      {
+        "keyword": "sngat",
+        "topic_count": 1,
+        "weighted_review_count": 75
+      },
+      {
+        "keyword": "membabtu",
+        "topic_count": 1,
+        "weighted_review_count": 75
+      },
+      {
+        "keyword": "menbantu",
+        "topic_count": 1,
+        "weighted_review_count": 75
+      },
+      {
+        "keyword": "responsif",
+        "topic_count": 1,
+        "weighted_review_count": 74
+      },
+      {
+        "keyword": "informatif",
+        "topic_count": 1,
+        "weighted_review_count": 74
+      },
+      {
+        "keyword": "baik²",
+        "topic_count": 1,
+        "weighted_review_count": 74
+      },
+      {
+        "keyword": "berkualitas",
+        "topic_count": 1,
+        "weighted_review_count": 74
+      },
+      {
+        "keyword": "spkk",
+        "topic_count": 1,
+        "weighted_review_count": 74
+      },
+      {
+        "keyword": "pkoknyaaa",
+        "topic_count": 1,
+        "weighted_review_count": 74
+      },
+      {
+        "keyword": "dyah",
+        "topic_count": 1,
+        "weighted_review_count": 74
+      },
+      {
+        "keyword": "terimakasiii",
+        "topic_count": 1,
+        "weighted_review_count": 68
+      },
+      {
+        "keyword": "mustika",
+        "topic_count": 1,
+        "weighted_review_count": 68
+      },
+      {
+        "keyword": "interviewnya",
+        "topic_count": 1,
+        "weighted_review_count": 68
+      },
+      {
+        "keyword": "dijangkau",
+        "topic_count": 1,
+        "weighted_review_count": 68
+      },
+      {
+        "keyword": "drmana",
+        "topic_count": 1,
+        "weighted_review_count": 68
+      },
+      {
+        "keyword": "promo",
+        "topic_count": 1,
+        "weighted_review_count": 40
+      },
+      {
+        "keyword": "mahal",
+        "topic_count": 1,
+        "weighted_review_count": 40
+      },
+      {
+        "keyword": "membanyaki",
+        "topic_count": 1,
+        "weighted_review_count": 40
+      },
+      {
+        "keyword": "ongkirnya",
+        "topic_count": 1,
+        "weighted_review_count": 40
+      },
+      {
+        "keyword": "gratis",
+        "topic_count": 1,
+        "weighted_review_count": 40
+      },
+      {
+        "keyword": "kode",
+        "topic_count": 1,
+        "weighted_review_count": 40
+      },
+      {
+        "keyword": "voucher",
+        "topic_count": 1,
+        "weighted_review_count": 40
+      },
+      {
+        "keyword": "beli",
+        "topic_count": 1,
+        "weighted_review_count": 40
+      },
+      {
+        "keyword": "alhamdulillah",
+        "topic_count": 1,
+        "weighted_review_count": 31
+      },
+      {
+        "keyword": "masya",
+        "topic_count": 1,
+        "weighted_review_count": 31
+      },
+      {
+        "keyword": "allah",
+        "topic_count": 1,
+        "weighted_review_count": 31
+      },
+      {
+        "keyword": "masyaallah",
+        "topic_count": 1,
+        "weighted_review_count": 31
+      },
+      {
+        "keyword": "tabarakallah",
+        "topic_count": 1,
+        "weighted_review_count": 31
+      },
+      {
+        "keyword": "smpet",
+        "topic_count": 1,
+        "weighted_review_count": 31
+      },
+      {
+        "keyword": "resep",
+        "topic_count": 1,
+        "weighted_review_count": 31
+      },
+      {
+        "keyword": "berbicara",
+        "topic_count": 1,
+        "weighted_review_count": 23
+      },
+      {
+        "keyword": "bicara",
+        "topic_count": 1,
+        "weighted_review_count": 23
+      },
+      {
+        "keyword": "biarkan",
+        "topic_count": 1,
+        "weighted_review_count": 23
+      }
+    ],
+    "negatif": [
+      {
+        "keyword": "buruk",
+        "topic_count": 2,
+        "weighted_review_count": 378
+      },
+      {
+        "keyword": "pembayaran",
+        "topic_count": 1,
+        "weighted_review_count": 371
+      },
+      {
+        "keyword": "konsultasi",
+        "topic_count": 7,
+        "weighted_review_count": 346
+      },
+      {
+        "keyword": "dokternya",
+        "topic_count": 3,
+        "weighted_review_count": 187
+      },
+      {
+        "keyword": "pengiriman",
+        "topic_count": 3,
+        "weighted_review_count": 185
+      },
+      {
+        "keyword": "bayar",
+        "topic_count": 4,
+        "weighted_review_count": 182
+      },
+      {
+        "keyword": "sibuk",
+        "topic_count": 3,
+        "weighted_review_count": 172
+      },
+      {
+        "keyword": "hp",
+        "topic_count": 2,
+        "weighted_review_count": 142
+      },
+      {
+        "keyword": "mahal",
+        "topic_count": 1,
+        "weighted_review_count": 137
+      },
+      {
+        "keyword": "saldo",
+        "topic_count": 3,
+        "weighted_review_count": 130
+      },
+      {
+        "keyword": "tersedia",
+        "topic_count": 1,
+        "weighted_review_count": 113
+      },
+      {
+        "keyword": "dana",
+        "topic_count": 3,
+        "weighted_review_count": 92
+      },
+      {
+        "keyword": "pesanan",
+        "topic_count": 2,
+        "weighted_review_count": 85
+      },
+      {
+        "keyword": "menit",
+        "topic_count": 2,
+        "weighted_review_count": 78
+      },
+      {
+        "keyword": "jam",
+        "topic_count": 2,
+        "weighted_review_count": 72
+      },
+      {
+        "keyword": "pesan",
+        "topic_count": 2,
+        "weighted_review_count": 72
+      },
+      {
+        "keyword": "terpotong",
+        "topic_count": 2,
+        "weighted_review_count": 70
+      },
+      {
+        "keyword": "driver",
+        "topic_count": 2,
+        "weighted_review_count": 65
+      },
+      {
+        "keyword": "sesi",
+        "topic_count": 1,
+        "weighted_review_count": 63
+      },
+      {
+        "keyword": "error",
+        "topic_count": 1,
+        "weighted_review_count": 61
+      },
+      {
+        "keyword": "gratis",
+        "topic_count": 1,
+        "weighted_review_count": 61
+      },
+      {
+        "keyword": "dikirim",
+        "topic_count": 1,
+        "weighted_review_count": 60
+      },
+      {
+        "keyword": "korlap",
+        "topic_count": 1,
+        "weighted_review_count": 58
+      },
+      {
+        "keyword": "transaksi",
+        "topic_count": 1,
+        "weighted_review_count": 58
+      },
+      {
+        "keyword": "gagal",
+        "topic_count": 1,
+        "weighted_review_count": 58
+      },
+      {
+        "keyword": "beli",
+        "topic_count": 1,
+        "weighted_review_count": 58
+      },
+      {
+        "keyword": "aneh",
+        "topic_count": 2,
+        "weighted_review_count": 53
+      },
+      {
+        "keyword": "apotek",
+        "topic_count": 1,
+        "weighted_review_count": 41
+      },
+      {
+        "keyword": "kirim",
+        "topic_count": 1,
+        "weighted_review_count": 41
+      },
+      {
+        "keyword": "kasihan",
+        "topic_count": 1,
+        "weighted_review_count": 41
+      },
+      {
+        "keyword": "buang",
+        "topic_count": 1,
+        "weighted_review_count": 35
+      },
+      {
+        "keyword": "balas",
+        "topic_count": 1,
+        "weighted_review_count": 35
+      },
+      {
+        "keyword": "uang",
+        "topic_count": 1,
+        "weighted_review_count": 35
+      },
+      {
+        "keyword": "apapun",
+        "topic_count": 1,
+        "weighted_review_count": 35
+      },
+      {
+        "keyword": "dibatalkan",
+        "topic_count": 1,
+        "weighted_review_count": 35
+      },
+      {
+        "keyword": "menunggu",
+        "topic_count": 2,
+        "weighted_review_count": 31
+      },
+      {
+        "keyword": "kurir",
+        "topic_count": 1,
+        "weighted_review_count": 25
+      },
+      {
+        "keyword": "alamat",
+        "topic_count": 1,
+        "weighted_review_count": 25
+      },
+      {
+        "keyword": "menghubungi",
+        "topic_count": 1,
+        "weighted_review_count": 25
+      },
+      {
+        "keyword": "gosend",
+        "topic_count": 1,
+        "weighted_review_count": 24
+      },
+      {
+        "keyword": "stok",
+        "topic_count": 1,
+        "weighted_review_count": 24
+      },
+      {
+        "keyword": "pegawai",
+        "topic_count": 1,
+        "weighted_review_count": 24
+      },
+      {
+        "keyword": "gara",
+        "topic_count": 1,
+        "weighted_review_count": 24
+      },
+      {
+        "keyword": "akun",
+        "topic_count": 1,
+        "weighted_review_count": 24
+      },
+      {
+        "keyword": "janji",
+        "topic_count": 1,
+        "weighted_review_count": 24
+      },
+      {
+        "keyword": "cuek",
+        "topic_count": 1,
+        "weighted_review_count": 24
+      },
+      {
+        "keyword": "pop",
+        "topic_count": 1,
+        "weighted_review_count": 24
+      },
+      {
+        "keyword": "realtime",
+        "topic_count": 1,
+        "weighted_review_count": 24
+      },
+      {
+        "keyword": "gangguan",
+        "topic_count": 1,
+        "weighted_review_count": 24
+      },
+      {
+        "keyword": "apotik",
+        "topic_count": 2,
+        "weighted_review_count": 24
+      },
+      {
+        "keyword": "ganti",
+        "topic_count": 1,
+        "weighted_review_count": 22
+      },
+      {
+        "keyword": "malam",
+        "topic_count": 1,
+        "weighted_review_count": 18
+      },
+      {
+        "keyword": "24jam",
+        "topic_count": 1,
+        "weighted_review_count": 18
+      },
+      {
+        "keyword": "kerjasama",
+        "topic_count": 1,
+        "weighted_review_count": 18
+      },
+      {
+        "keyword": "obatnya",
+        "topic_count": 1,
+        "weighted_review_count": 18
+      },
+      {
+        "keyword": "butuh",
+        "topic_count": 1,
+        "weighted_review_count": 18
+      },
+      {
+        "keyword": "like",
+        "topic_count": 1,
+        "weighted_review_count": 15
+      },
+      {
+        "keyword": "selesai",
+        "topic_count": 1,
+        "weighted_review_count": 15
+      },
+      {
+        "keyword": "dislike",
+        "topic_count": 1,
+        "weighted_review_count": 15
+      },
+      {
+        "keyword": "tanggal",
+        "topic_count": 1,
+        "weighted_review_count": 12
+      },
+      {
+        "keyword": "ojek",
+        "topic_count": 1,
+        "weighted_review_count": 12
+      },
+      {
+        "keyword": "juli",
+        "topic_count": 1,
+        "weighted_review_count": 12
+      },
+      {
+        "keyword": "11",
+        "topic_count": 1,
+        "weighted_review_count": 12
+      },
+      {
+        "keyword": "sampainya",
+        "topic_count": 1,
+        "weighted_review_count": 12
+      },
+      {
+        "keyword": "refund",
+        "topic_count": 1,
+        "weighted_review_count": 12
+      },
+      {
+        "keyword": "giliran",
+        "topic_count": 1,
+        "weighted_review_count": 12
+      },
+      {
+        "keyword": "bank",
+        "topic_count": 1,
+        "weighted_review_count": 12
+      },
+      {
+        "keyword": "kepotong",
+        "topic_count": 1,
+        "weighted_review_count": 12
+      },
+      {
+        "keyword": "review",
+        "topic_count": 1,
+        "weighted_review_count": 9
+      },
+      {
+        "keyword": "bagus",
+        "topic_count": 1,
+        "weighted_review_count": 9
+      },
+      {
+        "keyword": "evoucher",
+        "topic_count": 1,
+        "weighted_review_count": 8
+      },
+      {
+        "keyword": "service",
+        "topic_count": 1,
+        "weighted_review_count": 8
+      },
+      {
+        "keyword": "kendala",
+        "topic_count": 1,
+        "weighted_review_count": 8
+      },
+      {
+        "keyword": "dihari",
+        "topic_count": 1,
+        "weighted_review_count": 8
+      },
+      {
+        "keyword": "bad",
+        "topic_count": 1,
+        "weighted_review_count": 8
+      },
+      {
+        "keyword": "tertulis",
+        "topic_count": 1,
+        "weighted_review_count": 8
+      },
+      {
+        "keyword": "minggu",
+        "topic_count": 1,
+        "weighted_review_count": 8
+      },
+      {
+        "keyword": "iklan",
+        "topic_count": 1,
+        "weighted_review_count": 8
+      },
+      {
+        "keyword": "tipu",
+        "topic_count": 1,
+        "weighted_review_count": 8
+      },
+      {
+        "keyword": "mitra",
+        "topic_count": 1,
+        "weighted_review_count": 8
+      },
+      {
+        "keyword": "promo",
+        "topic_count": 1,
+        "weighted_review_count": 8
+      },
+      {
+        "keyword": "pajang",
+        "topic_count": 1,
+        "weighted_review_count": 8
+      },
+      {
+        "keyword": "bermitra",
+        "topic_count": 1,
+        "weighted_review_count": 8
+      },
+      {
+        "keyword": "palsu",
+        "topic_count": 1,
+        "weighted_review_count": 8
+      },
+      {
+        "keyword": "pengantarnya",
+        "topic_count": 1,
+        "weighted_review_count": 8
+      },
+      {
+        "keyword": "blokk",
+        "topic_count": 1,
+        "weighted_review_count": 8
+      },
+      {
+        "keyword": "disuru",
+        "topic_count": 1,
+        "weighted_review_count": 7
+      },
+      {
+        "keyword": "berkurang",
+        "topic_count": 1,
+        "weighted_review_count": 7
+      },
+      {
+        "keyword": "kunjung",
+        "topic_count": 1,
+        "weighted_review_count": 7
+      },
+      {
+        "keyword": "komplain",
+        "topic_count": 1,
+        "weighted_review_count": 7
+      },
+      {
+        "keyword": "erima",
+        "topic_count": 1,
+        "weighted_review_count": 7
+      },
+      {
+        "keyword": "dikirimi",
+        "topic_count": 1,
+        "weighted_review_count": 7
+      },
+      {
+        "keyword": "50",
+        "topic_count": 1,
+        "weighted_review_count": 7
+      },
+      {
+        "keyword": "ribu",
+        "topic_count": 1,
+        "weighted_review_count": 7
+      },
+      {
+        "keyword": "2x",
+        "topic_count": 1,
+        "weighted_review_count": 7
+      },
+      {
+        "keyword": "1ribu",
+        "topic_count": 1,
+        "weighted_review_count": 7
+      },
+      {
+        "keyword": "menahan",
+        "topic_count": 1,
+        "weighted_review_count": 7
+      },
+      {
+        "keyword": "mbayar",
+        "topic_count": 1,
+        "weighted_review_count": 7
+      },
+      {
+        "keyword": "kondulkok",
+        "topic_count": 1,
+        "weighted_review_count": 7
+      },
+      {
+        "keyword": "perak",
+        "topic_count": 1,
+        "weighted_review_count": 7
+      },
+      {
+        "keyword": "sapa",
+        "topic_count": 1,
+        "weighted_review_count": 7
+      },
+      {
+        "keyword": "bu",
+        "topic_count": 1,
+        "weighted_review_count": 7
+      },
+      {
+        "keyword": "telp",
+        "topic_count": 1,
+        "weighted_review_count": 7
+      },
+      {
+        "keyword": "online",
+        "topic_count": 1,
+        "weighted_review_count": 7
+      },
+      {
+        "keyword": "penolakan",
+        "topic_count": 1,
+        "weighted_review_count": 7
+      },
+      {
+        "keyword": "pura",
+        "topic_count": 1,
+        "weighted_review_count": 7
+      },
+      {
+        "keyword": "diputus",
+        "topic_count": 1,
+        "weighted_review_count": 7
+      },
+      {
+        "keyword": "keluhan",
+        "topic_count": 1,
+        "weighted_review_count": 7
+      },
+      {
+        "keyword": "ditolak",
+        "topic_count": 1,
+        "weighted_review_count": 7
+      },
+      {
+        "keyword": "sia2",
+        "topic_count": 1,
+        "weighted_review_count": 7
+      },
+      {
+        "keyword": "chat",
+        "topic_count": 1,
+        "weighted_review_count": 7
+      },
+      {
+        "keyword": "respon",
+        "topic_count": 1,
+        "weighted_review_count": 7
+      },
+      {
+        "keyword": "buang2",
+        "topic_count": 1,
+        "weighted_review_count": 7
+      },
+      {
+        "keyword": "slow",
+        "topic_count": 1,
+        "weighted_review_count": 7
+      },
+      {
+        "keyword": "habisss",
+        "topic_count": 1,
+        "weighted_review_count": 7
+      },
+      {
+        "keyword": "terbaca",
+        "topic_count": 1,
+        "weighted_review_count": 7
+      },
+      {
+        "keyword": "ortopendi",
+        "topic_count": 1,
+        "weighted_review_count": 7
+      },
+      {
+        "keyword": "antibiotik",
+        "topic_count": 1,
+        "weighted_review_count": 6
+      },
+      {
+        "keyword": "pasien",
+        "topic_count": 1,
+        "weighted_review_count": 6
+      },
+      {
+        "keyword": "lengkap",
+        "topic_count": 1,
+        "weighted_review_count": 6
+      },
+      {
+        "keyword": "item",
+        "topic_count": 1,
+        "weighted_review_count": 6
+      },
+      {
+        "keyword": "memesan",
+        "topic_count": 1,
+        "weighted_review_count": 6
+      },
+      {
+        "keyword": "toko",
+        "topic_count": 1,
+        "weighted_review_count": 6
+      },
+      {
+        "keyword": "kalender",
+        "topic_count": 1,
+        "weighted_review_count": 4
+      },
+      {
+        "keyword": "menstruasi",
+        "topic_count": 1,
+        "weighted_review_count": 4
+      },
+      {
+        "keyword": "login",
+        "topic_count": 1,
+        "weighted_review_count": 4
+      },
+      {
+        "keyword": "tes",
+        "topic_count": 1,
+        "weighted_review_count": 4
+      },
+      {
+        "keyword": "halo",
+        "topic_count": 1,
+        "weighted_review_count": 4
+      },
+      {
+        "keyword": "otp",
+        "topic_count": 1,
+        "weighted_review_count": 4
+      },
+      {
+        "keyword": "diperketat",
+        "topic_count": 1,
+        "weighted_review_count": 4
+      }
+    ],
+    "netral": [
+      {
+        "keyword": "konsultasi",
+        "topic_count": 2,
+        "weighted_review_count": 56
+      },
+      {
+        "keyword": "dokternya",
+        "topic_count": 2,
+        "weighted_review_count": 45
+      },
+      {
+        "keyword": "menit",
+        "topic_count": 1,
+        "weighted_review_count": 35
+      },
+      {
+        "keyword": "driver",
+        "topic_count": 2,
+        "weighted_review_count": 26
+      },
+      {
+        "keyword": "bagus",
+        "topic_count": 2,
+        "weighted_review_count": 24
+      },
+      {
+        "keyword": "chat",
+        "topic_count": 1,
+        "weighted_review_count": 21
+      },
+      {
+        "keyword": "bayar",
+        "topic_count": 1,
+        "weighted_review_count": 21
+      },
+      {
+        "keyword": "apotek",
+        "topic_count": 2,
+        "weighted_review_count": 20
+      },
+      {
+        "keyword": "hp",
+        "topic_count": 1,
+        "weighted_review_count": 19
+      },
+      {
+        "keyword": "kode",
+        "topic_count": 1,
+        "weighted_review_count": 19
+      },
+      {
+        "keyword": "masuk",
+        "topic_count": 1,
+        "weighted_review_count": 19
+      },
+      {
+        "keyword": "daftar",
+        "topic_count": 1,
+        "weighted_review_count": 19
+      },
+      {
+        "keyword": "error",
+        "topic_count": 1,
+        "weighted_review_count": 19
+      },
+      {
+        "keyword": "buka",
+        "topic_count": 1,
+        "weighted_review_count": 19
+      },
+      {
+        "keyword": "pengiriman",
+        "topic_count": 1,
+        "weighted_review_count": 16
+      },
+      {
+        "keyword": "kasihan",
+        "topic_count": 1,
+        "weighted_review_count": 16
+      },
+      {
+        "keyword": "apotik",
+        "topic_count": 1,
+        "weighted_review_count": 16
+      },
+      {
+        "keyword": "mahal",
+        "topic_count": 1,
+        "weighted_review_count": 16
+      },
+      {
+        "keyword": "jam",
+        "topic_count": 1,
+        "weighted_review_count": 16
+      },
+      {
+        "keyword": "lumayan",
+        "topic_count": 1,
+        "weighted_review_count": 16
+      },
+      {
+        "keyword": "ok",
+        "topic_count": 1,
+        "weighted_review_count": 16
+      },
+      {
+        "keyword": "63⁷7u",
+        "topic_count": 1,
+        "weighted_review_count": 16
+      },
+      {
+        "keyword": "bukanya",
+        "topic_count": 1,
+        "weighted_review_count": 16
+      },
+      {
+        "keyword": "pembaruan",
+        "topic_count": 1,
+        "weighted_review_count": 16
+      },
+      {
+        "keyword": "sulit",
+        "topic_count": 1,
+        "weighted_review_count": 16
+      },
+      {
+        "keyword": "mantap",
+        "topic_count": 1,
+        "weighted_review_count": 16
+      },
+      {
+        "keyword": "cocok",
+        "topic_count": 1,
+        "weighted_review_count": 16
+      },
+      {
+        "keyword": "pembayaran",
+        "topic_count": 1,
+        "weighted_review_count": 14
+      },
+      {
+        "keyword": "bank",
+        "topic_count": 1,
+        "weighted_review_count": 14
+      },
+      {
+        "keyword": "metode",
+        "topic_count": 1,
+        "weighted_review_count": 14
+      },
+      {
+        "keyword": "dana",
+        "topic_count": 1,
+        "weighted_review_count": 14
+      },
+      {
+        "keyword": "kga",
+        "topic_count": 1,
+        "weighted_review_count": 14
+      },
+      {
+        "keyword": "sediakan",
+        "topic_count": 1,
+        "weighted_review_count": 14
+      },
+      {
+        "keyword": "transfer",
+        "topic_count": 1,
+        "weighted_review_count": 14
+      },
+      {
+        "keyword": "account",
+        "topic_count": 1,
+        "weighted_review_count": 14
+      },
+      {
+        "keyword": "kalender",
+        "topic_count": 1,
+        "weighted_review_count": 11
+      },
+      {
+        "keyword": "pakai",
+        "topic_count": 1,
+        "weighted_review_count": 11
+      },
+      {
+        "keyword": "menstruasi",
+        "topic_count": 1,
+        "weighted_review_count": 11
+      },
+      {
+        "keyword": "pilihan",
+        "topic_count": 1,
+        "weighted_review_count": 11
+      },
+      {
+        "keyword": "pembayarannya",
+        "topic_count": 1,
+        "weighted_review_count": 11
+      },
+      {
+        "keyword": "kasih",
+        "topic_count": 1,
+        "weighted_review_count": 11
+      },
+      {
+        "keyword": "saldo",
+        "topic_count": 1,
+        "weighted_review_count": 10
+      },
+      {
+        "keyword": "update",
+        "topic_count": 1,
+        "weighted_review_count": 10
+      },
+      {
+        "keyword": "gagal",
+        "topic_count": 1,
+        "weighted_review_count": 10
+      },
+      {
+        "keyword": "transaksi",
+        "topic_count": 1,
+        "weighted_review_count": 10
+      },
+      {
+        "keyword": "muter2",
+        "topic_count": 1,
+        "weighted_review_count": 10
+      },
+      {
+        "keyword": "repot",
+        "topic_count": 1,
+        "weighted_review_count": 10
+      },
+      {
+        "keyword": "tbtb",
+        "topic_count": 1,
+        "weighted_review_count": 10
+      },
+      {
+        "keyword": "kali",
+        "topic_count": 1,
+        "weighted_review_count": 10
+      },
+      {
+        "keyword": "ramah",
+        "topic_count": 1,
+        "weighted_review_count": 10
+      },
+      {
+        "keyword": "pasien",
+        "topic_count": 1,
+        "weighted_review_count": 10
+      },
+      {
+        "keyword": "pembeli",
+        "topic_count": 1,
+        "weighted_review_count": 10
+      },
+      {
+        "keyword": "top",
+        "topic_count": 1,
+        "weighted_review_count": 10
+      },
+      {
+        "keyword": "doc",
+        "topic_count": 1,
+        "weighted_review_count": 10
+      },
+      {
+        "keyword": "kurir",
+        "topic_count": 1,
+        "weighted_review_count": 10
+      },
+      {
+        "keyword": "membalas",
+        "topic_count": 1,
+        "weighted_review_count": 10
+      },
+      {
+        "keyword": "halo",
+        "topic_count": 1,
+        "weighted_review_count": 10
+      },
+      {
+        "keyword": "alamat",
+        "topic_count": 1,
+        "weighted_review_count": 10
+      },
+      {
+        "keyword": "maps",
+        "topic_count": 1,
+        "weighted_review_count": 10
+      },
+      {
+        "keyword": "sesuai",
+        "topic_count": 1,
+        "weighted_review_count": 10
+      },
+      {
+        "keyword": "gps",
+        "topic_count": 1,
+        "weighted_review_count": 10
+      },
+      {
+        "keyword": "of",
+        "topic_count": 1,
+        "weighted_review_count": 10
+      },
+      {
+        "keyword": "mapsnya",
+        "topic_count": 1,
+        "weighted_review_count": 10
+      },
+      {
+        "keyword": "waste",
+        "topic_count": 1,
+        "weighted_review_count": 10
+      },
+      {
+        "keyword": "ongkir",
+        "topic_count": 1,
+        "weighted_review_count": 9
+      },
+      {
+        "keyword": "tolong",
+        "topic_count": 1,
+        "weighted_review_count": 9
+      },
+      {
+        "keyword": "perbaiki",
+        "topic_count": 1,
+        "weighted_review_count": 9
+      },
+      {
+        "keyword": "telp",
+        "topic_count": 1,
+        "weighted_review_count": 9
+      },
+      {
+        "keyword": "mohon",
+        "topic_count": 1,
+        "weighted_review_count": 9
+      },
+      {
+        "keyword": "lokasi",
+        "topic_count": 1,
+        "weighted_review_count": 9
+      },
+      {
+        "keyword": "akurat",
+        "topic_count": 1,
+        "weighted_review_count": 9
+      },
+      {
+        "keyword": "semoga",
+        "topic_count": 1,
+        "weighted_review_count": 9
+      },
+      {
+        "keyword": "mhn",
+        "topic_count": 1,
+        "weighted_review_count": 9
+      },
+      {
+        "keyword": "merauke",
+        "topic_count": 1,
+        "weighted_review_count": 9
+      },
+      {
+        "keyword": "remaja",
+        "topic_count": 1,
+        "weighted_review_count": 9
+      },
+      {
+        "keyword": "antibiotik",
+        "topic_count": 1,
+        "weighted_review_count": 9
+      },
+      {
+        "keyword": "bandung",
+        "topic_count": 1,
+        "weighted_review_count": 9
+      },
+      {
+        "keyword": "responnya",
+        "topic_count": 1,
+        "weighted_review_count": 8
+      },
+      {
+        "keyword": "terkait",
+        "topic_count": 1,
+        "weighted_review_count": 8
+      },
+      {
+        "keyword": "puas",
+        "topic_count": 1,
+        "weighted_review_count": 8
+      },
+      {
+        "keyword": "respon",
+        "topic_count": 1,
+        "weighted_review_count": 8
+      },
+      {
+        "keyword": "kuponnya",
+        "topic_count": 1,
+        "weighted_review_count": 8
+      },
+      {
+        "keyword": "dipakai",
+        "topic_count": 1,
+        "weighted_review_count": 8
+      },
+      {
+        "keyword": "saldony",
+        "topic_count": 1,
+        "weighted_review_count": 8
+      },
+      {
+        "keyword": "diskon",
+        "topic_count": 1,
+        "weighted_review_count": 8
+      },
+      {
+        "keyword": "harmonisasi",
+        "topic_count": 1,
+        "weighted_review_count": 8
+      },
+      {
+        "keyword": "payah",
+        "topic_count": 1,
+        "weighted_review_count": 8
+      },
+      {
+        "keyword": "kosong",
+        "topic_count": 1,
+        "weighted_review_count": 8
+      },
+      {
+        "keyword": "dipandang",
+        "topic_count": 1,
+        "weighted_review_count": 8
+      },
+      {
+        "keyword": "oobat",
+        "topic_count": 1,
+        "weighted_review_count": 8
+      },
+      {
+        "keyword": "foto",
+        "topic_count": 1,
+        "weighted_review_count": 7
+      },
+      {
+        "keyword": "selesai",
+        "topic_count": 1,
+        "weighted_review_count": 7
+      },
+      {
+        "keyword": "sesi",
+        "topic_count": 1,
+        "weighted_review_count": 7
+      },
+      {
+        "keyword": "file",
+        "topic_count": 1,
+        "weighted_review_count": 7
+      },
+      {
+        "keyword": "otomatis",
+        "topic_count": 1,
+        "weighted_review_count": 7
+      },
+      {
+        "keyword": "membantu",
+        "topic_count": 1,
+        "weighted_review_count": 6
+      },
+      {
+        "keyword": "terimakasih",
+        "topic_count": 1,
+        "weighted_review_count": 6
+      },
+      {
+        "keyword": "live",
+        "topic_count": 1,
+        "weighted_review_count": 6
+      },
+      {
+        "keyword": "dimana",
+        "topic_count": 1,
+        "weighted_review_count": 6
+      },
+      {
+        "keyword": "good",
+        "topic_count": 1,
+        "weighted_review_count": 6
+      },
+      {
+        "keyword": "saldonya",
+        "topic_count": 1,
+        "weighted_review_count": 6
+      },
+      {
+        "keyword": "membanyaki",
+        "topic_count": 1,
+        "weighted_review_count": 6
+      },
+      {
+        "keyword": "ngisi",
+        "topic_count": 1,
+        "weighted_review_count": 6
+      },
+      {
+        "keyword": "berguna",
+        "topic_count": 1,
+        "weighted_review_count": 5
+      },
+      {
+        "keyword": "sakit",
+        "topic_count": 1,
+        "weighted_review_count": 5
+      },
+      {
+        "keyword": "kecawa",
+        "topic_count": 1,
+        "weighted_review_count": 5
+      },
+      {
+        "keyword": "sanagt",
+        "topic_count": 1,
+        "weighted_review_count": 5
+      },
+      {
+        "keyword": "kita2",
+        "topic_count": 1,
+        "weighted_review_count": 5
+      },
+      {
+        "keyword": "dikit2",
+        "topic_count": 1,
+        "weighted_review_count": 5
+      },
+      {
+        "keyword": "kosan",
+        "topic_count": 1,
+        "weighted_review_count": 5
+      },
+      {
+        "keyword": "terbantu",
+        "topic_count": 1,
+        "weighted_review_count": 5
+      }
+    ]
+  },
+  "app_version_analysis": [
+    {
+      "version": "Unknown",
+      "review_count": 2479,
+      "avg_score": 4.28,
+      "neg_pct": 16.22
+    },
+    {
+      "version": "21.9",
+      "review_count": 297,
+      "avg_score": 4.55,
+      "neg_pct": 9.76
+    },
+    {
+      "version": "22.6",
+      "review_count": 208,
+      "avg_score": 4.71,
+      "neg_pct": 5.77
+    },
+    {
+      "version": "23.601",
+      "review_count": 206,
+      "avg_score": 4.68,
+      "neg_pct": 6.31
+    },
+    {
+      "version": "21.51",
+      "review_count": 204,
+      "avg_score": 4.61,
+      "neg_pct": 7.84
+    },
+    {
+      "version": "24.801",
+      "review_count": 196,
+      "avg_score": 4.65,
+      "neg_pct": 7.65
+    },
+    {
+      "version": "23.8",
+      "review_count": 187,
+      "avg_score": 4.58,
+      "neg_pct": 9.09
+    },
+    {
+      "version": "19.9",
+      "review_count": 167,
+      "avg_score": 4.63,
+      "neg_pct": 7.78
+    },
+    {
+      "version": "20.001",
+      "review_count": 167,
+      "avg_score": 4.53,
+      "neg_pct": 9.58
+    },
+    {
+      "version": "18.3",
+      "review_count": 165,
+      "avg_score": 4.42,
+      "neg_pct": 12.73
+    }
+  ],
+  "spike_detection": {
+    "threshold": 4.03,
+    "spikes": [
+      {
+        "date": "2024-04-19",
+        "neg_count": 6,
+        "avg_score": 1.0,
+        "top_negative_topics": [
+          "Kualitas konsultasi rendah dan ketersediaan obat tidak memadai",
+          "Ketidakjelasan status dokter sibuk setelah bayar",
+          "Dokter sibuk setelah pembayaran berhasil tanpa refund"
+        ]
+      },
+      {
+        "date": "2024-01-03",
+        "neg_count": 6,
+        "avg_score": 1.33,
+        "top_negative_topics": [
+          "Kualitas konsultasi rendah dan ketersediaan obat tidak memadai",
+          "Pengiriman obat sangat lambat dan sistem pelacakan bermasalah",
+          "Obat tidak dikirim dan dana tidak dikembalikan"
+        ]
+      },
+      {
+        "date": "2023-11-24",
+        "neg_count": 6,
+        "avg_score": 1.17,
+        "top_negative_topics": [
+          "Ketidakjelasan status dokter sibuk setelah bayar",
+          "Kegagalan transaksi pembayaran dan lambatnya respon layanan pelanggan",
+          "Durasi konsultasi terlalu singkat dan jawaban dokter tidak memuaskan"
+        ]
+      },
+      {
+        "date": "2023-08-22",
+        "neg_count": 5,
+        "avg_score": 1.2,
+        "top_negative_topics": [
+          "Saldo terpotong namun sesi konsultasi tidak dapat diakses",
+          "Sesi chat terputus otomatis dan dana tidak dikembalikan",
+          "Dokter tidak merespons dan pengembalian dana tidak diproses"
+        ]
+      },
+      {
+        "date": "2023-06-20",
+        "neg_count": 5,
+        "avg_score": 1.0,
+        "top_negative_topics": [
+          "Kendala login, OTP, dan fitur kalender menstruasi",
+          "Saldo terpotong namun sesi konsultasi tidak dapat diakses",
+          "Ketiadaan opsi pengiriman instan dan durasi pengiriman lama"
+        ]
+      }
+    ]
+  },
+  "monthly_sentiment_trend": [
+    {
+      "month": "2023-06",
+      "positif": 141,
+      "negatif": 35,
+      "netral": 3,
+      "total": 179,
+      "net_sentiment_ratio": 0.5922
+    },
+    {
+      "month": "2023-07",
+      "positif": 358,
+      "negatif": 55,
+      "netral": 11,
+      "total": 424,
+      "net_sentiment_ratio": 0.7146
+    },
+    {
+      "month": "2023-08",
+      "positif": 471,
+      "negatif": 69,
+      "netral": 9,
+      "total": 549,
+      "net_sentiment_ratio": 0.7322
+    },
+    {
+      "month": "2023-09",
+      "positif": 385,
+      "negatif": 44,
+      "netral": 7,
+      "total": 436,
+      "net_sentiment_ratio": 0.7821
+    },
+    {
+      "month": "2023-10",
+      "positif": 427,
+      "negatif": 57,
+      "netral": 6,
+      "total": 490,
+      "net_sentiment_ratio": 0.7551
+    },
+    {
+      "month": "2023-11",
+      "positif": 395,
+      "negatif": 48,
+      "netral": 2,
+      "total": 445,
+      "net_sentiment_ratio": 0.7798
+    },
+    {
+      "month": "2023-12",
+      "positif": 412,
+      "negatif": 47,
+      "netral": 9,
+      "total": 468,
+      "net_sentiment_ratio": 0.7799
+    },
+    {
+      "month": "2024-01",
+      "positif": 394,
+      "negatif": 46,
+      "netral": 5,
+      "total": 445,
+      "net_sentiment_ratio": 0.782
+    },
+    {
+      "month": "2024-02",
+      "positif": 474,
+      "negatif": 40,
+      "netral": 2,
+      "total": 516,
+      "net_sentiment_ratio": 0.8411
+    },
+    {
+      "month": "2024-03",
+      "positif": 449,
+      "negatif": 48,
+      "netral": 10,
+      "total": 507,
+      "net_sentiment_ratio": 0.7909
+    },
+    {
+      "month": "2024-04",
+      "positif": 416,
+      "negatif": 61,
+      "netral": 14,
+      "total": 491,
+      "net_sentiment_ratio": 0.723
+    },
+    {
+      "month": "2024-05",
+      "positif": 416,
+      "negatif": 34,
+      "netral": 10,
+      "total": 460,
+      "net_sentiment_ratio": 0.8304
+    },
+    {
+      "month": "2024-06",
+      "positif": 459,
+      "negatif": 42,
+      "netral": 5,
+      "total": 506,
+      "net_sentiment_ratio": 0.8241
+    },
+    {
+      "month": "2024-07",
+      "positif": 488,
+      "negatif": 52,
+      "netral": 10,
+      "total": 550,
+      "net_sentiment_ratio": 0.7927
+    },
+    {
+      "month": "2024-08",
+      "positif": 414,
+      "negatif": 38,
+      "netral": 7,
+      "total": 459,
+      "net_sentiment_ratio": 0.8192
+    },
+    {
+      "month": "2024-09",
+      "positif": 447,
+      "negatif": 40,
+      "netral": 4,
+      "total": 491,
+      "net_sentiment_ratio": 0.8289
+    },
+    {
+      "month": "2024-10",
+      "positif": 483,
+      "negatif": 39,
+      "netral": 7,
+      "total": 529,
+      "net_sentiment_ratio": 0.8393
+    },
+    {
+      "month": "2024-11",
+      "positif": 439,
+      "negatif": 36,
+      "netral": 5,
+      "total": 480,
+      "net_sentiment_ratio": 0.8396
+    },
+    {
+      "month": "2024-12",
+      "positif": 553,
+      "negatif": 51,
+      "netral": 9,
+      "total": 613,
+      "net_sentiment_ratio": 0.8189
+    },
+    {
+      "month": "2025-01",
+      "positif": 485,
+      "negatif": 49,
+      "netral": 12,
+      "total": 546,
+      "net_sentiment_ratio": 0.7985
+    },
+    {
+      "month": "2025-02",
+      "positif": 391,
+      "negatif": 41,
+      "netral": 10,
+      "total": 442,
+      "net_sentiment_ratio": 0.7919
+    },
+    {
+      "month": "2025-03",
+      "positif": 426,
+      "negatif": 48,
+      "netral": 5,
+      "total": 479,
+      "net_sentiment_ratio": 0.7891
+    },
+    {
+      "month": "2025-04",
+      "positif": 429,
+      "negatif": 50,
+      "netral": 9,
+      "total": 488,
+      "net_sentiment_ratio": 0.7766
+    },
+    {
+      "month": "2025-05",
+      "positif": 443,
+      "negatif": 34,
+      "netral": 7,
+      "total": 484,
+      "net_sentiment_ratio": 0.845
+    },
+    {
+      "month": "2025-06",
+      "positif": 411,
+      "negatif": 29,
+      "netral": 1,
+      "total": 441,
+      "net_sentiment_ratio": 0.8662
+    },
+    {
+      "month": "2025-07",
+      "positif": 384,
+      "negatif": 54,
+      "netral": 3,
+      "total": 441,
+      "net_sentiment_ratio": 0.7483
+    },
+    {
+      "month": "2025-08",
+      "positif": 363,
+      "negatif": 41,
+      "netral": 7,
+      "total": 411,
+      "net_sentiment_ratio": 0.7835
+    },
+    {
+      "month": "2025-09",
+      "positif": 307,
+      "negatif": 40,
+      "netral": 1,
+      "total": 348,
+      "net_sentiment_ratio": 0.7672
+    },
+    {
+      "month": "2025-10",
+      "positif": 277,
+      "negatif": 28,
+      "netral": 6,
+      "total": 311,
+      "net_sentiment_ratio": 0.8006
+    },
+    {
+      "month": "2025-11",
+      "positif": 254,
+      "negatif": 35,
+      "netral": 2,
+      "total": 291,
+      "net_sentiment_ratio": 0.7526
+    },
+    {
+      "month": "2025-12",
+      "positif": 290,
+      "negatif": 42,
+      "netral": 7,
+      "total": 339,
+      "net_sentiment_ratio": 0.7316
+    },
+    {
+      "month": "2026-01",
+      "positif": 263,
+      "negatif": 28,
+      "netral": 3,
+      "total": 294,
+      "net_sentiment_ratio": 0.7993
+    },
+    {
+      "month": "2026-02",
+      "positif": 249,
+      "negatif": 21,
+      "netral": 2,
+      "total": 272,
+      "net_sentiment_ratio": 0.8382
+    },
+    {
+      "month": "2026-03",
+      "positif": 288,
+      "negatif": 39,
+      "netral": 6,
+      "total": 333,
+      "net_sentiment_ratio": 0.7477
+    },
+    {
+      "month": "2026-04",
+      "positif": 243,
+      "negatif": 30,
+      "netral": 8,
+      "total": 281,
+      "net_sentiment_ratio": 0.758
+    },
+    {
+      "month": "2026-05",
+      "positif": 247,
+      "negatif": 26,
+      "netral": 2,
+      "total": 275,
+      "net_sentiment_ratio": 0.8036
+    },
+    {
+      "month": "2026-06",
+      "positif": 102,
+      "negatif": 11,
+      "netral": 2,
+      "total": 115,
+      "net_sentiment_ratio": 0.7913
+    }
+  ]
+}
