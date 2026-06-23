@@ -1,0 +1,2610 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Analisis Sentimen Ulasan — CaRI Sentimen ID</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: rgba(17, 24, 39, 0.7);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+            --text-muted: #6b7280;
+            --text-title: #ffffff;
+            --accent-color: #3b82f6;
+            --accent-green: #10b981;
+            --accent-red: #ef4444;
+            --accent-yellow: #f59e0b;
+            --sidebar-width: 280px;
+        }
+        
+        [data-theme="light"] {
+            --bg-color: #f3f4f6;
+            --card-bg: rgba(255, 255, 255, 0.85);
+            --card-border: rgba(0, 0, 0, 0.08);
+            --text-primary: #1f2937;
+            --text-secondary: #4b5563;
+            --text-muted: #9ca3af;
+            --text-title: #111827;
+            --accent-color: #2563eb;
+            --accent-green: #059669;
+            --accent-red: #dc2626;
+            --accent-yellow: #d97706;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            overflow-x: hidden;
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            width: var(--sidebar-width);
+            background: var(--card-bg);
+            border-right: 1px solid var(--card-border);
+            backdrop-filter: blur(16px);
+            padding: 2rem 1.5rem;
+            position: fixed;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            z-index: 100;
+        }
+
+        .brand {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .brand-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.025em;
+        }
+
+        .brand-subtitle {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            list-style: none;
+            flex-grow: 1;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            color: var(--text-secondary);
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            gap: 0.75rem;
+        }
+
+        .nav-item:hover, .nav-item.active {
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        .theme-toggle-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 1rem;
+            border-top: 1px solid var(--card-border);
+        }
+
+        .theme-label {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 44px;
+            height: 24px;
+        }
+
+        .switch input { 
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: var(--text-muted);
+            transition: .4s;
+            border-radius: 24px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: var(--accent-color);
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(20px);
+        }
+
+        /* Main Content Styling */
+        .main-content {
+            margin-left: var(--sidebar-width);
+            padding: 2.5rem;
+            flex-grow: 1;
+            max-width: 1400px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 2.5rem;
+            border-bottom: 1px solid var(--card-border);
+            padding-bottom: 1.5rem;
+        }
+
+        .header-meta h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--text-title);
+            letter-spacing: -0.03em;
+            margin-bottom: 0.5rem;
+        }
+
+        .header-meta p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .download-btn-group {
+            display: flex;
+            gap: 0.50rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: white;
+            cursor: pointer;
+            border: none;
+            background-color: #374151;
+        }
+
+        .btn-excel { background-color: #16a34a; }
+        .btn-ppt { background-color: #d97706; }
+        .btn-pdf { background-color: #dc2626; }
+
+        /* Stat Cards Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-left: 4px solid var(--accent-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            backdrop-filter: blur(16px);
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card.pos-card { border-left-color: var(--accent-green); }
+        .stat-card.neg-card { border-left-color: var(--accent-red); }
+        .stat-card.neu-card { border-left-color: var(--accent-yellow); }
+        .stat-card.cs-card  { border-left-color: var(--accent-color); }
+
+        .stat-title {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .stat-value {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--text-title);
+        }
+
+        .stat-value.positif { color: var(--accent-green); }
+        .stat-value.negatif { color: var(--accent-red); }
+        .stat-value.cs { color: var(--accent-color); }
+
+        .stat-desc {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        /* Tab Panels Content */
+        .tab-panel {
+            display: none;
+        }
+
+        .tab-panel.active {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        /* Grid Layout components */
+        .row-grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .row-grid-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2rem;
+        }
+
+        @media (max-width: 1024px) {
+            .row-grid-2, .row-grid-3 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Doughnut center text positioning */
+        .doughnut-center-text {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;
+            z-index: 10;
+        }
+        
+        .doughnut-center-text .center-num {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--text-title);
+            line-height: 1.1;
+        }
+        
+        .doughnut-center-text .center-lbl {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Progress bars styling */
+        .rating-progress-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            padding-top: 0.25rem;
+        }
+
+        .progress-bar-item {
+            display: flex;
+            align-items: center;
+            font-size: 0.85rem;
+            gap: 0.75rem;
+        }
+
+        .pb-label {
+            width: 75px;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .pb-wrapper {
+            flex-grow: 1;
+            height: 10px;
+            background: rgba(156, 163, 175, 0.1);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .pb-fill {
+            height: 100%;
+            border-radius: 6px;
+        }
+        
+        .pb-fill.fill-pos { background: linear-gradient(90deg, var(--accent-green) 0%, #34d399 100%); }
+        .pb-fill.fill-pos-light { background: linear-gradient(90deg, #60a5fa 0%, var(--accent-color) 100%); }
+        .pb-fill.fill-neu { background: linear-gradient(90deg, #fbbf24 0%, var(--accent-yellow) 100%); }
+        .pb-fill.fill-neg-light { background: linear-gradient(90deg, #fb923c 0%, #f97316 100%); }
+        .pb-fill.fill-neg { background: linear-gradient(90deg, #f87171 0%, var(--accent-red) 100%); }
+
+        .pb-percent {
+            width: 45px;
+            text-align: right;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+
+        /* Gradient card & Highlights cards */
+        .bg-gradient-card {
+            background: linear-gradient(135deg, rgba(31, 41, 55, 0.4) 0%, rgba(17, 24, 39, 0.7) 100%);
+        }
+
+        .overview-highlight-box {
+            padding: 1.25rem;
+            border-radius: 8px;
+            background: rgba(156, 163, 175, 0.03);
+            border-left: 4px solid transparent;
+        }
+
+        .overview-highlight-box.border-pos {
+            border-left-color: var(--accent-green);
+        }
+
+        .overview-highlight-box.border-neg {
+            border-left-color: var(--accent-red);
+        }
+
+        .overview-highlight-box h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-title);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .overview-highlight-box p {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.55;
+        }
+
+
+        .panel-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 1.75rem;
+            backdrop-filter: blur(16px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .panel-card-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-title);
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--card-border);
+            padding-bottom: 0.75rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Narrative insights rendered Markdown */
+        .prose h1, .prose h2, .prose h3 {
+            font-family: 'Outfit', sans-serif;
+            color: var(--text-title);
+            margin-top: 1.75rem;
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+        }
+        .prose h2 { font-size: 1.4rem; border-bottom: 1px solid var(--card-border); padding-bottom: 0.5rem; }
+        .prose p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+        .prose ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1.25rem;
+            list-style-type: disc;
+        }
+        .prose li {
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+        .prose hr {
+            margin: 1.5rem 0;
+            border: 0;
+            border-top: 1px solid var(--card-border);
+        }
+        .prose blockquote {
+            border-left: 4px solid var(--accent-color);
+            padding: 0.5rem 1rem;
+            background: rgba(59, 130, 246, 0.05);
+            color: var(--text-secondary);
+            font-style: italic;
+            margin: 1rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        /* Tables design */
+        .table-responsive {
+            overflow-x: auto;
+            margin-top: 0.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.9rem;
+        }
+
+        th {
+            background: rgba(156, 163, 175, 0.05);
+            font-weight: 600;
+            color: var(--text-title);
+            padding: 0.75rem 1rem;
+            border-bottom: 2px solid var(--card-border);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--card-border);
+            color: var(--text-secondary);
+            max-width: 320px;
+            word-wrap: break-word;
+        }
+
+        tr:hover td {
+            background: rgba(156, 163, 175, 0.02);
+        }
+
+        /* Badges */
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .badge-pos { background: rgba(16, 185, 129, 0.1); color: var(--accent-green); }
+        .badge-neg { background: rgba(239, 68, 68, 0.1); color: var(--accent-red); }
+        .badge-neu { background: rgba(245, 158, 11, 0.1); color: var(--accent-yellow); }
+
+        /* Chart Visualizations Grid */
+        .charts-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .chart-img-container {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .chart-img-container img {
+            width: 100%;
+            height: 250px;
+            object-fit: contain;
+            background: rgba(0, 0, 0, 0.15);
+            border-radius: 6px;
+            border: 1px solid var(--card-border);
+        }
+
+        .chart-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-title);
+        }
+
+        .chart-desc {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <div class="brand">
+            <span class="brand-title">CaRI Sentimen ID</span>
+            <span class="brand-subtitle">Review Intelligence</span>
+        </div>
+        
+        <nav class="nav-links">
+            <a class="nav-item active" onclick="switchTab('ringkasan', this)">📋 Ringkasan Umum</a>
+            <a class="nav-item" onclick="switchTab('keluhan', this)">⚠️ Keluhan & Topik</a>
+            <a class="nav-item" onclick="switchTab('kinerja-cs', this)">💬 Kinerja CS</a>
+            <a class="nav-item" onclick="switchTab('narasi-ai', this)">💡 Narasi Insight</a>
+            <a class="nav-item" onclick="switchTab('ulasan-low', this)">🔍 Ulasan Ambigu</a>
+            <a class="nav-item" onclick="switchTab('galeri', this)">📊 Galeri Visualisasi</a>
+        </nav>
+        
+        <div class="theme-toggle-box">
+            <span class="theme-label">Mode Terang</span>
+            <label class="switch">
+                <input type="checkbox" id="theme-switch" onchange="toggleTheme(this)">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+        <!-- HEADER -->
+        <header>
+            <div class="header-meta">
+                <h1>Halodoc: Dokter, Obat & Lab</h1>
+                <p>Periode Data: 2023-06-15 s/d 2026-06-15 | Dibuat otomatis oleh CaRI Sentimen ID</p>
+            </div>
+            <div class="download-btn-group">
+                <a class="btn btn-excel" href="report_halodoc_dokter_obat_dan_lab.xlsx" download>Excel Report</a>
+                <a class="btn btn-ppt" href="report_halodoc_dokter_obat_dan_lab.pptx" download>PPTX Deck</a>
+                <a class="btn btn-pdf" href="report_halodoc_dokter_obat_dan_lab.pdf" download>PDF Laporan</a>
+            </div>
+        </header>
+
+        <!-- STAT CARDS ROW -->
+        <div class="stats-grid">
+            <div class="stat-card cs-card">
+                <span class="stat-title">Total Ulasan Analisis</span>
+                <span class="stat-value">15,629</span>
+                <span class="stat-desc">Jumlah ulasan terklasifikasi</span>
+            </div>
+            <div class="stat-card pos-card">
+                <span class="stat-title">Tingkat Kepuasan</span>
+                <span class="stat-value positif">88.76%</span>
+                <span class="stat-desc">Kontribusi sentimen positif</span>
+            </div>
+            <div class="stat-card neg-card">
+                <span class="stat-title">Rasio Komplain</span>
+                <span class="stat-value negatif">9.78%</span>
+                <span class="stat-desc">Kontribusi sentimen negatif</span>
+            </div>
+            <div class="stat-card cs-card">
+                <span class="stat-title">Tingkat Keyakinan AI</span>
+                <span class="stat-value cs">97.34%</span>
+                <span class="stat-desc">Confidence score rata-rata</span>
+            </div>
+        </div>
+
+        <!-- ---------------- TAB: RINGKASAN ---------------- -->
+        <div id="ringkasan" class="tab-panel active">
+            <div class="row-grid-3">
+                <div class="panel-card" style="display: flex; flex-direction: column; align-items: center; justify-content: space-between; position: relative;">
+                    <h2 class="panel-card-title" style="width:100%;">Proporsi Sentimen</h2>
+                    <div style="height: 220px; width: 100%; display: flex; justify-content: center; align-items: center; position: relative; padding: 10px 0;">
+                        <canvas id="chartSentimentDoughnut"></canvas>
+                        <!-- Center text inside Doughnut -->
+                        <div class="doughnut-center-text">
+                            <span class="center-num">88.76%</span>
+                            <span class="center-lbl">Positif</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+                    <h2 class="panel-card-title">Distribusi Rating Bintang</h2>
+                    <div style="height: 220px; width: 100%; display: flex; align-items: flex-end;">
+                        <canvas id="chartRatingBar" style="width: 100%; height: 100%;"></canvas>
+                    </div>
+                </div>
+                <div class="panel-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+                    <h2 class="panel-card-title">Rasio Rating Pengguna</h2>
+                    <div class="rating-progress-container">
+                        
+                        
+                        
+                        
+                        
+                        
+                        <div class="progress-bar-item">
+                            <div class="pb-label">5 ★</div>
+                            <div class="pb-wrapper"><div class="pb-fill fill-pos" style="width: 83.65%"></div></div>
+                            <div class="pb-percent">83.65%</div>
+                        </div>
+                        <div class="progress-bar-item">
+                            <div class="pb-label">4 ★</div>
+                            <div class="pb-wrapper"><div class="pb-fill fill-pos-light" style="width: 5.11%"></div></div>
+                            <div class="pb-percent">5.11%</div>
+                        </div>
+                        <div class="progress-bar-item">
+                            <div class="pb-label">3 ★</div>
+                            <div class="pb-wrapper"><div class="pb-fill fill-neu" style="width: 1.46%"></div></div>
+                            <div class="pb-percent">1.46%</div>
+                        </div>
+                        <div class="progress-bar-item">
+                            <div class="pb-label">2 ★</div>
+                            <div class="pb-wrapper"><div class="pb-fill fill-neg-light" style="width: 1.46%"></div></div>
+                            <div class="pb-percent">1.46%</div>
+                        </div>
+                        <div class="progress-bar-item">
+                            <div class="pb-label">1 ★</div>
+                            <div class="pb-wrapper"><div class="pb-fill fill-neg" style="width: 8.32%"></div></div>
+                            <div class="pb-percent">8.32%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="panel-card bg-gradient-card">
+                <h2 class="panel-card-title">🔍 Fakta Utama & Interpretasi Analisis</h2>
+                <div class="row-grid-2" style="gap: 2rem;">
+                    <div class="overview-highlight-box border-pos">
+                        <h3>📈 Loyalitas Pengguna & Brand Advocacy</h3>
+                        <p>Dominasi rating bintang 5 yang mencapai <strong>83.65%</strong> (13,074 ulasan) memperlihatkan tingkat apresiasi yang sangat tinggi terhadap fungsionalitas inti aplikasi. Hal ini menunjukkan kepuasan pengguna yang kuat dan merupakan aset utama dalam menjaga loyalitas pengguna.</p>
+                    </div>
+                    <div class="overview-highlight-box border-neg">
+                        <h3>⚠️ Titik Kritis Keluhan & Potensi Churn</h3>
+                        
+                        
+                            
+                                
+                                
+                                
+                                <p>Tingkat komplain bintang 1 yang berada di angka <strong>8.32%</strong> (1,300 ulasan) merupakan <em>critical path</em> yang memerlukan tindakan segera. Isu utama terdeteksi pada kategori <strong>Layanan Konsultasi Medis</strong> (terkait: Kegagalan akses ruang chat setelah pembayaran berhasil). Masalah ini menjadi pemicu utama ulasan negatif dan berpotensi meningkatkan tingkat churn pengguna secara signifikan.</p>
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                        
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+
+        <!-- ---------------- TAB: KELUHAN ---------------- -->
+        <div id="keluhan" class="tab-panel">
+            <div class="panel-card">
+                <h2 class="panel-card-title">Detail Kategori Isu (Berdasarkan Sentimen & Dampak)</h2>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Sentimen</th>
+                                <th>Kategori Bisnis</th>
+                                <th>Grup Isu</th>
+                                <th>Jumlah Ulasan</th>
+                                <th>Rata-rata Rating</th>
+                                <th>Contoh Isu</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td><strong>Layanan Konsultasi Medis</strong></td>
+                                <td><code>CONSULTATION_ERROR</code></td>
+                                <td style="text-align: right;">552</td>
+                                <td style="text-align: right; font-weight: 600;">1.15 ★</td>
+                                <td>Kegagalan akses ruang chat setelah pembayaran berhasil</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td><strong>Layanan Konsultasi Medis</strong></td>
+                                <td><code>PAYMENT_ISSUE</code></td>
+                                <td style="text-align: right;">152</td>
+                                <td style="text-align: right; font-weight: 600;">1.12 ★</td>
+                                <td>Saldo terpotong namun sesi chat tidak tersedia</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td><strong>Layanan Pembelian Obat</strong></td>
+                                <td><code>DELIVERY_ISSUE</code></td>
+                                <td style="text-align: right;">148</td>
+                                <td style="text-align: right; font-weight: 600;">1.07 ★</td>
+                                <td>Keterlambatan pengiriman obat instan dan kendala pembatalan, Masalah sistem pembayaran dan kendala kurir pengiriman</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td><strong>Teknis Aplikasi</strong></td>
+                                <td><code>APP_PERFORMANCE</code></td>
+                                <td style="text-align: right;">117</td>
+                                <td style="text-align: right; font-weight: 600;">1.21 ★</td>
+                                <td>Bug aplikasi dan kendala akses fitur utama</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td><strong>Pengalaman Pengguna</strong></td>
+                                <td><code>GENERAL_FEEDBACK</code></td>
+                                <td style="text-align: right;">80</td>
+                                <td style="text-align: right; font-weight: 600;">1.15 ★</td>
+                                <td>Ketidakpuasan umum terhadap kualitas layanan aplikasi</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td><strong>Layanan Konsultasi Medis</strong></td>
+                                <td><code>DOCTOR_RESPONSE</code></td>
+                                <td style="text-align: right;">63</td>
+                                <td style="text-align: right; font-weight: 600;">1.17 ★</td>
+                                <td>Respon dokter lambat dan durasi konsultasi tidak efektif</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td><strong>Informasi Layanan</strong></td>
+                                <td><code>PRICING_CLARITY</code></td>
+                                <td style="text-align: right;">54</td>
+                                <td style="text-align: right; font-weight: 600;">1.06 ★</td>
+                                <td>Ketidakjelasan informasi biaya konsultasi dokter, Pengguna keberatan dengan biaya konsultasi dokter</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td><strong>Layanan Pembelian Obat</strong></td>
+                                <td><code>MEDICINE_AVAILABILITY</code></td>
+                                <td style="text-align: right;">54</td>
+                                <td style="text-align: right; font-weight: 600;">1.26 ★</td>
+                                <td>Ketersediaan obat terbatas di apotek mitra</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td><strong>Layanan Pelanggan</strong></td>
+                                <td><code>CUSTOMER_SERVICE</code></td>
+                                <td style="text-align: right;">43</td>
+                                <td style="text-align: right; font-weight: 600;">1.07 ★</td>
+                                <td>Layanan pelanggan tidak responsif dan sistem bot</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td><strong>Promosi dan Voucher</strong></td>
+                                <td><code>PROMO_ISSUE</code></td>
+                                <td style="text-align: right;">32</td>
+                                <td style="text-align: right; font-weight: 600;">1.06 ★</td>
+                                <td>Voucher promo tidak dapat digunakan saat transaksi, Kode voucher tidak dapat digunakan atau tidak valid</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td><strong>Registrasi dan Akun</strong></td>
+                                <td><code>REGISTRATION_ISSUE</code></td>
+                                <td style="text-align: right;">30</td>
+                                <td style="text-align: right; font-weight: 600;">1.37 ★</td>
+                                <td>Kode verifikasi tidak muncul saat pendaftaran akun</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td><strong>Sistem Pembayaran</strong></td>
+                                <td><code>PAYMENT_ISSUE</code></td>
+                                <td style="text-align: right;">30</td>
+                                <td style="text-align: right; font-weight: 600;">1.27 ★</td>
+                                <td>Opsi metode pembayaran yang terbatas</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td><strong>Stabilitas Aplikasi</strong></td>
+                                <td><code>PERFORMANCE_BUG</code></td>
+                                <td style="text-align: right;">30</td>
+                                <td style="text-align: right; font-weight: 600;">1.2 ★</td>
+                                <td>Aplikasi sering mengalami error saat transaksi, Aplikasi lambat dan error setelah pembaruan</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td><strong>Pembayaran dan Refund</strong></td>
+                                <td><code>REFUND_ISSUE</code></td>
+                                <td style="text-align: right;">24</td>
+                                <td style="text-align: right; font-weight: 600;">1.08 ★</td>
+                                <td>Kendala pengembalian dana transaksi gagal</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td><strong>Pembelian Obat</strong></td>
+                                <td><code>DELIVERY_COST</code></td>
+                                <td style="text-align: right;">24</td>
+                                <td style="text-align: right; font-weight: 600;">1.21 ★</td>
+                                <td>Biaya pengiriman obat dianggap terlalu mahal</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td><strong>Layanan Konsultasi Medis</strong></td>
+                                <td><code>CONSULTATION_QUALITY</code></td>
+                                <td style="text-align: right;">23</td>
+                                <td style="text-align: right; font-weight: 600;">1.13 ★</td>
+                                <td>Ketidakpuasan terhadap nilai layanan berbayar, Kualitas resep dan biaya konsultasi tidak memuaskan, Durasi sesi konsultasi tidak sesuai ketentuan</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td><strong>Layanan Pembelian Obat</strong></td>
+                                <td><code>ORDER_FAILURE</code></td>
+                                <td style="text-align: right;">19</td>
+                                <td style="text-align: right; font-weight: 600;">1.16 ★</td>
+                                <td>Kegagalan sistem dalam pemrosesan pesanan obat, Pesanan obat dibatalkan otomatis tanpa notifikasi</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td><strong>Pengiriman Obat</strong></td>
+                                <td><code>DELIVERY_DELAY</code></td>
+                                <td style="text-align: right;">18</td>
+                                <td style="text-align: right; font-weight: 600;">1.22 ★</td>
+                                <td>Pengiriman obat lambat dan tidak sesuai estimasi</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td><strong>Layanan Pelanggan</strong></td>
+                                <td><code>CS_SERVICE_ISSUE</code></td>
+                                <td style="text-align: right;">11</td>
+                                <td style="text-align: right; font-weight: 600;">1.09 ★</td>
+                                <td>Kualitas pelayanan customer service buruk</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td><strong>Layanan Pelanggan</strong></td>
+                                <td><code>CS_PERFORMANCE</code></td>
+                                <td style="text-align: right;">9</td>
+                                <td style="text-align: right; font-weight: 600;">1.33 ★</td>
+                                <td>Respon customer service lambat dan tidak solutif</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td><strong>Pengalaman Pengguna</strong></td>
+                                <td><code>UX_ISSUE</code></td>
+                                <td style="text-align: right;">8</td>
+                                <td style="text-align: right; font-weight: 600;">1.12 ★</td>
+                                <td>Sistem chat dan alur pemesanan tidak efisien</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td><strong>Stabilitas Aplikasi</strong></td>
+                                <td><code>APP_TECHNICAL_BUG</code></td>
+                                <td style="text-align: right;">5</td>
+                                <td style="text-align: right; font-weight: 600;">1.2 ★</td>
+                                <td>Kendala teknis login dan fungsi aplikasi</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td><strong>Lain-lain / Noise</strong></td>
+                                <td><code>OVERALL_SATISFACTION</code></td>
+                                <td style="text-align: right;">2</td>
+                                <td style="text-align: right; font-weight: 600;">1.0 ★</td>
+                                <td>Ulasan umum/noise</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neu">
+                                        netral
+                                    </span>
+                                </td>
+                                <td><strong>Layanan Konsultasi Dokter</strong></td>
+                                <td><code>CONSULTATION_SERVICE_QUALITY</code></td>
+                                <td style="text-align: right;">64</td>
+                                <td style="text-align: right; font-weight: 600;">3.0 ★</td>
+                                <td>Durasi konsultasi 30 menit tidak cukup karena dokter lambat merespon, Sesi konsultasi berakhir sebelum masalah selesai dibahas, Dokter kurang ramah dan respon sangat lambat</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neu">
+                                        netral
+                                    </span>
+                                </td>
+                                <td><strong>Masalah Teknis Aplikasi</strong></td>
+                                <td><code>APP_TECHNICAL_BUG</code></td>
+                                <td style="text-align: right;">40</td>
+                                <td style="text-align: right; font-weight: 600;">3.0 ★</td>
+                                <td>Aplikasi tidak bisa diakses, error loading, dan tombol tidak responsif</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neu">
+                                        netral
+                                    </span>
+                                </td>
+                                <td><strong>Layanan Pembelian Obat</strong></td>
+                                <td><code>PHARMACY_DELIVERY_ISSUE</code></td>
+                                <td style="text-align: right;">35</td>
+                                <td style="text-align: right; font-weight: 600;">3.0 ★</td>
+                                <td>Kendala pengiriman obat, informasi ED, dan pembatalan pesanan, Lokasi apotek jauh dan akurasi titik pengiriman bermasalah, Biaya pengiriman mahal dan permintaan metode bayar COD</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neu">
+                                        netral
+                                    </span>
+                                </td>
+                                <td><strong>Sistem Pembayaran dan Refund</strong></td>
+                                <td><code>PAYMENT_REFUND_ISSUE</code></td>
+                                <td style="text-align: right;">19</td>
+                                <td style="text-align: right; font-weight: 600;">3.0 ★</td>
+                                <td>Dana tidak kembali setelah konsultasi dibatalkan oleh dokter</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neu">
+                                        netral
+                                    </span>
+                                </td>
+                                <td><strong>Layanan Pengiriman dan Lokasi</strong></td>
+                                <td><code>LOCATION_ACCURACY_ISSUE</code></td>
+                                <td style="text-align: right;">18</td>
+                                <td style="text-align: right; font-weight: 600;">3.0 ★</td>
+                                <td>Permintaan peningkatan akurasi lokasi pengguna, Ketidakakuratan GPS dan kendala input alamat manual</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neu">
+                                        netral
+                                    </span>
+                                </td>
+                                <td><strong>Pengalaman Pengguna</strong></td>
+                                <td><code>POSITIVE_FEEDBACK</code></td>
+                                <td style="text-align: right;">18</td>
+                                <td style="text-align: right; font-weight: 600;">3.0 ★</td>
+                                <td>Ulasan positif umum mengenai kegunaan aplikasi</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neu">
+                                        netral
+                                    </span>
+                                </td>
+                                <td><strong>Sistem Pembayaran dan Refund</strong></td>
+                                <td><code>PAYMENT_METHOD_REQUEST</code></td>
+                                <td style="text-align: right;">11</td>
+                                <td style="text-align: right; font-weight: 600;">3.0 ★</td>
+                                <td>Kurangnya variasi metode pembayaran transfer bank</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neu">
+                                        netral
+                                    </span>
+                                </td>
+                                <td><strong>Layanan Pengiriman dan Logistik</strong></td>
+                                <td><code>DELIVERY_DELAY</code></td>
+                                <td style="text-align: right;">8</td>
+                                <td style="text-align: right; font-weight: 600;">3.0 ★</td>
+                                <td>Durasi pencarian driver dan pengiriman obat yang lama</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neu">
+                                        netral
+                                    </span>
+                                </td>
+                                <td><strong>Kepuasan Pengguna</strong></td>
+                                <td><code>POSITIVE_FEEDBACK</code></td>
+                                <td style="text-align: right;">7</td>
+                                <td style="text-align: right; font-weight: 600;">3.0 ★</td>
+                                <td>Ulasan positif mengenai kualitas layanan aplikasi</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neu">
+                                        netral
+                                    </span>
+                                </td>
+                                <td><strong>Promosi dan Pembayaran</strong></td>
+                                <td><code>PROMO_ISSUE</code></td>
+                                <td style="text-align: right;">6</td>
+                                <td style="text-align: right; font-weight: 600;">3.0 ★</td>
+                                <td>Kendala teknis penggunaan kupon dan diskon</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neu">
+                                        netral
+                                    </span>
+                                </td>
+                                <td><strong>Lain-lain / Noise</strong></td>
+                                <td><code>OVERALL_SATISFACTION</code></td>
+                                <td style="text-align: right;">2</td>
+                                <td style="text-align: right; font-weight: 600;">3.0 ★</td>
+                                <td>Ulasan umum/noise</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td><strong>Kepuasan Pengguna Umum</strong></td>
+                                <td><code>POSITIVE_FEEDBACK</code></td>
+                                <td style="text-align: right;">6,655</td>
+                                <td style="text-align: right; font-weight: 600;">4.95 ★</td>
+                                <td>Ulasan positif mengenai manfaat aplikasi secara umum, Ulasan positif singkat mengenai kualitas layanan, Ulasan kepuasan pengguna dengan nada antusias</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td><strong>Layanan Konsultasi Medis</strong></td>
+                                <td><code>CONSULTATION_SERVICE</code></td>
+                                <td style="text-align: right;">2,764</td>
+                                <td style="text-align: right; font-weight: 600;">4.95 ★</td>
+                                <td>Kemudahan akses konsultasi dokter secara daring, Apresiasi terhadap dokter dan kemudahan konsultasi, Efektivitas solusi medis yang cepat dan tepat</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td><strong>Layanan Konsultasi Medis</strong></td>
+                                <td><code>DOCTOR_PERFORMANCE</code></td>
+                                <td style="text-align: right;">1,279</td>
+                                <td style="text-align: right; font-weight: 600;">4.95 ★</td>
+                                <td>Kualitas interaksi dan keramahan dokter saat konsultasi</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td><strong>Layanan Operasional</strong></td>
+                                <td><code>OPERATIONAL_SPEED</code></td>
+                                <td style="text-align: right;">1,164</td>
+                                <td style="text-align: right; font-weight: 600;">4.95 ★</td>
+                                <td>Kecepatan respon layanan dan pengiriman obat, Kualitas pelayanan yang cepat dan ramah</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td><strong>Kepuasan Pengguna</strong></td>
+                                <td><code>POSITIVE_FEEDBACK</code></td>
+                                <td style="text-align: right;">778</td>
+                                <td style="text-align: right; font-weight: 600;">4.94 ★</td>
+                                <td>Apresiasi positif terhadap layanan aplikasi, Ulasan positif mengenai manfaat aplikasi, Harapan baik dan apresiasi pengguna</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td><strong>Pengalaman Pengguna</strong></td>
+                                <td><code>USER_EXPERIENCE</code></td>
+                                <td style="text-align: right;">243</td>
+                                <td style="text-align: right; font-weight: 600;">4.97 ★</td>
+                                <td>Kemudahan dan kecepatan penggunaan aplikasi</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td><strong>Logistik dan Pengiriman</strong></td>
+                                <td><code>DELIVERY_ISSUE</code></td>
+                                <td style="text-align: right;">217</td>
+                                <td style="text-align: right; font-weight: 600;">4.61 ★</td>
+                                <td>Kendala pengiriman obat dan sistem kurir</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td><strong>Kepuasan Pengguna</strong></td>
+                                <td><code>GENERAL_FEEDBACK</code></td>
+                                <td style="text-align: right;">177</td>
+                                <td style="text-align: right; font-weight: 600;">4.95 ★</td>
+                                <td>Ulasan positif mengenai kegunaan aplikasi secara umum, Ulasan positif singkat terkait kesembuhan pengguna, Ulasan positif singkat (slang)</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td><strong>Layanan Konsultasi Medis</strong></td>
+                                <td><code>DOCTOR_QUALITY</code></td>
+                                <td style="text-align: right;">170</td>
+                                <td style="text-align: right; font-weight: 600;">4.95 ★</td>
+                                <td>Kualitas penjelasan medis yang mudah dipahami, Keramahan dan kompetensi dokter saat konsultasi</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td><strong>Layanan Konsultasi Medis</strong></td>
+                                <td><code>CONSULTATION_LIMIT</code></td>
+                                <td style="text-align: right;">152</td>
+                                <td style="text-align: right; font-weight: 600;">4.73 ★</td>
+                                <td>Durasi sesi chat konsultasi dokter terbatas</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td><strong>Layanan Konsultasi Medis</strong></td>
+                                <td><code>DOCTOR_RESPONSE</code></td>
+                                <td style="text-align: right;">104</td>
+                                <td style="text-align: right; font-weight: 600;">4.97 ★</td>
+                                <td>Kecepatan respon dokter dalam chat</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td><strong>Lain-lain / Noise</strong></td>
+                                <td><code>OVERALL_SATISFACTION</code></td>
+                                <td style="text-align: right;">76</td>
+                                <td style="text-align: right; font-weight: 600;">4.92 ★</td>
+                                <td>Ulasan umum/noise</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td><strong>Integrasi Asuransi</strong></td>
+                                <td><code>INSURANCE_INTEGRATION</code></td>
+                                <td style="text-align: right;">60</td>
+                                <td style="text-align: right; font-weight: 600;">4.95 ★</td>
+                                <td>Kemudahan penggunaan asuransi kantor untuk pembayaran</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td><strong>Promosi dan Voucher</strong></td>
+                                <td><code>PROMOTION_FEEDBACK</code></td>
+                                <td style="text-align: right;">34</td>
+                                <td style="text-align: right; font-weight: 600;">4.85 ★</td>
+                                <td>Permintaan penambahan promo dan voucher diskon</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- ---------------- TAB: KINERJA CS ---------------- -->
+        <div id="kinerja-cs" class="tab-panel">
+            <div class="panel-card">
+                <h2 class="panel-card-title">Kinerja Penanganan Keluhan (Customer Service)</h2>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Kategori Bisnis</th>
+                                <th>Total Komplain</th>
+                                <th>Replied</th>
+                                <th>Reply Rate (%)</th>
+                                <th>Median Delay (Jam)</th>
+                                <th>WA Redirect (%)</th>
+                                <th>Template Balasan Admin</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td><strong>Layanan Konsultasi Medis</strong></td>
+                                <td style="text-align: right;">790</td>
+                                <td style="text-align: right;">790</td>
+                                <td style="text-align: right; color: var(--accent-green); font-weight: 600;">100.0%</td>
+                                <td style="text-align: right;">0.63 jam</td>
+                                <td style="text-align: right;">99.62%</td>
+                                <td style="max-width: 400px; font-size: 0.8rem; color: var(--text-muted); font-style: italic;">"Halo rosyada maqvira, mohon maaf atas keluhan yang dialami. Kami sedang berupaya memperbaikinya secepatnya.  Jika masih butuh bantuan atau ingin me..."</td>
+                            </tr>
+                            
+                            <tr>
+                                <td><strong>Layanan Pembelian Obat</strong></td>
+                                <td style="text-align: right;">221</td>
+                                <td style="text-align: right;">219</td>
+                                <td style="text-align: right; color: var(--accent-green); font-weight: 600;">99.1%</td>
+                                <td style="text-align: right;">0.76 jam</td>
+                                <td style="text-align: right;">100.0%</td>
+                                <td style="max-width: 400px; font-size: 0.8rem; color: var(--text-muted); font-style: italic;">"Halo aKang ojan, mohon maaf atas keluhan yang dialami. Kami akan membantumu. Mohon sampaikan detail kendalamu via DM ke @HalodocID (X) atau @Halodo..."</td>
+                            </tr>
+                            
+                            <tr>
+                                <td><strong>Teknis Aplikasi</strong></td>
+                                <td style="text-align: right;">117</td>
+                                <td style="text-align: right;">117</td>
+                                <td style="text-align: right; color: var(--accent-green); font-weight: 600;">100.0%</td>
+                                <td style="text-align: right;">0.63 jam</td>
+                                <td style="text-align: right;">100.0%</td>
+                                <td style="max-width: 400px; font-size: 0.8rem; color: var(--text-muted); font-style: italic;">"Halo Megawati Natalia Pane, mohon maaf atas keluhan yang dialami. Kami akan membantumu. Mohon sampaikan detail kendalamu via DM ke @HalodocID (X) a..."</td>
+                            </tr>
+                            
+                            <tr>
+                                <td><strong>Pengalaman Pengguna</strong></td>
+                                <td style="text-align: right;">88</td>
+                                <td style="text-align: right;">88</td>
+                                <td style="text-align: right; color: var(--accent-green); font-weight: 600;">100.0%</td>
+                                <td style="text-align: right;">0.36 jam</td>
+                                <td style="text-align: right;">100.0%</td>
+                                <td style="max-width: 400px; font-size: 0.8rem; color: var(--text-muted); font-style: italic;">"Halo Toni Iskandar, mohon maaf atas keluhan yang dialami. Kami akan membantumu.  Mohon sampaikan detail kendalamu via DM ke @HalodocID (X) atau @Ha..."</td>
+                            </tr>
+                            
+                            <tr>
+                                <td><strong>Layanan Pelanggan</strong></td>
+                                <td style="text-align: right;">63</td>
+                                <td style="text-align: right;">62</td>
+                                <td style="text-align: right; color: var(--accent-green); font-weight: 600;">98.41%</td>
+                                <td style="text-align: right;">0.91 jam</td>
+                                <td style="text-align: right;">98.39%</td>
+                                <td style="max-width: 400px; font-size: 0.8rem; color: var(--text-muted); font-style: italic;">"Halo D rendoz, mohon maaf atas keluhan yang dialami. Kami sedang berupaya memperbaikinya secepatnya. Jika masih butuh bantuan atau ingin menindakla..."</td>
+                            </tr>
+                            
+                            <tr>
+                                <td><strong>Informasi Layanan</strong></td>
+                                <td style="text-align: right;">54</td>
+                                <td style="text-align: right;">54</td>
+                                <td style="text-align: right; color: var(--accent-green); font-weight: 600;">100.0%</td>
+                                <td style="text-align: right;">0.44 jam</td>
+                                <td style="text-align: right;">100.0%</td>
+                                <td style="max-width: 400px; font-size: 0.8rem; color: var(--text-muted); font-style: italic;">"Halo Elvan Mayas, mohon maaf atas keluhan yang dialami. Kami sedang berupaya memperbaikinya secepatnya. Jika masih butuh bantuan atau ingin meninda..."</td>
+                            </tr>
+                            
+                            <tr>
+                                <td><strong>Stabilitas Aplikasi</strong></td>
+                                <td style="text-align: right;">35</td>
+                                <td style="text-align: right;">35</td>
+                                <td style="text-align: right; color: var(--accent-green); font-weight: 600;">100.0%</td>
+                                <td style="text-align: right;">0.43 jam</td>
+                                <td style="text-align: right;">100.0%</td>
+                                <td style="max-width: 400px; font-size: 0.8rem; color: var(--text-muted); font-style: italic;">"Halo Riska Yuliana, mohon maaf atas keluhan yang dialami. Kami sedang berupaya memperbaikinya secepatnya. Jika masih butuh bantuan atau ingin menin..."</td>
+                            </tr>
+                            
+                            <tr>
+                                <td><strong>Promosi dan Voucher</strong></td>
+                                <td style="text-align: right;">32</td>
+                                <td style="text-align: right;">32</td>
+                                <td style="text-align: right; color: var(--accent-green); font-weight: 600;">100.0%</td>
+                                <td style="text-align: right;">0.21 jam</td>
+                                <td style="text-align: right;">100.0%</td>
+                                <td style="max-width: 400px; font-size: 0.8rem; color: var(--text-muted); font-style: italic;">"Halo Putraa Bangun, mohon maaf atas keluhan yang dialami. Kami sedang berupaya memperbaikinya secepatnya. Jika masih butuh bantuan atau ingin menin..."</td>
+                            </tr>
+                            
+                            <tr>
+                                <td><strong>Sistem Pembayaran</strong></td>
+                                <td style="text-align: right;">30</td>
+                                <td style="text-align: right;">30</td>
+                                <td style="text-align: right; color: var(--accent-green); font-weight: 600;">100.0%</td>
+                                <td style="text-align: right;">0.4 jam</td>
+                                <td style="text-align: right;">96.67%</td>
+                                <td style="max-width: 400px; font-size: 0.8rem; color: var(--text-muted); font-style: italic;">"Halo Zul Fikar, mohon maaf atas keluhan yang dialami. Kami akan membantumu. Mohon sampaikan detail kendalamu via DM ke @HalodocID (X) atau @Halodoc..."</td>
+                            </tr>
+                            
+                            <tr>
+                                <td><strong>Registrasi dan Akun</strong></td>
+                                <td style="text-align: right;">30</td>
+                                <td style="text-align: right;">30</td>
+                                <td style="text-align: right; color: var(--accent-green); font-weight: 600;">100.0%</td>
+                                <td style="text-align: right;">0.77 jam</td>
+                                <td style="text-align: right;">100.0%</td>
+                                <td style="max-width: 400px; font-size: 0.8rem; color: var(--text-muted); font-style: italic;">"Halo Zenna Wood, mohon maaf atas keluhan yang dialami.  Sebagai solusi awal, coba update aplikasi Halodoc kamu ke versi terbaru atau hapus cache. J..."</td>
+                            </tr>
+                            
+                            <tr>
+                                <td><strong>Pembelian Obat</strong></td>
+                                <td style="text-align: right;">24</td>
+                                <td style="text-align: right;">24</td>
+                                <td style="text-align: right; color: var(--accent-green); font-weight: 600;">100.0%</td>
+                                <td style="text-align: right;">0.76 jam</td>
+                                <td style="text-align: right;">100.0%</td>
+                                <td style="max-width: 400px; font-size: 0.8rem; color: var(--text-muted); font-style: italic;">"Halo Issas Antayirp, mohon maaf atas keluhan yang dialami. Kami sedang berupaya memperbaikinya secepatnya. Jika masih butuh bantuan atau ingin meni..."</td>
+                            </tr>
+                            
+                            <tr>
+                                <td><strong>Pembayaran dan Refund</strong></td>
+                                <td style="text-align: right;">24</td>
+                                <td style="text-align: right;">24</td>
+                                <td style="text-align: right; color: var(--accent-green); font-weight: 600;">100.0%</td>
+                                <td style="text-align: right;">0.38 jam</td>
+                                <td style="text-align: right;">100.0%</td>
+                                <td style="max-width: 400px; font-size: 0.8rem; color: var(--text-muted); font-style: italic;">"Halo Yesinta Farlin, mohon maaf atas keluhan yang dialami. Kami sedang berupaya memperbaikinya secepatnya.  Jika masih butuh bantuan atau ingin men..."</td>
+                            </tr>
+                            
+                            <tr>
+                                <td><strong>Pengiriman Obat</strong></td>
+                                <td style="text-align: right;">18</td>
+                                <td style="text-align: right;">18</td>
+                                <td style="text-align: right; color: var(--accent-green); font-weight: 600;">100.0%</td>
+                                <td style="text-align: right;">0.82 jam</td>
+                                <td style="text-align: right;">100.0%</td>
+                                <td style="max-width: 400px; font-size: 0.8rem; color: var(--text-muted); font-style: italic;">"Halo Boy, mohon maaf atas keluhan yang dialami. Kami sedang berupaya memperbaikinya secepatnya.  Jika masih butuh bantuan atau ingin menindaklanjut..."</td>
+                            </tr>
+                            
+                            <tr>
+                                <td><strong>Lain-lain / Noise</strong></td>
+                                <td style="text-align: right;">2</td>
+                                <td style="text-align: right;">2</td>
+                                <td style="text-align: right; color: var(--accent-green); font-weight: 600;">100.0%</td>
+                                <td style="text-align: right;">0.94 jam</td>
+                                <td style="text-align: right;">100.0%</td>
+                                <td style="max-width: 400px; font-size: 0.8rem; color: var(--text-muted); font-style: italic;">"Hai rio jenero! Mohon maaf atas ketidaknyamanan yang terjadi. Saat ini sudah terdapat penyesuaian biaya dan harga pada aplikasi dan kami harap untu..."</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- ---------------- TAB: NARASI INSIGHT ---------------- -->
+        <div id="narasi-ai" class="tab-panel">
+            <div class="panel-card">
+                <h2 class="panel-card-title">Laporan Analisis Insight (Hasil LLM Gemini)</h2>
+                <div class="prose">
+                    <h1>Laporan Insight Analisis Ulasan — Halodoc: Dokter, Obat &amp; Lab</h1>
+<blockquote>
+<p>Dibuat otomatis pada 2026-06-23 09:06:30 menggunakan gemini-3.1-flash-lite
+Sumber data: output/json/eda_summary.json</p>
+</blockquote>
+<hr />
+<p>Berikut adalah laporan analisis data sentimen untuk aplikasi "Halodoc: Dokter, Obat &amp; Lab" berdasarkan data periode 15 Juni 2023 hingga 15 Juni 2026.</p>
+<hr />
+<h2>1. Ringkasan Umum</h2>
+<p>Aplikasi Halodoc memiliki basis pengguna yang sangat loyal dengan total <strong>15.629 ulasan</strong>. Distribusi sentimen menunjukkan dominasi <strong>sentimen positif sebesar 88,76%</strong> (13.873 ulasan), diikuti sentimen negatif (9,78%) dan netral (1,46%).
+*   <strong>Polarisasi Rating:</strong> Terdapat polarisasi yang sangat tajam di mana <strong>83,6%</strong> dari total ulasan memberikan rating bintang 5 (13.074 ulasan). Hal ini menunjukkan <em>brand advocacy</em> yang sangat kuat.
+*   <strong>Kepercayaan Data:</strong> Model klasifikasi sentimen memiliki tingkat keyakinan (<em>confidence rate</em>) yang sangat tinggi, mencapai <strong>97,34%</strong>, sehingga data ini sangat valid untuk dijadikan dasar pengambilan keputusan.</p>
+<h2>2. Analisis Sentimen Negatif &amp; Korelasi Versi</h2>
+<p>Masalah utama yang memicu frustrasi pengguna adalah kegagalan sistem transaksi dan aksesibilitas.
+*   <strong>Pain Point Utama:</strong> Kegagalan akses ruang chat setelah pembayaran (552 ulasan) dan saldo terpotong namun sesi chat tidak tersedia (152 ulasan) menjadi kategori "Layanan Konsultasi Medis" yang paling krusial. Kata kunci seperti <strong>"konsultasi"</strong>, <strong>"ribet"</strong>, dan <strong>"saldo"</strong> mendominasi keluhan.
+*   <strong>Korelasi Versi:</strong> Ulasan dengan versi <strong>"Unknown"</strong> menyumbang persentase negatif tertinggi sebesar <strong>16,22%</strong> dengan rata-rata rating rendah (4,28). Sementara itu, versi <strong>21.9</strong> yang memiliki 297 ulasan mencatat tingkat negatif <strong>9,76%</strong>. Ini mengindikasikan perlunya pembenahan pada <em>tracking</em> versi aplikasi agar kendala teknis lebih mudah teridentifikasi.</p>
+<h2>3. Analisis Temporal &amp; Lonjakan (Spike Detection)</h2>
+<p>Tren bulanan menunjukkan stabilitas dengan rasio sentimen bersih rata-rata di atas 0,75. Namun, data <em>spike</em> menunjukkan adanya titik kritis:
+*   <strong>2024-04-19:</strong> Terjadi lonjakan keluhan (6 ulasan negatif) dengan rata-rata rating sangat rendah (1,0) yang dipicu oleh kegagalan akses chat dan keterlambatan pengiriman obat.
+*   <strong>2023-06-20:</strong> Lonjakan keluhan (5 ulasan negatif, rating 1,0) akibat bug teknis aplikasi.
+Pola ini menunjukkan bahwa lonjakan negatif sangat berkorelasi dengan <strong>kegagalan fungsionalitas inti</strong> (transaksi/akses chat), bukan isu minor.</p>
+<h2>4. Analisis Sentimen Positif</h2>
+<p>Pengguna sangat mengapresiasi kemudahan akses kesehatan.
+*   <strong>Topik Utama:</strong> "Membantu Sangat Sekali" (2.775 ulasan) dan "Good Ok Bagus" (2.228 ulasan) menjadi bukti kepuasan fungsional aplikasi. Kata kunci <strong>"bagus"</strong> dan <strong>"membantu"</strong> muncul secara konsisten.
+*   <strong>Resonansi Tinggi:</strong> Topik "Halodoc Dokter Kasih" mencatat <strong>992 total_thumbs_up</strong> dari 902 ulasan, memberikan rasio <em>likes</em> per ulasan sebesar <strong>1,1x</strong>, yang menunjukkan bahwa narasi kemudahan konsultasi dengan dokter sangat disukai oleh komunitas.</p>
+<h2>5. Kinerja Customer Service</h2>
+<p>Performa CS sangat impresif dengan <em>average reply rate</em> mencapai <strong>99,8%</strong>.
+*   <strong>Responsivitas:</strong> Kategori "Pengalaman Pengguna" memiliki respons tercepat dengan median delay hanya <strong>0,36 jam</strong>. Sebaliknya, kategori "Lain-lain / Noise" menjadi yang paling lambat (0,94 jam).
+*   <strong>Redireksi WA:</strong> Hampir seluruh keluhan (99,67%) diarahkan ke WhatsApp, yang menunjukkan bahwa CS lebih memilih penyelesaian masalah secara personal dan real-time daripada melalui sistem <em>in-app chat</em> yang mungkin sedang bermasalah.</p>
+<h2>6. Rekomendasi Strategis</h2>
+<ol>
+<li><strong>Perbaikan Backend Transaksi:</strong> Prioritaskan perbaikan <em>callback system</em> antara <em>payment gateway</em> dan ruang chat. Keluhan "saldo terpotong tapi chat tidak ada" adalah <em>critical point</em> yang harus dihilangkan untuk menjaga kepercayaan pengguna.</li>
+<li><strong>Audit Versi Aplikasi:</strong> Segera identifikasi 2.479 ulasan dengan versi "Unknown". Lakukan <em>mandatory update</em> atau pengetatan deteksi versi agar data <em>crash</em> lebih akurat.</li>
+<li><strong>Mekanisme Refund Otomatis:</strong> Mengingat tingginya keluhan terkait pembayaran, buatlah sistem <em>self-service refund</em> di aplikasi untuk sesi chat yang gagal, guna mengurangi beban tim CS.</li>
+<li><strong>Optimasi SLA Respons:</strong> Fokuskan penambahan SDM/Automasi untuk kategori "Layanan Pelanggan" yang memiliki <em>reply rate</em> terendah (98,41%).</li>
+<li><strong>Stabilisasi Pengiriman Obat:</strong> Untuk masalah pengiriman obat, tingkatkan integrasi dengan API kurir pihak ketiga untuk memberikan <em>tracking</em> yang lebih transparan kepada pengguna, guna menekan keluhan terkait "keterlambatan pengiriman".</li>
+</ol>
+                </div>
+            </div>
+        </div>
+
+        <!-- ---------------- TAB: ULASAN LOW CONFIDENCE ---------------- -->
+        <div id="ulasan-low" class="tab-panel">
+            <div class="panel-card">
+                <h2 class="panel-card-title">Top 50 Ulasan dengan Keyakinan Klasifikasi Rendah (Ambigu/Noise)</h2>
+                <div class="prose" style="margin-bottom: 1rem;">
+                    <p>Ulasan di bawah tergolong ambigu bagi model (misal ulasan berisi slang, simbol, typo berat, atau kalimat kontradiktif) sehingga tingkat probabilitas topik di bawah 0.5. Ulasan ini layak di-review manual oleh tim QA.</p>
+                </div>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Sentimen</th>
+                                <th>Isi Ulasan Pengguna</th>
+                                <th>Topik Terprediksi</th>
+                                <th>Kategori Bisnis</th>
+                                <th>Probabilitas Topik</th>
+                                <th>Topik Alternatif 1</th>
+                                <th>Probabilitas Alt 1</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">mantappppp</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Mantap Banget Keren</code></td>
+                                <td style="text-align: right;">0.8208</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">Bintang 5 aja dulu,hahahaha</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Promo Membanyaki Kode</code></td>
+                                <td style="text-align: right;">0.643</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">Tidaknjelas dan tdk tersusun rapi</td>
+                                <td><code>Tidaknjelas Bertarif Rapi</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Buang2 Duit Responnya</code></td>
+                                <td style="text-align: right;">0.54</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">Sekarang kok bertarif ya</td>
+                                <td><code>Tidaknjelas Bertarif Rapi</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Gratis Kira Doang</code></td>
+                                <td style="text-align: right;">0.7124</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">gak ngecewain</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Good Ok Bagus</code></td>
+                                <td style="text-align: right;">0.6661</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">chatt berlangsung dengan baik</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Cepat Respon Pengiriman</code></td>
+                                <td style="text-align: right;">0.6246</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">Gooooodddd</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Mantap Banget Keren</code></td>
+                                <td style="text-align: right;">0.6397</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">Respinsif dan jelaa</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Responsif Dokternya Karlina</code></td>
+                                <td style="text-align: right;">0.6351</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">🙏</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Good Ok Bagus</code></td>
+                                <td style="text-align: right;">0.8758</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">Loveee</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Good Ok Bagus</code></td>
+                                <td style="text-align: right;">0.7641</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">mantappppp</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Mantap Banget Keren</code></td>
+                                <td style="text-align: right;">0.8208</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">Memberi tahu yg nelpon biasa nipu</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Solusi Berobat Tepat</code></td>
+                                <td style="text-align: right;">0.5797</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">perfect</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Good Ok Bagus</code></td>
+                                <td style="text-align: right;">0.9025</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">pelayanana baik</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Pelayanan Pelayanannya Ramah</code></td>
+                                <td style="text-align: right;">0.8674</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">sippp</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Mantap Banget Keren</code></td>
+                                <td style="text-align: right;">0.805</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">bagud</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Good Ok Bagus</code></td>
+                                <td style="text-align: right;">0.762</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">gooddd</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Good Ok Bagus</code></td>
+                                <td style="text-align: right;">0.79</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">Baik baik dokter nya</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Responsif Dokternya Karlina</code></td>
+                                <td style="text-align: right;">0.7525</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">ntaps</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Good Ok Bagus</code></td>
+                                <td style="text-align: right;">0.7478</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">Cool</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Good Ok Bagus</code></td>
+                                <td style="text-align: right;">0.8948</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">cool</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Good Ok Bagus</code></td>
+                                <td style="text-align: right;">0.8948</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">gooodddddd</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Helpfull Helpful Sok</code></td>
+                                <td style="text-align: right;">0.6418</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">Baru tau kalo halodoc aplikasinya sebagus ini</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Halodoc Kasih Terima</code></td>
+                                <td style="text-align: right;">0.7163</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">Mantappppp</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Mantap Banget Keren</code></td>
+                                <td style="text-align: right;">0.8208</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">baik sekli dokter nya</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Dokternya Ramah Dokter</code></td>
+                                <td style="text-align: right;">0.7374</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">Sippp</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Mantap Banget Keren</code></td>
+                                <td style="text-align: right;">0.805</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">𝑟𝑒𝑠𝑝𝑜𝑛 𝑑𝑟 𝑑𝑜𝑘 𝑠𝑝𝑒𝑐𝑖𝑎𝑙𝑖𝑠 𝑠𝑎𝑛𝑔𝑎𝑡 𝑟𝑎𝑚𝑎ℎ 𝑑𝑎𝑛 𝑐𝑒𝑝𝑎𝑡</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Solusi Berobat Tepat</code></td>
+                                <td style="text-align: right;">0.427</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">Approved</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Good Ok Bagus</code></td>
+                                <td style="text-align: right;">0.7774</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">Ternyata halodoc sebagus itu aplikasinya</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Halodoc Kasih Terima</code></td>
+                                <td style="text-align: right;">0.7073</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">Jawaban tepat dan jelas</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Penjelasannya Jelas Penjelasan</code></td>
+                                <td style="text-align: right;">0.7253</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">Dokter nyaaa baikk sekaliiii</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Dokternya Ramah Dokter</code></td>
+                                <td style="text-align: right;">0.8635</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">Matap lah apk ini Apk</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Aplikasi Ini Yang</code></td>
+                                <td style="text-align: right;">0.6952</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">Kereeennnmn</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Mantap Banget Keren</code></td>
+                                <td style="text-align: right;">0.6563</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">APPROVED🫶🏻🫶🏻🫶🏻</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Good Ok Bagus</code></td>
+                                <td style="text-align: right;">0.7774</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">Baik dan cukup jelas</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Penjelasannya Jelas Penjelasan</code></td>
+                                <td style="text-align: right;">0.7175</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">Ngerating aj</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Good Ok Bagus</code></td>
+                                <td style="text-align: right;">0.7415</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">sejauh ini baik, mungkin bsa saya tambah bintang lgi nanti yaa</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Menit Coba Baru</code></td>
+                                <td style="text-align: right;">0.6416</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">Yaes</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Good Ok Bagus</code></td>
+                                <td style="text-align: right;">0.8296</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">Gacor sih dokter nya</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Responsif Dokternya Karlina</code></td>
+                                <td style="text-align: right;">0.7815</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">cool</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Good Ok Bagus</code></td>
+                                <td style="text-align: right;">0.8948</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">Kerem</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Good Ok Bagus</code></td>
+                                <td style="text-align: right;">0.7449</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">baru sekali sih</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Mantap Banget Keren</code></td>
+                                <td style="text-align: right;">0.7428</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">Obat komplit</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Solusi Berobat Tepat</code></td>
+                                <td style="text-align: right;">0.675</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">Cukuplah.</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Good Ok Bagus</code></td>
+                                <td style="text-align: right;">0.8538</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">𝑃𝑒𝑙𝑎𝑦𝑎𝑛𝑎𝑛𝑛𝑦𝑎 𝑠𝑎𝑛𝑔𝑎𝑡 𝑏𝑎𝑖𝑘,,𝑑𝑜𝑘𝑡𝑒𝑟𝑛𝑦𝑎 𝑟𝑎𝑚𝑎ℎ 𝑑𝑎𝑛 𝑐𝑒𝑝𝑎𝑡 𝑟𝑒𝑠𝑝𝑜𝑛.</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Solusi Berobat Tepat</code></td>
+                                <td style="text-align: right;">0.427</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">Gacor</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Good Ok Bagus</code></td>
+                                <td style="text-align: right;">0.867</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">gooddddd</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Mantap Banget Keren</code></td>
+                                <td style="text-align: right;">0.7094</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">jelas cara penangannya</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Penjelasannya Jelas Penjelasan</code></td>
+                                <td style="text-align: right;">0.7338</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">kemahalan sedikit,</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Good Ok Bagus</code></td>
+                                <td style="text-align: right;">0.7012</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">sippp</td>
+                                <td><code>Sippp Baik Cool</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Mantap Banget Keren</code></td>
+                                <td style="text-align: right;">0.805</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- ---------------- TAB: GALERI GRAPHICS ---------------- -->
+        <div id="galeri" class="tab-panel">
+            <div class="charts-gallery-grid">
+                
+                <div class="chart-img-container">
+                    <span class="chart-title">Visualisasi #1: Distribusi Sentimen Pengguna</span>
+                    <img src="../charts/01_sentiment_distribution_pie.png" alt="Distribusi Sentimen Pengguna">
+                    <span class="chart-desc">Nama file: 01_sentiment_distribution_pie.png</span>
+                </div>
+                
+                <div class="chart-img-container">
+                    <span class="chart-title">Visualisasi #2: Distribusi Rating Ulasan Bintang</span>
+                    <img src="../charts/02_rating_distribution_raw.png" alt="Distribusi Rating Ulasan Bintang">
+                    <span class="chart-desc">Nama file: 02_rating_distribution_raw.png</span>
+                </div>
+                
+                <div class="chart-img-container">
+                    <span class="chart-title">Visualisasi #3: Kategori Ulasan Negatif Terpopuler</span>
+                    <img src="../charts/03_top_negative_categories.png" alt="Kategori Ulasan Negatif Terpopuler">
+                    <span class="chart-desc">Nama file: 03_top_negative_categories.png</span>
+                </div>
+                
+                <div class="chart-img-container">
+                    <span class="chart-title">Visualisasi #4: Kategori Ulasan Positif Terpopuler</span>
+                    <img src="../charts/04_top_positive_categories.png" alt="Kategori Ulasan Positif Terpopuler">
+                    <span class="chart-desc">Nama file: 04_top_positive_categories.png</span>
+                </div>
+                
+                <div class="chart-img-container">
+                    <span class="chart-title">Visualisasi #5: Rasio Sentimen Bersih Bulanan</span>
+                    <img src="../charts/05_net_sentiment_ratio.png" alt="Rasio Sentimen Bersih Bulanan">
+                    <span class="chart-desc">Nama file: 05_net_sentiment_ratio.png</span>
+                </div>
+                
+                <div class="chart-img-container">
+                    <span class="chart-title">Visualisasi #6: Topik Negatif Detail</span>
+                    <img src="../charts/06_top_negative_topics.png" alt="Topik Negatif Detail">
+                    <span class="chart-desc">Nama file: 06_top_negative_topics.png</span>
+                </div>
+                
+                <div class="chart-img-container">
+                    <span class="chart-title">Visualisasi #7: Topik Positif Detail</span>
+                    <img src="../charts/07_top_positive_topics.png" alt="Topik Positif Detail">
+                    <span class="chart-desc">Nama file: 07_top_positive_topics.png</span>
+                </div>
+                
+                <div class="chart-img-container">
+                    <span class="chart-title">Visualisasi #8: Hubungan Likes vs Jumlah Ulasan</span>
+                    <img src="../charts/08_thumbs_up_vs_review_scatter.png" alt="Hubungan Likes vs Jumlah Ulasan">
+                    <span class="chart-desc">Nama file: 08_thumbs_up_vs_review_scatter.png</span>
+                </div>
+                
+                <div class="chart-img-container">
+                    <span class="chart-title">Visualisasi #9: Tingkat Balasan CS Ulasan Negatif</span>
+                    <img src="../charts/09_cs_reply_rate.png" alt="Tingkat Balasan CS Ulasan Negatif">
+                    <span class="chart-desc">Nama file: 09_cs_reply_rate.png</span>
+                </div>
+                
+                <div class="chart-img-container">
+                    <span class="chart-title">Visualisasi #10: Latensi Balasan CS (Jam)</span>
+                    <img src="../charts/10_cs_reply_delay.png" alt="Latensi Balasan CS (Jam)">
+                    <span class="chart-desc">Nama file: 10_cs_reply_delay.png</span>
+                </div>
+                
+                <div class="chart-img-container">
+                    <span class="chart-title">Visualisasi #11: Persentase CS Mengarahkan ke WhatsApp</span>
+                    <img src="../charts/11_cs_support_redirect_rate.png" alt="Persentase CS Mengarahkan ke WhatsApp">
+                    <span class="chart-desc">Nama file: 11_cs_support_redirect_rate.png</span>
+                </div>
+                
+                <div class="chart-img-container">
+                    <span class="chart-title">Visualisasi #12: Kata Kunci Utama dalam Ulasan</span>
+                    <img src="../charts/12_top_keywords.png" alt="Kata Kunci Utama dalam Ulasan">
+                    <span class="chart-desc">Nama file: 12_top_keywords.png</span>
+                </div>
+                
+                <div class="chart-img-container">
+                    <span class="chart-title">Visualisasi #13: Tren Volume Ulasan Bulanan</span>
+                    <img src="../charts/13_monthly_trend.png" alt="Tren Volume Ulasan Bulanan">
+                    <span class="chart-desc">Nama file: 13_monthly_trend.png</span>
+                </div>
+                
+                <div class="chart-img-container">
+                    <span class="chart-title">Visualisasi #14: Analisis Sentimen per Versi Aplikasi</span>
+                    <img src="../charts/14_app_version_analysis.png" alt="Analisis Sentimen per Versi Aplikasi">
+                    <span class="chart-desc">Nama file: 14_app_version_analysis.png</span>
+                </div>
+                
+                <div class="chart-img-container">
+                    <span class="chart-title">Visualisasi #15: Deteksi Spike Komplain Bulanan</span>
+                    <img src="../charts/15_spike_detection.png" alt="Deteksi Spike Komplain Bulanan">
+                    <span class="chart-desc">Nama file: 15_spike_detection.png</span>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Tab switching logic
+        function switchTab(tabId, el) {
+            // Hide all tab-panels
+            document.querySelectorAll('.tab-panel').forEach(panel => {
+                panel.classList.remove('active');
+            });
+            // Show target tab-panel
+            document.getElementById(tabId).classList.add('active');
+
+            // Deactivate all nav items
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            // Activate clicked nav item
+            el.classList.add('active');
+        }
+
+        // Theme Toggle Logic
+        function toggleTheme(checkbox) {
+            if (checkbox.checked) {
+                document.documentElement.setAttribute('data-theme', 'light');
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+            }
+        }
+
+        // --- Render Chart.js Ringkasan ---
+        document.addEventListener("DOMContentLoaded", function() {
+            // Doughnut Chart Sentimen
+            const ctxDoughnut = document.getElementById('chartSentimentDoughnut').getContext('2d');
+            new Chart(ctxDoughnut, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Positif', 'Negatif', 'Netral'],
+                    datasets: [{
+                        data: [
+                            13873,
+                            1528,
+                            228
+                        ],
+                        backgroundColor: ['#10b981', '#ef4444', '#f59e0b'],
+                        borderColor: '#1e293b',
+                        borderWidth: 2,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '72%',
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: { color: '#9ca3af', font: { family: 'Inter', size: 11 } }
+                        }
+                    }
+                }
+            });
+
+            // Bar Chart Rating Bintang
+            const ctxBar = document.getElementById('chartRatingBar').getContext('2d');
+            new Chart(ctxBar, {
+                type: 'bar',
+                data: {
+                    labels: ['1 ★', '2 ★', '3 ★', '4 ★', '5 ★'],
+                    datasets: [{
+                        label: 'Jumlah Ulasan',
+                        data: [
+                            1300,
+                            228,
+                            228,
+                            799,
+                            13074
+                        ],
+                        backgroundColor: ['#ef4444', '#f97316', '#fbbf24', '#60a5fa', '#10b981'],
+                        borderRadius: 6,
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            grid: { color: 'rgba(255, 255, 255, 0.05)' },
+                            ticks: { color: '#9ca3af', font: { family: 'Inter' } }
+                        },
+                        x: {
+                            grid: { display: false },
+                            ticks: { color: '#9ca3af', font: { family: 'Inter' } }
+                        }
+                    },
+                    plugins: {
+                        legend: { display: false }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
