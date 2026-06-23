@@ -1,7 +1,7 @@
 {
   "meta": {
     "app_name": "Halodoc: Dokter, Obat & Lab",
-    "generated_at": "2026-06-23T09:06:14",
+    "generated_at": "2026-06-23T20:53:07",
     "csv_output_dir": "output\\csv",
     "top_n": 10,
     "date_range": {

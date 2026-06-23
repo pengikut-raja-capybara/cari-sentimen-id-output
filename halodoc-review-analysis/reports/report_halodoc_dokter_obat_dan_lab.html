@@ -1481,7 +1481,7 @@
                                 <th>Replied</th>
                                 <th>Reply Rate (%)</th>
                                 <th>Median Delay (Jam)</th>
-                                <th>WA Redirect (%)</th>
+                                <th>Redirect (%)</th>
                                 <th>Template Balasan Admin</th>
                             </tr>
                         </thead>
@@ -1640,41 +1640,39 @@
                 <div class="prose">
                     <h1>Laporan Insight Analisis Ulasan — Halodoc: Dokter, Obat &amp; Lab</h1>
 <blockquote>
-<p>Dibuat otomatis pada 2026-06-23 09:06:30 menggunakan gemini-3.1-flash-lite
+<p>Dibuat otomatis pada 2026-06-23 20:53:56 menggunakan gemini-3.1-flash-lite
 Sumber data: output/json/eda_summary.json</p>
 </blockquote>
 <hr />
-<p>Berikut adalah laporan analisis data sentimen untuk aplikasi "Halodoc: Dokter, Obat &amp; Lab" berdasarkan data periode 15 Juni 2023 hingga 15 Juni 2026.</p>
+<p>Berikut adalah laporan analisis data sentimen untuk aplikasi <strong>Halodoc: Dokter, Obat &amp; Lab</strong>.</p>
 <hr />
 <h2>1. Ringkasan Umum</h2>
-<p>Aplikasi Halodoc memiliki basis pengguna yang sangat loyal dengan total <strong>15.629 ulasan</strong>. Distribusi sentimen menunjukkan dominasi <strong>sentimen positif sebesar 88,76%</strong> (13.873 ulasan), diikuti sentimen negatif (9,78%) dan netral (1,46%).
-*   <strong>Polarisasi Rating:</strong> Terdapat polarisasi yang sangat tajam di mana <strong>83,6%</strong> dari total ulasan memberikan rating bintang 5 (13.074 ulasan). Hal ini menunjukkan <em>brand advocacy</em> yang sangat kuat.
-*   <strong>Kepercayaan Data:</strong> Model klasifikasi sentimen memiliki tingkat keyakinan (<em>confidence rate</em>) yang sangat tinggi, mencapai <strong>97,34%</strong>, sehingga data ini sangat valid untuk dijadikan dasar pengambilan keputusan.</p>
+<p>Data mencakup <strong>15.629 ulasan</strong> yang dikumpulkan selama periode <strong>15 Juni 2023 hingga 15 Juni 2026</strong>. Distribusi sentimen menunjukkan dominasi positif yang sangat kuat sebesar <strong>88,76% (13.873 ulasan)</strong>, diikuti sentimen negatif <strong>9,78% (1.528 ulasan)</strong> dan netral <strong>1,46% (228 ulasan)</strong>. </p>
+<p>Terjadi polarisasi ekstrem pada distribusi rating: <strong>83,65% (13.074)</strong> dari total ulasan memberikan rating <strong>bintang 5</strong>, yang mengindikasikan loyalitas pengguna sangat tinggi. Tingkat kepercayaan klasifikasi model secara keseluruhan mencapai <strong>0,9734</strong>, mencerminkan akurasi tinggi dalam kategorisasi data.</p>
 <h2>2. Analisis Sentimen Negatif &amp; Korelasi Versi</h2>
-<p>Masalah utama yang memicu frustrasi pengguna adalah kegagalan sistem transaksi dan aksesibilitas.
-*   <strong>Pain Point Utama:</strong> Kegagalan akses ruang chat setelah pembayaran (552 ulasan) dan saldo terpotong namun sesi chat tidak tersedia (152 ulasan) menjadi kategori "Layanan Konsultasi Medis" yang paling krusial. Kata kunci seperti <strong>"konsultasi"</strong>, <strong>"ribet"</strong>, dan <strong>"saldo"</strong> mendominasi keluhan.
-*   <strong>Korelasi Versi:</strong> Ulasan dengan versi <strong>"Unknown"</strong> menyumbang persentase negatif tertinggi sebesar <strong>16,22%</strong> dengan rata-rata rating rendah (4,28). Sementara itu, versi <strong>21.9</strong> yang memiliki 297 ulasan mencatat tingkat negatif <strong>9,76%</strong>. Ini mengindikasikan perlunya pembenahan pada <em>tracking</em> versi aplikasi agar kendala teknis lebih mudah teridentifikasi.</p>
+<p>Pengguna yang memberikan ulasan negatif sering menggunakan kata kunci seperti <strong>"konsultasi"</strong>, <strong>"ribet"</strong>, dan <strong>"saldo"</strong>. Berikut adalah 3 <em>pain point</em> utama:
+1. <strong>Kegagalan akses ruang chat setelah pembayaran berhasil</strong> (552 ulasan): Merupakan isu krusial yang paling banyak dikeluhkan.
+2. <strong>Saldo terpotong namun sesi chat tidak tersedia</strong> (152 ulasan): Isu sistemik pada integrasi pembayaran.
+3. <strong>Bug aplikasi dan kendala akses fitur utama</strong> (117 ulasan).</p>
+<p><strong>Korelasi Versi:</strong>
+Versi aplikasi yang belum teridentifikasi (<strong>Unknown</strong>) menyumbang persentase negatif tertinggi sebesar <strong>16,22%</strong> dengan rata-rata rating <strong>4,28</strong>. Sementara itu, versi <strong>21.51</strong> memiliki persentase negatif <strong>7,84%</strong> dengan rating <strong>4,61</strong>, menunjukkan perlunya pembaruan stabilitas pada versi <em>legacy</em> atau tidak teridentifikasi untuk menekan angka kegagalan akses.</p>
 <h2>3. Analisis Temporal &amp; Lonjakan (Spike Detection)</h2>
-<p>Tren bulanan menunjukkan stabilitas dengan rasio sentimen bersih rata-rata di atas 0,75. Namun, data <em>spike</em> menunjukkan adanya titik kritis:
-*   <strong>2024-04-19:</strong> Terjadi lonjakan keluhan (6 ulasan negatif) dengan rata-rata rating sangat rendah (1,0) yang dipicu oleh kegagalan akses chat dan keterlambatan pengiriman obat.
-*   <strong>2023-06-20:</strong> Lonjakan keluhan (5 ulasan negatif, rating 1,0) akibat bug teknis aplikasi.
-Pola ini menunjukkan bahwa lonjakan negatif sangat berkorelasi dengan <strong>kegagalan fungsionalitas inti</strong> (transaksi/akses chat), bukan isu minor.</p>
+<p>Tren sentimen bulanan menunjukkan stabilitas dengan <em>net sentiment ratio</em> rata-rata di kisaran 0,74 hingga 0,83. 
+Dua lonjakan (<em>spike</em>) negatif signifikan yang terdeteksi:
+* <strong>19 April 2024</strong>: Terjadi 6 ulasan negatif (rating rata-rata <strong>1,0</strong>), didominasi oleh keluhan terkait <strong>kegagalan akses ruang chat setelah pembayaran berhasil</strong> dan <strong>keterlambatan pengiriman obat instan</strong>.
+* <strong>3 Januari 2024</strong>: Terjadi 6 ulasan negatif (rating rata-rata <strong>1,33</strong>), terutama mengenai <strong>keterlambatan pengiriman obat instan</strong> dan <strong>kegagalan akses ruang chat</strong>.</p>
 <h2>4. Analisis Sentimen Positif</h2>
-<p>Pengguna sangat mengapresiasi kemudahan akses kesehatan.
-*   <strong>Topik Utama:</strong> "Membantu Sangat Sekali" (2.775 ulasan) dan "Good Ok Bagus" (2.228 ulasan) menjadi bukti kepuasan fungsional aplikasi. Kata kunci <strong>"bagus"</strong> dan <strong>"membantu"</strong> muncul secara konsisten.
-*   <strong>Resonansi Tinggi:</strong> Topik "Halodoc Dokter Kasih" mencatat <strong>992 total_thumbs_up</strong> dari 902 ulasan, memberikan rasio <em>likes</em> per ulasan sebesar <strong>1,1x</strong>, yang menunjukkan bahwa narasi kemudahan konsultasi dengan dokter sangat disukai oleh komunitas.</p>
+<p>Pengguna sangat mengapresiasi kemudahan aplikasi dengan kata kunci <strong>"bagus"</strong>, <strong>"membantu"</strong>, dan <strong>"bermanfaat"</strong>. Topik positif teratas meliputi:
+1. <strong>Ulasan positif mengenai manfaat aplikasi secara umum</strong> (2.775 ulasan).
+2. <strong>Ulasan positif singkat mengenai kualitas layanan</strong> (2.228 ulasan).
+3. <strong>Kemudahan akses konsultasi dokter secara daring</strong> (1.395 ulasan).</p>
+<p>Terdapat poin resonansi tinggi pada topik <strong>apresiasi terhadap dokter dan kemudahan konsultasi</strong>, yang memperoleh <strong>992 <em>thumbs up</em></strong> (total <em>likes</em>). Jika dibandingkan dengan rata-rata <em>thumbs up</em> topik lain, topik ini memiliki daya tarik atau validasi komunitas yang sangat kuat.</p>
 <h2>5. Kinerja Customer Service</h2>
-<p>Performa CS sangat impresif dengan <em>average reply rate</em> mencapai <strong>99,8%</strong>.
-*   <strong>Responsivitas:</strong> Kategori "Pengalaman Pengguna" memiliki respons tercepat dengan median delay hanya <strong>0,36 jam</strong>. Sebaliknya, kategori "Lain-lain / Noise" menjadi yang paling lambat (0,94 jam).
-*   <strong>Redireksi WA:</strong> Hampir seluruh keluhan (99,67%) diarahkan ke WhatsApp, yang menunjukkan bahwa CS lebih memilih penyelesaian masalah secara personal dan real-time daripada melalui sistem <em>in-app chat</em> yang mungkin sedang bermasalah.</p>
-<h2>6. Rekomendasi Strategis</h2>
-<ol>
-<li><strong>Perbaikan Backend Transaksi:</strong> Prioritaskan perbaikan <em>callback system</em> antara <em>payment gateway</em> dan ruang chat. Keluhan "saldo terpotong tapi chat tidak ada" adalah <em>critical point</em> yang harus dihilangkan untuk menjaga kepercayaan pengguna.</li>
-<li><strong>Audit Versi Aplikasi:</strong> Segera identifikasi 2.479 ulasan dengan versi "Unknown". Lakukan <em>mandatory update</em> atau pengetatan deteksi versi agar data <em>crash</em> lebih akurat.</li>
-<li><strong>Mekanisme Refund Otomatis:</strong> Mengingat tingginya keluhan terkait pembayaran, buatlah sistem <em>self-service refund</em> di aplikasi untuk sesi chat yang gagal, guna mengurangi beban tim CS.</li>
-<li><strong>Optimasi SLA Respons:</strong> Fokuskan penambahan SDM/Automasi untuk kategori "Layanan Pelanggan" yang memiliki <em>reply rate</em> terendah (98,41%).</li>
-<li><strong>Stabilisasi Pengiriman Obat:</strong> Untuk masalah pengiriman obat, tingkatkan integrasi dengan API kurir pihak ketiga untuk memberikan <em>tracking</em> yang lebih transparan kepada pengguna, guna menekan keluhan terkait "keterlambatan pengiriman".</li>
-</ol>
+<p>Secara umum, performa <em>Customer Service</em> (CS) sangat impresif dengan <em>avg reply rate</em> <strong>99,8%</strong> dan median waktu respon <strong>0,62 jam</strong>.
+* <strong>Responsivitas Terbaik:</strong> Kategori <strong>Promosi dan Voucher</strong> mencatat waktu respon tercepat yaitu <strong>0,21 jam</strong>.
+* <strong>Responsivitas Terlambat:</strong> Kategori <strong>Lain-lain / Noise</strong> memiliki waktu respon terlambat yaitu <strong>0,94 jam</strong>.
+* <strong>Tingkat Respon:</strong> Kategori <strong>Layanan Konsultasi Medis</strong> menjadi yang paling responsif dengan <em>reply rate</em> <strong>100%</strong>, sedangkan <strong>Layanan Pelanggan</strong> memiliki <em>reply rate</em> terendah di angka <strong>98,41%</strong>, yang menunjukkan area untuk perbaikan komunikasi bagi tim CS.</p>
+<p>Redireksi ke WhatsApp telah diimplementasikan dengan sangat baik, dengan tingkat redireksi mencapai <strong>99,67%</strong>, memastikan pengguna mendapatkan bantuan personal setelah kendala terdeteksi.</p>
                 </div>
             </div>
         </div>
