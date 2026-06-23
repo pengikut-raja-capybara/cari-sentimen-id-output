@@ -1,0 +1,44 @@
+sentiment,business_category,merge_group,review_count_all,review_count_confident,share_confident,avg_score,example_sub_issues
+negatif,Masalah Notifikasi dan Akses,NOTIFICATION_AND_ACCESS_ISSUE,169,166,0.9822,1.32,Notifikasi tidak muncul dan kendala akses akun pengguna
+negatif,Kualitas Aplikasi Umum,GENERAL_PERFORMANCE_ISSUE,117,110,0.9402,1.15,"Performa aplikasi buruk dan tidak responsif, Banyak bug dan aplikasi tidak berfungsi baik"
+negatif,Masalah Pengunggahan dan Pengunduhan,FILE_TRANSFER_ERROR,116,114,0.9828,1.23,Gagal mengunggah tugas dan mengunduh materi pembelajaran
+negatif,Masalah Stabilitas Server,SERVER_CONNECTION_ERROR,113,111,0.9823,1.26,"Aplikasi tidak bisa dibuka dan kesalahan server, Aplikasi sering mengalami error dan lambat"
+negatif,Masalah Autentikasi Pengguna,LOGIN_AUTHENTICATION_ERROR,100,100,1.0,1.24,Gagal login dan kendala verifikasi email
+negatif,Pengalaman Pengguna dan UI,USER_EXPERIENCE_FEEDBACK,97,96,0.9897,1.27,"Tampilan baru menyulitkan dan fitur tidak nyaman, Aplikasi semakin lambat dan sulit digunakan"
+negatif,Stabilitas Sistem dan Performa,PERFORMANCE_BUG,91,90,0.989,1.14,"Kegagalan sistem saat pengumpulan tugas dan error server, Aplikasi lambat dan gagal memuat data meski jaringan stabil, Aplikasi sering mengalami error secara tiba-tiba"
+negatif,Fitur Presensi dan Absensi,PRESENSI_BUG,42,42,1.0,1.31,"Kendala teknis kamera saat memindai kode QR absensi, Kegagalan fungsi pemindaian kode QR untuk absensi"
+negatif,Masalah Sinkronisasi Data,DATA_SYNC_ISSUE,41,41,1.0,1.24,Data kelas tidak muncul dan gagal absensi
+negatif,Manajemen File dan Dokumen,FILE_MANAGEMENT_ERROR,36,36,1.0,1.31,Kendala unggah dan unduh file pada perangkat Android
+negatif,Akses Akun dan Login,LOGIN_ERROR,29,29,1.0,1.1,Kesulitan pengguna untuk masuk ke dalam aplikasi
+negatif,Stabilitas Sistem dan Performa,UPDATE_ISSUE,27,27,1.0,1.15,Penurunan kinerja aplikasi setelah pembaruan sistem
+negatif,Manajemen Pembaruan,UPDATE_ISSUE,20,20,1.0,1.35,"Permintaan update aplikasi yang terlalu sering dan error, Frekuensi pembaruan aplikasi yang terlalu sering"
+negatif,Fitur Notifikasi,NOTIFICATION_ERROR,18,18,1.0,1.17,Notifikasi tidak muncul menyebabkan keterlambatan pengumpulan tugas
+negatif,Pengalaman Pengguna,GENERAL_FEEDBACK,18,18,1.0,1.17,Ulasan umum mengenai kualitas aplikasi
+negatif,Integritas Data Akademik,DATA_INCONSISTENCY,16,16,1.0,1.06,Ketidaksesuaian data nilai dan sistem kampus
+negatif,Stabilitas Sistem,SERVER_ERROR,16,16,1.0,1.31,Kesalahan server saat login dan akses sistem
+negatif,Performa Aplikasi,PERFORMANCE_ISSUE,15,15,1.0,1.13,Aplikasi berjalan lambat dan sering error
+negatif,Fungsionalitas Aplikasi,APP_FUNCTIONALITY,14,14,1.0,1.21,Kegagalan ganti foto profil dan aplikasi tertutup otomatis
+negatif,Pengalaman Pengguna,USER_EXPERIENCE,12,12,1.0,1.17,Aplikasi tidak efektif dan menyebabkan perangkat error
+negatif,Stabilitas Sistem,APP_CRASH,10,10,1.0,1.2,Aplikasi sering tertutup paksa (force close)
+negatif,Lain-lain / Noise,OVERALL_SATISFACTION,9,0,0.0,1.11,Ulasan umum/noise
+negatif,Sistem Pembayaran,PAYMENT_ISSUE,9,9,1.0,1.0,Kendala pembayaran tagihan dan notifikasi pembayaran
+netral,Stabilitas Aplikasi,PERFORMANCE_BUG,40,40,1.0,3.0,"Aplikasi sering eror dan lambat saat diakses, Aplikasi lambat dibuka meski jaringan stabil"
+netral,Fungsionalitas Sistem,SYSTEM_ERROR,37,37,1.0,3.0,"Kendala sinkronisasi data tugas dan akses KRS, Kendala akses fitur absensi dan notifikasi"
+netral,Pengalaman Pengguna,USER_FEEDBACK,34,33,0.9706,3.0,"Ulasan positif terkait fitur QR scan, Ulasan umum positif terhadap aplikasi"
+netral,Manajemen Tugas,TASK_MANAGEMENT_ISSUE,22,22,1.0,3.0,Gagal mengunggah atau mengunduh dokumen tugas
+netral,Notifikasi dan Pengingat,NOTIFICATION_BUG,19,19,1.0,3.0,Notifikasi tugas terlambat muncul atau tidak berfungsi
+netral,Autentikasi Pengguna,LOGIN_ERROR,17,17,1.0,3.0,Masalah login dan kegagalan kode verifikasi
+netral,Pengembangan Fitur,FEATURE_REQUEST,15,15,1.0,3.0,Saran penambahan fitur dan keamanan ujian
+netral,Fungsionalitas Aplikasi,FUNCTIONAL_BUG,14,13,0.9286,3.0,Kendala teknis pada fitur unduh materi dan pengiriman tugas
+netral,Pengalaman Pengguna,GENERAL_FEEDBACK,14,14,1.0,3.0,Ulasan pengguna yang tidak spesifik atau bersifat uji coba
+netral,Stabilitas Sistem dan Aksesibilitas,SYSTEM_ACCESS_ERROR,14,14,1.0,3.0,Kegagalan akses aplikasi dan integrasi sistem setelah pembaruan
+netral,Kepuasan Pengguna,POSITIVE_FEEDBACK,12,12,1.0,3.0,Apresiasi positif terhadap manfaat aplikasi bagi kegiatan perkuliahan
+netral,Stabilitas Sistem dan Aksesibilitas,PERFORMANCE_BUG,12,12,1.0,3.0,Penurunan performa aplikasi setelah melakukan pembaruan versi
+netral,Fungsionalitas Aplikasi,UI_UX_ISSUE,8,8,1.0,3.0,Kendala pada pengaturan profil dan penyesuaian tampilan antarmuka
+netral,Manajemen Akun dan Login,LOGIN_ERROR,6,6,1.0,3.0,Kegagalan proses verifikasi dan login akun pengguna
+netral,Fungsionalitas Aplikasi,FILE_DOWNLOAD_ERROR,5,5,1.0,3.0,Kesalahan pada proses pengunduhan dan pembukaan file dokumen
+netral,Lain-lain / Noise,OVERALL_SATISFACTION,5,0,0.0,3.0,Ulasan umum/noise
+positif,Pengalaman Pengguna,POSITIVE_FEEDBACK,797,791,0.9925,4.76,"Aplikasi memudahkan akses nilai dan proses perkuliahan, Pengguna merasa puas dan terbantu dengan aplikasi, Aplikasi sangat membantu kegiatan akademik"
+positif,Kepuasan Pengguna,POSITIVE_FEEDBACK,348,348,1.0,4.9,"Ulasan positif singkat mengenai kualitas aplikasi, Ulasan positif singkat dalam bahasa Inggris, Ulasan positif singkat"
+positif,Ulasan Positif Pengguna,POSITIVE_FEEDBACK,109,109,1.0,4.9,"Pengguna memberikan apresiasi positif secara umum, Aplikasi dinilai sangat membantu kegiatan pembelajaran, Aplikasi dinilai memiliki kualitas terbaik dan profesional"
+positif,Lain-lain / Noise,OVERALL_SATISFACTION,4,0,0.0,4.5,Ulasan umum/noise
