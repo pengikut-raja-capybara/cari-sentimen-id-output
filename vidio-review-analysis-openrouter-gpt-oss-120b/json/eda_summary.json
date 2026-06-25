@@ -1,0 +1,4765 @@
+{
+  "meta": {
+    "app_name": "Vidio: Sports, Movies, Series",
+    "generated_at": "2026-06-24T23:11:29",
+    "csv_output_dir": "output\\csv",
+    "top_n": 10,
+    "date_range": {
+      "start": "2023-06-15",
+      "end": "2026-06-15"
+    }
+  },
+  "overview": {
+    "total_reviews": 37661,
+    "sentiment_distribution": {
+      "positif": {
+        "count": 15613,
+        "pct": 41.46,
+        "avg_score": 4.84
+      },
+      "negatif": {
+        "count": 19220,
+        "pct": 51.03,
+        "avg_score": 1.16
+      },
+      "netral": {
+        "count": 2828,
+        "pct": 7.51,
+        "avg_score": 3.0
+      }
+    },
+    "confidence_stats": {
+      "overall_confident_rate": 0.972,
+      "by_sentiment": {
+        "positif": 0.952,
+        "negatif": 0.9867,
+        "netral": 0.9823
+      }
+    },
+    "rating_distribution_raw": {
+      "1": 16177,
+      "2": 3043,
+      "3": 2828,
+      "4": 2562,
+      "5": 13051
+    }
+  },
+  "topic_analysis": {
+    "positif": {
+      "total_topics": 29,
+      "total_reviews": 15379,
+      "topics": [
+        {
+          "rank": 1,
+          "topic_id": 0,
+          "topic_name": "Good Ok Oke",
+          "business_category": "Ulasan Umum Positif",
+          "sub_issue": "Komentar singkat pujian",
+          "review_count": 3226,
+          "pct": 20.66,
+          "avg_score": 4.9,
+          "total_thumbs_up": 1248
+        },
+        {
+          "rank": 2,
+          "topic_id": 1,
+          "topic_name": "Bagus Sangat Baik",
+          "business_category": "Ulasan Umum Positif",
+          "sub_issue": "Pujian kualitas aplikasi",
+          "review_count": 3047,
+          "pct": 19.52,
+          "avg_score": 4.89,
+          "total_thumbs_up": 2160
+        },
+        {
+          "rank": 3,
+          "topic_id": 2,
+          "topic_name": "Mantap Keren Banget",
+          "business_category": "Ulasan Umum Positif",
+          "sub_issue": "Ekspresi kepuasan tinggi",
+          "review_count": 1677,
+          "pct": 10.74,
+          "avg_score": 4.92,
+          "total_thumbs_up": 1267
+        },
+        {
+          "rank": 4,
+          "topic_id": 3,
+          "topic_name": "Film Menonton Bagus",
+          "business_category": "Konten Film",
+          "sub_issue": "Kualitas film dan streaming",
+          "review_count": 1150,
+          "pct": 7.37,
+          "avg_score": 4.85,
+          "total_thumbs_up": 1875
+        },
+        {
+          "rank": 5,
+          "topic_id": 4,
+          "topic_name": "Saya Tidak Di",
+          "business_category": "Masalah Teknis",
+          "sub_issue": "Tidak dapat merekam / error playback",
+          "review_count": 1004,
+          "pct": 6.43,
+          "avg_score": 4.63,
+          "total_thumbs_up": 16442
+        },
+        {
+          "rank": 6,
+          "topic_id": 5,
+          "topic_name": "Aplikasi Menonton Ini",
+          "business_category": "Ulasan Umum Positif",
+          "sub_issue": "Pujian aplikasi secara umum",
+          "review_count": 968,
+          "pct": 6.2,
+          "avg_score": 4.9,
+          "total_thumbs_up": 3387
+        },
+        {
+          "rank": 7,
+          "topic_id": 6,
+          "topic_name": "Film Tidak Rcti",
+          "business_category": "Konten TV",
+          "sub_issue": "Ketiadaan channel RCTI",
+          "review_count": 830,
+          "pct": 5.32,
+          "avg_score": 4.65,
+          "total_thumbs_up": 4456
+        },
+        {
+          "rank": 8,
+          "topic_id": 7,
+          "topic_name": "Iklan Tapi Banyak",
+          "business_category": "Iklan",
+          "sub_issue": "Terlalu banyak iklan",
+          "review_count": 756,
+          "pct": 4.84,
+          "avg_score": 4.6,
+          "total_thumbs_up": 5082
+        },
+        {
+          "rank": 9,
+          "topic_id": 8,
+          "topic_name": "Terima Kasih Semoga",
+          "business_category": "Ulasan Umum Positif",
+          "sub_issue": "Ucapan terima kasih",
+          "review_count": 347,
+          "pct": 2.22,
+          "avg_score": 4.87,
+          "total_thumbs_up": 1765
+        },
+        {
+          "rank": 10,
+          "topic_id": 9,
+          "topic_name": "Aplikasi Sangat Bagus",
+          "business_category": "Ulasan Umum Positif",
+          "sub_issue": "Pujian aplikasi",
+          "review_count": 267,
+          "pct": 1.71,
+          "avg_score": 4.9,
+          "total_thumbs_up": 83
+        },
+        {
+          "rank": 11,
+          "topic_id": 10,
+          "topic_name": "Suka Banget Aku",
+          "business_category": "Ulasan Umum Positif",
+          "sub_issue": "Ekspresi suka kuat",
+          "review_count": 240,
+          "pct": 1.54,
+          "avg_score": 4.92,
+          "total_thumbs_up": 153
+        },
+        {
+          "rank": 12,
+          "topic_id": 11,
+          "topic_name": "Coba Tingkatkan Mencoba",
+          "business_category": "Masalah Teknis",
+          "sub_issue": "Fitur masih dalam percobaan",
+          "review_count": 205,
+          "pct": 1.31,
+          "avg_score": 4.73,
+          "total_thumbs_up": 482
+        },
+        {
+          "rank": 13,
+          "topic_id": 12,
+          "topic_name": "Iklan Ngelag Kebanyakan",
+          "business_category": "Iklan",
+          "sub_issue": "Iklan mengganggu dan lag",
+          "review_count": 187,
+          "pct": 1.2,
+          "avg_score": 4.5,
+          "total_thumbs_up": 38
+        },
+        {
+          "rank": 14,
+          "topic_id": 13,
+          "topic_name": "Tv Menonton Dimana",
+          "business_category": "Fitur TV",
+          "sub_issue": "Menonton TV di perangkat lain",
+          "review_count": 176,
+          "pct": 1.13,
+          "avg_score": 4.86,
+          "total_thumbs_up": 238
+        },
+        {
+          "rank": 15,
+          "topic_id": 14,
+          "topic_name": "League Liga Premier",
+          "business_category": "Konten Olahraga",
+          "sub_issue": "Streaming liga sepak bola",
+          "review_count": 164,
+          "pct": 1.05,
+          "avg_score": 4.85,
+          "total_thumbs_up": 1114
+        },
+        {
+          "rank": 16,
+          "topic_id": 15,
+          "topic_name": "Mantul Mntap Mantaf",
+          "business_category": "nan",
+          "sub_issue": "nan",
+          "review_count": 142,
+          "pct": 0.91,
+          "avg_score": 4.92,
+          "total_thumbs_up": 165
+        },
+        {
+          "rank": 17,
+          "topic_id": 16,
+          "topic_name": "Beli Pulsa Pakai",
+          "business_category": "nan",
+          "sub_issue": "nan",
+          "review_count": 133,
+          "pct": 0.85,
+          "avg_score": 4.65,
+          "total_thumbs_up": 271
+        },
+        {
+          "rank": 18,
+          "topic_id": 17,
+          "topic_name": "Mudah Ribet Gunakan",
+          "business_category": "nan",
+          "sub_issue": "nan",
+          "review_count": 112,
+          "pct": 0.72,
+          "avg_score": 4.92,
+          "total_thumbs_up": 148
+        },
+        {
+          "rank": 19,
+          "topic_id": 18,
+          "topic_name": "Like This Sok",
+          "business_category": "nan",
+          "sub_issue": "nan",
+          "review_count": 102,
+          "pct": 0.65,
+          "avg_score": 4.93,
+          "total_thumbs_up": 12
+        },
+        {
+          "rank": 20,
+          "topic_id": 19,
+          "topic_name": "Cepat Respon Terima",
+          "business_category": "nan",
+          "sub_issue": "nan",
+          "review_count": 99,
+          "pct": 0.63,
+          "avg_score": 4.84,
+          "total_thumbs_up": 566
+        },
+        {
+          "rank": 21,
+          "topic_id": 20,
+          "topic_name": "Bayar Dikit Diskon",
+          "business_category": "nan",
+          "sub_issue": "nan",
+          "review_count": 99,
+          "pct": 0.63,
+          "avg_score": 4.67,
+          "total_thumbs_up": 392
+        },
+        {
+          "rank": 22,
+          "topic_id": 21,
+          "topic_name": "Hapus Fitur Riwayat",
+          "business_category": "nan",
+          "sub_issue": "nan",
+          "review_count": 97,
+          "pct": 0.62,
+          "avg_score": 4.58,
+          "total_thumbs_up": 254
+        },
+        {
+          "rank": 23,
+          "topic_id": 22,
+          "topic_name": "Bintang Kasih Dulu",
+          "business_category": "nan",
+          "sub_issue": "nan",
+          "review_count": 95,
+          "pct": 0.61,
+          "avg_score": 4.63,
+          "total_thumbs_up": 62
+        },
+        {
+          "rank": 24,
+          "topic_id": 23,
+          "topic_name": "Cinta Terbaik Bintang",
+          "business_category": "nan",
+          "sub_issue": "nan",
+          "review_count": 72,
+          "pct": 0.46,
+          "avg_score": 4.9,
+          "total_thumbs_up": 9
+        },
+        {
+          "rank": 25,
+          "topic_id": 24,
+          "topic_name": "Bb Hu Xx",
+          "business_category": "nan",
+          "sub_issue": "nan",
+          "review_count": 70,
+          "pct": 0.45,
+          "avg_score": 4.77,
+          "total_thumbs_up": 6
+        },
+        {
+          "rank": 26,
+          "topic_id": 25,
+          "topic_name": "Sports Movies Acl",
+          "business_category": "nan",
+          "sub_issue": "nan",
+          "review_count": 43,
+          "pct": 0.28,
+          "avg_score": 4.98,
+          "total_thumbs_up": 14
+        },
+        {
+          "rank": 27,
+          "topic_id": 26,
+          "topic_name": "Ufc Bagus² 𝑏𝑎𝑔𝑢𝑠",
+          "business_category": "nan",
+          "sub_issue": "nan",
+          "review_count": 37,
+          "pct": 0.24,
+          "avg_score": 4.78,
+          "total_thumbs_up": 5
+        },
+        {
+          "rank": 28,
+          "topic_id": 27,
+          "topic_name": "𝑑𝑖 𝗌𝖾𝗋𝗎 𝑛𝑦𝑎",
+          "business_category": "nan",
+          "sub_issue": "nan",
+          "review_count": 19,
+          "pct": 0.12,
+          "avg_score": 4.79,
+          "total_thumbs_up": 18
+        },
+        {
+          "rank": 29,
+          "topic_id": 28,
+          "topic_name": "Pernando Fb Diyan",
+          "business_category": "nan",
+          "sub_issue": "nan",
+          "review_count": 15,
+          "pct": 0.1,
+          "avg_score": 5.0,
+          "total_thumbs_up": 0
+        }
+      ],
+      "category_concentration": {
+        "top_3_categories": [
+          "Ulasan Umum Positif",
+          "Masalah Teknis",
+          "Konten Film"
+        ],
+        "top_3_pct": 78.88
+      }
+    },
+    "negatif": {
+      "total_topics": 29,
+      "total_reviews": 19114,
+      "topics": [
+        {
+          "rank": 1,
+          "topic_id": 0,
+          "topic_name": "Saya Tidak Di",
+          "business_category": "Langganan Tidak Aktif",
+          "sub_issue": "Tidak dapat menonton meski sudah berlangganan",
+          "review_count": 4959,
+          "pct": 25.8,
+          "avg_score": 1.16,
+          "total_thumbs_up": 34210
+        },
+        {
+          "rank": 2,
+          "topic_id": 1,
+          "topic_name": "Menonton Bola Bagus",
+          "business_category": "Streaming Bola",
+          "sub_issue": "Tidak dapat menonton liga setelah bayar",
+          "review_count": 2066,
+          "pct": 10.75,
+          "avg_score": 1.16,
+          "total_thumbs_up": 3861
+        },
+        {
+          "rank": 3,
+          "topic_id": 2,
+          "topic_name": "Buruk Berbayar Aplikasi",
+          "business_category": "Kualitas Aplikasi",
+          "sub_issue": "Aplikasi dianggap buruk/jelek",
+          "review_count": 1784,
+          "pct": 9.28,
+          "avg_score": 1.1,
+          "total_thumbs_up": 1429
+        },
+        {
+          "rank": 4,
+          "topic_id": 3,
+          "topic_name": "Bisa Tidak Menonton",
+          "business_category": "Akses Konten",
+          "sub_issue": "Tidak dapat menonton konten berbayar",
+          "review_count": 1730,
+          "pct": 9.0,
+          "avg_score": 1.2,
+          "total_thumbs_up": 1376
+        },
+        {
+          "rank": 5,
+          "topic_id": 4,
+          "topic_name": "Iklan Film Menit",
+          "business_category": "Iklan pada Film",
+          "sub_issue": "Iklan terlalu lama tiap film",
+          "review_count": 1408,
+          "pct": 7.33,
+          "avg_score": 1.22,
+          "total_thumbs_up": 8551
+        },
+        {
+          "rank": 6,
+          "topic_id": 5,
+          "topic_name": "Iklan Banyak Terlalu",
+          "business_category": "Iklan Berlebih",
+          "sub_issue": "Terlalu banyak iklan",
+          "review_count": 1060,
+          "pct": 5.52,
+          "avg_score": 1.19,
+          "total_thumbs_up": 2369
+        },
+        {
+          "rank": 7,
+          "topic_id": 6,
+          "topic_name": "Susah Langganan Masih",
+          "business_category": "Iklan pada Premium",
+          "sub_issue": "Iklan muncul meski berlangganan",
+          "review_count": 933,
+          "pct": 4.85,
+          "avg_score": 1.16,
+          "total_thumbs_up": 3605
+        },
+        {
+          "rank": 8,
+          "topic_id": 7,
+          "topic_name": "Mahal Bayar Gratis",
+          "business_category": "Harga Langganan",
+          "sub_issue": "Harga terlalu mahal/harus bayar",
+          "review_count": 666,
+          "pct": 3.47,
+          "avg_score": 1.14,
+          "total_thumbs_up": 571
+        },
+        {
+          "rank": 9,
+          "topic_id": 8,
+          "topic_name": "Aplikasi Sampah Tolol",
+          "business_category": "Kualitas Aplikasi",
+          "sub_issue": "Aplikasi dianggap sampah",
+          "review_count": 641,
+          "pct": 3.34,
+          "avg_score": 1.04,
+          "total_thumbs_up": 366
+        },
+        {
+          "rank": 10,
+          "topic_id": 9,
+          "topic_name": "Aplikasi Uninstall Uninstal",
+          "business_category": "Penghapusan Aplikasi",
+          "sub_issue": "Ingin uninstall karena iklan",
+          "review_count": 602,
+          "pct": 3.13,
+          "avg_score": 1.07,
+          "total_thumbs_up": 374
+        },
+        {
+          "rank": 11,
+          "topic_id": 10,
+          "topic_name": "Login Pakai Nomor",
+          "business_category": "Login",
+          "sub_issue": "Tidak dapat login pakai nomor HP",
+          "review_count": 504,
+          "pct": 2.62,
+          "avg_score": 1.17,
+          "total_thumbs_up": 1596
+        },
+        {
+          "rank": 12,
+          "topic_id": 11,
+          "topic_name": "Ngelag Mulu Ngeleg",
+          "business_category": "Kinerja Aplikasi",
+          "sub_issue": "Lag dan error terus-menerus",
+          "review_count": 467,
+          "pct": 2.43,
+          "avg_score": 1.13,
+          "total_thumbs_up": 200
+        },
+        {
+          "rank": 13,
+          "topic_id": 12,
+          "topic_name": "Banget Loading Banyak",
+          "business_category": "Iklan Lambat",
+          "sub_issue": "Iklan loading lama mengganggu",
+          "review_count": 356,
+          "pct": 1.85,
+          "avg_score": 1.21,
+          "total_thumbs_up": 874
+        },
+        {
+          "rank": 14,
+          "topic_id": 13,
+          "topic_name": "Pembayaran Voucher Otomatis",
+          "business_category": "Pembayaran Otomatis",
+          "sub_issue": "Tagihan otomatis tanpa persetujuan",
+          "review_count": 335,
+          "pct": 1.74,
+          "avg_score": 1.15,
+          "total_thumbs_up": 794
+        },
+        {
+          "rank": 15,
+          "topic_id": 14,
+          "topic_name": "Buruk Mengecewakan Banget",
+          "business_category": "Kepuasan Pengguna",
+          "sub_issue": "Pengalaman buruk aplikasi",
+          "review_count": 243,
+          "pct": 1.26,
+          "avg_score": 1.07,
+          "total_thumbs_up": 381
+        },
+        {
+          "rank": 16,
+          "topic_id": 15,
+          "topic_name": "Bug Error Sering",
+          "business_category": "Kinerja Aplikasi",
+          "sub_issue": "Sering error dan buffering",
+          "review_count": 234,
+          "pct": 1.22,
+          "avg_score": 1.18,
+          "total_thumbs_up": 256
+        },
+        {
+          "rank": 17,
+          "topic_id": 16,
+          "topic_name": "Serie Piala Dunia",
+          "business_category": "Konten Siaran",
+          "sub_issue": "Tidak tersedia liga atau seri",
+          "review_count": 222,
+          "pct": 1.16,
+          "avg_score": 1.16,
+          "total_thumbs_up": 644
+        },
+        {
+          "rank": 18,
+          "topic_id": 17,
+          "topic_name": "Kebanyakan Iklan Iklannya",
+          "business_category": "Iklan",
+          "sub_issue": "Terlalu banyak iklan",
+          "review_count": 214,
+          "pct": 1.11,
+          "avg_score": 1.14,
+          "total_thumbs_up": 108
+        },
+        {
+          "rank": 19,
+          "topic_id": 18,
+          "topic_name": "Jelas Black Screen",
+          "business_category": "Tampilan",
+          "sub_issue": "Layar hitam/blank",
+          "review_count": 124,
+          "pct": 0.65,
+          "avg_score": 1.09,
+          "total_thumbs_up": 593
+        },
+        {
+          "rank": 20,
+          "topic_id": 19,
+          "topic_name": "Ok Keren Lumayan",
+          "business_category": "Umum Positif",
+          "sub_issue": "Ulasan netral atau pujian",
+          "review_count": 122,
+          "pct": 0.63,
+          "avg_score": 1.29,
+          "total_thumbs_up": 71
+        },
+        {
+          "rank": 21,
+          "topic_id": 20,
+          "topic_name": "Suka Sendiri Mundur",
+          "business_category": "Kinerja Aplikasi",
+          "sub_issue": "Error dan lag saat menonton",
+          "review_count": 96,
+          "pct": 0.5,
+          "avg_score": 1.25,
+          "total_thumbs_up": 66
+        },
+        {
+          "rank": 22,
+          "topic_id": 21,
+          "topic_name": "Coba Dulu Uji",
+          "business_category": "Pengalaman Baru",
+          "sub_issue": "Masalah saat pertama kali pakai",
+          "review_count": 81,
+          "pct": 0.42,
+          "avg_score": 1.32,
+          "total_thumbs_up": 45
+        },
+        {
+          "rank": 23,
+          "topic_id": 22,
+          "topic_name": "Makin Kesini Semakin",
+          "business_category": "Iklan",
+          "sub_issue": "Iklan meningkat, kualitas turun",
+          "review_count": 73,
+          "pct": 0.38,
+          "avg_score": 1.15,
+          "total_thumbs_up": 115
+        },
+        {
+          "rank": 24,
+          "topic_id": 23,
+          "topic_name": "Wae Kudu Opo",
+          "business_category": "Pembayaran Langganan",
+          "sub_issue": "Keluhan biaya paket langganan",
+          "review_count": 50,
+          "pct": 0.26,
+          "avg_score": 1.1,
+          "total_thumbs_up": 4
+        },
+        {
+          "rank": 25,
+          "topic_id": 24,
+          "topic_name": "Denda Bapuk Taii",
+          "business_category": "Iklan",
+          "sub_issue": "Iklan berlebihan/menyebalkan",
+          "review_count": 48,
+          "pct": 0.25,
+          "avg_score": 1.08,
+          "total_thumbs_up": 8
+        },
+        {
+          "rank": 26,
+          "topic_id": 25,
+          "topic_name": "The This Application",
+          "business_category": "Umum Negatif",
+          "sub_issue": "Tidak direkomendasikan, banyak iklan",
+          "review_count": 42,
+          "pct": 0.22,
+          "avg_score": 1.19,
+          "total_thumbs_up": 23
+        },
+        {
+          "rank": 27,
+          "topic_id": 26,
+          "topic_name": "Hu Cc Mi",
+          "business_category": "Tidak Relevan",
+          "sub_issue": "Ulasan tidak dapat dipahami",
+          "review_count": 31,
+          "pct": 0.16,
+          "avg_score": 1.52,
+          "total_thumbs_up": 6
+        },
+        {
+          "rank": 28,
+          "topic_id": 27,
+          "topic_name": "𝒏𝒚𝒂 𝒅𝒊 𝑛𝑦𝑎",
+          "business_category": "Tidak Relevan",
+          "sub_issue": "Ulasan tidak jelas",
+          "review_count": 12,
+          "pct": 0.06,
+          "avg_score": 1.17,
+          "total_thumbs_up": 5
+        },
+        {
+          "rank": 29,
+          "topic_id": 28,
+          "topic_name": "Adilllllll Aplikasiiiii Maaaahhaaalll",
+          "business_category": "Iklan",
+          "sub_issue": "Keluhan iklan berlebihan",
+          "review_count": 11,
+          "pct": 0.06,
+          "avg_score": 1.0,
+          "total_thumbs_up": 0
+        }
+      ],
+      "category_concentration": {
+        "top_3_categories": [
+          "Langganan Tidak Aktif",
+          "Kualitas Aplikasi",
+          "Streaming Bola"
+        ],
+        "top_3_pct": 49.44
+      }
+    },
+    "netral": {
+      "total_topics": 29,
+      "total_reviews": 2818,
+      "topics": [
+        {
+          "rank": 1,
+          "topic_id": 0,
+          "topic_name": "Saya Di Sudah",
+          "business_category": "Masalah Streaming",
+          "sub_issue": "Tidak dapat menonton live atau film",
+          "review_count": 641,
+          "pct": 22.67,
+          "avg_score": 3.0,
+          "total_thumbs_up": 7180
+        },
+        {
+          "rank": 2,
+          "topic_id": 1,
+          "topic_name": "Bayar Paket Beli",
+          "business_category": "Pembayaran Langganan",
+          "sub_issue": "Iklan tetap muncul setelah bayar",
+          "review_count": 281,
+          "pct": 9.94,
+          "avg_score": 3.0,
+          "total_thumbs_up": 1208
+        },
+        {
+          "rank": 3,
+          "topic_id": 2,
+          "topic_name": "Tv Menonton Siaran",
+          "business_category": "Siaran TV",
+          "sub_issue": "Channel tidak muncul atau terputus",
+          "review_count": 198,
+          "pct": 7.0,
+          "avg_score": 3.0,
+          "total_thumbs_up": 301
+        },
+        {
+          "rank": 4,
+          "topic_id": 3,
+          "topic_name": "Tolong Nya Kurangi",
+          "business_category": "Iklan",
+          "sub_issue": "Terlalu banyak iklan, minta dikurangi",
+          "review_count": 186,
+          "pct": 6.58,
+          "avg_score": 3.0,
+          "total_thumbs_up": 864
+        },
+        {
+          "rank": 5,
+          "topic_id": 4,
+          "topic_name": "Bagus Lumayan Mantap",
+          "business_category": "Puasan Pengguna",
+          "sub_issue": "Aplikasi dinilai bagus",
+          "review_count": 180,
+          "pct": 6.36,
+          "avg_score": 3.0,
+          "total_thumbs_up": 23
+        },
+        {
+          "rank": 6,
+          "topic_id": 5,
+          "topic_name": "Sinyal Padahal Banget",
+          "business_category": "Kualitas Streaming",
+          "sub_issue": "Lag meski sinyal bagus",
+          "review_count": 151,
+          "pct": 5.34,
+          "avg_score": 3.0,
+          "total_thumbs_up": 117
+        },
+        {
+          "rank": 7,
+          "topic_id": 6,
+          "topic_name": "Film Lengkap Kurang",
+          "business_category": "Katalog Konten",
+          "sub_issue": "Film/seri kurang lengkap",
+          "review_count": 127,
+          "pct": 4.49,
+          "avg_score": 3.0,
+          "total_thumbs_up": 70
+        },
+        {
+          "rank": 8,
+          "topic_id": 7,
+          "topic_name": "Ok Oke Good",
+          "business_category": "Puasan Pengguna",
+          "sub_issue": "Komentar OK/baik",
+          "review_count": 124,
+          "pct": 4.38,
+          "avg_score": 3.0,
+          "total_thumbs_up": 40
+        },
+        {
+          "rank": 9,
+          "topic_id": 8,
+          "topic_name": "Saya No Bisa",
+          "business_category": "Akun & Login",
+          "sub_issue": "Tidak dapat daftar atau masuk",
+          "review_count": 116,
+          "pct": 4.1,
+          "avg_score": 3.0,
+          "total_thumbs_up": 117
+        },
+        {
+          "rank": 10,
+          "topic_id": 9,
+          "topic_name": "Menonton Patah Live",
+          "business_category": "Masalah Live Streaming",
+          "sub_issue": "Live streaming terputus, iklan mengganggu",
+          "review_count": 86,
+          "pct": 3.04,
+          "avg_score": 3.0,
+          "total_thumbs_up": 80
+        },
+        {
+          "rank": 11,
+          "topic_id": 10,
+          "topic_name": "Kebanyakan Iklan Banyak",
+          "business_category": "Iklan",
+          "sub_issue": "Terlalu banyak iklan",
+          "review_count": 83,
+          "pct": 2.93,
+          "avg_score": 3.0,
+          "total_thumbs_up": 42
+        },
+        {
+          "rank": 12,
+          "topic_id": 11,
+          "topic_name": "Banyak Bagus Tapi",
+          "business_category": "Iklan",
+          "sub_issue": "Iklan mengganggu pengalaman",
+          "review_count": 69,
+          "pct": 2.44,
+          "avg_score": 3.0,
+          "total_thumbs_up": 19
+        },
+        {
+          "rank": 13,
+          "topic_id": 12,
+          "topic_name": "Lambat Ngelag Gangguan",
+          "business_category": "Kinerja Aplikasi",
+          "sub_issue": "Loading lama atau error",
+          "review_count": 68,
+          "pct": 2.4,
+          "avg_score": 3.0,
+          "total_thumbs_up": 45
+        },
+        {
+          "rank": 14,
+          "topic_id": 13,
+          "topic_name": "Buka Bisa Di",
+          "business_category": "Aplikasi Tidak Bisa Dibuka",
+          "sub_issue": "Tidak dapat membuka atau mengunduh video",
+          "review_count": 60,
+          "pct": 2.12,
+          "avg_score": 3.0,
+          "total_thumbs_up": 16
+        },
+        {
+          "rank": 15,
+          "topic_id": 14,
+          "topic_name": "Dulu Coba Iklannya",
+          "business_category": "Iklan",
+          "sub_issue": "Uji coba iklan dulu",
+          "review_count": 55,
+          "pct": 1.94,
+          "avg_score": 3.0,
+          "total_thumbs_up": 2
+        },
+        {
+          "rank": 16,
+          "topic_id": 15,
+          "topic_name": "Liga Inggris Vs",
+          "business_category": "Siaran Live",
+          "sub_issue": "Liga tidak tersedia",
+          "review_count": 50,
+          "pct": 1.77,
+          "avg_score": 3.0,
+          "total_thumbs_up": 13
+        },
+        {
+          "rank": 17,
+          "topic_id": 16,
+          "topic_name": "Bintang Kasih Aku",
+          "business_category": "Kualitas Konten",
+          "sub_issue": "Bintang rendah, konten kurang bagus",
+          "review_count": 48,
+          "pct": 1.7,
+          "avg_score": 3.0,
+          "total_thumbs_up": 6
+        },
+        {
+          "rank": 18,
+          "topic_id": 17,
+          "topic_name": "Banyak Iklan Iklannya",
+          "business_category": "Iklan",
+          "sub_issue": "Terlalu banyak iklan",
+          "review_count": 42,
+          "pct": 1.49,
+          "avg_score": 3.0,
+          "total_thumbs_up": 17
+        },
+        {
+          "rank": 19,
+          "topic_id": 18,
+          "topic_name": "Ada Tidak Rcti",
+          "business_category": "Ketersediaan Channel",
+          "sub_issue": "Channel RCTI tidak ada",
+          "review_count": 41,
+          "pct": 1.45,
+          "avg_score": 3.0,
+          "total_thumbs_up": 3
+        },
+        {
+          "rank": 20,
+          "topic_id": 19,
+          "topic_name": "Mahal Harga Naik",
+          "business_category": "Harga Paket",
+          "sub_issue": "Harga paket naik",
+          "review_count": 36,
+          "pct": 1.27,
+          "avg_score": 3.0,
+          "total_thumbs_up": 15
+        },
+        {
+          "rank": 21,
+          "topic_id": 21,
+          "topic_name": "Iklan Menit Iklann",
+          "business_category": "Iklan",
+          "sub_issue": "Iklan terlalu lama/skip",
+          "review_count": 35,
+          "pct": 1.24,
+          "avg_score": 3.0,
+          "total_thumbs_up": 16
+        },
+        {
+          "rank": 22,
+          "topic_id": 20,
+          "topic_name": "Download Asmara Magic",
+          "business_category": "Download",
+          "sub_issue": "Tidak bisa download video",
+          "review_count": 35,
+          "pct": 1.24,
+          "avg_score": 3.0,
+          "total_thumbs_up": 1
+        },
+        {
+          "rank": 23,
+          "topic_id": 22,
+          "topic_name": "Gtv Mnctv Rcti",
+          "business_category": "Ketersediaan Channel",
+          "sub_issue": "Channel GTV/MNCTV/RCTI tidak ada",
+          "review_count": 31,
+          "pct": 1.1,
+          "avg_score": 3.0,
+          "total_thumbs_up": 6
+        },
+        {
+          "rank": 24,
+          "topic_id": 23,
+          "topic_name": "Membeli Transaksi Paket",
+          "business_category": "Pembelian Paket",
+          "sub_issue": "Tidak dapat membeli paket",
+          "review_count": 19,
+          "pct": 0.67,
+          "avg_score": 3.0,
+          "total_thumbs_up": 0
+        },
+        {
+          "rank": 25,
+          "topic_id": 25,
+          "topic_name": "Ngelag Subtitel Sering",
+          "business_category": "Performansi",
+          "sub_issue": "Lag dan subtitle bermasalah",
+          "review_count": 13,
+          "pct": 0.46,
+          "avg_score": 3.0,
+          "total_thumbs_up": 2
+        },
+        {
+          "rank": 26,
+          "topic_id": 24,
+          "topic_name": "Iklan Mengganggu Terlalu",
+          "business_category": "Iklan",
+          "sub_issue": "Iklan mengganggu, durasi panjang",
+          "review_count": 13,
+          "pct": 0.46,
+          "avg_score": 3.0,
+          "total_thumbs_up": 9
+        },
+        {
+          "rank": 27,
+          "topic_id": 26,
+          "topic_name": "Tau Nih Express",
+          "business_category": "Fitur Eksperimen",
+          "sub_issue": "Bug posting atau screenshot tidak berfungsi",
+          "review_count": 12,
+          "pct": 0.42,
+          "avg_score": 3.0,
+          "total_thumbs_up": 33
+        },
+        {
+          "rank": 28,
+          "topic_id": 27,
+          "topic_name": "Mm Look Tok",
+          "business_category": "Spam",
+          "sub_issue": "Ulasan tidak dapat dipahami",
+          "review_count": 11,
+          "pct": 0.39,
+          "avg_score": 3.0,
+          "total_thumbs_up": 2
+        },
+        {
+          "rank": 29,
+          "topic_id": 28,
+          "topic_name": "𝐚𝐝𝐚 𝐤𝐞𝐧𝐚𝐩𝐚 Tiba²",
+          "business_category": "Download",
+          "sub_issue": "Download hanya untuk premium",
+          "review_count": 7,
+          "pct": 0.25,
+          "avg_score": 3.0,
+          "total_thumbs_up": 0
+        }
+      ],
+      "category_concentration": {
+        "top_3_categories": [
+          "Masalah Streaming",
+          "Iklan",
+          "Puasan Pengguna"
+        ],
+        "top_3_pct": 50.67
+      }
+    }
+  },
+  "business_categories": {
+    "by_sentiment": {
+      "positif": [
+        {
+          "category": "Ulasan Umum Positif",
+          "review_count": 9772,
+          "pct": 62.59,
+          "avg_score": 4.9,
+          "share_confident": 0.9562
+        },
+        {
+          "category": "Masalah Teknis",
+          "review_count": 1209,
+          "pct": 7.74,
+          "avg_score": 4.65,
+          "share_confident": 0.9694
+        },
+        {
+          "category": "Konten Film",
+          "review_count": 1150,
+          "pct": 7.37,
+          "avg_score": 4.85,
+          "share_confident": 0.9965
+        },
+        {
+          "category": "Iklan",
+          "review_count": 943,
+          "pct": 6.04,
+          "avg_score": 4.58,
+          "share_confident": 0.9883
+        },
+        {
+          "category": "Konten TV",
+          "review_count": 830,
+          "pct": 5.32,
+          "avg_score": 4.65,
+          "share_confident": 0.988
+        },
+        {
+          "category": "Lain-lain / Noise",
+          "review_count": 234,
+          "pct": 1.5,
+          "avg_score": 4.91,
+          "share_confident": 0.0
+        },
+        {
+          "category": "Fitur TV",
+          "review_count": 176,
+          "pct": 1.13,
+          "avg_score": 4.86,
+          "share_confident": 0.9943
+        },
+        {
+          "category": "Konten Olahraga",
+          "review_count": 164,
+          "pct": 1.05,
+          "avg_score": 4.85,
+          "share_confident": 0.9939
+        }
+      ],
+      "negatif": [
+        {
+          "category": "Langganan Tidak Aktif",
+          "review_count": 4959,
+          "pct": 25.8,
+          "avg_score": 1.16,
+          "share_confident": 0.9895
+        },
+        {
+          "category": "Kualitas Aplikasi",
+          "review_count": 2425,
+          "pct": 12.62,
+          "avg_score": 1.09,
+          "share_confident": 0.9946
+        },
+        {
+          "category": "Streaming Bola",
+          "review_count": 2066,
+          "pct": 10.75,
+          "avg_score": 1.16,
+          "share_confident": 0.9923
+        },
+        {
+          "category": "Akses Konten",
+          "review_count": 1730,
+          "pct": 9.0,
+          "avg_score": 1.2,
+          "share_confident": 0.989
+        },
+        {
+          "category": "Iklan pada Film",
+          "review_count": 1408,
+          "pct": 7.33,
+          "avg_score": 1.22,
+          "share_confident": 0.9943
+        },
+        {
+          "category": "Iklan Berlebih",
+          "review_count": 1060,
+          "pct": 5.52,
+          "avg_score": 1.19,
+          "share_confident": 0.9962
+        },
+        {
+          "category": "Iklan pada Premium",
+          "review_count": 933,
+          "pct": 4.85,
+          "avg_score": 1.16,
+          "share_confident": 0.9968
+        },
+        {
+          "category": "Kinerja Aplikasi",
+          "review_count": 797,
+          "pct": 4.15,
+          "avg_score": 1.16,
+          "share_confident": 0.9975
+        },
+        {
+          "category": "Harga Langganan",
+          "review_count": 666,
+          "pct": 3.47,
+          "avg_score": 1.14,
+          "share_confident": 0.9955
+        },
+        {
+          "category": "Penghapusan Aplikasi",
+          "review_count": 602,
+          "pct": 3.13,
+          "avg_score": 1.07,
+          "share_confident": 0.9718
+        },
+        {
+          "category": "Login",
+          "review_count": 504,
+          "pct": 2.62,
+          "avg_score": 1.17,
+          "share_confident": 0.994
+        },
+        {
+          "category": "Iklan Lambat",
+          "review_count": 356,
+          "pct": 1.85,
+          "avg_score": 1.21,
+          "share_confident": 0.9972
+        },
+        {
+          "category": "Iklan",
+          "review_count": 346,
+          "pct": 1.8,
+          "avg_score": 1.13,
+          "share_confident": 0.9942
+        },
+        {
+          "category": "Pembayaran Otomatis",
+          "review_count": 335,
+          "pct": 1.74,
+          "avg_score": 1.15,
+          "share_confident": 0.997
+        },
+        {
+          "category": "Kepuasan Pengguna",
+          "review_count": 243,
+          "pct": 1.26,
+          "avg_score": 1.07,
+          "share_confident": 1.0
+        },
+        {
+          "category": "Konten Siaran",
+          "review_count": 222,
+          "pct": 1.16,
+          "avg_score": 1.16,
+          "share_confident": 0.982
+        },
+        {
+          "category": "Tampilan",
+          "review_count": 124,
+          "pct": 0.65,
+          "avg_score": 1.09,
+          "share_confident": 1.0
+        },
+        {
+          "category": "Umum Positif",
+          "review_count": 122,
+          "pct": 0.63,
+          "avg_score": 1.29,
+          "share_confident": 1.0
+        },
+        {
+          "category": "Lain-lain / Noise",
+          "review_count": 106,
+          "pct": 0.55,
+          "avg_score": 1.18,
+          "share_confident": 0.0
+        },
+        {
+          "category": "Pengalaman Baru",
+          "review_count": 81,
+          "pct": 0.42,
+          "avg_score": 1.32,
+          "share_confident": 1.0
+        },
+        {
+          "category": "Pembayaran Langganan",
+          "review_count": 50,
+          "pct": 0.26,
+          "avg_score": 1.1,
+          "share_confident": 1.0
+        },
+        {
+          "category": "Tidak Relevan",
+          "review_count": 43,
+          "pct": 0.22,
+          "avg_score": 1.42,
+          "share_confident": 0.9767
+        },
+        {
+          "category": "Umum Negatif",
+          "review_count": 42,
+          "pct": 0.22,
+          "avg_score": 1.19,
+          "share_confident": 1.0
+        }
+      ],
+      "netral": [
+        {
+          "category": "Masalah Streaming",
+          "review_count": 641,
+          "pct": 22.67,
+          "avg_score": 3.0,
+          "share_confident": 0.9906
+        },
+        {
+          "category": "Iklan",
+          "review_count": 483,
+          "pct": 17.08,
+          "avg_score": 3.0,
+          "share_confident": 0.9917
+        },
+        {
+          "category": "Puasan Pengguna",
+          "review_count": 304,
+          "pct": 10.75,
+          "avg_score": 3.0,
+          "share_confident": 0.9375
+        },
+        {
+          "category": "Pembayaran Langganan",
+          "review_count": 281,
+          "pct": 9.94,
+          "avg_score": 3.0,
+          "share_confident": 0.9929
+        },
+        {
+          "category": "Siaran TV",
+          "review_count": 198,
+          "pct": 7.0,
+          "avg_score": 3.0,
+          "share_confident": 1.0
+        },
+        {
+          "category": "Kualitas Streaming",
+          "review_count": 151,
+          "pct": 5.34,
+          "avg_score": 3.0,
+          "share_confident": 0.9801
+        },
+        {
+          "category": "Katalog Konten",
+          "review_count": 127,
+          "pct": 4.49,
+          "avg_score": 3.0,
+          "share_confident": 0.9843
+        },
+        {
+          "category": "Akun & Login",
+          "review_count": 116,
+          "pct": 4.1,
+          "avg_score": 3.0,
+          "share_confident": 0.9828
+        },
+        {
+          "category": "Masalah Live Streaming",
+          "review_count": 86,
+          "pct": 3.04,
+          "avg_score": 3.0,
+          "share_confident": 1.0
+        },
+        {
+          "category": "Ketersediaan Channel",
+          "review_count": 72,
+          "pct": 2.55,
+          "avg_score": 3.0,
+          "share_confident": 1.0
+        },
+        {
+          "category": "Kinerja Aplikasi",
+          "review_count": 68,
+          "pct": 2.4,
+          "avg_score": 3.0,
+          "share_confident": 1.0
+        },
+        {
+          "category": "Aplikasi Tidak Bisa Dibuka",
+          "review_count": 60,
+          "pct": 2.12,
+          "avg_score": 3.0,
+          "share_confident": 0.9833
+        },
+        {
+          "category": "Siaran Live",
+          "review_count": 50,
+          "pct": 1.77,
+          "avg_score": 3.0,
+          "share_confident": 1.0
+        },
+        {
+          "category": "Kualitas Konten",
+          "review_count": 48,
+          "pct": 1.7,
+          "avg_score": 3.0,
+          "share_confident": 1.0
+        },
+        {
+          "category": "Download",
+          "review_count": 42,
+          "pct": 1.49,
+          "avg_score": 3.0,
+          "share_confident": 0.9762
+        },
+        {
+          "category": "Harga Paket",
+          "review_count": 36,
+          "pct": 1.27,
+          "avg_score": 3.0,
+          "share_confident": 1.0
+        },
+        {
+          "category": "Pembelian Paket",
+          "review_count": 19,
+          "pct": 0.67,
+          "avg_score": 3.0,
+          "share_confident": 1.0
+        },
+        {
+          "category": "Performansi",
+          "review_count": 13,
+          "pct": 0.46,
+          "avg_score": 3.0,
+          "share_confident": 1.0
+        },
+        {
+          "category": "Fitur Eksperimen",
+          "review_count": 12,
+          "pct": 0.42,
+          "avg_score": 3.0,
+          "share_confident": 1.0
+        },
+        {
+          "category": "Spam",
+          "review_count": 11,
+          "pct": 0.39,
+          "avg_score": 3.0,
+          "share_confident": 1.0
+        },
+        {
+          "category": "Lain-lain / Noise",
+          "review_count": 10,
+          "pct": 0.35,
+          "avg_score": 3.0,
+          "share_confident": 0.0
+        }
+      ]
+    },
+    "cross_sentiment": [
+      {
+        "category": "Ulasan Umum Positif",
+        "positif": 9772,
+        "negatif": 0,
+        "netral": 0,
+        "total": 9772,
+        "net_sentiment_ratio": 1.0
+      },
+      {
+        "category": "Langganan Tidak Aktif",
+        "positif": 0,
+        "negatif": 4959,
+        "netral": 0,
+        "total": 4959,
+        "net_sentiment_ratio": -1.0
+      },
+      {
+        "category": "Kualitas Aplikasi",
+        "positif": 0,
+        "negatif": 2425,
+        "netral": 0,
+        "total": 2425,
+        "net_sentiment_ratio": -1.0
+      },
+      {
+        "category": "Streaming Bola",
+        "positif": 0,
+        "negatif": 2066,
+        "netral": 0,
+        "total": 2066,
+        "net_sentiment_ratio": -1.0
+      },
+      {
+        "category": "Iklan",
+        "positif": 943,
+        "negatif": 346,
+        "netral": 483,
+        "total": 1772,
+        "net_sentiment_ratio": 0.3369
+      },
+      {
+        "category": "Akses Konten",
+        "positif": 0,
+        "negatif": 1730,
+        "netral": 0,
+        "total": 1730,
+        "net_sentiment_ratio": -1.0
+      },
+      {
+        "category": "Iklan pada Film",
+        "positif": 0,
+        "negatif": 1408,
+        "netral": 0,
+        "total": 1408,
+        "net_sentiment_ratio": -1.0
+      },
+      {
+        "category": "Masalah Teknis",
+        "positif": 1209,
+        "negatif": 0,
+        "netral": 0,
+        "total": 1209,
+        "net_sentiment_ratio": 1.0
+      },
+      {
+        "category": "Konten Film",
+        "positif": 1150,
+        "negatif": 0,
+        "netral": 0,
+        "total": 1150,
+        "net_sentiment_ratio": 1.0
+      },
+      {
+        "category": "Iklan Berlebih",
+        "positif": 0,
+        "negatif": 1060,
+        "netral": 0,
+        "total": 1060,
+        "net_sentiment_ratio": -1.0
+      },
+      {
+        "category": "Iklan pada Premium",
+        "positif": 0,
+        "negatif": 933,
+        "netral": 0,
+        "total": 933,
+        "net_sentiment_ratio": -1.0
+      },
+      {
+        "category": "Kinerja Aplikasi",
+        "positif": 0,
+        "negatif": 797,
+        "netral": 68,
+        "total": 865,
+        "net_sentiment_ratio": -0.9214
+      },
+      {
+        "category": "Konten TV",
+        "positif": 830,
+        "negatif": 0,
+        "netral": 0,
+        "total": 830,
+        "net_sentiment_ratio": 1.0
+      },
+      {
+        "category": "Harga Langganan",
+        "positif": 0,
+        "negatif": 666,
+        "netral": 0,
+        "total": 666,
+        "net_sentiment_ratio": -1.0
+      },
+      {
+        "category": "Masalah Streaming",
+        "positif": 0,
+        "negatif": 0,
+        "netral": 641,
+        "total": 641,
+        "net_sentiment_ratio": 0.0
+      },
+      {
+        "category": "Penghapusan Aplikasi",
+        "positif": 0,
+        "negatif": 602,
+        "netral": 0,
+        "total": 602,
+        "net_sentiment_ratio": -1.0
+      },
+      {
+        "category": "Login",
+        "positif": 0,
+        "negatif": 504,
+        "netral": 0,
+        "total": 504,
+        "net_sentiment_ratio": -1.0
+      },
+      {
+        "category": "Iklan Lambat",
+        "positif": 0,
+        "negatif": 356,
+        "netral": 0,
+        "total": 356,
+        "net_sentiment_ratio": -1.0
+      },
+      {
+        "category": "Lain-lain / Noise",
+        "positif": 234,
+        "negatif": 106,
+        "netral": 10,
+        "total": 350,
+        "net_sentiment_ratio": 0.3657
+      },
+      {
+        "category": "Pembayaran Otomatis",
+        "positif": 0,
+        "negatif": 335,
+        "netral": 0,
+        "total": 335,
+        "net_sentiment_ratio": -1.0
+      },
+      {
+        "category": "Pembayaran Langganan",
+        "positif": 0,
+        "negatif": 50,
+        "netral": 281,
+        "total": 331,
+        "net_sentiment_ratio": -0.1511
+      },
+      {
+        "category": "Puasan Pengguna",
+        "positif": 0,
+        "negatif": 0,
+        "netral": 304,
+        "total": 304,
+        "net_sentiment_ratio": 0.0
+      },
+      {
+        "category": "Kepuasan Pengguna",
+        "positif": 0,
+        "negatif": 243,
+        "netral": 0,
+        "total": 243,
+        "net_sentiment_ratio": -1.0
+      },
+      {
+        "category": "Konten Siaran",
+        "positif": 0,
+        "negatif": 222,
+        "netral": 0,
+        "total": 222,
+        "net_sentiment_ratio": -1.0
+      },
+      {
+        "category": "Siaran TV",
+        "positif": 0,
+        "negatif": 0,
+        "netral": 198,
+        "total": 198,
+        "net_sentiment_ratio": 0.0
+      },
+      {
+        "category": "Fitur TV",
+        "positif": 176,
+        "negatif": 0,
+        "netral": 0,
+        "total": 176,
+        "net_sentiment_ratio": 1.0
+      },
+      {
+        "category": "Konten Olahraga",
+        "positif": 164,
+        "negatif": 0,
+        "netral": 0,
+        "total": 164,
+        "net_sentiment_ratio": 1.0
+      },
+      {
+        "category": "Kualitas Streaming",
+        "positif": 0,
+        "negatif": 0,
+        "netral": 151,
+        "total": 151,
+        "net_sentiment_ratio": 0.0
+      },
+      {
+        "category": "Katalog Konten",
+        "positif": 0,
+        "negatif": 0,
+        "netral": 127,
+        "total": 127,
+        "net_sentiment_ratio": 0.0
+      },
+      {
+        "category": "Tampilan",
+        "positif": 0,
+        "negatif": 124,
+        "netral": 0,
+        "total": 124,
+        "net_sentiment_ratio": -1.0
+      },
+      {
+        "category": "Umum Positif",
+        "positif": 0,
+        "negatif": 122,
+        "netral": 0,
+        "total": 122,
+        "net_sentiment_ratio": -1.0
+      },
+      {
+        "category": "Akun & Login",
+        "positif": 0,
+        "negatif": 0,
+        "netral": 116,
+        "total": 116,
+        "net_sentiment_ratio": 0.0
+      },
+      {
+        "category": "Masalah Live Streaming",
+        "positif": 0,
+        "negatif": 0,
+        "netral": 86,
+        "total": 86,
+        "net_sentiment_ratio": 0.0
+      },
+      {
+        "category": "Pengalaman Baru",
+        "positif": 0,
+        "negatif": 81,
+        "netral": 0,
+        "total": 81,
+        "net_sentiment_ratio": -1.0
+      },
+      {
+        "category": "Ketersediaan Channel",
+        "positif": 0,
+        "negatif": 0,
+        "netral": 72,
+        "total": 72,
+        "net_sentiment_ratio": 0.0
+      },
+      {
+        "category": "Aplikasi Tidak Bisa Dibuka",
+        "positif": 0,
+        "negatif": 0,
+        "netral": 60,
+        "total": 60,
+        "net_sentiment_ratio": 0.0
+      },
+      {
+        "category": "Siaran Live",
+        "positif": 0,
+        "negatif": 0,
+        "netral": 50,
+        "total": 50,
+        "net_sentiment_ratio": 0.0
+      },
+      {
+        "category": "Kualitas Konten",
+        "positif": 0,
+        "negatif": 0,
+        "netral": 48,
+        "total": 48,
+        "net_sentiment_ratio": 0.0
+      },
+      {
+        "category": "Tidak Relevan",
+        "positif": 0,
+        "negatif": 43,
+        "netral": 0,
+        "total": 43,
+        "net_sentiment_ratio": -1.0
+      },
+      {
+        "category": "Download",
+        "positif": 0,
+        "negatif": 0,
+        "netral": 42,
+        "total": 42,
+        "net_sentiment_ratio": 0.0
+      },
+      {
+        "category": "Umum Negatif",
+        "positif": 0,
+        "negatif": 42,
+        "netral": 0,
+        "total": 42,
+        "net_sentiment_ratio": -1.0
+      },
+      {
+        "category": "Harga Paket",
+        "positif": 0,
+        "negatif": 0,
+        "netral": 36,
+        "total": 36,
+        "net_sentiment_ratio": 0.0
+      },
+      {
+        "category": "Pembelian Paket",
+        "positif": 0,
+        "negatif": 0,
+        "netral": 19,
+        "total": 19,
+        "net_sentiment_ratio": 0.0
+      },
+      {
+        "category": "Performansi",
+        "positif": 0,
+        "negatif": 0,
+        "netral": 13,
+        "total": 13,
+        "net_sentiment_ratio": 0.0
+      },
+      {
+        "category": "Fitur Eksperimen",
+        "positif": 0,
+        "negatif": 0,
+        "netral": 12,
+        "total": 12,
+        "net_sentiment_ratio": 0.0
+      },
+      {
+        "category": "Spam",
+        "positif": 0,
+        "negatif": 0,
+        "netral": 11,
+        "total": 11,
+        "net_sentiment_ratio": 0.0
+      }
+    ]
+  },
+  "cs_performance": {
+    "overall": {
+      "total_negative_reviews": 19220,
+      "total_replied": 19034,
+      "avg_reply_rate": 99.03,
+      "median_reply_delay_hours": 1.22,
+      "avg_wa_redirect_rate": 82.43
+    },
+    "by_category": [
+      {
+        "category": "Langganan Tidak Aktif",
+        "total_neg": 4959,
+        "replied": 4943,
+        "reply_rate": 99.68,
+        "delay_hours": 1.26,
+        "wa_redirect_rate": 88.71
+      },
+      {
+        "category": "Kualitas Aplikasi",
+        "total_neg": 2425,
+        "replied": 2360,
+        "reply_rate": 97.32,
+        "delay_hours": 1.17,
+        "wa_redirect_rate": 85.51
+      },
+      {
+        "category": "Streaming Bola",
+        "total_neg": 2066,
+        "replied": 2043,
+        "reply_rate": 98.89,
+        "delay_hours": 1.35,
+        "wa_redirect_rate": 84.34
+      },
+      {
+        "category": "Akses Konten",
+        "total_neg": 1730,
+        "replied": 1711,
+        "reply_rate": 98.9,
+        "delay_hours": 1.17,
+        "wa_redirect_rate": 86.73
+      },
+      {
+        "category": "Iklan pada Film",
+        "total_neg": 1408,
+        "replied": 1398,
+        "reply_rate": 99.29,
+        "delay_hours": 1.0,
+        "wa_redirect_rate": 61.95
+      },
+      {
+        "category": "Iklan Berlebih",
+        "total_neg": 1060,
+        "replied": 1054,
+        "reply_rate": 99.43,
+        "delay_hours": 1.1,
+        "wa_redirect_rate": 56.83
+      },
+      {
+        "category": "Iklan pada Premium",
+        "total_neg": 933,
+        "replied": 929,
+        "reply_rate": 99.57,
+        "delay_hours": 1.27,
+        "wa_redirect_rate": 89.02
+      },
+      {
+        "category": "Kinerja Aplikasi",
+        "total_neg": 797,
+        "replied": 795,
+        "reply_rate": 99.75,
+        "delay_hours": 1.32,
+        "wa_redirect_rate": 91.32
+      },
+      {
+        "category": "Harga Langganan",
+        "total_neg": 666,
+        "replied": 663,
+        "reply_rate": 99.55,
+        "delay_hours": 1.27,
+        "wa_redirect_rate": 73.76
+      },
+      {
+        "category": "Penghapusan Aplikasi",
+        "total_neg": 602,
+        "replied": 594,
+        "reply_rate": 98.67,
+        "delay_hours": 1.21,
+        "wa_redirect_rate": 82.15
+      },
+      {
+        "category": "Login",
+        "total_neg": 504,
+        "replied": 504,
+        "reply_rate": 100.0,
+        "delay_hours": 1.33,
+        "wa_redirect_rate": 94.64
+      },
+      {
+        "category": "Iklan Lambat",
+        "total_neg": 356,
+        "replied": 354,
+        "reply_rate": 99.44,
+        "delay_hours": 1.21,
+        "wa_redirect_rate": 68.93
+      },
+      {
+        "category": "Iklan",
+        "total_neg": 346,
+        "replied": 338,
+        "reply_rate": 97.69,
+        "delay_hours": 1.31,
+        "wa_redirect_rate": 56.51
+      },
+      {
+        "category": "Pembayaran Otomatis",
+        "total_neg": 335,
+        "replied": 334,
+        "reply_rate": 99.7,
+        "delay_hours": 1.14,
+        "wa_redirect_rate": 91.02
+      },
+      {
+        "category": "Kepuasan Pengguna",
+        "total_neg": 243,
+        "replied": 241,
+        "reply_rate": 99.18,
+        "delay_hours": 1.15,
+        "wa_redirect_rate": 92.12
+      },
+      {
+        "category": "Konten Siaran",
+        "total_neg": 222,
+        "replied": 211,
+        "reply_rate": 95.05,
+        "delay_hours": 1.46,
+        "wa_redirect_rate": 87.2
+      },
+      {
+        "category": "Tampilan",
+        "total_neg": 124,
+        "replied": 121,
+        "reply_rate": 97.58,
+        "delay_hours": 0.88,
+        "wa_redirect_rate": 91.74
+      },
+      {
+        "category": "Umum Positif",
+        "total_neg": 122,
+        "replied": 122,
+        "reply_rate": 100.0,
+        "delay_hours": 1.55,
+        "wa_redirect_rate": 74.59
+      },
+      {
+        "category": "Lain-lain / Noise",
+        "total_neg": 106,
+        "replied": 104,
+        "reply_rate": 98.11,
+        "delay_hours": 1.0,
+        "wa_redirect_rate": 88.46
+      },
+      {
+        "category": "Pengalaman Baru",
+        "total_neg": 81,
+        "replied": 81,
+        "reply_rate": 100.0,
+        "delay_hours": 1.14,
+        "wa_redirect_rate": 75.31
+      },
+      {
+        "category": "Pembayaran Langganan",
+        "total_neg": 50,
+        "replied": 50,
+        "reply_rate": 100.0,
+        "delay_hours": 1.17,
+        "wa_redirect_rate": 66.0
+      },
+      {
+        "category": "Tidak Relevan",
+        "total_neg": 43,
+        "replied": 43,
+        "reply_rate": 100.0,
+        "delay_hours": 1.14,
+        "wa_redirect_rate": 95.35
+      },
+      {
+        "category": "Umum Negatif",
+        "total_neg": 42,
+        "replied": 41,
+        "reply_rate": 97.62,
+        "delay_hours": 1.05,
+        "wa_redirect_rate": 82.93
+      }
+    ],
+    "best_performers": {
+      "fastest_reply": {
+        "category": "Tampilan",
+        "delay_hours": 0.88
+      },
+      "highest_reply_rate": {
+        "category": "Login",
+        "rate": 100.0
+      }
+    },
+    "worst_performers": {
+      "slowest_reply": {
+        "category": "Umum Positif",
+        "delay_hours": 1.55
+      },
+      "lowest_reply_rate": {
+        "category": "Konten Siaran",
+        "rate": 95.05
+      }
+    }
+  },
+  "keyword_analysis": {
+    "positif": [
+      {
+        "keyword": "bagus",
+        "topic_count": 4,
+        "weighted_review_count": 5432
+      },
+      {
+        "keyword": "ok",
+        "topic_count": 2,
+        "weighted_review_count": 4903
+      },
+      {
+        "keyword": "oke",
+        "topic_count": 2,
+        "weighted_review_count": 4903
+      },
+      {
+        "keyword": "seru",
+        "topic_count": 2,
+        "weighted_review_count": 4903
+      },
+      {
+        "keyword": "top",
+        "topic_count": 2,
+        "weighted_review_count": 3493
+      },
+      {
+        "keyword": "good",
+        "topic_count": 2,
+        "weighted_review_count": 3328
+      },
+      {
+        "keyword": "the",
+        "topic_count": 2,
+        "weighted_review_count": 3328
+      },
+      {
+        "keyword": "terbaik",
+        "topic_count": 2,
+        "weighted_review_count": 3298
+      },
+      {
+        "keyword": "nice",
+        "topic_count": 1,
+        "weighted_review_count": 3226
+      },
+      {
+        "keyword": "best",
+        "topic_count": 1,
+        "weighted_review_count": 3226
+      },
+      {
+        "keyword": "job",
+        "topic_count": 1,
+        "weighted_review_count": 3226
+      },
+      {
+        "keyword": "membantu",
+        "topic_count": 1,
+        "weighted_review_count": 3047
+      },
+      {
+        "keyword": "puas",
+        "topic_count": 1,
+        "weighted_review_count": 3047
+      },
+      {
+        "keyword": "menghibur",
+        "topic_count": 1,
+        "weighted_review_count": 3047
+      },
+      {
+        "keyword": "memuaskan",
+        "topic_count": 1,
+        "weighted_review_count": 3047
+      },
+      {
+        "keyword": "menonton",
+        "topic_count": 3,
+        "weighted_review_count": 2294
+      },
+      {
+        "keyword": "film",
+        "topic_count": 2,
+        "weighted_review_count": 1980
+      },
+      {
+        "keyword": "mantap",
+        "topic_count": 1,
+        "weighted_review_count": 1677
+      },
+      {
+        "keyword": "keren",
+        "topic_count": 1,
+        "weighted_review_count": 1677
+      },
+      {
+        "keyword": "mantab",
+        "topic_count": 1,
+        "weighted_review_count": 1677
+      },
+      {
+        "keyword": "pokoknya",
+        "topic_count": 1,
+        "weighted_review_count": 1677
+      },
+      {
+        "keyword": "suka",
+        "topic_count": 2,
+        "weighted_review_count": 1390
+      },
+      {
+        "keyword": "filmnya",
+        "topic_count": 1,
+        "weighted_review_count": 1150
+      },
+      {
+        "keyword": "kualitas",
+        "topic_count": 1,
+        "weighted_review_count": 1150
+      },
+      {
+        "keyword": "hiburan",
+        "topic_count": 1,
+        "weighted_review_count": 1150
+      },
+      {
+        "keyword": "paket",
+        "topic_count": 2,
+        "weighted_review_count": 1137
+      },
+      {
+        "keyword": "tv",
+        "topic_count": 2,
+        "weighted_review_count": 1006
+      },
+      {
+        "keyword": "iklan",
+        "topic_count": 2,
+        "weighted_review_count": 943
+      },
+      {
+        "keyword": "kadang",
+        "topic_count": 2,
+        "weighted_review_count": 943
+      },
+      {
+        "keyword": "tolong",
+        "topic_count": 2,
+        "weighted_review_count": 927
+      },
+      {
+        "keyword": "rcti",
+        "topic_count": 1,
+        "weighted_review_count": 830
+      },
+      {
+        "keyword": "tambahkan",
+        "topic_count": 1,
+        "weighted_review_count": 830
+      },
+      {
+        "keyword": "siaran",
+        "topic_count": 1,
+        "weighted_review_count": 830
+      },
+      {
+        "keyword": "mahal",
+        "topic_count": 1,
+        "weighted_review_count": 756
+      },
+      {
+        "keyword": "kurangi",
+        "topic_count": 1,
+        "weighted_review_count": 756
+      },
+      {
+        "keyword": "iklannya",
+        "topic_count": 1,
+        "weighted_review_count": 756
+      },
+      {
+        "keyword": "harga",
+        "topic_count": 1,
+        "weighted_review_count": 756
+      },
+      {
+        "keyword": "kasih",
+        "topic_count": 3,
+        "weighted_review_count": 541
+      },
+      {
+        "keyword": "terima",
+        "topic_count": 2,
+        "weighted_review_count": 446
+      },
+      {
+        "keyword": "semoga",
+        "topic_count": 1,
+        "weighted_review_count": 347
+      },
+      {
+        "keyword": "sukses",
+        "topic_count": 1,
+        "weighted_review_count": 347
+      },
+      {
+        "keyword": "terimakasih",
+        "topic_count": 1,
+        "weighted_review_count": 347
+      },
+      {
+        "keyword": "coba",
+        "topic_count": 2,
+        "weighted_review_count": 300
+      },
+      {
+        "keyword": "sngat",
+        "topic_count": 1,
+        "weighted_review_count": 267
+      },
+      {
+        "keyword": "favorit",
+        "topic_count": 1,
+        "weighted_review_count": 267
+      },
+      {
+        "keyword": "video",
+        "topic_count": 1,
+        "weighted_review_count": 267
+      },
+      {
+        "keyword": "love",
+        "topic_count": 1,
+        "weighted_review_count": 240
+      },
+      {
+        "keyword": "bayar",
+        "topic_count": 2,
+        "weighted_review_count": 232
+      },
+      {
+        "keyword": "tingkatkan",
+        "topic_count": 1,
+        "weighted_review_count": 205
+      },
+      {
+        "keyword": "mencoba",
+        "topic_count": 1,
+        "weighted_review_count": 205
+      },
+      {
+        "keyword": "lelet",
+        "topic_count": 1,
+        "weighted_review_count": 205
+      },
+      {
+        "keyword": "ngelag",
+        "topic_count": 1,
+        "weighted_review_count": 187
+      },
+      {
+        "keyword": "kebanyakan",
+        "topic_count": 1,
+        "weighted_review_count": 187
+      },
+      {
+        "keyword": "eror",
+        "topic_count": 1,
+        "weighted_review_count": 187
+      },
+      {
+        "keyword": "dimana",
+        "topic_count": 1,
+        "weighted_review_count": 176
+      },
+      {
+        "keyword": "rumah",
+        "topic_count": 1,
+        "weighted_review_count": 176
+      },
+      {
+        "keyword": "hp",
+        "topic_count": 1,
+        "weighted_review_count": 176
+      },
+      {
+        "keyword": "league",
+        "topic_count": 1,
+        "weighted_review_count": 164
+      },
+      {
+        "keyword": "liga",
+        "topic_count": 1,
+        "weighted_review_count": 164
+      },
+      {
+        "keyword": "premier",
+        "topic_count": 1,
+        "weighted_review_count": 164
+      },
+      {
+        "keyword": "vs",
+        "topic_count": 1,
+        "weighted_review_count": 164
+      },
+      {
+        "keyword": "live",
+        "topic_count": 1,
+        "weighted_review_count": 164
+      },
+      {
+        "keyword": "raga",
+        "topic_count": 1,
+        "weighted_review_count": 164
+      },
+      {
+        "keyword": "indonesia",
+        "topic_count": 1,
+        "weighted_review_count": 164
+      },
+      {
+        "keyword": "olah",
+        "topic_count": 1,
+        "weighted_review_count": 164
+      },
+      {
+        "keyword": "serie",
+        "topic_count": 1,
+        "weighted_review_count": 164
+      },
+      {
+        "keyword": "match",
+        "topic_count": 1,
+        "weighted_review_count": 164
+      },
+      {
+        "keyword": "mantul",
+        "topic_count": 1,
+        "weighted_review_count": 142
+      },
+      {
+        "keyword": "mntap",
+        "topic_count": 1,
+        "weighted_review_count": 142
+      },
+      {
+        "keyword": "mantaf",
+        "topic_count": 1,
+        "weighted_review_count": 142
+      },
+      {
+        "keyword": "mantull",
+        "topic_count": 1,
+        "weighted_review_count": 142
+      },
+      {
+        "keyword": "mntp",
+        "topic_count": 1,
+        "weighted_review_count": 142
+      },
+      {
+        "keyword": "syuka",
+        "topic_count": 1,
+        "weighted_review_count": 142
+      },
+      {
+        "keyword": "bagis",
+        "topic_count": 1,
+        "weighted_review_count": 142
+      },
+      {
+        "keyword": "baikkk",
+        "topic_count": 1,
+        "weighted_review_count": 142
+      },
+      {
+        "keyword": "aplikasiii",
+        "topic_count": 1,
+        "weighted_review_count": 142
+      },
+      {
+        "keyword": "beli",
+        "topic_count": 1,
+        "weighted_review_count": 133
+      },
+      {
+        "keyword": "pulsa",
+        "topic_count": 1,
+        "weighted_review_count": 133
+      },
+      {
+        "keyword": "pakai",
+        "topic_count": 1,
+        "weighted_review_count": 133
+      },
+      {
+        "keyword": "telkomsel",
+        "topic_count": 1,
+        "weighted_review_count": 133
+      },
+      {
+        "keyword": "mudah",
+        "topic_count": 1,
+        "weighted_review_count": 112
+      },
+      {
+        "keyword": "ribet",
+        "topic_count": 1,
+        "weighted_review_count": 112
+      },
+      {
+        "keyword": "praktis",
+        "topic_count": 1,
+        "weighted_review_count": 112
+      },
+      {
+        "keyword": "simple",
+        "topic_count": 1,
+        "weighted_review_count": 112
+      },
+      {
+        "keyword": "like",
+        "topic_count": 1,
+        "weighted_review_count": 102
+      },
+      {
+        "keyword": "this",
+        "topic_count": 1,
+        "weighted_review_count": 102
+      },
+      {
+        "keyword": "sok",
+        "topic_count": 1,
+        "weighted_review_count": 102
+      },
+      {
+        "keyword": "is",
+        "topic_count": 1,
+        "weighted_review_count": 102
+      },
+      {
+        "keyword": "aplication",
+        "topic_count": 1,
+        "weighted_review_count": 102
+      },
+      {
+        "keyword": "and",
+        "topic_count": 1,
+        "weighted_review_count": 102
+      },
+      {
+        "keyword": "excellent",
+        "topic_count": 1,
+        "weighted_review_count": 102
+      },
+      {
+        "keyword": "application",
+        "topic_count": 1,
+        "weighted_review_count": 102
+      },
+      {
+        "keyword": "cepat",
+        "topic_count": 1,
+        "weighted_review_count": 99
+      },
+      {
+        "keyword": "respon",
+        "topic_count": 1,
+        "weighted_review_count": 99
+      },
+      {
+        "keyword": "keluhan",
+        "topic_count": 1,
+        "weighted_review_count": 99
+      },
+      {
+        "keyword": "kendala",
+        "topic_count": 1,
+        "weighted_review_count": 99
+      },
+      {
+        "keyword": "fast",
+        "topic_count": 1,
+        "weighted_review_count": 99
+      },
+      {
+        "keyword": "team",
+        "topic_count": 1,
+        "weighted_review_count": 99
+      },
+      {
+        "keyword": "dikit",
+        "topic_count": 1,
+        "weighted_review_count": 99
+      },
+      {
+        "keyword": "diskon",
+        "topic_count": 1,
+        "weighted_review_count": 99
+      },
+      {
+        "keyword": "membanyaki",
+        "topic_count": 1,
+        "weighted_review_count": 99
+      },
+      {
+        "keyword": "promo",
+        "topic_count": 1,
+        "weighted_review_count": 99
+      },
+      {
+        "keyword": "gratis",
+        "topic_count": 1,
+        "weighted_review_count": 99
+      },
+      {
+        "keyword": "hapus",
+        "topic_count": 1,
+        "weighted_review_count": 97
+      },
+      {
+        "keyword": "fitur",
+        "topic_count": 1,
+        "weighted_review_count": 97
+      },
+      {
+        "keyword": "riwayat",
+        "topic_count": 1,
+        "weighted_review_count": 97
+      },
+      {
+        "keyword": "tontonan",
+        "topic_count": 1,
+        "weighted_review_count": 97
+      },
+      {
+        "keyword": "mode",
+        "topic_count": 1,
+        "weighted_review_count": 97
+      },
+      {
+        "keyword": "bintangnya",
+        "topic_count": 1,
+        "weighted_review_count": 95
+      },
+      {
+        "keyword": "cinta",
+        "topic_count": 1,
+        "weighted_review_count": 72
+      },
+      {
+        "keyword": "berbicara",
+        "topic_count": 1,
+        "weighted_review_count": 72
+      },
+      {
+        "keyword": "tuhan",
+        "topic_count": 1,
+        "weighted_review_count": 72
+      },
+      {
+        "keyword": "pencari",
+        "topic_count": 1,
+        "weighted_review_count": 72
+      },
+      {
+        "keyword": "bicara",
+        "topic_count": 1,
+        "weighted_review_count": 72
+      },
+      {
+        "keyword": "bb",
+        "topic_count": 1,
+        "weighted_review_count": 70
+      },
+      {
+        "keyword": "hu",
+        "topic_count": 1,
+        "weighted_review_count": 70
+      },
+      {
+        "keyword": "xx",
+        "topic_count": 1,
+        "weighted_review_count": 70
+      },
+      {
+        "keyword": "ah",
+        "topic_count": 1,
+        "weighted_review_count": 70
+      },
+      {
+        "keyword": "oo",
+        "topic_count": 1,
+        "weighted_review_count": 70
+      },
+      {
+        "keyword": "existingbefore",
+        "topic_count": 1,
+        "weighted_review_count": 70
+      },
+      {
+        "keyword": "by",
+        "topic_count": 1,
+        "weighted_review_count": 70
+      },
+      {
+        "keyword": "king",
+        "topic_count": 1,
+        "weighted_review_count": 70
+      },
+      {
+        "keyword": "uc",
+        "topic_count": 1,
+        "weighted_review_count": 70
+      },
+      {
+        "keyword": "aing",
+        "topic_count": 1,
+        "weighted_review_count": 70
+      },
+      {
+        "keyword": "acl",
+        "topic_count": 1,
+        "weighted_review_count": 43
+      },
+      {
+        "keyword": "gamestop",
+        "topic_count": 1,
+        "weighted_review_count": 43
+      },
+      {
+        "keyword": "movie",
+        "topic_count": 1,
+        "weighted_review_count": 43
+      },
+      {
+        "keyword": "vido",
+        "topic_count": 1,
+        "weighted_review_count": 43
+      },
+      {
+        "keyword": "program",
+        "topic_count": 1,
+        "weighted_review_count": 43
+      },
+      {
+        "keyword": "movis",
+        "topic_count": 1,
+        "weighted_review_count": 43
+      },
+      {
+        "keyword": "mov",
+        "topic_count": 1,
+        "weighted_review_count": 43
+      },
+      {
+        "keyword": "ufc",
+        "topic_count": 1,
+        "weighted_review_count": 37
+      },
+      {
+        "keyword": "bagus²",
+        "topic_count": 1,
+        "weighted_review_count": 37
+      },
+      {
+        "keyword": "𝑏𝑎𝑔𝑢𝑠",
+        "topic_count": 1,
+        "weighted_review_count": 37
+      },
+      {
+        "keyword": "1qaaàa",
+        "topic_count": 1,
+        "weighted_review_count": 37
+      },
+      {
+        "keyword": "𝙣𝙮𝙖",
+        "topic_count": 1,
+        "weighted_review_count": 37
+      },
+      {
+        "keyword": "alhamdulillàh",
+        "topic_count": 1,
+        "weighted_review_count": 37
+      },
+      {
+        "keyword": "8789⁹⁹⁹⁹⁹",
+        "topic_count": 1,
+        "weighted_review_count": 37
+      },
+      {
+        "keyword": "baík",
+        "topic_count": 1,
+        "weighted_review_count": 37
+      },
+      {
+        "keyword": "favoritlihat",
+        "topic_count": 1,
+        "weighted_review_count": 37
+      },
+      {
+        "keyword": "kurang²in",
+        "topic_count": 1,
+        "weighted_review_count": 37
+      },
+      {
+        "keyword": "𝑑𝑖",
+        "topic_count": 1,
+        "weighted_review_count": 19
+      },
+      {
+        "keyword": "𝗌𝖾𝗋𝗎",
+        "topic_count": 1,
+        "weighted_review_count": 19
+      },
+      {
+        "keyword": "𝑛𝑦𝑎",
+        "topic_count": 1,
+        "weighted_review_count": 19
+      },
+      {
+        "keyword": "𝚔𝚊𝚕𝚊𝚞",
+        "topic_count": 1,
+        "weighted_review_count": 19
+      },
+      {
+        "keyword": "𝗅𝖺𝗀𝗂",
+        "topic_count": 1,
+        "weighted_review_count": 19
+      },
+      {
+        "keyword": "𝚗𝚘𝚗𝚝𝚘𝚗",
+        "topic_count": 1,
+        "weighted_review_count": 19
+      },
+      {
+        "keyword": "𝚜𝚞𝚔𝚊",
+        "topic_count": 1,
+        "weighted_review_count": 19
+      },
+      {
+        "keyword": "𝚕𝚊𝚖𝚊",
+        "topic_count": 1,
+        "weighted_review_count": 19
+      },
+      {
+        "keyword": "𝚝𝚊𝚙𝚒",
+        "topic_count": 1,
+        "weighted_review_count": 19
+      },
+      {
+        "keyword": "𝑏𝑎𝑦𝑎𝑟",
+        "topic_count": 1,
+        "weighted_review_count": 19
+      },
+      {
+        "keyword": "pernando",
+        "topic_count": 1,
+        "weighted_review_count": 15
+      },
+      {
+        "keyword": "fb",
+        "topic_count": 1,
+        "weighted_review_count": 15
+      },
+      {
+        "keyword": "diyan",
+        "topic_count": 1,
+        "weighted_review_count": 15
+      },
+      {
+        "keyword": "bafus",
+        "topic_count": 1,
+        "weighted_review_count": 15
+      },
+      {
+        "keyword": "dariz",
+        "topic_count": 1,
+        "weighted_review_count": 15
+      },
+      {
+        "keyword": "campor",
+        "topic_count": 1,
+        "weighted_review_count": 15
+      },
+      {
+        "keyword": "dilv",
+        "topic_count": 1,
+        "weighted_review_count": 15
+      },
+      {
+        "keyword": "kanja",
+        "topic_count": 1,
+        "weighted_review_count": 15
+      },
+      {
+        "keyword": "fiorentina",
+        "topic_count": 1,
+        "weighted_review_count": 15
+      },
+      {
+        "keyword": "anahgahat",
+        "topic_count": 1,
+        "weighted_review_count": 15
+      }
+    ],
+    "negatif": [
+      {
+        "keyword": "paket",
+        "topic_count": 2,
+        "weighted_review_count": 6689
+      },
+      {
+        "keyword": "menonton",
+        "topic_count": 5,
+        "weighted_review_count": 5640
+      },
+      {
+        "keyword": "saldo",
+        "topic_count": 1,
+        "weighted_review_count": 4959
+      },
+      {
+        "keyword": "iklan",
+        "topic_count": 6,
+        "weighted_review_count": 4612
+      },
+      {
+        "keyword": "bagus",
+        "topic_count": 3,
+        "weighted_review_count": 3972
+      },
+      {
+        "keyword": "bayar",
+        "topic_count": 3,
+        "weighted_review_count": 3665
+      },
+      {
+        "keyword": "iklannya",
+        "topic_count": 5,
+        "weighted_review_count": 3111
+      },
+      {
+        "keyword": "berlangganan",
+        "topic_count": 2,
+        "weighted_review_count": 2663
+      },
+      {
+        "keyword": "film",
+        "topic_count": 2,
+        "weighted_review_count": 2468
+      },
+      {
+        "keyword": "buruk",
+        "topic_count": 4,
+        "weighted_review_count": 2314
+      },
+      {
+        "keyword": "liga",
+        "topic_count": 2,
+        "weighted_review_count": 2288
+      },
+      {
+        "keyword": "lambat",
+        "topic_count": 2,
+        "weighted_review_count": 2140
+      },
+      {
+        "keyword": "bola",
+        "topic_count": 1,
+        "weighted_review_count": 2066
+      },
+      {
+        "keyword": "patah",
+        "topic_count": 1,
+        "weighted_review_count": 2066
+      },
+      {
+        "keyword": "jaringan",
+        "topic_count": 1,
+        "weighted_review_count": 2066
+      },
+      {
+        "keyword": "sinyal",
+        "topic_count": 1,
+        "weighted_review_count": 2066
+      },
+      {
+        "keyword": "berbayar",
+        "topic_count": 1,
+        "weighted_review_count": 1784
+      },
+      {
+        "keyword": "payah",
+        "topic_count": 1,
+        "weighted_review_count": 1784
+      },
+      {
+        "keyword": "busuk",
+        "topic_count": 1,
+        "weighted_review_count": 1784
+      },
+      {
+        "keyword": "ribet",
+        "topic_count": 1,
+        "weighted_review_count": 1784
+      },
+      {
+        "keyword": "tv",
+        "topic_count": 1,
+        "weighted_review_count": 1730
+      },
+      {
+        "keyword": "mulu",
+        "topic_count": 2,
+        "weighted_review_count": 1527
+      },
+      {
+        "keyword": "menit",
+        "topic_count": 1,
+        "weighted_review_count": 1408
+      },
+      {
+        "keyword": "skip",
+        "topic_count": 1,
+        "weighted_review_count": 1408
+      },
+      {
+        "keyword": "tolong",
+        "topic_count": 1,
+        "weighted_review_count": 1408
+      },
+      {
+        "keyword": "iklanya",
+        "topic_count": 1,
+        "weighted_review_count": 1060
+      },
+      {
+        "keyword": "ngotak",
+        "topic_count": 1,
+        "weighted_review_count": 1060
+      },
+      {
+        "keyword": "mengganggu",
+        "topic_count": 1,
+        "weighted_review_count": 1060
+      },
+      {
+        "keyword": "susah",
+        "topic_count": 1,
+        "weighted_review_count": 933
+      },
+      {
+        "keyword": "langganan",
+        "topic_count": 1,
+        "weighted_review_count": 933
+      },
+      {
+        "keyword": "error",
+        "topic_count": 3,
+        "weighted_review_count": 797
+      },
+      {
+        "keyword": "eror",
+        "topic_count": 2,
+        "weighted_review_count": 701
+      },
+      {
+        "keyword": "mahal",
+        "topic_count": 1,
+        "weighted_review_count": 666
+      },
+      {
+        "keyword": "gratis",
+        "topic_count": 1,
+        "weighted_review_count": 666
+      },
+      {
+        "keyword": "harga",
+        "topic_count": 1,
+        "weighted_review_count": 666
+      },
+      {
+        "keyword": "dibuka",
+        "topic_count": 1,
+        "weighted_review_count": 666
+      },
+      {
+        "keyword": "sampah",
+        "topic_count": 1,
+        "weighted_review_count": 641
+      },
+      {
+        "keyword": "tolol",
+        "topic_count": 1,
+        "weighted_review_count": 641
+      },
+      {
+        "keyword": "burik",
+        "topic_count": 1,
+        "weighted_review_count": 641
+      },
+      {
+        "keyword": "berguna",
+        "topic_count": 1,
+        "weighted_review_count": 641
+      },
+      {
+        "keyword": "scam",
+        "topic_count": 1,
+        "weighted_review_count": 641
+      },
+      {
+        "keyword": "tipu",
+        "topic_count": 1,
+        "weighted_review_count": 641
+      },
+      {
+        "keyword": "uninstall",
+        "topic_count": 1,
+        "weighted_review_count": 602
+      },
+      {
+        "keyword": "uninstal",
+        "topic_count": 1,
+        "weighted_review_count": 602
+      },
+      {
+        "keyword": "download",
+        "topic_count": 1,
+        "weighted_review_count": 602
+      },
+      {
+        "keyword": "auto",
+        "topic_count": 1,
+        "weighted_review_count": 602
+      },
+      {
+        "keyword": "ngelag",
+        "topic_count": 2,
+        "weighted_review_count": 563
+      },
+      {
+        "keyword": "login",
+        "topic_count": 1,
+        "weighted_review_count": 504
+      },
+      {
+        "keyword": "pakai",
+        "topic_count": 1,
+        "weighted_review_count": 504
+      },
+      {
+        "keyword": "nomor",
+        "topic_count": 1,
+        "weighted_review_count": 504
+      },
+      {
+        "keyword": "hp",
+        "topic_count": 1,
+        "weighted_review_count": 504
+      },
+      {
+        "keyword": "pulsa",
+        "topic_count": 1,
+        "weighted_review_count": 504
+      },
+      {
+        "keyword": "no",
+        "topic_count": 1,
+        "weighted_review_count": 504
+      },
+      {
+        "keyword": "ngeleg",
+        "topic_count": 1,
+        "weighted_review_count": 467
+      },
+      {
+        "keyword": "lag",
+        "topic_count": 1,
+        "weighted_review_count": 467
+      },
+      {
+        "keyword": "gangguan",
+        "topic_count": 1,
+        "weighted_review_count": 467
+      },
+      {
+        "keyword": "nge",
+        "topic_count": 1,
+        "weighted_review_count": 467
+      },
+      {
+        "keyword": "loading",
+        "topic_count": 1,
+        "weighted_review_count": 356
+      },
+      {
+        "keyword": "pembayaran",
+        "topic_count": 1,
+        "weighted_review_count": 335
+      },
+      {
+        "keyword": "voucher",
+        "topic_count": 1,
+        "weighted_review_count": 335
+      },
+      {
+        "keyword": "otomatis",
+        "topic_count": 1,
+        "weighted_review_count": 335
+      },
+      {
+        "keyword": "metode",
+        "topic_count": 1,
+        "weighted_review_count": 335
+      },
+      {
+        "keyword": "persetujuan",
+        "topic_count": 1,
+        "weighted_review_count": 335
+      },
+      {
+        "keyword": "potong",
+        "topic_count": 1,
+        "weighted_review_count": 335
+      },
+      {
+        "keyword": "kode",
+        "topic_count": 1,
+        "weighted_review_count": 335
+      },
+      {
+        "keyword": "mengecewakan",
+        "topic_count": 1,
+        "weighted_review_count": 243
+      },
+      {
+        "keyword": "putus",
+        "topic_count": 1,
+        "weighted_review_count": 243
+      },
+      {
+        "keyword": "ih",
+        "topic_count": 1,
+        "weighted_review_count": 243
+      },
+      {
+        "keyword": "bug",
+        "topic_count": 1,
+        "weighted_review_count": 234
+      },
+      {
+        "keyword": "buffering",
+        "topic_count": 1,
+        "weighted_review_count": 234
+      },
+      {
+        "keyword": "serie",
+        "topic_count": 1,
+        "weighted_review_count": 222
+      },
+      {
+        "keyword": "piala",
+        "topic_count": 1,
+        "weighted_review_count": 222
+      },
+      {
+        "keyword": "dunia",
+        "topic_count": 1,
+        "weighted_review_count": 222
+      },
+      {
+        "keyword": "macet",
+        "topic_count": 1,
+        "weighted_review_count": 222
+      },
+      {
+        "keyword": "italia",
+        "topic_count": 1,
+        "weighted_review_count": 222
+      },
+      {
+        "keyword": "siaran",
+        "topic_count": 1,
+        "weighted_review_count": 222
+      },
+      {
+        "keyword": "kebanyakan",
+        "topic_count": 1,
+        "weighted_review_count": 214
+      },
+      {
+        "keyword": "suka",
+        "topic_count": 2,
+        "weighted_review_count": 144
+      },
+      {
+        "keyword": "black",
+        "topic_count": 1,
+        "weighted_review_count": 124
+      },
+      {
+        "keyword": "screen",
+        "topic_count": 1,
+        "weighted_review_count": 124
+      },
+      {
+        "keyword": "aplikasih",
+        "topic_count": 1,
+        "weighted_review_count": 124
+      },
+      {
+        "keyword": "adminnya",
+        "topic_count": 1,
+        "weighted_review_count": 124
+      },
+      {
+        "keyword": "sport",
+        "topic_count": 1,
+        "weighted_review_count": 124
+      },
+      {
+        "keyword": "gold",
+        "topic_count": 1,
+        "weighted_review_count": 124
+      },
+      {
+        "keyword": "ok",
+        "topic_count": 1,
+        "weighted_review_count": 122
+      },
+      {
+        "keyword": "keren",
+        "topic_count": 1,
+        "weighted_review_count": 122
+      },
+      {
+        "keyword": "lumayan",
+        "topic_count": 1,
+        "weighted_review_count": 122
+      },
+      {
+        "keyword": "mantap",
+        "topic_count": 1,
+        "weighted_review_count": 122
+      },
+      {
+        "keyword": "semoga",
+        "topic_count": 1,
+        "weighted_review_count": 122
+      },
+      {
+        "keyword": "wow",
+        "topic_count": 1,
+        "weighted_review_count": 122
+      },
+      {
+        "keyword": "mundur",
+        "topic_count": 1,
+        "weighted_review_count": 96
+      },
+      {
+        "keyword": "ngebug",
+        "topic_count": 1,
+        "weighted_review_count": 96
+      },
+      {
+        "keyword": "kadang",
+        "topic_count": 1,
+        "weighted_review_count": 96
+      },
+      {
+        "keyword": "coba",
+        "topic_count": 1,
+        "weighted_review_count": 81
+      },
+      {
+        "keyword": "uji",
+        "topic_count": 1,
+        "weighted_review_count": 81
+      },
+      {
+        "keyword": "kesini",
+        "topic_count": 1,
+        "weighted_review_count": 73
+      },
+      {
+        "keyword": "kesana",
+        "topic_count": 1,
+        "weighted_review_count": 73
+      },
+      {
+        "keyword": "wae",
+        "topic_count": 1,
+        "weighted_review_count": 50
+      },
+      {
+        "keyword": "kudu",
+        "topic_count": 1,
+        "weighted_review_count": 50
+      },
+      {
+        "keyword": "opo",
+        "topic_count": 1,
+        "weighted_review_count": 50
+      },
+      {
+        "keyword": "kuning",
+        "topic_count": 1,
+        "weighted_review_count": 50
+      },
+      {
+        "keyword": "koret",
+        "topic_count": 1,
+        "weighted_review_count": 50
+      },
+      {
+        "keyword": "mayar",
+        "topic_count": 1,
+        "weighted_review_count": 50
+      },
+      {
+        "keyword": "koyok",
+        "topic_count": 1,
+        "weighted_review_count": 50
+      },
+      {
+        "keyword": "iklane",
+        "topic_count": 1,
+        "weighted_review_count": 50
+      },
+      {
+        "keyword": "akeh",
+        "topic_count": 1,
+        "weighted_review_count": 50
+      },
+      {
+        "keyword": "celeng",
+        "topic_count": 1,
+        "weighted_review_count": 50
+      },
+      {
+        "keyword": "denda",
+        "topic_count": 1,
+        "weighted_review_count": 48
+      },
+      {
+        "keyword": "bapuk",
+        "topic_count": 1,
+        "weighted_review_count": 48
+      },
+      {
+        "keyword": "taii",
+        "topic_count": 1,
+        "weighted_review_count": 48
+      },
+      {
+        "keyword": "memuat",
+        "topic_count": 1,
+        "weighted_review_count": 48
+      },
+      {
+        "keyword": "batasi",
+        "topic_count": 1,
+        "weighted_review_count": 48
+      },
+      {
+        "keyword": "kena",
+        "topic_count": 1,
+        "weighted_review_count": 48
+      },
+      {
+        "keyword": "gagal",
+        "topic_count": 1,
+        "weighted_review_count": 48
+      },
+      {
+        "keyword": "hahaha",
+        "topic_count": 1,
+        "weighted_review_count": 48
+      },
+      {
+        "keyword": "tahi",
+        "topic_count": 1,
+        "weighted_review_count": 48
+      },
+      {
+        "keyword": "the",
+        "topic_count": 1,
+        "weighted_review_count": 42
+      },
+      {
+        "keyword": "this",
+        "topic_count": 1,
+        "weighted_review_count": 42
+      },
+      {
+        "keyword": "application",
+        "topic_count": 1,
+        "weighted_review_count": 42
+      },
+      {
+        "keyword": "not",
+        "topic_count": 1,
+        "weighted_review_count": 42
+      },
+      {
+        "keyword": "is",
+        "topic_count": 1,
+        "weighted_review_count": 42
+      },
+      {
+        "keyword": "good",
+        "topic_count": 1,
+        "weighted_review_count": 42
+      },
+      {
+        "keyword": "ads",
+        "topic_count": 1,
+        "weighted_review_count": 42
+      },
+      {
+        "keyword": "and",
+        "topic_count": 1,
+        "weighted_review_count": 42
+      },
+      {
+        "keyword": "you",
+        "topic_count": 1,
+        "weighted_review_count": 42
+      },
+      {
+        "keyword": "for",
+        "topic_count": 1,
+        "weighted_review_count": 42
+      },
+      {
+        "keyword": "hu",
+        "topic_count": 1,
+        "weighted_review_count": 31
+      },
+      {
+        "keyword": "cc",
+        "topic_count": 1,
+        "weighted_review_count": 31
+      },
+      {
+        "keyword": "mi",
+        "topic_count": 1,
+        "weighted_review_count": 31
+      },
+      {
+        "keyword": "cv",
+        "topic_count": 1,
+        "weighted_review_count": 31
+      },
+      {
+        "keyword": "aa",
+        "topic_count": 1,
+        "weighted_review_count": 31
+      },
+      {
+        "keyword": "jj",
+        "topic_count": 1,
+        "weighted_review_count": 31
+      },
+      {
+        "keyword": "nn",
+        "topic_count": 1,
+        "weighted_review_count": 31
+      },
+      {
+        "keyword": "mm",
+        "topic_count": 1,
+        "weighted_review_count": 31
+      },
+      {
+        "keyword": "gue",
+        "topic_count": 1,
+        "weighted_review_count": 31
+      },
+      {
+        "keyword": "on",
+        "topic_count": 1,
+        "weighted_review_count": 31
+      },
+      {
+        "keyword": "𝒏𝒚𝒂",
+        "topic_count": 1,
+        "weighted_review_count": 12
+      },
+      {
+        "keyword": "𝒅𝒊",
+        "topic_count": 1,
+        "weighted_review_count": 12
+      },
+      {
+        "keyword": "𝑛𝑦𝑎",
+        "topic_count": 1,
+        "weighted_review_count": 12
+      },
+      {
+        "keyword": "𝑖𝑘𝑙𝑎𝑛",
+        "topic_count": 1,
+        "weighted_review_count": 12
+      },
+      {
+        "keyword": "𝚝𝚒𝚍𝚊𝚔",
+        "topic_count": 1,
+        "weighted_review_count": 12
+      },
+      {
+        "keyword": "𝒖𝒏𝒅𝒖𝒉",
+        "topic_count": 1,
+        "weighted_review_count": 12
+      },
+      {
+        "keyword": "𝑑𝑖𝑘𝑖𝑡2",
+        "topic_count": 1,
+        "weighted_review_count": 12
+      },
+      {
+        "keyword": "𝒂𝒌𝒖",
+        "topic_count": 1,
+        "weighted_review_count": 12
+      },
+      {
+        "keyword": "𝚋𝚊𝚐𝚞𝚜",
+        "topic_count": 1,
+        "weighted_review_count": 12
+      },
+      {
+        "keyword": "𝒌𝒂𝒍𝒘",
+        "topic_count": 1,
+        "weighted_review_count": 12
+      },
+      {
+        "keyword": "adilllllll",
+        "topic_count": 1,
+        "weighted_review_count": 11
+      },
+      {
+        "keyword": "aplikasiiiii",
+        "topic_count": 1,
+        "weighted_review_count": 11
+      },
+      {
+        "keyword": "maaaahhaaalll",
+        "topic_count": 1,
+        "weighted_review_count": 11
+      },
+      {
+        "keyword": "mahaaaallll",
+        "topic_count": 1,
+        "weighted_review_count": 11
+      },
+      {
+        "keyword": "mahaaaaalllll",
+        "topic_count": 1,
+        "weighted_review_count": 11
+      },
+      {
+        "keyword": "mahaaaalllllllllll",
+        "topic_count": 1,
+        "weighted_review_count": 11
+      },
+      {
+        "keyword": "mahallll",
+        "topic_count": 1,
+        "weighted_review_count": 11
+      },
+      {
+        "keyword": "jelekkkkm",
+        "topic_count": 1,
+        "weighted_review_count": 11
+      },
+      {
+        "keyword": "kontllllll",
+        "topic_count": 1,
+        "weighted_review_count": 11
+      },
+      {
+        "keyword": "ngedebit",
+        "topic_count": 1,
+        "weighted_review_count": 11
+      }
+    ],
+    "netral": [
+      {
+        "keyword": "menonton",
+        "topic_count": 6,
+        "weighted_review_count": 1339
+      },
+      {
+        "keyword": "bagus",
+        "topic_count": 6,
+        "weighted_review_count": 646
+      },
+      {
+        "keyword": "iklan",
+        "topic_count": 7,
+        "weighted_review_count": 514
+      },
+      {
+        "keyword": "paket",
+        "topic_count": 3,
+        "weighted_review_count": 336
+      },
+      {
+        "keyword": "bayar",
+        "topic_count": 1,
+        "weighted_review_count": 281
+      },
+      {
+        "keyword": "beli",
+        "topic_count": 1,
+        "weighted_review_count": 281
+      },
+      {
+        "keyword": "langganan",
+        "topic_count": 1,
+        "weighted_review_count": 281
+      },
+      {
+        "keyword": "pulsa",
+        "topic_count": 1,
+        "weighted_review_count": 281
+      },
+      {
+        "keyword": "suka",
+        "topic_count": 3,
+        "weighted_review_count": 261
+      },
+      {
+        "keyword": "iklannya",
+        "topic_count": 4,
+        "weighted_review_count": 249
+      },
+      {
+        "keyword": "kurangi",
+        "topic_count": 2,
+        "weighted_review_count": 241
+      },
+      {
+        "keyword": "menit",
+        "topic_count": 2,
+        "weighted_review_count": 233
+      },
+      {
+        "keyword": "tv",
+        "topic_count": 2,
+        "weighted_review_count": 229
+      },
+      {
+        "keyword": "siaran",
+        "topic_count": 1,
+        "weighted_review_count": 198
+      },
+      {
+        "keyword": "ulang",
+        "topic_count": 1,
+        "weighted_review_count": 198
+      },
+      {
+        "keyword": "tolong",
+        "topic_count": 1,
+        "weighted_review_count": 186
+      },
+      {
+        "keyword": "perbaiki",
+        "topic_count": 1,
+        "weighted_review_count": 186
+      },
+      {
+        "keyword": "mohon",
+        "topic_count": 1,
+        "weighted_review_count": 186
+      },
+      {
+        "keyword": "lumayan",
+        "topic_count": 1,
+        "weighted_review_count": 180
+      },
+      {
+        "keyword": "mantap",
+        "topic_count": 1,
+        "weighted_review_count": 180
+      },
+      {
+        "keyword": "keren",
+        "topic_count": 1,
+        "weighted_review_count": 180
+      },
+      {
+        "keyword": "sinyal",
+        "topic_count": 1,
+        "weighted_review_count": 151
+      },
+      {
+        "keyword": "aman",
+        "topic_count": 1,
+        "weighted_review_count": 151
+      },
+      {
+        "keyword": "muter",
+        "topic_count": 1,
+        "weighted_review_count": 151
+      },
+      {
+        "keyword": "the",
+        "topic_count": 2,
+        "weighted_review_count": 138
+      },
+      {
+        "keyword": "berlangganan",
+        "topic_count": 2,
+        "weighted_review_count": 135
+      },
+      {
+        "keyword": "film",
+        "topic_count": 1,
+        "weighted_review_count": 127
+      },
+      {
+        "keyword": "lengkap",
+        "topic_count": 1,
+        "weighted_review_count": 127
+      },
+      {
+        "keyword": "episode",
+        "topic_count": 1,
+        "weighted_review_count": 127
+      },
+      {
+        "keyword": "filmnya",
+        "topic_count": 1,
+        "weighted_review_count": 127
+      },
+      {
+        "keyword": "ok",
+        "topic_count": 1,
+        "weighted_review_count": 124
+      },
+      {
+        "keyword": "oke",
+        "topic_count": 1,
+        "weighted_review_count": 124
+      },
+      {
+        "keyword": "good",
+        "topic_count": 1,
+        "weighted_review_count": 124
+      },
+      {
+        "keyword": "is",
+        "topic_count": 1,
+        "weighted_review_count": 124
+      },
+      {
+        "keyword": "bad",
+        "topic_count": 1,
+        "weighted_review_count": 124
+      },
+      {
+        "keyword": "heleh",
+        "topic_count": 1,
+        "weighted_review_count": 124
+      },
+      {
+        "keyword": "mennit",
+        "topic_count": 1,
+        "weighted_review_count": 124
+      },
+      {
+        "keyword": "nice",
+        "topic_count": 1,
+        "weighted_review_count": 124
+      },
+      {
+        "keyword": "jos",
+        "topic_count": 1,
+        "weighted_review_count": 124
+      },
+      {
+        "keyword": "mahabarata",
+        "topic_count": 1,
+        "weighted_review_count": 124
+      },
+      {
+        "keyword": "no",
+        "topic_count": 1,
+        "weighted_review_count": 116
+      },
+      {
+        "keyword": "hp",
+        "topic_count": 1,
+        "weighted_review_count": 116
+      },
+      {
+        "keyword": "login",
+        "topic_count": 1,
+        "weighted_review_count": 116
+      },
+      {
+        "keyword": "coba",
+        "topic_count": 2,
+        "weighted_review_count": 103
+      },
+      {
+        "keyword": "patah",
+        "topic_count": 1,
+        "weighted_review_count": 86
+      },
+      {
+        "keyword": "live",
+        "topic_count": 1,
+        "weighted_review_count": 86
+      },
+      {
+        "keyword": "bola",
+        "topic_count": 1,
+        "weighted_review_count": 86
+      },
+      {
+        "keyword": "streaming",
+        "topic_count": 1,
+        "weighted_review_count": 86
+      },
+      {
+        "keyword": "gambar",
+        "topic_count": 1,
+        "weighted_review_count": 86
+      },
+      {
+        "keyword": "olah",
+        "topic_count": 1,
+        "weighted_review_count": 86
+      },
+      {
+        "keyword": "raga",
+        "topic_count": 1,
+        "weighted_review_count": 86
+      },
+      {
+        "keyword": "mahal",
+        "topic_count": 2,
+        "weighted_review_count": 86
+      },
+      {
+        "keyword": "kebanyakan",
+        "topic_count": 1,
+        "weighted_review_count": 83
+      },
+      {
+        "keyword": "premium",
+        "topic_count": 1,
+        "weighted_review_count": 83
+      },
+      {
+        "keyword": "namanya",
+        "topic_count": 1,
+        "weighted_review_count": 83
+      },
+      {
+        "keyword": "gratis",
+        "topic_count": 1,
+        "weighted_review_count": 83
+      },
+      {
+        "keyword": "ngelag",
+        "topic_count": 2,
+        "weighted_review_count": 81
+      },
+      {
+        "keyword": "kadang",
+        "topic_count": 2,
+        "weighted_review_count": 81
+      },
+      {
+        "keyword": "rcti",
+        "topic_count": 2,
+        "weighted_review_count": 72
+      },
+      {
+        "keyword": "mnctv",
+        "topic_count": 2,
+        "weighted_review_count": 72
+      },
+      {
+        "keyword": "enak",
+        "topic_count": 1,
+        "weighted_review_count": 69
+      },
+      {
+        "keyword": "iklanya",
+        "topic_count": 1,
+        "weighted_review_count": 69
+      },
+      {
+        "keyword": "memuaskan",
+        "topic_count": 1,
+        "weighted_review_count": 69
+      },
+      {
+        "keyword": "lambat",
+        "topic_count": 1,
+        "weighted_review_count": 68
+      },
+      {
+        "keyword": "gangguan",
+        "topic_count": 1,
+        "weighted_review_count": 68
+      },
+      {
+        "keyword": "parah",
+        "topic_count": 1,
+        "weighted_review_count": 68
+      },
+      {
+        "keyword": "mulu",
+        "topic_count": 1,
+        "weighted_review_count": 68
+      },
+      {
+        "keyword": "loading",
+        "topic_count": 1,
+        "weighted_review_count": 68
+      },
+      {
+        "keyword": "buka",
+        "topic_count": 1,
+        "weighted_review_count": 60
+      },
+      {
+        "keyword": "putar",
+        "topic_count": 1,
+        "weighted_review_count": 60
+      },
+      {
+        "keyword": "rekam",
+        "topic_count": 1,
+        "weighted_review_count": 60
+      },
+      {
+        "keyword": "kebuka",
+        "topic_count": 1,
+        "weighted_review_count": 60
+      },
+      {
+        "keyword": "laptop",
+        "topic_count": 1,
+        "weighted_review_count": 60
+      },
+      {
+        "keyword": "dicoba",
+        "topic_count": 1,
+        "weighted_review_count": 55
+      },
+      {
+        "keyword": "kungfu",
+        "topic_count": 1,
+        "weighted_review_count": 55
+      },
+      {
+        "keyword": "liga",
+        "topic_count": 1,
+        "weighted_review_count": 50
+      },
+      {
+        "keyword": "inggris",
+        "topic_count": 1,
+        "weighted_review_count": 50
+      },
+      {
+        "keyword": "vs",
+        "topic_count": 1,
+        "weighted_review_count": 50
+      },
+      {
+        "keyword": "timnas",
+        "topic_count": 1,
+        "weighted_review_count": 50
+      },
+      {
+        "keyword": "indonesia",
+        "topic_count": 1,
+        "weighted_review_count": 50
+      },
+      {
+        "keyword": "italia",
+        "topic_count": 1,
+        "weighted_review_count": 50
+      },
+      {
+        "keyword": "pertandingan",
+        "topic_count": 1,
+        "weighted_review_count": 50
+      },
+      {
+        "keyword": "ditayangkan",
+        "topic_count": 1,
+        "weighted_review_count": 50
+      },
+      {
+        "keyword": "kasih",
+        "topic_count": 1,
+        "weighted_review_count": 48
+      },
+      {
+        "keyword": "flim",
+        "topic_count": 1,
+        "weighted_review_count": 48
+      },
+      {
+        "keyword": "tamba",
+        "topic_count": 1,
+        "weighted_review_count": 48
+      },
+      {
+        "keyword": "agz",
+        "topic_count": 1,
+        "weighted_review_count": 42
+      },
+      {
+        "keyword": "kali",
+        "topic_count": 1,
+        "weighted_review_count": 42
+      },
+      {
+        "keyword": "ketinggalan",
+        "topic_count": 1,
+        "weighted_review_count": 42
+      },
+      {
+        "keyword": "kepotong",
+        "topic_count": 1,
+        "weighted_review_count": 42
+      },
+      {
+        "keyword": "ganggu",
+        "topic_count": 1,
+        "weighted_review_count": 42
+      },
+      {
+        "keyword": "akses",
+        "topic_count": 1,
+        "weighted_review_count": 41
+      },
+      {
+        "keyword": "game",
+        "topic_count": 1,
+        "weighted_review_count": 41
+      },
+      {
+        "keyword": "horor",
+        "topic_count": 1,
+        "weighted_review_count": 41
+      },
+      {
+        "keyword": "berkualitas",
+        "topic_count": 1,
+        "weighted_review_count": 41
+      },
+      {
+        "keyword": "senang",
+        "topic_count": 1,
+        "weighted_review_count": 41
+      },
+      {
+        "keyword": "harga",
+        "topic_count": 1,
+        "weighted_review_count": 36
+      },
+      {
+        "keyword": "harganya",
+        "topic_count": 1,
+        "weighted_review_count": 36
+      },
+      {
+        "keyword": "kmrin2",
+        "topic_count": 1,
+        "weighted_review_count": 36
+      },
+      {
+        "keyword": "iklann",
+        "topic_count": 1,
+        "weighted_review_count": 35
+      },
+      {
+        "keyword": "dikit",
+        "topic_count": 1,
+        "weighted_review_count": 35
+      },
+      {
+        "keyword": "skip",
+        "topic_count": 1,
+        "weighted_review_count": 35
+      },
+      {
+        "keyword": "anjir",
+        "topic_count": 1,
+        "weighted_review_count": 35
+      },
+      {
+        "keyword": "bentar",
+        "topic_count": 1,
+        "weighted_review_count": 35
+      },
+      {
+        "keyword": "download",
+        "topic_count": 1,
+        "weighted_review_count": 35
+      },
+      {
+        "keyword": "asmara",
+        "topic_count": 1,
+        "weighted_review_count": 35
+      },
+      {
+        "keyword": "magic",
+        "topic_count": 1,
+        "weighted_review_count": 35
+      },
+      {
+        "keyword": "gara",
+        "topic_count": 1,
+        "weighted_review_count": 35
+      },
+      {
+        "keyword": "gen",
+        "topic_count": 1,
+        "weighted_review_count": 35
+      },
+      {
+        "keyword": "video",
+        "topic_count": 1,
+        "weighted_review_count": 35
+      },
+      {
+        "keyword": "f1",
+        "topic_count": 1,
+        "weighted_review_count": 35
+      },
+      {
+        "keyword": "gtv",
+        "topic_count": 1,
+        "weighted_review_count": 31
+      },
+      {
+        "keyword": "mnc",
+        "topic_count": 1,
+        "weighted_review_count": 31
+      },
+      {
+        "keyword": "tambahkan",
+        "topic_count": 1,
+        "weighted_review_count": 31
+      },
+      {
+        "keyword": "cenel",
+        "topic_count": 1,
+        "weighted_review_count": 31
+      },
+      {
+        "keyword": "global",
+        "topic_count": 1,
+        "weighted_review_count": 31
+      },
+      {
+        "keyword": "membeli",
+        "topic_count": 1,
+        "weighted_review_count": 19
+      },
+      {
+        "keyword": "transaksi",
+        "topic_count": 1,
+        "weighted_review_count": 19
+      },
+      {
+        "keyword": "memutar",
+        "topic_count": 1,
+        "weighted_review_count": 19
+      },
+      {
+        "keyword": "subtitel",
+        "topic_count": 1,
+        "weighted_review_count": 13
+      },
+      {
+        "keyword": "hilang",
+        "topic_count": 1,
+        "weighted_review_count": 13
+      },
+      {
+        "keyword": "kecewa",
+        "topic_count": 1,
+        "weighted_review_count": 13
+      },
+      {
+        "keyword": "ngebuggg",
+        "topic_count": 1,
+        "weighted_review_count": 13
+      },
+      {
+        "keyword": "mengganggu",
+        "topic_count": 1,
+        "weighted_review_count": 13
+      },
+      {
+        "keyword": "muncul",
+        "topic_count": 1,
+        "weighted_review_count": 13
+      },
+      {
+        "keyword": "durasi",
+        "topic_count": 1,
+        "weighted_review_count": 13
+      },
+      {
+        "keyword": "suruh",
+        "topic_count": 1,
+        "weighted_review_count": 13
+      },
+      {
+        "keyword": "peremium",
+        "topic_count": 1,
+        "weighted_review_count": 13
+      },
+      {
+        "keyword": "tau",
+        "topic_count": 1,
+        "weighted_review_count": 12
+      },
+      {
+        "keyword": "nih",
+        "topic_count": 1,
+        "weighted_review_count": 12
+      },
+      {
+        "keyword": "express",
+        "topic_count": 1,
+        "weighted_review_count": 12
+      },
+      {
+        "keyword": "post",
+        "topic_count": 1,
+        "weighted_review_count": 12
+      },
+      {
+        "keyword": "screenshot",
+        "topic_count": 1,
+        "weighted_review_count": 12
+      },
+      {
+        "keyword": "mm",
+        "topic_count": 1,
+        "weighted_review_count": 11
+      },
+      {
+        "keyword": "look",
+        "topic_count": 1,
+        "weighted_review_count": 11
+      },
+      {
+        "keyword": "tok",
+        "topic_count": 1,
+        "weighted_review_count": 11
+      },
+      {
+        "keyword": "be",
+        "topic_count": 1,
+        "weighted_review_count": 11
+      },
+      {
+        "keyword": "better",
+        "topic_count": 1,
+        "weighted_review_count": 11
+      },
+      {
+        "keyword": "4698l",
+        "topic_count": 1,
+        "weighted_review_count": 11
+      },
+      {
+        "keyword": "4jtvnmv",
+        "topic_count": 1,
+        "weighted_review_count": 11
+      },
+      {
+        "keyword": "𝐚𝐝𝐚",
+        "topic_count": 1,
+        "weighted_review_count": 7
+      },
+      {
+        "keyword": "𝐤𝐞𝐧𝐚𝐩𝐚",
+        "topic_count": 1,
+        "weighted_review_count": 7
+      },
+      {
+        "keyword": "tiba²",
+        "topic_count": 1,
+        "weighted_review_count": 7
+      },
+      {
+        "keyword": "𝐁𝐞𝐛𝐞𝐫𝐚𝐩𝐚",
+        "topic_count": 1,
+        "weighted_review_count": 7
+      },
+      {
+        "keyword": "𝐝𝐢",
+        "topic_count": 1,
+        "weighted_review_count": 7
+      },
+      {
+        "keyword": "𝒑𝒓𝒂𝒃𝒂𝒚𝒂𝒓",
+        "topic_count": 1,
+        "weighted_review_count": 7
+      },
+      {
+        "keyword": "𝘾𝙤𝙗𝙖",
+        "topic_count": 1,
+        "weighted_review_count": 7
+      },
+      {
+        "keyword": "𝙅𝙡𝙚𝙠",
+        "topic_count": 1,
+        "weighted_review_count": 7
+      },
+      {
+        "keyword": "𝐭𝐨𝐥𝐨𝐧𝐠",
+        "topic_count": 1,
+        "weighted_review_count": 7
+      },
+      {
+        "keyword": "𝐯𝐢𝐝𝐞𝐨",
+        "topic_count": 1,
+        "weighted_review_count": 7
+      }
+    ]
+  },
+  "app_version_analysis": [
+    {
+      "version": "Unknown",
+      "review_count": 11154,
+      "avg_score": 2.79,
+      "neg_pct": 51.88
+    },
+    {
+      "version": "6.42.11-d5e79fc404",
+      "review_count": 1295,
+      "avg_score": 4.18,
+      "neg_pct": 16.06
+    },
+    {
+      "version": "7.7.8-b865c19d7a",
+      "review_count": 1025,
+      "avg_score": 4.04,
+      "neg_pct": 19.22
+    },
+    {
+      "version": "6.43.9-8ec34856ef",
+      "review_count": 858,
+      "avg_score": 3.08,
+      "neg_pct": 44.06
+    },
+    {
+      "version": "6.26.10-d1d18a1dc7",
+      "review_count": 801,
+      "avg_score": 2.45,
+      "neg_pct": 60.05
+    },
+    {
+      "version": "6.16.10-7c8e484a28",
+      "review_count": 713,
+      "avg_score": 2.29,
+      "neg_pct": 65.36
+    },
+    {
+      "version": "6.19.6-57ca02382d",
+      "review_count": 643,
+      "avg_score": 2.43,
+      "neg_pct": 61.59
+    },
+    {
+      "version": "6.44.9-cb9acb65af",
+      "review_count": 531,
+      "avg_score": 3.05,
+      "neg_pct": 45.76
+    },
+    {
+      "version": "7.8.11-a223a40036",
+      "review_count": 526,
+      "avg_score": 2.98,
+      "neg_pct": 46.77
+    },
+    {
+      "version": "6.8.9-dd7326ae5f",
+      "review_count": 487,
+      "avg_score": 2.77,
+      "neg_pct": 50.92
+    }
+  ],
+  "spike_detection": {
+    "threshold": 45.79,
+    "spikes": [
+      {
+        "date": "2024-06-22",
+        "neg_count": 158,
+        "avg_score": 1.06,
+        "top_negative_topics": [
+          "Tidak dapat menonton meski sudah berlangganan",
+          "Aplikasi dianggap buruk/jelek",
+          "Aplikasi dianggap sampah"
+        ]
+      },
+      {
+        "date": "2026-01-31",
+        "neg_count": 132,
+        "avg_score": 1.02,
+        "top_negative_topics": [
+          "Aplikasi dianggap buruk/jelek",
+          "Tidak dapat menonton liga setelah bayar",
+          "Ingin uninstall karena iklan"
+        ]
+      },
+      {
+        "date": "2023-11-10",
+        "neg_count": 108,
+        "avg_score": 1.07,
+        "top_negative_topics": [
+          "Tidak dapat menonton meski sudah berlangganan",
+          "Aplikasi dianggap buruk/jelek",
+          "Tidak dapat menonton liga setelah bayar"
+        ]
+      },
+      {
+        "date": "2023-08-13",
+        "neg_count": 103,
+        "avg_score": 1.06,
+        "top_negative_topics": [
+          "Aplikasi dianggap buruk/jelek",
+          "Tidak dapat menonton liga setelah bayar",
+          "Lag dan error terus-menerus"
+        ]
+      },
+      {
+        "date": "2023-08-26",
+        "neg_count": 91,
+        "avg_score": 1.18,
+        "top_negative_topics": [
+          "Tidak dapat menonton meski sudah berlangganan",
+          "Tidak dapat menonton liga setelah bayar",
+          "Aplikasi dianggap buruk/jelek"
+        ]
+      }
+    ]
+  },
+  "monthly_sentiment_trend": [
+    {
+      "month": "2023-06",
+      "positif": 325,
+      "negatif": 362,
+      "netral": 78,
+      "total": 765,
+      "net_sentiment_ratio": -0.0484
+    },
+    {
+      "month": "2023-07",
+      "positif": 541,
+      "negatif": 631,
+      "netral": 112,
+      "total": 1284,
+      "net_sentiment_ratio": -0.0701
+    },
+    {
+      "month": "2023-08",
+      "positif": 555,
+      "negatif": 763,
+      "netral": 102,
+      "total": 1420,
+      "net_sentiment_ratio": -0.1465
+    },
+    {
+      "month": "2023-09",
+      "positif": 513,
+      "negatif": 574,
+      "netral": 88,
+      "total": 1175,
+      "net_sentiment_ratio": -0.0519
+    },
+    {
+      "month": "2023-10",
+      "positif": 423,
+      "negatif": 623,
+      "netral": 91,
+      "total": 1137,
+      "net_sentiment_ratio": -0.1759
+    },
+    {
+      "month": "2023-11",
+      "positif": 602,
+      "negatif": 1066,
+      "netral": 107,
+      "total": 1775,
+      "net_sentiment_ratio": -0.2614
+    },
+    {
+      "month": "2023-12",
+      "positif": 368,
+      "negatif": 713,
+      "netral": 88,
+      "total": 1169,
+      "net_sentiment_ratio": -0.2951
+    },
+    {
+      "month": "2024-01",
+      "positif": 298,
+      "negatif": 489,
+      "netral": 69,
+      "total": 856,
+      "net_sentiment_ratio": -0.2231
+    },
+    {
+      "month": "2024-02",
+      "positif": 407,
+      "negatif": 473,
+      "netral": 100,
+      "total": 980,
+      "net_sentiment_ratio": -0.0673
+    },
+    {
+      "month": "2024-03",
+      "positif": 522,
+      "negatif": 694,
+      "netral": 137,
+      "total": 1353,
+      "net_sentiment_ratio": -0.1271
+    },
+    {
+      "month": "2024-04",
+      "positif": 479,
+      "negatif": 714,
+      "netral": 99,
+      "total": 1292,
+      "net_sentiment_ratio": -0.1819
+    },
+    {
+      "month": "2024-05",
+      "positif": 322,
+      "negatif": 554,
+      "netral": 78,
+      "total": 954,
+      "net_sentiment_ratio": -0.2432
+    },
+    {
+      "month": "2024-06",
+      "positif": 358,
+      "negatif": 757,
+      "netral": 94,
+      "total": 1209,
+      "net_sentiment_ratio": -0.33
+    },
+    {
+      "month": "2024-07",
+      "positif": 329,
+      "negatif": 525,
+      "netral": 78,
+      "total": 932,
+      "net_sentiment_ratio": -0.2103
+    },
+    {
+      "month": "2024-08",
+      "positif": 256,
+      "negatif": 630,
+      "netral": 70,
+      "total": 956,
+      "net_sentiment_ratio": -0.3912
+    },
+    {
+      "month": "2024-09",
+      "positif": 252,
+      "negatif": 575,
+      "netral": 95,
+      "total": 922,
+      "net_sentiment_ratio": -0.3503
+    },
+    {
+      "month": "2024-10",
+      "positif": 289,
+      "negatif": 455,
+      "netral": 63,
+      "total": 807,
+      "net_sentiment_ratio": -0.2057
+    },
+    {
+      "month": "2024-11",
+      "positif": 260,
+      "negatif": 493,
+      "netral": 59,
+      "total": 812,
+      "net_sentiment_ratio": -0.2869
+    },
+    {
+      "month": "2024-12",
+      "positif": 1799,
+      "negatif": 613,
+      "netral": 142,
+      "total": 2554,
+      "net_sentiment_ratio": 0.4644
+    },
+    {
+      "month": "2025-01",
+      "positif": 677,
+      "negatif": 618,
+      "netral": 95,
+      "total": 1390,
+      "net_sentiment_ratio": 0.0424
+    },
+    {
+      "month": "2025-02",
+      "positif": 355,
+      "negatif": 365,
+      "netral": 49,
+      "total": 769,
+      "net_sentiment_ratio": -0.013
+    },
+    {
+      "month": "2025-03",
+      "positif": 461,
+      "negatif": 568,
+      "netral": 99,
+      "total": 1128,
+      "net_sentiment_ratio": -0.0949
+    },
+    {
+      "month": "2025-04",
+      "positif": 346,
+      "negatif": 383,
+      "netral": 56,
+      "total": 785,
+      "net_sentiment_ratio": -0.0471
+    },
+    {
+      "month": "2025-05",
+      "positif": 330,
+      "negatif": 341,
+      "netral": 57,
+      "total": 728,
+      "net_sentiment_ratio": -0.0151
+    },
+    {
+      "month": "2025-06",
+      "positif": 293,
+      "negatif": 373,
+      "netral": 62,
+      "total": 728,
+      "net_sentiment_ratio": -0.1099
+    },
+    {
+      "month": "2025-07",
+      "positif": 262,
+      "negatif": 503,
+      "netral": 77,
+      "total": 842,
+      "net_sentiment_ratio": -0.2862
+    },
+    {
+      "month": "2025-08",
+      "positif": 1245,
+      "negatif": 703,
+      "netral": 128,
+      "total": 2076,
+      "net_sentiment_ratio": 0.2611
+    },
+    {
+      "month": "2025-09",
+      "positif": 357,
+      "negatif": 446,
+      "netral": 52,
+      "total": 855,
+      "net_sentiment_ratio": -0.1041
+    },
+    {
+      "month": "2025-10",
+      "positif": 322,
+      "negatif": 315,
+      "netral": 70,
+      "total": 707,
+      "net_sentiment_ratio": 0.0099
+    },
+    {
+      "month": "2025-11",
+      "positif": 339,
+      "negatif": 443,
+      "netral": 51,
+      "total": 833,
+      "net_sentiment_ratio": -0.1248
+    },
+    {
+      "month": "2025-12",
+      "positif": 335,
+      "negatif": 413,
+      "netral": 52,
+      "total": 800,
+      "net_sentiment_ratio": -0.0975
+    },
+    {
+      "month": "2026-01",
+      "positif": 319,
+      "negatif": 492,
+      "netral": 46,
+      "total": 857,
+      "net_sentiment_ratio": -0.2019
+    },
+    {
+      "month": "2026-02",
+      "positif": 294,
+      "negatif": 360,
+      "netral": 43,
+      "total": 697,
+      "net_sentiment_ratio": -0.0947
+    },
+    {
+      "month": "2026-03",
+      "positif": 245,
+      "negatif": 335,
+      "netral": 39,
+      "total": 619,
+      "net_sentiment_ratio": -0.1454
+    },
+    {
+      "month": "2026-04",
+      "positif": 196,
+      "negatif": 334,
+      "netral": 41,
+      "total": 571,
+      "net_sentiment_ratio": -0.2417
+    },
+    {
+      "month": "2026-05",
+      "positif": 206,
+      "negatif": 309,
+      "netral": 36,
+      "total": 551,
+      "net_sentiment_ratio": -0.1869
+    },
+    {
+      "month": "2026-06",
+      "positif": 133,
+      "negatif": 215,
+      "netral": 25,
+      "total": 373,
+      "net_sentiment_ratio": -0.2198
+    }
+  ]
+}

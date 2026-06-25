@@ -1,0 +1,63 @@
+sentiment,business_category,merge_group,review_count_all,review_count_confident,share_confident,avg_score,example_sub_issues
+negatif,Langganan Tidak Aktif,SUBSCRIPTION_ERROR,4959,4907,0.9895,1.16,Tidak dapat menonton meski sudah berlangganan
+negatif,Kualitas Aplikasi,APP_QUALITY,2425,2412,0.9946,1.09,"Aplikasi dianggap buruk/jelek, Aplikasi dianggap sampah"
+negatif,Streaming Bola,SPORTS_STREAM,2066,2050,0.9923,1.16,Tidak dapat menonton liga setelah bayar
+negatif,Akses Konten,CONTENT_ACCESS,1730,1711,0.989,1.2,Tidak dapat menonton konten berbayar
+negatif,Iklan pada Film,ADS_MOVIE,1408,1400,0.9943,1.22,Iklan terlalu lama tiap film
+negatif,Iklan Berlebih,ADS_EXCESS,1060,1056,0.9962,1.19,Terlalu banyak iklan
+negatif,Iklan pada Premium,ADS_PREMIUM,933,930,0.9968,1.16,Iklan muncul meski berlangganan
+negatif,Harga Langganan,PRICE_COMPLAINT,666,663,0.9955,1.14,Harga terlalu mahal/harus bayar
+negatif,Penghapusan Aplikasi,UNINSTALL,602,585,0.9718,1.07,Ingin uninstall karena iklan
+negatif,Login,LOGIN_ERROR,504,501,0.994,1.17,Tidak dapat login pakai nomor HP
+negatif,Kinerja Aplikasi,PERFORMANCE,467,466,0.9979,1.13,Lag dan error terus-menerus
+negatif,Iklan Lambat,ADS_LOADING,356,355,0.9972,1.21,Iklan loading lama mengganggu
+negatif,Pembayaran Otomatis,AUTO_PAYMENT,335,334,0.997,1.15,Tagihan otomatis tanpa persetujuan
+negatif,Kepuasan Pengguna,USER_DISSATISFACTION,243,243,1.0,1.07,Pengalaman buruk aplikasi
+negatif,Kinerja Aplikasi,APP_CRASH,234,233,0.9957,1.18,Sering error dan buffering
+negatif,Konten Siaran,CONTENT_UNAVAILABLE,222,218,0.982,1.16,Tidak tersedia liga atau seri
+negatif,Iklan,ADS_OVERLOAD,214,214,1.0,1.14,Terlalu banyak iklan
+negatif,Tampilan,BLACK_SCREEN,124,124,1.0,1.09,Layar hitam/blank
+negatif,Umum Positif,POSITIVE_FEEDBACK,122,122,1.0,1.29,Ulasan netral atau pujian
+negatif,Lain-lain / Noise,OVERALL_SATISFACTION,106,0,0.0,1.18,Ulasan umum/noise
+negatif,Kinerja Aplikasi,APP_ERROR,96,96,1.0,1.25,Error dan lag saat menonton
+negatif,Pengalaman Baru,FIRST_TIME_ISSUE,81,81,1.0,1.32,Masalah saat pertama kali pakai
+negatif,Iklan,ADS_INCREASE,73,71,0.9726,1.15,"Iklan meningkat, kualitas turun"
+negatif,Iklan,ADS_SPAM,59,59,1.0,1.07,"Iklan berlebihan/menyebalkan, Keluhan iklan berlebihan"
+negatif,Pembayaran Langganan,SUBSCRIPTION_COST,50,50,1.0,1.1,Keluhan biaya paket langganan
+negatif,Tidak Relevan,NOISE,43,42,0.9767,1.42,"Ulasan tidak dapat dipahami, Ulasan tidak jelas"
+negatif,Umum Negatif,NEGATIVE_FEEDBACK,42,42,1.0,1.19,"Tidak direkomendasikan, banyak iklan"
+netral,Masalah Streaming,STREAMING_ERROR,641,635,0.9906,3.0,Tidak dapat menonton live atau film
+netral,Iklan,AD_OVERLOAD,338,335,0.9911,3.0,"Terlalu banyak iklan, minta dikurangi, Terlalu banyak iklan, Iklan mengganggu pengalaman"
+netral,Puasan Pengguna,POSITIVE_FEEDBACK,304,285,0.9375,3.0,"Aplikasi dinilai bagus, Komentar OK/baik"
+netral,Pembayaran Langganan,PAYMENT_ISSUE,281,279,0.9929,3.0,Iklan tetap muncul setelah bayar
+netral,Siaran TV,TV_CHANNEL,198,198,1.0,3.0,Channel tidak muncul atau terputus
+netral,Kualitas Streaming,PERFORMANCE_ISSUE,151,148,0.9801,3.0,Lag meski sinyal bagus
+netral,Katalog Konten,CONTENT_GAP,127,125,0.9843,3.0,Film/seri kurang lengkap
+netral,Akun & Login,ACCOUNT_ISSUE,116,114,0.9828,3.0,Tidak dapat daftar atau masuk
+netral,Masalah Live Streaming,LIVE_ERROR,86,86,1.0,3.0,"Live streaming terputus, iklan mengganggu"
+netral,Ketersediaan Channel,CHANNEL_MISSING,72,72,1.0,3.0,"Channel RCTI tidak ada, Channel GTV/MNCTV/RCTI tidak ada"
+netral,Kinerja Aplikasi,PERFORMANCE_ISSUE,68,68,1.0,3.0,Loading lama atau error
+netral,Aplikasi Tidak Bisa Dibuka,APP_CRASH,60,59,0.9833,3.0,Tidak dapat membuka atau mengunduh video
+netral,Iklan,AD_TEST,55,54,0.9818,3.0,Uji coba iklan dulu
+netral,Siaran Live,LIVE_BROADCAST,50,50,1.0,3.0,Liga tidak tersedia
+netral,Kualitas Konten,CONTENT_RATING,48,48,1.0,3.0,"Bintang rendah, konten kurang bagus"
+netral,Download,DOWNLOAD_LIMIT,42,41,0.9762,3.0,"Tidak bisa download video, Download hanya untuk premium"
+netral,Iklan,ADS_EXCESS,42,42,1.0,3.0,Terlalu banyak iklan
+netral,Harga Paket,PRICE_INCREASE,36,36,1.0,3.0,Harga paket naik
+netral,Iklan,ADS_DURATION,35,35,1.0,3.0,Iklan terlalu lama/skip
+netral,Pembelian Paket,PURCHASE_ERROR,19,19,1.0,3.0,Tidak dapat membeli paket
+netral,Iklan,ADS_INTRUSIVE,13,13,1.0,3.0,"Iklan mengganggu, durasi panjang"
+netral,Performansi,PLAYBACK_ISSUE,13,13,1.0,3.0,Lag dan subtitle bermasalah
+netral,Fitur Eksperimen,FEATURE_BUG,12,12,1.0,3.0,Bug posting atau screenshot tidak berfungsi
+netral,Spam,NOISE,11,11,1.0,3.0,Ulasan tidak dapat dipahami
+netral,Lain-lain / Noise,OVERALL_SATISFACTION,10,0,0.0,3.0,Ulasan umum/noise
+positif,Ulasan Umum Positif,POSITIVE_GENERAL,9772,9344,0.9562,4.9,"Komentar singkat pujian, Pujian kualitas aplikasi, Ekspresi kepuasan tinggi"
+positif,Konten Film,CONTENT_FILM,1150,1146,0.9965,4.85,Kualitas film dan streaming
+positif,,,1135,1112,0.9797,4.79,
+positif,Masalah Teknis,PLAYBACK_ERROR,1004,968,0.9641,4.63,Tidak dapat merekam / error playback
+positif,Iklan,AD_OVERLOAD,943,932,0.9883,4.58,"Terlalu banyak iklan, Iklan mengganggu dan lag"
+positif,Konten TV,CHANNEL_MISSING,830,820,0.988,4.65,Ketiadaan channel RCTI
+positif,Lain-lain / Noise,OVERALL_SATISFACTION,234,0,0.0,4.91,Ulasan umum/noise
+positif,Masalah Teknis,FEATURE_TRIAL,205,204,0.9951,4.73,Fitur masih dalam percobaan
+positif,Fitur TV,TV_STREAMING,176,175,0.9943,4.86,Menonton TV di perangkat lain
+positif,Konten Olahraga,SPORTS_LIVE,164,163,0.9939,4.85,Streaming liga sepak bola
