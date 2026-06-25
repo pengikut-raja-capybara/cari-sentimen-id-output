@@ -1,0 +1,557 @@
+reviewId,content,sentiment,topic_id,topic_name,business_category,main_topic_prob,alt_topic_1,alt_topic_1_name,alt_topic_1_prob
+b6cddacb-9077-4a3e-bdc0-bc681814b91e,kenapa jmo saya tidak bisa,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,16,Buka Bisa Tidak,0.7735174298286438
+a6c21b0c-7824-4232-b65a-69c2c9199d6e,tenks,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.8534843921661377
+617f4375-d420-4d8f-8468-650ba73e60de,Tidak bisa diibuka,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,3,Bisa Dibuka Tidak,0.7505287528038025
+31ccf98c-1e16-45ff-986a-f41a5b318724,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+657ce784-0fe0-4eaa-87c6-d1b20af99d35,"gmn sih apk nya, tetap g bisa di acces.",negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,1,Bisa Tidak Buka,0.8623262643814087
+2def8682-85f3-452e-bd3f-5c15512da5a3,jmo gak guna penjilat,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,5,Lambat Ribet Buruk,0.6425966024398804
+ff3c925a-c6e2-4c2d-9d56-74a763511ac3,"Aplikasi keluar sendiri, belum bisa di gunakan",negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,1,Bisa Tidak Buka,0.8065784573554993
+99283531-51a1-4be6-85c6-163994e5fe3a,Cukup mumpuni,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.8076451420783997
+532874b8-288b-4613-8ff4-1a144eea8d17,jmo keluar sendiri,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,5,Lambat Ribet Buruk,0.7481416463851929
+14b89cdd-05ad-47df-bcb7-0e3052679502,konsentrasinya,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,5,Lambat Ribet Buruk,0.7739689350128174
+390bfe9d-ed57-4106-8e15-9eb43946afba,jmo errorteruss knpa,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,10,Jmo Nih Susah,0.7110841274261475
+a160a37a-539a-497e-a75c-8c72dd5b9d6a,Aplikasinya Lemotttt,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,5,Lambat Ribet Buruk,0.7878746390342712
+bf9e0964-77f1-4810-b092-a3d599d19f8e,aplikasi gak guna,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,12,Sampah Tolol Aplikasi,0.8493732810020447
+d44df307-f8cf-4b18-81c2-96ce1bb129e7,gmn ini aplikasi nya sampai skrg tidak bisa digunakan,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,15,2026 Mei Tanggal,0.8495521545410156
+a8bd8cda-5e64-4b19-90d4-11da74a40861,sangatlah baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.8622428774833679
+731733bc-8fd9-4f95-b784-026454754029,ko apk y kembali ajh,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,14,Update Pengkinian Data,0.7596833109855652
+9f5124ef-d011-4141-bf47-5dae914b9423,aplikasiii ga beresssssssssss!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,6,Mental Mulu Terus,0.6988182067871094
+f29742b7-e753-4f2e-8093-481eaba91f97,gak bisa dibukk,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,5,Lambat Ribet Buruk,0.7882386445999146
+8db70fbe-cf0e-4bda-b935-984eb42f9ab9,aplikasinya keluar sendiri,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,5,Lambat Ribet Buruk,0.8130003213882446
+95f089cb-5da7-4962-abc5-c28f54e8a97c,bintang 1dulu aja,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,10,Sering Kebanyakan Terlalu,0.6195781230926514
+3d43dc2c-6ab5-4d36-8dd5-787099f944d1,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+dec94c02-9daa-40b3-b0af-685172d03246,seringerrot,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.7610410451889038
+60d48e23-5d48-4227-b640-5489d9361ee2,Baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+77ea3ab3-07eb-41e5-916b-16ce74923428,Mantaafff 👍👍,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.8097357749938965
+d5bfdc55-3ca7-453f-b706-9172ea6c83a8,APA APA DIPERSULITTTTT,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,5,Lambat Ribet Buruk,0.6607275009155273
+ecba79e5-ba7a-45cb-ba72-df7d60486cba,macetan,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,5,Lambat Ribet Buruk,0.7642749547958374
+e0a1b6a5-f304-4075-90f4-0cd823820e75,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+c748946f-2344-426f-b7ea-2a66f0340f62,knp si k updeted trus,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,14,Update Pengkinian Data,0.7754912972450256
+5c4e774f-7a8d-40fb-80a0-535f7c452a82,kenapa ya terlalu sering di apdute,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,14,Update Pengkinian Data,0.7588574886322021
+deb06f88-d9ff-42af-a886-928fd5a7bde7,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+e31c9537-f181-450d-bbfd-b7d90c5e00c8,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+d402d91a-d843-47ed-b2ea-d85bc60d98a9,sering keluar sendiri,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,13,Bintang Sering Update,0.6958526372909546
+a84cd2d5-454b-46c5-967e-cb8bd1d8342d,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+65aa6634-c28f-4e5a-bd5c-e863cce99089,M A N T A P,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,25,Easy Use Great,0.5526637434959412
+6a28402f-82f8-4f5c-bebf-c88b504729d8,Jmo semkin di dpn,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,10,Jmo Nih Susah,0.7189473509788513
+f3057861-27ee-41dd-ad2b-73a632b0a299,kenapa aplikasinya jmo keluar terus ya...??,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,3,Bisa Tidak Buka,0.809804379940033
+b9bf54bd-c28a-4414-b9da-5dadc7eb0c87,luar biasa aplikasinya,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,2,Mantap Mantab Banget,0.7280349731445312
+a422eb07-7c44-46fb-9dc4-3d48f4548675,sering keluar sendiri,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,13,Bintang Sering Update,0.6958526372909546
+d110ffdb-d6c6-489c-b3ee-60a9c754ff52,aplikasi nggak guna,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,12,Sampah Tolol Aplikasi,0.8493732213973999
+9e49d245-c85a-4e24-ab62-6d01e068a3b2,harus tau segalanya,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,28,Penting Diperhatikan Bagiku,0.6985519528388977
+7fe8391c-8ae4-4751-99d7-7a3e2e9f59f8,aplikasi erorrrrrr,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,5,Lambat Ribet Buruk,0.7806960344314575
+c3589fcf-2cfb-45d6-af6f-f3810eb3de5e,bad,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,9,Bagus Mantap Baik,0.8137061595916748
+ce89243c-17a0-4f40-a0cb-5102e047fa20,bintang yg bicara,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,5,Lambat Ribet Buruk,0.6888269186019897
+f9cc718e-7c8c-4d50-8d34-cf573d1b05b6,aplikasi nya kluar keluar sendri,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,7,Susah Kagak Login,0.7958559989929199
+70d3e9fe-a23e-404e-a0ab-9cb5b1885ae6,satu bintang dulu,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,5,Lambat Ribet Buruk,0.7033168077468872
+e610318d-b075-430e-8fe2-8aca4f28baaf,Aplikasi nya sudah lebih baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,18,Tingkatkan Berfungsi Ditingkatkan,0.7537378072738647
+54d1497b-3ce5-4c4b-b8a8-b28f294c8d6e,pas,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.6926424503326416
+be1f7f84-eb0f-43a6-8331-aa117f1b8fd1,kok updating trus yaa,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,14,Update Pengkinian Data,0.7382123470306396
+6189ad8f-6125-4bef-9152-e3e564d69142,knp gak konek jmo ini udah 1 bulan,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,14,Update Pengkinian Data,0.7721675038337708
+03c2cd96-3c3c-4cc5-9e70-0b9ccc105a6c,BagusMbatu,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.707048773765564
+09906f77-db4c-4031-acb8-2cfb2269dc06,Baik-baik saja,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.6974010467529297
+a256edd1-57b3-47e8-826b-3d4e4c14cdc2,saya baru menggunakan aplikasi ini,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,5,Aplikasi Yang Membantu,0.7696706056594849
+016e1ccc-f5a0-45cf-a802-5aa89f54dd32,sangat melayanin,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,7,Pelayanan Ramah Pelayanannya,0.8240858316421509
+16013de2-15d9-44e7-b473-6709c6bafe2c,Terbaikku,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.7190002799034119
+0ce807ac-67e8-4017-9cbf-31170911d41e,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+86c5e2a7-1d5f-4824-87c3-531c3bf4b861,"sering JMO tidak menaggapi,",negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,10,Sering Kebanyakan Terlalu,0.7015954852104187
+bc701f7a-6aed-49ae-890b-222414ba0e05,bintang 1 saja aplikasi tidak bisa D gunakn,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,1,Bisa Tidak Buka,0.7829310894012451
+92708a09-602f-4639-aa76-06d85f4bb5cb,aplikasi jembot pepek,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,12,Sampah Tolol Aplikasi,0.6681281924247742
+32b82ea2-b648-400e-ad39-77d54594f7b6,ribettt,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,5,Lambat Ribet Buruk,0.758152961730957
+7e45b10c-2175-4d9c-8827-3073d7ffa31b,𝘪𝘯𝘪 𝘣𝘦𝘯𝘦𝘳𝘢𝘯 𝘑𝘔𝘖 𝘮𝘪𝘯𝘵𝘢 𝘶𝘱𝘥𝘢𝘵𝘦 𝘵𝘦𝘳𝘶𝘴 𝘩𝘦𝘳𝘢𝘯,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,10,Sering Kebanyakan Terlalu,0.4292552471160888
+9acaba19-ebfc-4bb2-8856-edad8888fb62,openfastraser notkey,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,25,Easy Use Great,0.6491135954856873
+86563add-364a-4624-bde9-fd7afbb8e16e,awesome,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.7407429218292236
+ccb39060-cdf8-4a9f-bd32-ce916c3c11c7,ngoni goodlah,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,26,Sae Alus Bin,0.7700300812721252
+090152ad-fcb7-4122-b064-660f328ebe9c,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+4667f513-9684-47af-8f7d-198e5d34b7d1,manataaaap,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.789910078048706
+24d4d795-63df-42e7-ae48-a93b364d0c00,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+c46ac7c4-2f37-413d-924b-940c5885deb2,Baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+8fd07c06-971d-45de-ab5c-9ab09660b5a9,baik selalu,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.8398095369338989
+b9753395-930a-43ae-847f-ef293c115fc2,guuddlah,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.8058807849884033
+0b64c124-980f-4dd8-be16-0b942fbe8b4e,baik baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.8130663633346558
+8a99d1bb-3c3c-4611-ba94-fd5fb7487559,sangat baik dan digitalisasi,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,7,Pelayanan Ramah Pelayanannya,0.7812552452087402
+932de6f0-94c2-48a8-bbf0-d5e193387b7f,baik j,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.7742569446563721
+3fedbc8a-b74f-4843-a79e-174fd2a5d6fb,"aplikasi JMO tidak bisa digunakan, selalu keluar sendiri.",negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,1,Bisa Tidak Buka,0.8307895064353943
+0745dfc1-ac52-42f9-b764-25e742ea9106,terlalu lama,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,5,Lambat Ribet Buruk,0.782629132270813
+5121eb96-671f-4cb2-913a-f9a05c672e3d,sudah beberapa bulan sya tidak bisa menggunakan aplikasi JMO keluar sendri,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,15,2026 Mei Tanggal,0.8237582445144653
+ec7b16da-6c0d-4347-9219-bce3a392a5db,terlalu di persulitkan,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,5,Lambat Ribet Buruk,0.7591411471366882
+a5a79ce0-4798-4a92-8f5d-776e60ee6e40,apk djancok..,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,12,Sampah Tolol Aplikasi,0.7049989104270935
+b0cfada4-b6b6-477c-959e-28408402e201,Selalu ReLogin,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,5,Lambat Ribet Buruk,0.7730823755264282
+5096c856-ea5b-419e-8efb-458073db2885,maantap,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.8327990770339966
+bf437914-05cf-4e74-9f3f-c02323efe432,agak lama,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.7578767538070679
+4a538b53-b5aa-4cce-b8db-f8a594b0f3ac,jmo sangat berarti untuk saya,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,5,Aplikasi Yang Membantu,0.7313364744186401
+d2f9421c-0a84-4645-b28f-70bd1fd6d56d,baikk,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+a791bebe-5853-4ea4-a7b9-d8ccb295cd88,oqke,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.7908210754394531
+c713b797-d110-4876-828d-dca7d323eaed,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+5985d3d5-5993-4573-b224-fd9f3161e92b,mantaaapssssssss,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.732083797454834
+a6d7eaad-0b20-47f5-9082-ed314ca0bb6d,gabisaaa dibukaaaaaa aplikasinyaaaaaaaaa,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,7,Susah Kagak Login,0.613242506980896
+19dfa067-402c-42d5-9c23-38ba6dd425a5,bad,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,9,Bagus Mantap Baik,0.8137061595916748
+6e9bebb3-b669-4bbb-9ed7-02be16eebc0a,𝒌𝒆𝒏𝒂𝒑𝒂 𝑱𝑴𝑶 𝒏𝒚𝒂 𝒕𝒊𝒅𝒂𝒌 𝒃𝒊𝒔𝒂 𝒅𝒊 𝒃𝒖𝒌𝒂,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,10,Sering Kebanyakan Terlalu,0.4292552471160888
+c076fe87-f771-46a4-94f3-1e538480b484,keluar keluar terus aplikasinya,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,5,Lambat Ribet Buruk,0.7047246098518372
+849bb32c-6eed-404a-95b1-3885ec13a16b,keluar keluar terus ga jelas,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,21,Jelas Pengaduan Tros,0.7500640153884888
+923a0298-e809-42d5-9138-4ac848575e58,"bintang 1,",negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,5,Lambat Ribet Buruk,0.7048605680465698
+55075666-dc6e-4462-a28a-6018fadf366d,ini kenapa yaaa jmo aku gak bisa dibuka²,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,18,Jmo Saya Buka,0.7235405445098877
+00bf7ce8-4d45-4078-a9d5-0fce74c30d65,apk anjkng,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,5,Lambat Ribet Buruk,0.7956539988517761
+a12e70f2-0fb0-412e-ba4e-f0218d4da849,.oo 9,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.7349801063537598
+53dcfb46-e667-4b6c-9df2-908d0eba2608,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+16246123-721b-4819-97db-ee9e1569b21d,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+25d3086a-285a-4cd4-bf56-e6aeaafa589f,Aplikasi gajelas mmmkkkkkk,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,21,Jelas Pengaduan Tros,0.7364774942398071
+3d9c8b91-f5e7-41e5-87a2-7375e5d7c115,biasa aja,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.7675570249557495
+d4f7ccaf-f285-486d-b6fb-f89f23976e2c,mana hadiah saya,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,10,Jmo Nih Susah,0.6581555008888245
+f2cbb936-47cd-4b47-934a-cccdec42906b,jmo lebih baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,10,Jmo Nih Susah,0.8411749005317688
+a9465510-4dd0-44b7-9082-6f95a10dd8d0,kenapa kok forclous,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,13,Bintang Sering Update,0.6849443912506104
+5e4a7bc4-c612-4879-91fb-b085f3a96d4a,kenapa aplikasi ini tidak bisa saya gunakan,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,3,Bisa Tidak Buka,0.825331449508667
+9e89a3db-3d3b-4c22-96e1-a3872e03da41,aku koncone agung jaimo,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,26,Sae Alus Bin,0.6292721629142761
+a5d676a8-9bd7-4e02-818c-ad38a14a725d,sangat buruuuukmenurut saya,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,16,Membantu Sangat Bermanfaat,0.664158821105957
+b0a6ca68-4aba-4d7f-a676-c8e88ccb055b,erorrrrrrr,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,5,Lambat Ribet Buruk,0.7359476089477539
+f18fbc36-e655-4b91-a898-b12488316951,saya tidak ke aplikasinya,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,21,Jelas Pengaduan Tros,0.7258764505386353
+4a6a0ff5-128f-4476-8a49-c1959eb6f0b0,"tidak bisa di gunakan apk JMO, keluar terus",negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,1,Bisa Tidak Buka,0.8790936470031738
+c0d3bf5e-7d8c-4e2c-a9e0-33dc42efa9c2,Dih aplikasi ngasal,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,5,Lambat Ribet Buruk,0.7685950994491577
+5b12c23f-8de1-479a-aae1-76131546f29a,ap likasi tidak bisa digunakan,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,18,Jmo Saya Buka,0.741510272026062
+49c53366-2294-4d3e-9794-eaf3d73a2193,didowload aja gak bisa,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,3,Bisa Dibuka Tidak,0.7445678114891052
+6c52af8d-b517-449c-8e82-390811bf2305,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+c3aad010-a698-426c-ad06-5dc94d597630,wuke,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.8291501998901367
+4c646b32-aad0-4f1e-ae3e-d4b7e01fe321,"kenapa bulum ad pitur transper lewat ewalet,.",negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,27,Indak Tifak Bisa,0.6450387239456177
+770572d0-b8c4-4a6b-9ce0-a91faeddcb9d,agak lain,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,5,Lambat Ribet Buruk,0.7798985242843628
+22de9157-ccdf-4c54-b466-f099870c15af,belum mencobanya,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,5,Lambat Ribet Buruk,0.6641615033149719
+27a92e11-c0ab-4206-a9e3-b164d1ba7d99,to global,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.7130861878395081
+000f596b-4305-466a-bffc-f43c980f4b92,Rancak Bana !!!,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.7306315898895264
+9d36b2ce-7b74-4679-aded-962923e42fc6,T O P,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.6816678047180176
+eb1f30bf-a122-41fa-92da-25dbda3558b0,saat baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.7058368921279907
+adfb59a4-7a1e-4ef0-891d-88390cd2fdb6,mntullll,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.7915505766868591
+0231ed35-5dbb-40f1-ba90-07a6d6faf5cb,hanya 3 huruf....T O P,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,24,Bintang Biar Berbicara,0.6311229467391968
+53cb1782-0454-4fd3-b6f1-264d4f44bb23,aplikasi selalu keluar dengan sendirinya,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,13,Bintang Sering Update,0.7152410745620728
+d14fc649-8a07-4746-a31a-0fd2c888a987,yeess,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.764712393283844
+e46dc761-1f70-410d-9129-7f9ed299ebb2,aplikasi ini digunan tidak bisa,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,16,Buka Bisa Tidak,0.7019497752189636
+5d1087de-c3b4-4a1b-8967-2b4ed95f15a1,thebes,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,23,Goood Goof Go,0.6752608418464661
+3c5c0518-d081-4f6d-b6d4-f44158796cd8,aplikasi paok,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,12,Sampah Tolol Aplikasi,0.7445676326751709
+32746296-a199-4fb9-9e62-7be9c50b818a,satu kata ... gaaaak mantuuuuuulll,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,28,Ra Ora Wae,0.5718690156936646
+7e709a28-4b65-4646-883b-f78424be3b5d,"Sekarang gk bisa digunakan , aplikasi ini selalu keluar sendiri",negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,1,Bisa Tidak Buka,0.8435932397842407
+fac2e6aa-cc50-4c99-b412-9acae677bb6a,kenapa keluar trus,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,13,Bintang Sering Update,0.6880407929420471
+e1563c64-896c-4ba7-b91f-cb9e232b33a3,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+5ed22fd1-5c40-4981-8453-ec712cbbb67c,cup baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.8653958439826965
+036afe39-649b-42e1-8a77-52afa0ed8a0e,kreeen,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.8288570642471313
+daa2ec0f-3e84-40b5-9e0c-891a0ddd8536,"baik .....baik.,,,,,,tapi jangan. slalu di afgreat",positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,13,Bintang Sering Update,0.6199316382408142
+57cd9fa3-6d78-457f-8f7c-986518714a66,tengkyu,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.7447816133499146
+362cf14b-d26a-4ce2-add9-a377cf4765cf,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+aca02415-db40-4f45-bb23-a0d1f52731b6,aplikasi cacat gajelas,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,13,Bintang Sering Update,0.7347418069839478
+afe2b353-7b6b-45c6-85c4-2134bf17ebbe,jozzz,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.8134644627571106
+c21f6edb-06d3-49be-be16-b5970b7e148a,saya baru menggunakan aplikasi ini,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,5,Aplikasi Yang Membantu,0.7696706056594849
+9689cdda-7cd6-4cc5-916c-d162f08bba11,sangat ngabantu,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,15,Membatu Sngat Sangan,0.8341058492660522
+3f39a6b2-7d53-4041-b4cd-82af6b472481,apk ecek ecek,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,12,Sampah Tolol Aplikasi,0.6504749059677124
+c7d87cfe-37f1-4f71-84a0-38b99d64454a,harus kedaftar dulu ya dpt bsunya 🤣🤣🤣,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,28,Ra Ora Wae,0.6494572162628174
+d9c0e53b-9b90-405d-b80a-61169c26a236,APK KOTOL,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,12,Sampah Tolol Aplikasi,0.7698438167572021
+e3dc0f01-f5f4-442f-a843-1dee2a4d3be2,Aplikasi kontopll,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,12,Sampah Tolol Aplikasi,0.7876191139221191
+4a41a6df-c382-4e8b-8d7c-8208b0e929f8,bad,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,9,Bagus Mantap Baik,0.8137061595916748
+67e9fb95-a050-45b6-a01b-0c292883f80d,toooopp...,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.8124990463256836
+0fead253-91bb-4824-a3fb-14a855f2543a,akhirnya bisa juga,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,19,Alhamdulillah Bismillah Alhamdulilah,0.7378172278404236
+de0e2d6a-4dfc-4f31-b0e7-2e1c79419291,supaya lebih baik lagi,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,18,Tingkatkan Berfungsi Ditingkatkan,0.7681208848953247
+2e4eccf6-c270-4121-9a5b-7847e323f898,Peraktis,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.7718791365623474
+3eb6a9d0-97e1-4295-bb6d-8e3d14f9daec,JMO Kereeennn,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,26,Sae Alus Bin,0.7437975406646729
+3ec77133-2eb8-4b23-b9dd-d7c50ddb555d,aplikasi yang luar biasa,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,5,Aplikasi Yang Membantu,0.752550482749939
+5f5bd282-0368-4383-ab8d-f0f8c4f9fa1a,apk jmo mobile horor,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,12,Sampah Tolol Aplikasi,0.7208704352378845
+1b18eee3-25f6-40fd-b6aa-4f641d9a4615,"aplikasi cacaaaad,",negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,5,Lambat Ribet Buruk,0.769221305847168
+3cea3a39-59d6-44fa-ac50-681e326d8a43,kalou saya sih yesss,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,5,Lambat Ribet Buruk,0.6471427083015442
+ee8987b7-9f59-45a0-863f-c42ce8fb7371,ngelagg,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,5,Lambat Ribet Buruk,0.7787481546401978
+9f24e572-7271-41ae-bdea-9d793d5089d8,aplikasi tedong,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,5,Lambat Ribet Buruk,0.739739716053009
+20074f07-569f-44fa-9a70-7aa57b323156,pembaruaan trusss.,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,5,Lambat Ribet Buruk,0.6961349248886108
+507f65d7-5a86-41c8-9c6e-0a0ae5c9ddcf,apa ke gunaan poin di aplikasi JMO?,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,18,Jmo Saya Buka,0.6821824908256531
+f5254937-d2fb-45d4-b624-5639f35743ba,begus aja,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.732467770576477
+36677b42-a049-4e63-9b5d-ecf023afd1e3,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+bd9fce60-4a96-445c-b22d-fcd06768b07e,kereeeeeennnn,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.6565912961959839
+2012cac1-ae33-4795-909e-78bc1554989c,baik,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,3,Bagus Baik Sangat,0.9213695526123048
+0ca8bf0f-b580-47fc-ac56-615f8ede9dfd,goood,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,6,Ok Good Oke,0.7817630767822266
+b8b7dafd-ba17-48db-adc8-6b87876c9b09,sangat menginspirasi,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,1,Membantu Sangat Bermanfaat,0.876164436340332
+c5e9a352-9b8c-4c0f-bcb6-21bc135eaa57,JMO errorr yah...,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,10,Jmo Nih Susah,0.7590978145599365
+4a6c9273-3ea2-4469-815f-e6b5d28186b0,memuaskann sekali,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,15,Membatu Sngat Sangan,0.8040108680725098
+f4f9703c-c32d-4aa6-ac6e-f08e1bc516bf,kenapa aplikasi JMO sering keluar dari aplikasi tiba2,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,20,Verifikasi Otomatis Keluar,0.8168226480484009
+73cd78e6-2b14-4caa-8293-a7124d51a0bd,jos,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,6,Ok Good Oke,0.8372479677200317
+f3f58c08-1f4f-4013-bff4-b0ac95a0b3e5,Better,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,6,Ok Good Oke,0.8693016767501831
+c2f8735d-e4e0-4f79-90bb-f91dc96dbb9c,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+e9c2a3d0-b6e0-4b43-b6bd-328855bf69a2,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+ea486a1b-fe00-40c7-980e-8d89c4e74378,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+8c2315e0-bc5d-47c2-89dd-ec2b744ed9b8,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+5db0e49d-db50-42ee-8e30-ce280ad5bb31,baik,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,3,Bagus Baik Sangat,0.9213695526123048
+3c1153c2-b4bf-458c-990c-bf9257fb8729,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+3a1227ff-fd8f-44c1-90ab-da979c0e6682,Zara,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.7731689214706421
+1e61253d-65bb-4ef8-9c02-7c5e5897b95c,amezink,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,23,Goood Goof Go,0.7937780618667603
+0ce30315-3868-485a-965f-ca686c27bdc6,baik,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,3,Bagus Baik Sangat,0.9213695526123048
+4338236d-9e26-4b81-ac34-a1bdd9278f9d,baik,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,3,Bagus Baik Sangat,0.9213695526123048
+e835c6cf-8983-4df9-b302-915ffb07b563,idem_ ... Thk's.,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,6,Ok Good Oke,0.5626528263092041
+07ad250b-e50a-4d92-af11-3ecfca5c1267,helpfull,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.7663804888725281
+5dc2c350-c39f-4405-a5b4-3b553eb6649a,ferfek,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.7757958173751831
+19a80307-1497-4a1a-9e1e-1410eec18f93,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+fb5aa21a-b0d4-480c-bbb8-1aa496a25e3b,Jessica dahj,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.652084231376648
+61e3d620-34e6-4a71-9a72-f62c0f1a6002,amat baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.867662787437439
+b9c34385-6906-4cc0-8c4e-dab20d9f6368,lebih dimaksimal kan lagi aplikasi JMO ini,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,17,Lagi Semoga Tolong,0.7163757085800171
+cbcf87bc-3760-45b1-9541-7299f9d7db39,baik,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,3,Bagus Baik Sangat,0.9213695526123048
+35d1e7d3-c2f6-475b-890a-8ae3c984d7c0,之前在别的手机上面下载的这个软件，现在更换手机了，下载的时候不让下载，就显示下载到另外一个手机上是什么意思？,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,14,Bintang Kasih Dulu,0.2566897273063659
+bc3905c9-1d02-4a8e-976b-ce64d8fccbcc,Yang penting jos,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,5,Lambat Lumayan Kebanyakan,0.716612696647644
+50c2241e-b4e7-4b6b-becc-9d6ab221bc5a,baik,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,3,Bagus Baik Sangat,0.9213695526123048
+4b265216-f90b-441f-894b-dde9277b50da,baik,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,3,Bagus Baik Sangat,0.9213695526123048
+912204ff-d0fd-4e89-8d13-6bdd96d58308,ini masih awal.,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,5,Lambat Lumayan Kebanyakan,0.6814063787460327
+17c21357-e6bc-4f15-9892-9e7a57023fdd,luar biasa,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,11,Mantap Puas Lumayan,0.7912409901618958
+ce85cef9-e314-44bb-b9d0-cd1243bb2186,bahus,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,5,Lambat Lumayan Kebanyakan,0.8126102685928345
+93506c54-2ca3-4174-937c-0ce73bc07f90,sangat bagusnya,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,3,Bagus Baik Sangat,0.8622353076934814
+5f803b9b-bd72-4685-a5cc-ec87887112e1,josss,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,11,Mantap Puas Lumayan,0.830830454826355
+a38fbb51-a6b6-45a2-8a6d-9dc0eb463281,baik,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,3,Bagus Baik Sangat,0.9213695526123048
+2f20e51d-2cd6-4c6e-9fc7-8326e73f2619,baik,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,3,Bagus Baik Sangat,0.9213695526123048
+0cd1f307-6fbb-41e7-a864-dd531f9ea10e,Apakah ini sama dengan JKN..?,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,13,Jht Saldo Klaim,0.6097631454467773
+68853070-339d-4751-a4a3-2aadcc1b0aa8,👍👍,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,5,Lambat Lumayan Kebanyakan,0.8584332466125488
+f35af12b-4ef8-4af2-ba41-1626b0f9252e,baik,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,3,Bagus Baik Sangat,0.9213695526123048
+e555a223-42f4-49a6-8055-458404dc12f4,masih ngeleg,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,5,Lambat Lumayan Kebanyakan,0.7346944808959961
+709d9f0e-c0d6-404c-a72b-abee7fa81538,mbulet,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,11,Mantap Puas Lumayan,0.7408016920089722
+4b0a5246-66d0-4e79-8670-bebc0079dbc0,baik,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,3,Bagus Baik Sangat,0.9213695526123048
+672e5571-57c0-4fcd-8053-a8adcaeb5eff,sangat nyaman,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,28,Pelayanan Orang Online,0.785628080368042
+01eda9cb-330d-4082-b4c4-8ec8bbf8f513,baik,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,3,Bagus Baik Sangat,0.9213695526123048
+a8d2fe31-fc40-4cf6-871b-1e34a90458d1,baik,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,3,Bagus Baik Sangat,0.9213695526123048
+9f28e96f-9cc4-463b-8116-607869aef683,sangat amanay,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,15,Mudah Lebih Cepat,0.7226896286010742
+085be91f-15dc-4b76-b77f-183c3c9683e7,baik,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,3,Bagus Baik Sangat,0.9213695526123048
+77dcc6bf-935a-44d9-b516-da3cac9c861e,knpa sekarang sering troubel jmo yah?,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,14,Update Pengkinian Data,0.7368378639221191
+35bdb01b-cd55-4563-9db4-41a59c84b759,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+56b89646-039c-406f-ad24-33c195c81081,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+62d6a59b-7453-47ec-8636-802abb8c7838,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+0c1fc2ca-ccbc-4d5e-897e-ea777b59f2e2,apk yang sangat luar biasa,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,5,Aplikasi Yang Membantu,0.7940146327018738
+0ba62d71-a10a-4711-a9b0-7c94780f03ea,baik,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,3,Bagus Baik Sangat,0.9213695526123048
+e0eb2cd3-35af-43ff-8fdb-0e97cd1e80d7,JMO sudah lebih baik👌,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,10,Jmo Nih Susah,0.7977768182754517
+0fe0df6f-b97a-4c83-ad2a-7e90807833b4,biasa,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.8259340524673462
+968fabbc-9283-4764-8e04-cbe0251459e8,pas,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.6926424503326416
+775271d4-d854-42e9-a2f2-47a4954481a5,3dulu,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.7520033717155457
+3f19b4e4-2b7c-40c6-b3e0-57b537f4afbe,cece musyaufha,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.6774249076843262
+b23e1d8f-2ed3-41f9-a224-c47c138324a6,bereh,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.8425779342651367
+654e3b98-f1b0-4d2c-b9a7-57014816ef10,Baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+3d778df4-b22d-4819-85e2-9ee5b91ee878,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+1d870d12-561c-4d52-b122-62b6ebab43a4,baik,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,3,Bagus Baik Sangat,0.9213695526123048
+8b187785-2cdc-4664-a6b6-f72667bc522d,luar biasa,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,11,Mantap Puas Lumayan,0.7912409901618958
+48cdfcb7-b1cd-4b88-8e2a-65cb530ea6bc,goood,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,6,Ok Good Oke,0.7817630767822266
+23275487-f837-46c9-8ab1-8f96240a4c0d,baik,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,3,Bagus Baik Sangat,0.9213695526123048
+e88771c2-3d3d-43ea-ae33-c4ecf9310036,baik,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,3,Bagus Baik Sangat,0.9213695526123048
+09ca4b12-6778-4608-a11a-a0c3f9a408db,💯,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,5,Lambat Lumayan Kebanyakan,0.858433187007904
+71dbf0d2-44e4-4135-80bb-c149a417373f,sementara 3bintang dulu,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,5,Lambat Lumayan Kebanyakan,0.7074272632598877
+65c0d75d-9f68-41a3-b7ba-cf9ccd8ae58e,manrtab,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,6,Ok Good Oke,0.7201582193374634
+22e84b57-4045-4e6c-ad76-32205005cbc7,𝒐𝒌,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,5,Lambat Lumayan Kebanyakan,0.8689950704574585
+fa3341eb-5eeb-431d-93be-947cca7d1d77,kenapa aplikasi jmo ini sering keluar sendiri ya,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,20,Verifikasi Otomatis Keluar,0.8580057621002197
+7ff84cc3-9912-4ac8-a023-1d71ec9c868d,baik,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,3,Bagus Baik Sangat,0.9213695526123048
+a17e9aae-426b-4afe-a354-33de99c5194a,tokmim aqraqaaaaaaaaaaaaaa,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,5,Lambat Lumayan Kebanyakan,0.4636552929878235
+f5df176c-d7a1-4250-ba6e-056df847b55b,"ini aplikasi gimanansih,",positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,13,Bintang Sering Update,0.7174727916717529
+fa4d3f06-1c86-4000-8012-fab0b1601eb6,sangat membentu,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,15,Membatu Sngat Sangan,0.8211246728897095
+8a562b6c-1604-40b7-97d7-e3fbb1740f94,aplikasi tiba tiba keluar tidak bisa di gunakan,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,16,Buka Bisa Tidak,0.8185374736785889
+86964cd2-471f-4d60-bfcf-cfdb64fc5945,lumaya,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.7547096610069275
+fcf83f37-a912-41a4-ab30-a7d3446b0a7a,awesome,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.7407429218292236
+c253e5d9-cd52-4de9-8b29-1446c716ad88,muantaps,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.8524898290634155
+b07c3911-2514-441d-9a70-6ac6738b8515,slalu hatihati 👍,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,5,Lambat Lumayan Kebanyakan,0.7823969721794128
+89d848a0-c82c-444a-9267-39a6f149db74,lemottt,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,25,Mulu Ah Anehh,0.7206125855445862
+691370f2-a804-4b02-bade-aa18e7e22058,baik,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,3,Bagus Baik Sangat,0.9213695526123048
+6df5ddc8-dfc2-4a8e-9be7-9a59042adeff,baik,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,3,Bagus Baik Sangat,0.9213695526123048
+2bdcb044-5355-4b1b-b555-fd6e49b5964b,yg yes,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,5,Lambat Lumayan Kebanyakan,0.7582389116287231
+198c8126-77f3-4361-b512-a7f73ad18892,sangat baik untuk pembelajaran,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,19,Membantu Sangat Info,0.7620037794113159
+30f4be46-8812-4532-acec-be8b8cfcf700,baik,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,3,Bagus Baik Sangat,0.9213695526123048
+b1245ae6-d893-4345-89e2-834b7bd6c2e2,"yfcrth r tttcct g ttrexsrcg tgg, rasa dr rr, ca yang www wwwwwwww",netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,25,Mulu Ah Anehh,0.5178552865982056
+dcfde24e-e821-431c-8f68-2863236895e9,sedang,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,5,Lambat Lumayan Kebanyakan,0.8533375859260559
+aa3e0f74-363e-4815-9919-b0bbeb5ef4ef,jossss,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,11,Mantap Puas Lumayan,0.7933974862098694
+08c2f958-32f0-4267-a322-88cd19bf396a,baik,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,3,Bagus Baik Sangat,0.9213695526123048
+f90d3b74-84f4-4a1f-b47f-89b392826208,baik,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,3,Bagus Baik Sangat,0.9213695526123048
+06efafea-1b6a-497a-b29f-660c2222de17,B aja,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,5,Lambat Lumayan Kebanyakan,0.7643035054206848
+54eedbe4-2866-4137-a377-aa0f0934420b,baik,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,3,Bagus Baik Sangat,0.9213695526123048
+bafe003d-1991-4bac-a519-a49d472f1891,masih belajar paham,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,5,Lambat Lumayan Kebanyakan,0.7027677893638611
+b090d000-89ef-4ae1-99ab-7a03f9f29dc5,baik,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,3,Bagus Baik Sangat,0.9213695526123048
+46251000-6185-4bf5-bdef-96d79bd9ec09,sangat praktie🙏,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,15,Membatu Sngat Sangan,0.8499646782875061
+78906f38-6c25-41ba-a3fb-47dec2cfa303,muantap,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.8112596869468689
+640127b3-d76f-4f31-b961-2bf98d978c23,kerwn,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.8019593954086304
+078dc227-7b45-4297-bf94-1e82f595d5a5,Baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+05b3b487-184a-4e1a-9732-ef8cfa7263ee,baik,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,3,Bagus Baik Sangat,0.9213695526123048
+b963fa78-298c-40a3-9f21-f096770d1a0b,kenapa jmo apk nya keluar terus ya?,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,21,Mental Eror Terus,0.8904471397399902
+a7d5c40d-3aab-49bf-9849-6c386fde8504,jossssss,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,2,Mantap Mantab Banget,0.8239701986312866
+ab53479c-c983-40f0-8560-5969f6a1191d,t.o.p..bangeuut,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,26,Sae Alus Bin,0.6443197131156921
+7d3f9a51-63dc-483d-b254-514adb3c478e,Baik Baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.8130663633346558
+3adc9429-b177-45f9-9083-c44ee3c8be03,alright.,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.7821286916732788
+28f42453-58b7-4e73-8457-e594c36d6927,terbaiks,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.81446373462677
+7ff96254-7261-4d2e-80cc-6b7e95735f3d,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+38f4f9c7-37a8-4c9c-8caa-f60832e1871a,baik utk dilanjutkan,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.7703583240509033
+f599b2a7-3114-48dc-81c6-45b52f095c29,baik,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,3,Bagus Baik Sangat,0.9213695526123048
+2a3243aa-dc32-4664-86d0-e1bb3b2f99e2,FC terus aplikasi ga ngangkat,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,8,Eror Sering Susah,0.7566548585891724
+539e2122-e8c9-4687-94b2-5fbf1f59398a,baik,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,3,Bagus Baik Sangat,0.9213695526123048
+f3928597-cacb-42e8-a1ba-b8f07b79d961,BAIK,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,3,Bagus Baik Sangat,0.9213695526123048
+41612ad5-53cb-4532-bb2b-38117aadb77b,baik,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,3,Bagus Baik Sangat,0.9213695526123048
+84352f07-bdb0-4104-9ded-8e0bdc31fa9c,meuaskan,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.7855068445205688
+e2bdfd5f-a1a2-44cf-b274-a2a10eb49a8e,baik,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,3,Bagus Baik Sangat,0.9213695526123048
+4620b04d-04b0-4c3e-b2bc-3174f0904388,Luar biasa,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,11,Mantap Puas Lumayan,0.7912409901618958
+615e0a0e-dfdb-4a88-97b5-a0fd8cfd9a42,baik,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,3,Bagus Baik Sangat,0.9213695526123048
+fbe5d44f-7fa5-4a85-afa6-250cf31a483c,kok saya gak bisa masup ke aplikasi jmo y sejak d perbaruii,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,0,Bisa Tidak Di,0.8644614219665527
+098977e7-1b22-4b0a-b743-e71974af5dc5,kenapa saya tidak bisa menginstal aplikasi ini?,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,20,Verifikasi Otomatis Keluar,0.8040883541107178
+9a596705-b391-4344-8ca9-867834a0d2ad,Semakin burukkkkkkk!,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,5,Lambat Lumayan Kebanyakan,0.6055735945701599
+5018015e-e955-4647-b83b-e161f77a9af5,baik,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,3,Bagus Baik Sangat,0.9213695526123048
+21700e86-1ea3-43b9-a709-6aadf6e93436,baik,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,3,Bagus Baik Sangat,0.9213695526123048
+aa54c493-92d3-40ea-bae7-8636bae244d1,tiga dulu ku beri,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,5,Lambat Lumayan Kebanyakan,0.5910444259643555
+57286872-a84f-48a0-a908-c11a2a736571,baik,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,3,Bagus Baik Sangat,0.9213695526123048
+28e737f0-fc83-4c9b-9400-168d826e2cb7,Ada peningkatam,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,5,Lambat Lumayan Kebanyakan,0.7291971445083618
+359e5e97-073b-4f26-aebe-7874b1d56ddc,baik,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,3,Bagus Baik Sangat,0.9213695526123048
+43bff6e9-0acb-451b-a291-a0ba263cc947,aplikasi keluar sendiri,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,10,Jmo Nih Susah,0.7366723418235779
+1b5b96fe-1f6a-4a87-b3bf-509aab91650c,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+aec4ef49-6555-4f4c-b68d-e101228d11eb,kereb,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.8269554376602173
+575e057b-8ef1-4f2f-9e5e-c27eadf3e6b0,muaaantaaaaaaaap'eeee,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.6152224540710449
+f45ad8c2-3cd3-4b3a-a70c-c4203730efee,JMO digunakan oleh yang menjadibanggots,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,10,Jmo Nih Susah,0.5556954145431519
+87bc8897-a593-4911-9a53-51a8d4c09890,josssssssss,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,2,Mantap Mantab Banget,0.8073735237121582
+7594f4e5-dd2f-42b6-bf03-e28aa98fcf6a,gacorrrrrr,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.8082571029663086
+a2905be7-0102-402e-a242-a55ff4ca353f,baik baik baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.7352385520935059
+5b8f28bd-98fd-466d-8d13-472211c6fa48,biasa aja,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.7675569653511047
+ab3928bc-a7de-4e42-a2e1-8ea93210fd61,baikk,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+235c50b4-1f35-494c-8c7a-2dfdb614b123,baik,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,3,Bagus Baik Sangat,0.9213695526123048
+255c5b3a-ced0-49f9-aa79-e8b36df84f4b,sangan baik,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,3,Bagus Baik Sangat,0.7711387872695923
+b28d97e6-d9d0-4e8a-8dd6-f10a186d5da4,aplikasi paling nyaman di gunakan,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,15,Mudah Lebih Cepat,0.6847871541976929
+6a9fe08f-0626-4076-8079-b492467c2fd7,𝚜𝚊𝚗𝚐𝚊𝚝 𝚋𝚊𝚒𝚔,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,5,Lambat Lumayan Kebanyakan,0.7853568196296692
+e40df361-f1ae-4c2f-b6c6-0a92ea0d8dc6,"𝚐𝚔 𝚋𝚒𝚜𝚊 𝚕𝚘𝚐𝚒𝚗 ,𝚊𝚗𝚎𝚑 , ,𝚖𝚕𝚑 𝚔𝚊𝚝𝚊 𝚜𝚊𝚗𝚍𝚒 𝚝𝚍𝚔𝚜𝚎𝚜𝚞𝚊𝚒,, 𝚓𝚕𝚜"" 𝚋𝚒𝚊𝚜𝚊𝚗𝚢𝚊 𝚋𝚒𝚜𝚊.",netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,22,Terlalu Sering Lahir,0.3758856952190399
+3994889e-1ecc-407a-959c-d78f5f04f4ad,erorrr teruss,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,25,Mulu Ah Anehh,0.827017068862915
+997cc497-5554-439a-b027-78873a05bcf3,𝕒𝕡𝕝𝕚𝕜𝕒𝕤𝕚 𝕛𝕞𝕠 𝕤𝕖𝕣𝕚𝕟𝕘 𝕓𝕘𝕥 𝕖𝕣𝕠𝕣 𝕝𝕠𝕒𝕕𝕚𝕟𝕘 𝕟𝕪𝕒 𝕤𝕦𝕜𝕒 𝕝𝕒𝕞𝕒.𝕥𝕝𝕟𝕘 𝕕𝕠𝕒𝕟𝕘 𝕕𝕚 𝕡𝕖𝕣𝕓𝕒𝕚𝕜𝕚 𝕒𝕡𝕝𝕚𝕜𝕒𝕤𝕚 𝕛𝕞𝕠,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,22,Terlalu Sering Lahir,0.3437852263450622
+004fb3c6-8a13-4de0-a03a-b2dcf3480d18,baik,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,3,Bagus Baik Sangat,0.9213695526123048
+d1955459-d747-43aa-9f00-baa5720df0d6,👍,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,5,Lambat Lumayan Kebanyakan,0.8584332466125488
+869554c5-8a65-4ee5-bbb0-377d44886f96,muantabs,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.8116022348403931
+46b39dc8-3fb0-479a-8e78-2c413a0d189e,baik baik👍,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.8130664229393005
+3b84cb45-7a95-42d6-96d5-0cc137c8e42e,bqgus,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.8189004063606262
+1e78fd11-f60c-4547-9290-24b73c906f39,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+5fa2ca48-05b7-47b6-8722-d9d1010cf58f,gerceppp,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.8317837715148926
+061384aa-d60c-4d83-b495-148794760194,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+6b2fa4ad-0631-44a5-947a-40d37b014dad,pas,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.6926424503326416
+2bcdfd22-3b2b-44e3-8c35-6eaa3a5e4a97,baikk,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+72e46901-3f0d-422f-b656-e9e6965e9747,nanteb,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.8028340339660645
+91575e07-3673-4eca-8ccb-181caca7daa3,bereh,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.8425779342651367
+243e44c4-6fc6-4e4b-b074-13b5ec65eafc,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+8bf4856c-fc6f-40f1-b0dd-99a39ed04f7b,baik aja,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.7742569446563721
+32cc2b0f-0f88-4c74-a48c-55a2faa4a5f4,Jmo aplikasi cacat,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,10,Jmo Nih Susah,0.7337528467178345
+68a3f560-0950-48e1-b803-ec4a022f98a3,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+1a76bcce-9e31-440b-a874-53efb83d89f0,lebih baik lagi aplikasi nya,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,17,Lagi Semoga Tolong,0.7860832214355469
+6df4007c-9b9b-4963-8ce6-ee666414e8dd,muantaf,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.7566789388656616
+d4feeaee-9fcb-41d6-8900-774165b5e410,sangatlah baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.8622428774833679
+9f2802b0-ab9b-495e-8252-6fd8eb8d38d1,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+5933cf1f-8436-4f7d-932a-3e990c672703,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+c72a9977-67f6-47a2-8345-1027bbd7a1b5,aplikasi keluar sendirinya,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,13,Bintang Sering Update,0.7534588575363159
+91bd76d4-6da9-4e2c-b69e-a8532608ee3e,maantap,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.8327990770339966
+ebd8a2b4-9928-46b2-aa26-c8998dfb4a3d,awesome,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.7407429218292236
+5649a132-1270-45ce-923e-0c1269493dff,weldone,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,23,Goood Goof Go,0.7551501989364624
+36a8a9c1-5755-461e-9133-18acaf24a11e,teebaik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.7987686395645142
+63b62859-d4ec-4765-b4c8-bd38aeaa4222,cunn,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.8169286251068115
+112a8f94-bf01-46dc-a38b-1bc07742bbcf,dangay baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.7930178642272949
+e081b769-f42e-4528-ad51-0c84581b99ba,saya sngt terbntu atas aplikasi jmo in terimksi bnyk,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,17,Lagi Semoga Tolong,0.69627845287323
+46084955-722d-42ea-9f0a-687df00ba9b0,jozzz,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.8134644627571106
+00c90e0c-1999-4a0f-8971-ed2a8b1bf109,👍👍❤🙏,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,5,Lambat Lumayan Kebanyakan,0.858433187007904
+38d606c0-b50c-4dc9-a0d3-f70910b3aab3,👌Baik,netral,-1,Baik Luar Biasa,Lain-lain / Noise,0.0,3,Bagus Baik Sangat,0.9213695526123048
+ab32fefd-e0b9-41cf-86c8-969de941a593,amat baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.867662787437439
+2bfce4e9-780e-4981-8b0a-dad3fee7ba19,pas,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.6926424503326416
+1e95051d-47a8-4348-945e-de5f1a7c6e73,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+f76639ae-2329-499a-98cb-07c9c1135aea,Gacorrr,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.8531599640846252
+fe141ebc-b842-4452-b4d7-9f34c93ef476,keluar trs,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,10,Jmo Nih Susah,0.7420303821563721
+75baa889-f212-464a-8e70-7ca105f849f5,keulang sendiri apknya,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.6762628555297852
+6c5d0515-26b4-4579-99e5-3b0d73255f23,👍BagusMbatu,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.707048773765564
+420e425c-e691-4b39-b4c1-d7ab74040735,usefull,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.7990455627441406
+609db5ac-ae75-468c-80c3-f3e50e61c780,nicce app,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.7105824947357178
+b5db5cad-1d30-4ac2-9d67-4166437616a5,sngt bermnft,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,15,Membatu Sngat Sangan,0.8540323376655579
+8185b7e2-803e-43ce-9634-38b6a1fd32b8,ya sangat beruntung sekali mempunyai jmo mobile ini,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,5,Aplikasi Yang Membantu,0.7418328523635864
+388e7853-b44c-443e-b719-24bdb3e93e02,helpfully,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,25,Easy Use Great,0.7325139045715332
+8de9a964-71a4-441f-a31e-fcdc04a40321,JMO muuuaaanntteepp.. puuoolll 👍,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,26,Sae Alus Bin,0.605931282043457
+39144865-609a-41f0-b96d-accea54171ea,sangat senan menggunakan aplikasi ini.,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,5,Aplikasi Yang Membantu,0.8421061635017395
+3740d3b6-7aff-4d5a-9470-afc113729eba,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+ee20846e-6dd8-4553-9bcc-ae9a2d72dcd4,uenak,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.8050309419631958
+bc183af5-bfed-4fe7-9200-57e2511a330d,apk ya cuxok,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,10,Jmo Nih Susah,0.7729471921920776
+768dc793-73e7-490e-aba5-0218ca0e2d7e,BAIK,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+4b30b86f-a953-4260-a037-3ef0115c13f1,greatt,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.8408871293067932
+2c2794eb-baa8-4b70-b69e-b5737873a0d4,responsil,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.8100817203521729
+4780bdae-04ef-416f-b2f3-174f812234c4,kereun,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.7582480907440186
+152db51e-cd3c-45ad-bfa2-e058856f8bb0,teebaik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.7987686395645142
+e3cdf631-2d86-4a3d-9d45-14d589936511,kereeenn,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.746191680431366
+7d04080e-d525-411a-b598-2995f4f52910,esiplah,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.8058645725250244
+8a5ab03c-c72f-4c88-94e6-8ed48276bced,jozzzz,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.784942626953125
+10426cad-8a57-4e57-8ee9-c1c300f3cca2,trolly Sri apgred trus,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,13,Bintang Sering Update,0.6896882653236389
+0b541a09-6e34-406d-a18b-b3ff672959cd,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+29b14a35-88da-4146-9317-6d782460dba0,lebih tertata,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.7824668884277344
+1ba02e9b-41b6-48d9-9877-fd646af51df0,mututerjamin,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.7113445997238159
+ee250e66-f4b9-426a-9a15-f6f59e1c2b99,jossssss,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,2,Mantap Mantab Banget,0.8239701986312866
+e10d6b22-e98c-45da-943a-24835495c4a3,kelasss,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.7944420576095581
+500daa2a-677f-4722-9020-469a06794595,sangat manpaat,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,15,Membatu Sngat Sangan,0.847131073474884
+1fb25ffb-4f1d-4d9f-a865-a745eb59807a,ya baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.7899137735366821
+65bd7ee9-96db-47e3-9725-a4c433f51e54,sangat membantunya,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,1,Membantu Sangat Bermanfaat,0.8650351166725159
+1bbd7b69-c504-47e8-b617-0f2acf78f061,buuuuuuagus sekali ini apk,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,15,Membatu Sngat Sangan,0.6728671193122864
+26e7e41c-8f23-4616-9384-1ab34de8715f,baru saja menggunakan jmo,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,5,Aplikasi Yang Membantu,0.629483699798584
+2e1fed99-34f6-4605-a932-53d3d359dbca,awesome,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.7407429218292236
+a730a730-834c-4054-8e58-511c326e3652,kreenn,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.8276766538619995
+915365be-7443-4f02-be0e-9ec3ef4ad392,semianus kum,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.6214580535888672
+ae79b0cf-dd06-4eb0-9dd7-4738d78b9033,aplikasi JMO lebih baik lagi,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,18,Tingkatkan Berfungsi Ditingkatkan,0.7856290340423584
+ddbe33cb-2693-4c7a-a61d-ede9399eac32,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+c8721603-01e5-4a15-8050-992720cb6237,muantap,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.8112596869468689
+b4aaff29-23c0-496b-84b1-3575be7124e3,👍BagusMbatu,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.7070486545562744
+71386df9-21ae-4499-9364-c86832a41a44,mauliate ma di parjamsostek,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,26,Sae Alus Bin,0.6802632808685303
+9be86b7e-7b1f-4f5e-8cc2-58c6875ce3b3,sekarang gak bisa di gunakan aplikasi ini,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,16,Buka Bisa Tidak,0.7878848910331726
+c038d4ab-ac4c-48a7-a2ea-8d1d9bb73cf4,aplikasi luar biasa,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.7678557634353638
+96320c0c-fac2-41d9-993c-33e3a6af0209,Perlu pembuktian ....,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,10,Jmo Nih Susah,0.6772841215133667
+4d99c162-ff28-447f-a2f7-a1258677d657,mnantap,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.8437464237213135
+6c70db20-44c7-420d-915d-202dc7b6a29b,wadidau😙😙😙😙,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.8107265830039978
+286327ba-7dbe-4aff-96d6-7129cc2840e5,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+b24f22cd-89f3-4788-8a4e-684033395473,sangat mwmbanru,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,15,Membatu Sngat Sangan,0.7963018417358398
+65086a74-e516-4e5e-ae5d-50b17f004d05,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+fa8b33cd-b06e-453a-a073-f0cbb9f1af2c,helpfull,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.7663804888725281
+8786f7d8-f4fe-4968-8108-0516afbdf8a9,aplikasi nya luar biasa,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,5,Aplikasi Yang Membantu,0.8057782649993896
+5e917f71-acc7-4151-8c8c-4d54004f19d2,lumyan,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.7385873794555664
+9b85b615-9a11-4914-8254-85dc6fd1d232,keluar terus aplikasinya,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,10,Jmo Nih Susah,0.7150776386260986
+cbc567ac-f9c8-490c-9055-d07803c64007,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+a58fa3bf-53f5-4b46-8ad6-926cebc36d16,baik seklai,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.8003627061843872
+3b7b46dd-94d4-4713-b340-821319900ebe,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+51a8b8d8-736a-44f6-b1e1-337263ef1743,"jmo skrng gak bisa di bukaaa,,",positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,16,Buka Bisa Tidak,0.8308374881744385
+4408a91c-d447-4c74-9521-62286144587b,Muantap 👍,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.8112596869468689
+978c9bc9-7e80-46ee-be69-4908f3ed9a50,JMO Selalu Abded,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,10,Jmo Nih Susah,0.7979517579078674
+0963f6fa-968c-41e6-b511-131fe6da0542,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+d7b02e54-dd2a-4880-b9ab-c11505d70c11,ini knp ya aplikasi nya ko ga bisa ke buak ?,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,3,Bisa Tidak Buka,0.8933956027030945
+a5b1d2d8-d57b-44c6-9e41-f56b44f41618,selama menggunakan aplikasi JMO sangat baikk,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,5,Aplikasi Yang Membantu,0.7913474440574646
+b21489c2-11df-43b1-a423-2b01d17f5325,luwar biasa,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.7638689279556274
+1565b809-2a0e-4e3a-854e-1d8303243124,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+4182cf53-71ab-44be-9803-9cb46653bc7d,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+2ab4b96f-a44c-4d01-b320-66910ea4977b,yeyy,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.7671396732330322
+c7020e1d-2399-4bf9-8c4e-16ac7f59b74e,anjay,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.7658305764198303
+71dfd780-303c-4942-85a8-1c3a8436a90c,aplikasinya luar biasa bagussnyaa,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,5,Aplikasi Yang Membantu,0.759972095489502
+bbd82a6d-0733-41fa-8a5d-aa95692c07ce,semua nya baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,10,Jmo Nih Susah,0.7402361631393433
+87259a51-ff90-41cb-b09b-a5ae25eedb64,apakah ini bisa di tarek,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,13,Bintang Sering Update,0.686433732509613
+bd3032df-cc29-4bab-9908-8077e976b1e3,aplikasi yg sangat luar biasa,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,5,Aplikasi Yang Membantu,0.7940146327018738
+d4049b78-a2f7-4ec8-b88f-5864d9ec34a4,krennn,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.812852144241333
+d612ba3c-36f3-461c-a4e2-95ebc95353af,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+48e3def7-dcdc-4ea0-af99-51f0ad93335b,sangat peraktis,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,15,Membatu Sngat Sangan,0.821334719657898
+bc426ea1-4969-4639-b33c-ab0d06b1ff04,manstabs,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,23,Goood Goof Go,0.7567526698112488
+a552a22b-96d8-492e-9441-3aed974ad8e2,Baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+6ed50fbf-3871-4e00-b828-87379d0619cb,jmo gak bisa duka,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,10,Jmo Nih Susah,0.7574170827865601
+bea33edf-52e9-4143-bd39-e9dede053704,jempolan,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.8227369785308838
+8b86fb5c-2d4b-4833-9fe9-087677a1867a,baik baik saja,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.6974011063575745
+76d848f6-0217-466d-845e-69f3152b097a,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+f9a6f504-70e7-4a96-944a-ae3200207aae,sangat baik dan berpotensi,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,12,Cepat Respon Aman,0.7643200755119324
+694a7feb-842a-442a-b991-cc719b3ef7f4,tidak terinstsl,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.6812405586242676
+1f272947-e91d-4822-b11b-f0585d6ebcd6,mangul,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.8181157112121582
+c7733ec0-b681-490d-9c07-39c50fcbb9a7,superrrr,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.7888107895851135
+257419cd-d2d2-45d6-80ec-8d9e9648a20d,jmo semakin 👍,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,10,Jmo Nih Susah,0.7792606949806213
+668abeca-bd5d-49fb-a9ab-946a44e65f02,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+da0b7b8c-70aa-4265-b421-e9e366928236,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+549ee680-a1cf-435b-9068-fffb9ec8db29,apakah sedang ada masalah dengan apk JMO?,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,3,Bisa Tidak Buka,0.6710901260375977
+77c1ff57-c932-4e50-b424-3676519eb5fd,jossssssssssss,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,2,Mantap Mantab Banget,0.7223531007766724
+772e1e68-c559-426f-ba9f-8700c00f7e72,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+f5bd05d8-7604-4bdf-a741-129481af19ce,kenapa sekarang aplikasi jmo saya sering keluar sendiri,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,3,Bisa Tidak Buka,0.8335113525390625
+000c278f-ad60-45e8-aac9-99dcffb646a8,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+9b053fe1-ed19-4ee5-a3f2-19f3527e5aad,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+3f61065e-9763-45e5-9d4d-ed3c3ce72624,jossssssssss,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,2,Mantap Mantab Banget,0.7749828100204468
+7214f77e-154f-4370-be2c-780dfb7fbb39,exelend,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,23,Goood Goof Go,0.7902041673660278
+0e801dd3-cde4-4b2e-b338-6f3c96a2f5b3,kurangbaek,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.798872709274292
+0da474c9-2c01-4a9a-9209-677126c3c9f6,cukup baik jmo ini,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,10,Jmo Nih Susah,0.7894470691680908
+e943755f-780f-45b9-80f8-020a3fda7598,JMO debes,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,23,Goood Goof Go,0.7190158367156982
+659e2371-6440-4609-84c5-77989e2eb6f7,muantap,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.8112596869468689
+0584549c-3742-47c6-85b7-703244559959,Simpe,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.8199514746665955
+a843319b-8e84-4828-99a3-22e83ccfcb61,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+67df3521-8847-4d93-bcb3-8e40a4697777,pelayang baik dan respek,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,7,Pelayanan Ramah Pelayanannya,0.8118211030960083
+2c71ccba-768a-4526-95a8-b95ef8130c17,Lom ada di alam kan,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,26,Sae Alus Bin,0.6350667476654053
+e70d1103-ae48-47c2-85ef-7b5413b00b2a,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+26302d01-8e66-4c57-b63a-10ca0aff5027,krennn,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.812852144241333
+9c0138a2-3cb4-4f64-b014-e2e951141509,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+d4ccef07-9a4d-4807-802c-06d5f6c31b3e,ini macam 👍🏻👍🏻👍🏻,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.7051898241043091
+1449208a-210b-4687-82ae-875c2ab78019,kok gak bisa di bukuk aplikasi jmo nya,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,3,Bisa Tidak Buka,0.8776993751525879
+302c1b25-d3d1-4983-8fb5-8121393b11fe,baik aja,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.7742569446563721
+8a8eb698-0a8b-45d8-800e-c7ac9733c381,saya baru tahu,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,10,Jmo Nih Susah,0.6949613094329834
+6f11ef59-1d0a-4e4a-9984-0f66a0bfa262,jios,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.7991831302642822
+375041f2-4be8-4694-95d0-e1bac62a841b,coet,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.8374427556991577
+a0e10395-0803-412d-9798-2619bf236b69,Celet sekali,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.7406075596809387
+115e6ecb-30eb-4a55-bd54-170d0acaec2e,mauliate,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.7545713186264038
+57284a16-6f4f-4b9c-b5c4-6b1a1bd8746e,sangat baik dan sangat tepat,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,7,Pelayanan Ramah Pelayanannya,0.7604508399963379
+6e562c0e-02bb-4625-a597-1157678bdc15,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+f9f0bb63-dbac-4a84-8be3-b29c5803f043,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+033bc2ec-812d-413f-8560-81cae88ddc49,aplikasi jmo yg sangat baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,5,Aplikasi Yang Membantu,0.8528518080711365
+503cf256-a1ef-41ad-a188-9ced046481d4,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+f42f0a4c-7e8f-45e3-9b38-dbc02307caef,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+de947f4f-0e58-43d3-ae70-e3c39fb6c30c,henat,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.7886848449707031
+32472eb8-b0ac-4472-b8bc-4dfe573412a6,luaar biaasa,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.7529828548431396
+e7595649-cf92-4a2d-b608-b78285a1efc5,kereennnn,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.7037924528121948
+2a75e146-78e3-4b0f-9cc8-ec387a1a9338,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+f2e7ee04-1505-4d33-870d-899cd90ba615,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+bdebee58-8ed8-4c5c-a753-150db3fea3d6,JMO saya bisa dibika,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,10,Jmo Nih Susah,0.6988351345062256
+7aa85eb5-c458-4cc9-88b4-454ff7d04f60,apk yg sangat luar biasa 👍,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,5,Aplikasi Yang Membantu,0.7940146327018738
+26eb249f-9909-416c-9cef-fa6837f82fcc,selama ini baik baik saja,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,18,Tingkatkan Berfungsi Ditingkatkan,0.620311975479126
+cb00ab3c-2cf5-4242-8184-7338d734dd41,matappp,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.8487619161605835
+10f5ff51-619c-4ba9-9ccd-d926424b48ca,awesome,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.7407429218292236
+c3737c60-029d-4d93-8156-3fd548770c10,Dapat dipantau setiap saat.,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,21,Informasi Up Date,0.6844850778579712
+4566aaaf-a1c4-4d7e-bb22-37c43083668c,genah,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.833273708820343
+20204fee-3d1a-4f55-8ce7-3ae79cf39e7d,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+31ba8ef0-ca1a-480e-a855-5bbc9e862019,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+f5d1f6c2-5da7-4b0a-baa8-60b0084546a5,Amat baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.867662787437439
+83056815-5b32-4e3d-9f96-82d657d95fca,sama saja,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.7427626848220825
+925d7eca-4108-4a69-a7f4-cba48dc9ff5c,sesak untuk aplikasi jmo,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,5,Aplikasi Yang Membantu,0.7151819467544556
+565d6ad9-1009-4e9a-ae4c-c771a3d47d0b,jozzz,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.8134644627571106
+b8279f53-065c-4020-99eb-a62382648802,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+bcba4ded-b28d-4f60-bd1d-d4b215ab56d3,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+a9fcde33-5825-42e5-9b0d-b7a42be61ea2,Cengcelengan,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.7411420941352844
+16344e4b-e08b-4256-be66-55617d904662,sangat membangu dg adanya aplikasi ini,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,5,Aplikasi Yang Membantu,0.7946863770484924
+b315b40f-3124-466e-8394-def687147eae,semua jauh lebih baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,10,Jmo Nih Susah,0.7020887136459351
+9b95a1f7-dd2e-4101-9a73-e79a6a336bfd,perlidungan untuk pkwt,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,6,Saldo Jht Untuk,0.5463864803314209
+0969fd0b-5b73-485f-a731-f1cd69d021cc,luar biasa aplikasi nya,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,5,Aplikasi Yang Membantu,0.7733303308486938
+96246b0a-f94e-4dd7-a8b8-10db67db7191,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+4409a804-9fab-4e65-9de1-114cfc921ff8,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+f8a84bef-7c57-41af-a5d6-68652725da8b,trrimaksih,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.7424757480621338
+7cd9be17-5b53-4a19-9883-a2e70179c02c,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+6fd32e82-2deb-498d-831a-14f17fb327b7,baik baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.8130664229393005
+ab02407b-ac33-48a9-a8e6-c38ff28f1c9c,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+73448f54-3478-40a6-8411-9530f8ae0b2a,draiver / sopir,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.7097087502479553
+a5d65ac5-e1c9-4c36-81a3-b00c737dfdcc,Awesome,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.7407429218292236
+15a18ec7-e708-4dd6-bad9-8a62317de7cf,jmo lebih baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,10,Jmo Nih Susah,0.8411750197410583
+d0da4dad-1d40-48b9-9c19-3b9c655d4d51,SangatbMembantu,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,15,Membatu Sngat Sangan,0.8095430135726929
+d1103330-2d9e-4bf0-9027-e41a5b1e997b,saat baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.7058368921279907
+86188acd-1069-45ff-9a15-5cec25ff503d,rekomded,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.770624577999115
+103e2fae-714a-46b0-bd46-53a1211d12f9,lumyan,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.7385873794555664
+eeeb071c-738f-4fbb-a8f3-4af020e2a21a,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+2e5334ce-c270-4ba6-a98b-a6080885ca68,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+74ef112a-211b-4eec-8aa4-9d177bceab97,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+f02a8796-f199-4404-8b24-7e4b5ee7b439,erorrrrr,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.7473307847976685
+4ed1c35a-3002-4c52-a504-c4ae5d23803f,bestttt👍👍👍👍👍,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.7824743986129761
+a74710be-f726-4f2e-aa79-b083172dd750,aplikasi tertolol yg pernah ada,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,12,Sampah Tolol Aplikasi,0.6659898161888123
+017502fe-098e-453e-af5e-c5916d621c73,aplikasinya keluar dengan sendiri,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,5,Lambat Ribet Buruk,0.7242040634155273
+8a6c37ee-2978-4c75-83ce-4c5f1e082353,aplikasi idiot,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,12,Sampah Tolol Aplikasi,0.7583969235420227
+c5276073-b735-4c36-a935-9029dde8a56a,"ke JMO lama, lewat aplikasi lama",negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,2,Update Tiap Meminta,0.6953580379486084
+09101340-cde0-49b0-a69e-52d58759b3fb,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+18db7b95-97ac-4c9c-83b5-70276f92728f,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+0caeb7d3-6bd8-42df-96fe-0654b6ba21f4,mangtab,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.765784502029419
+01d930ec-0c14-4308-8d67-a7c69907c885,mangap,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.8790709972381592
+7046c78f-3b4a-4730-b652-67359a4bdc15,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+4a6b0928-17b8-40c8-9646-7c3fa03e555d,manthaaff,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.7933505177497864
+ff851a9b-9705-40b0-8acd-53f0a9c001bc,kenapa appl nya selalu keluar dengan sendirinya.,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,23,Berhenti Terus Menanggapi,0.7458130717277527
+c130adaa-a7fd-47fe-9b92-4e7fdb89a449,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+c2447d38-6bde-4db8-8229-85f7d65f5374,terlalu rubet,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,5,Lambat Ribet Buruk,0.8111397624015808
+1db7b8c6-238b-4561-b992-237fb102aa9e,jozzz,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.8134644627571106
+dd772d0e-9488-4fc8-86d9-b4a090439c88,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+a6cd923a-f19f-49c7-8da3-dc0d546dbc88,jmo baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,10,Jmo Nih Susah,0.8283406496047974
+4ade400c-1a59-4176-8e90-8d91283019b3,bqgus,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.8189004063606262
+233ef831-9d36-4fca-a50c-2e3d91b70b3d,baik,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.9281484484672546
+72980bb6-ce4f-4ac5-af72-ced341162e0a,kerren,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,0,Bagus Ok Baik,0.7659199237823486
+9c5d543e-0797-4b90-8d55-06467a2d5e47,jmo aplikasi errorr,negatif,-1,Keluar Bad Aplikasi,Lain-lain / Noise,0.0,12,Sampah Tolol Aplikasi,0.7887240648269653
+81d4c634-6916-42d9-8c70-4b3b393eceac,masuukk,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.8300005197525024
+6e2cb2ac-ed97-43a5-b4a3-7c6b489dcf69,sering keluar sendiri,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,13,Bintang Sering Update,0.6958526372909546
+24b9b7e2-eb24-41b9-9604-0e6de3ecdfb3,aplikasinya keluar trs,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,13,Bintang Sering Update,0.7669427394866943
+dc15c217-1c4b-4802-a528-39106b71bce5,bagussdbanget,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,11,Mntap Mantul Mantaf,0.7883839011192322
+da368a05-2fc5-4c01-a4cf-9c72e4896c91,helpfully,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,25,Easy Use Great,0.7325139045715332
+73e85076-b94d-4605-a2e9-aa3bf04fc70e,perfectttt too,positif,-1,Baik Awesome Biasa,Lain-lain / Noise,0.0,25,Easy Use Great,0.7497755289077759
+2f996102-74f7-4707-acfd-235cd3d0626c,kenapa disaat buka aplikasi JMO selalu kembali atau tidak bisa login apakah ada kendala teknis,positif,0,Bagus Ok Baik,Kepuasan Pengguna Umum,0.2118565738201141,3,Bisa Tidak Buka,0.8379079103469849
+23422d44-f943-4205-9bd3-b43328cb6640,"nomer HP saya hilang yang terdaftar di JMO,caranya gimana agar saya bisa long in kembali terimakasih,kok gak ada tanggapan",positif,0,Bagus Ok Baik,Kepuasan Pengguna Umum,0.2248982191085815,3,Bisa Tidak Buka,0.8136736154556274
+0da6f6e3-8d15-44e4-a30f-61821fd8f551,knp punya saya tidak bisa di buka aplikasinya.. pdhl mau pencairan tapi gabisa di buka tolong di perbaiki lagi ini gimna ya 🙏,positif,0,Bagus Ok Baik,Kepuasan Pengguna Umum,0.2335909903049469,3,Bisa Tidak Buka,0.87787264585495
+4d0ebbcd-0927-4368-9d1a-9435ddf5767d,apa infonya ini habis update malah gak bisa masuk? pake fitur cari akun malah internet terputus.,positif,0,Bagus Ok Baik,Kepuasan Pengguna Umum,0.2391691654920578,3,Bisa Tidak Buka,0.8336310386657715
+8ad812dc-967c-434b-b652-1e7731c127dc,Kak tolong benerin punya saya ngak bisa daftar saya mau daftar baru masukin nama trus masukin tgl lahir eh nyata nya balik lagi ke nama,positif,0,Bagus Ok Baik,Kepuasan Pengguna Umum,0.2429651618003845,3,Bisa Tidak Buka,0.7138550281524658
+46c74e6b-6178-4d6d-a8b0-b90c1379083c,kenapa saya tidak bisa masuk ke jimo.tiba2 kepental saat buka aplikasinya,positif,0,Bagus Ok Baik,Kepuasan Pengguna Umum,0.2441174387931823,3,Bisa Tidak Buka,0.8323004245758057
+8284f22b-6fbd-4d88-94a4-0f1e23ad6341,hai kak kenapa JMO 3hri ini susah untuk dbuka aplikasix pdahal sudah dupdate tpi msih tetap tidak bisa buka selalu kluar terus aplikasi klo kita buka itu,positif,2,Mantap Mantab Banget,Kepuasan Pengguna Umum,0.2494295537471771,3,Bisa Tidak Buka,0.874174177646637
+f61db36c-4b6f-471d-8dc3-a04268b2b18d,bagaimana mengatasi lupa akun yg efektif??,positif,0,Bagus Ok Baik,Kepuasan Pengguna Umum,0.2495734095573425,21,Informasi Up Date,0.5662275552749634
+46f91ff5-fb3e-4716-a108-faa48304ab1a,App minta update..setelah di klik button update tetap tidak bisa..mohon solusi.thank,positif,0,Bagus Ok Baik,Kepuasan Pengguna Umum,0.2497785091400146,3,Bisa Tidak Buka,0.8174997568130493
+bbb85807-fd1d-41c4-adb3-9f7e9b29a649,kok saya tidak bisa masuk ya.spk keluar terus. bug,positif,0,Bagus Ok Baik,Kepuasan Pengguna Umum,0.2498745620250702,3,Bisa Tidak Buka,0.8018050193786621
+636ffe95-9aee-4676-9596-cbe6ec93e864,sangan sederhana untuk memprediksi apa yg kita butuhkan seputar kebutuhan pokok buruh,positif,2,Mantap Mantab Banget,Kepuasan Pengguna Umum,0.2500416040420532,21,Informasi Up Date,0.5659832954406738
+a6e208e3-c940-46a2-8b9d-35c6f80e506c,"aplikasi tidak bisa di buka ""apliksi terus berhenti"" , minimal android berapa ?",positif,2,Mantap Mantab Banget,Kepuasan Pengguna Umum,0.2505523562431335,3,Bisa Tidak Buka,0.8371981382369995
+8961d2a5-2b2b-46df-bdee-dc2220e0afeb,"program terbaru jos, semalem ngisi formulir besok nya siang udh masuk klaim jht ❤️‍🔥",positif,0,Bagus Ok Baik,Kepuasan Pengguna Umum,0.2508890032768249,9,Bpjs Saya Yang,0.7234089970588684
+f7bbf11d-2ebc-433e-a8d9-4cc19a95cded,kenapa gak bisa di buka login ke jmo nya padahal jaringan bagus tapi setiap login langsung keluar .padahal Uda di update,positif,0,Bagus Ok Baik,Kepuasan Pengguna Umum,0.2523916661739349,3,Bisa Tidak Buka,0.884556233882904
+d53f962a-a8be-464f-b6a0-014cf8dcef27,Sangat membantu! klaim tanpa perlu tatap muka atau proses yg berbelit-belit,positif,0,Bagus Ok Baik,Kepuasan Pengguna Umum,0.2537700533866882,21,Informasi Up Date,0.642314076423645
+e1347c9d-1ce2-41a6-b5ce-3b629b0c9a34,"kenapa ga ada teguran dari BPJS ,pekerja PT dapat segmen BPU(BPJS petani),,,???",positif,0,Bagus Ok Baik,Kepuasan Pengguna Umum,0.2542526423931122,9,Bpjs Saya Yang,0.6975072026252747
+385c3481-91a6-42ee-af0f-9c7c5e342bae,tolong di perbaiki lgi saldo awal dan yg baru kok blm ada gabung,positif,0,Bagus Ok Baik,Kepuasan Pengguna Umum,0.2546182870864868,3,Bisa Tidak Buka,0.7532140016555786
+9915a637-7062-460d-932d-bd0727b4266c,"Mau ngaplod dokumen JHT tiba"" jaringan hilang jadi keluar apk , apakah harus nunggu lagi untuk mengisi dokumennya?",positif,0,Bagus Ok Baik,Kepuasan Pengguna Umum,0.2551866471767425,9,Bpjs Saya Yang,0.7876358032226562
+078f1e69-c054-4f7b-9c02-d43f06e752cf,"update jmo, ko buka aplikasi gabisa bisa ya. baru buka lgsg keluar tbtb. udah copot pasang aplikasi tapi tetep gabisa dibuka, kenapa tuh??",positif,0,Bagus Ok Baik,Kepuasan Pengguna Umum,0.2556594014167785,3,Bisa Tidak Buka,0.8540738821029663
+b1fd5f29-7334-4165-afea-34bd1e8a1db3,"kenapa aplikanya ngga bisa di buka, apakah hp saya terlalu canggih, atau karena saldo saya sudah sangat banyak sekali",positif,2,Mantap Mantab Banget,Kepuasan Pengguna Umum,0.2563952803611755,3,Bisa Tidak Buka,0.828727662563324
+48bc3d0c-7cba-496b-9474-ba8c8fc9a730,"kenapa gak bisa buat login...padahal jaringan bagus, sudah coba uninstal dan instal lagi tetep sama... coba ganti pasword juga masih sama gak bisa login 😮‍💨",positif,0,Bagus Ok Baik,Kepuasan Pengguna Umum,0.2576967179775238,3,Bisa Tidak Buka,0.8328295946121216
+64894557-56c4-428d-92f2-4e5939e42b22,kenapa aplikasi jmo saya buka malah balik lagi ada trouble sistem apa gimana yah,positif,2,Mantap Mantab Banget,Kepuasan Pengguna Umum,0.2580193281173706,3,Bisa Tidak Buka,0.8630629181861877
+98f16d1f-4af0-4337-8915-2a95fd44d49e,"jelek bangettt.. mau pengkinian data aja susah banget.. lamaaaa,, ujungnya tidak terhubung ke server, padahal pakai wifi. mau cairin duit sendiri aja susah banget sih!!",positif,0,Bagus Ok Baik,Kepuasan Pengguna Umum,0.2583816945552826,14,Update Pengkinian Data,0.7137770652770996
+88520c1d-148e-43b9-b036-e6c6a2affcc5,"Di bln september aplikasi JMO di hp saya masih bisa di buka, tapi mulai bulan oktober ini ga bisa di buka kenapa ya ? Di situ tertera pastikan internet terhubung. padahal jaringan bagus",positif,0,Bagus Ok Baik,Kepuasan Pengguna Umum,0.2600763440132141,3,Bisa Tidak Buka,0.8737895488739014
+ff43b8ce-81f6-4605-9507-36fb38128b25,"wow , kejutan . mau log in tidak bisa padahal email sama pw bener. malah di suruh dateng ke kantor cabang",positif,0,Bagus Ok Baik,Kepuasan Pengguna Umum,0.2602145075798034,9,Bpjs Saya Yang,0.7660876512527466
+39d09599-5dd7-4fbf-9388-52fa7b01261b,"kenapa di hp saya ini gak bisa di buka ya,padahal sebelumnya lancar lancar aja lo,",positif,0,Bagus Ok Baik,Kepuasan Pengguna Umum,0.2606732845306396,3,Bisa Tidak Buka,0.8753149509429932
+3973a456-477f-46fc-81bb-b4fcdc8808a9,bagi pengguna iPhone agar maksimal login melalui android,positif,2,Mantap Mantab Banget,Kepuasan Pengguna Umum,0.2612748742103576,21,Informasi Up Date,0.6075899600982666
+fda8221e-9bb4-46a9-86f1-cfc894d7fd11,"tolong impormasinya dari pihak bpjs kenagakerjaan saya mengalami tidak dapat masuk ke aplikasi jmo,setiap saya klik aplikasi jmo nya selalu membal... mohon beri tahu gimana caranya supaya aplikasi jmo saya bisa masuk kembali.trim's",positif,0,Bagus Ok Baik,Kepuasan Pengguna Umum,0.2621946334838867,9,Bpjs Saya Yang,0.8302210569381714

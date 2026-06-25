@@ -1,0 +1,4299 @@
+{
+  "meta": {
+    "app_name": "JMO (Jamsostek Mobile)",
+    "generated_at": "2026-06-25T11:24:52",
+    "csv_output_dir": "output\\csv",
+    "top_n": 10,
+    "date_range": {
+      "start": "2025-06-15",
+      "end": "2026-06-15"
+    }
+  },
+  "overview": {
+    "total_reviews": 80637,
+    "sentiment_distribution": {
+      "positif": {
+        "count": 60550,
+        "pct": 75.09,
+        "avg_score": 4.91
+      },
+      "negatif": {
+        "count": 16369,
+        "pct": 20.3,
+        "avg_score": 1.18
+      },
+      "netral": {
+        "count": 3718,
+        "pct": 4.61,
+        "avg_score": 3.0
+      }
+    },
+    "confidence_stats": {
+      "overall_confident_rate": 0.977,
+      "by_sentiment": {
+        "positif": 0.9756,
+        "negatif": 0.9862,
+        "netral": 0.9594
+      }
+    },
+    "rating_distribution_raw": {
+      "1": 13402,
+      "2": 2967,
+      "3": 3718,
+      "4": 5696,
+      "5": 54854
+    }
+  },
+  "topic_analysis": {
+    "positif": {
+      "total_topics": 29,
+      "total_reviews": 60186,
+      "topics": [
+        {
+          "rank": 1,
+          "topic_id": 0,
+          "topic_name": "Bagus Ok Baik",
+          "business_category": "Kepuasan Pengguna Umum",
+          "sub_issue": "Ulasan positif umum mengenai pengalaman pengguna",
+          "review_count": 23776,
+          "pct": 39.27,
+          "avg_score": 4.92,
+          "total_thumbs_up": 926
+        },
+        {
+          "rank": 2,
+          "topic_id": 1,
+          "topic_name": "Membantu Sangat Bermanfaat",
+          "business_category": "Kepuasan Pengguna Umum",
+          "sub_issue": "Aplikasi dianggap sangat membantu dan bermanfaat",
+          "review_count": 7288,
+          "pct": 12.04,
+          "avg_score": 4.94,
+          "total_thumbs_up": 992
+        },
+        {
+          "rank": 3,
+          "topic_id": 2,
+          "topic_name": "Mantap Mantab Banget",
+          "business_category": "Kepuasan Pengguna Umum",
+          "sub_issue": "Ulasan positif mengenai kualitas aplikasi",
+          "review_count": 6694,
+          "pct": 11.06,
+          "avg_score": 4.95,
+          "total_thumbs_up": 176
+        },
+        {
+          "rank": 4,
+          "topic_id": 3,
+          "topic_name": "Bisa Tidak Buka",
+          "business_category": "Masalah Akses Aplikasi",
+          "sub_issue": "Aplikasi tidak dapat dibuka atau diakses",
+          "review_count": 4603,
+          "pct": 7.6,
+          "avg_score": 4.75,
+          "total_thumbs_up": 4871
+        },
+        {
+          "rank": 5,
+          "topic_id": 4,
+          "topic_name": "Mudah Cepat Dan",
+          "business_category": "Kepuasan Pengguna Umum",
+          "sub_issue": "Proses penggunaan aplikasi cepat dan mudah",
+          "review_count": 4019,
+          "pct": 6.64,
+          "avg_score": 4.94,
+          "total_thumbs_up": 133
+        },
+        {
+          "rank": 6,
+          "topic_id": 5,
+          "topic_name": "Aplikasi Yang Membantu",
+          "business_category": "Kepuasan Pengguna Umum",
+          "sub_issue": "Aplikasi dinilai sangat membantu bagi pekerja",
+          "review_count": 2645,
+          "pct": 4.37,
+          "avg_score": 4.94,
+          "total_thumbs_up": 124
+        },
+        {
+          "rank": 7,
+          "topic_id": 6,
+          "topic_name": "Saldo Jht Untuk",
+          "business_category": "Layanan Informasi Saldo",
+          "sub_issue": "Kemudahan dalam pengecekan saldo JHT",
+          "review_count": 2008,
+          "pct": 3.32,
+          "avg_score": 4.93,
+          "total_thumbs_up": 460
+        },
+        {
+          "rank": 8,
+          "topic_id": 7,
+          "topic_name": "Pelayanan Ramah Pelayanannya",
+          "business_category": "Kualitas Layanan Digital",
+          "sub_issue": "Pelayanan aplikasi dinilai cepat dan memuaskan",
+          "review_count": 1195,
+          "pct": 1.97,
+          "avg_score": 4.95,
+          "total_thumbs_up": 27
+        },
+        {
+          "rank": 9,
+          "topic_id": 8,
+          "topic_name": "Semoga Sukses Selalu",
+          "business_category": "Kepuasan Pengguna Umum",
+          "sub_issue": "Harapan positif untuk pengembangan aplikasi ke depan",
+          "review_count": 1064,
+          "pct": 1.76,
+          "avg_score": 4.92,
+          "total_thumbs_up": 101
+        },
+        {
+          "rank": 10,
+          "topic_id": 9,
+          "topic_name": "Bpjs Saya Yang",
+          "business_category": "Masalah Layanan Klaim",
+          "sub_issue": "Kendala biometrik dan ketidaksesuaian data klaim JHT",
+          "review_count": 978,
+          "pct": 1.62,
+          "avg_score": 4.82,
+          "total_thumbs_up": 7674
+        },
+        {
+          "rank": 11,
+          "topic_id": 10,
+          "topic_name": "Jmo Nih Susah",
+          "business_category": "Kepuasan Pengguna Umum",
+          "sub_issue": "Ulasan positif mengenai performa aplikasi",
+          "review_count": 756,
+          "pct": 1.25,
+          "avg_score": 4.86,
+          "total_thumbs_up": 24
+        },
+        {
+          "rank": 12,
+          "topic_id": 11,
+          "topic_name": "Mntap Mantul Mantaf",
+          "business_category": "Kepuasan Pengguna Umum",
+          "sub_issue": "Ulasan positif singkat mengenai aplikasi",
+          "review_count": 648,
+          "pct": 1.07,
+          "avg_score": 4.93,
+          "total_thumbs_up": 4
+        },
+        {
+          "rank": 13,
+          "topic_id": 12,
+          "topic_name": "Cepat Respon Aman",
+          "business_category": "Kualitas Layanan Digital",
+          "sub_issue": "Respon aplikasi dinilai cepat dan akurat",
+          "review_count": 639,
+          "pct": 1.06,
+          "avg_score": 4.92,
+          "total_thumbs_up": 145
+        },
+        {
+          "rank": 14,
+          "topic_id": 13,
+          "topic_name": "Bintang Sering Update",
+          "business_category": "Masalah Stabilitas Aplikasi",
+          "sub_issue": "Aplikasi sering mengalami error atau gangguan teknis",
+          "review_count": 635,
+          "pct": 1.05,
+          "avg_score": 4.69,
+          "total_thumbs_up": 17
+        },
+        {
+          "rank": 15,
+          "topic_id": 14,
+          "topic_name": "Update Pengkinian Data",
+          "business_category": "Masalah Pembaruan Aplikasi",
+          "sub_issue": "Aplikasi terus meminta pembaruan data secara berulang",
+          "review_count": 603,
+          "pct": 1.0,
+          "avg_score": 4.64,
+          "total_thumbs_up": 1101
+        },
+        {
+          "rank": 16,
+          "topic_id": 15,
+          "topic_name": "Membatu Sngat Sangan",
+          "business_category": "Ulasan Positif Pengguna",
+          "sub_issue": "Pengguna merasa aplikasi sangat membantu kebutuhan mereka",
+          "review_count": 504,
+          "pct": 0.83,
+          "avg_score": 4.93,
+          "total_thumbs_up": 6
+        },
+        {
+          "rank": 17,
+          "topic_id": 16,
+          "topic_name": "Buka Bisa Tidak",
+          "business_category": "Masalah Akses Aplikasi",
+          "sub_issue": "Aplikasi tidak dapat dibuka atau diakses oleh pengguna",
+          "review_count": 429,
+          "pct": 0.71,
+          "avg_score": 4.8,
+          "total_thumbs_up": 45
+        },
+        {
+          "rank": 18,
+          "topic_id": 17,
+          "topic_name": "Lagi Semoga Tolong",
+          "business_category": "Peningkatan Kualitas Layanan",
+          "sub_issue": "Permintaan perbaikan sistem dan stabilitas aplikasi",
+          "review_count": 410,
+          "pct": 0.68,
+          "avg_score": 4.85,
+          "total_thumbs_up": 114
+        },
+        {
+          "rank": 19,
+          "topic_id": 18,
+          "topic_name": "Tingkatkan Berfungsi Ditingkatkan",
+          "business_category": "Peningkatan Kualitas Layanan",
+          "sub_issue": "Saran untuk terus meningkatkan kualitas pelayanan aplikasi",
+          "review_count": 316,
+          "pct": 0.52,
+          "avg_score": 4.85,
+          "total_thumbs_up": 74
+        },
+        {
+          "rank": 20,
+          "topic_id": 19,
+          "topic_name": "Alhamdulillah Bismillah Alhamdulilah",
+          "business_category": "Ulasan Positif Pengguna",
+          "sub_issue": "Pengguna merasa puas dengan kelancaran proses aplikasi",
+          "review_count": 313,
+          "pct": 0.52,
+          "avg_score": 4.95,
+          "total_thumbs_up": 4
+        },
+        {
+          "rank": 21,
+          "topic_id": 20,
+          "topic_name": "Tua Hari Masa",
+          "business_category": "Manfaat Layanan Jaminan",
+          "sub_issue": "Aplikasi membantu pengelolaan tabungan hari tua",
+          "review_count": 237,
+          "pct": 0.39,
+          "avg_score": 4.96,
+          "total_thumbs_up": 1
+        },
+        {
+          "rank": 22,
+          "topic_id": 21,
+          "topic_name": "Informasi Up Date",
+          "business_category": "Akses Informasi Layanan",
+          "sub_issue": "Kemudahan mendapatkan informasi dan update data klaim",
+          "review_count": 123,
+          "pct": 0.2,
+          "avg_score": 4.84,
+          "total_thumbs_up": 1
+        },
+        {
+          "rank": 23,
+          "topic_id": 22,
+          "topic_name": "Cek Saldo Sosial",
+          "business_category": "Akses Informasi Layanan",
+          "sub_issue": "Kemudahan dalam melakukan pengecekan saldo jaminan",
+          "review_count": 107,
+          "pct": 0.18,
+          "avg_score": 4.88,
+          "total_thumbs_up": 3
+        },
+        {
+          "rank": 24,
+          "topic_id": 23,
+          "topic_name": "Goood Goof Go",
+          "business_category": "Ulasan Positif Pengguna",
+          "sub_issue": "Apresiasi umum terhadap kinerja aplikasi",
+          "review_count": 58,
+          "pct": 0.1,
+          "avg_score": 4.91,
+          "total_thumbs_up": 0
+        },
+        {
+          "rank": 25,
+          "topic_id": 24,
+          "topic_name": "Bintang Biar Berbicara",
+          "business_category": "Ulasan Positif Pengguna",
+          "sub_issue": "Pengguna memberikan rating tinggi sebagai bentuk kepuasan",
+          "review_count": 44,
+          "pct": 0.07,
+          "avg_score": 4.98,
+          "total_thumbs_up": 0
+        },
+        {
+          "rank": 26,
+          "topic_id": 25,
+          "topic_name": "Easy Use Great",
+          "business_category": "Pengalaman Pengguna",
+          "sub_issue": "Aplikasi dinilai mudah digunakan dan bermanfaat",
+          "review_count": 40,
+          "pct": 0.07,
+          "avg_score": 4.8,
+          "total_thumbs_up": 2
+        },
+        {
+          "rank": 27,
+          "topic_id": 26,
+          "topic_name": "Sae Alus Bin",
+          "business_category": "Masalah Akses Aplikasi",
+          "sub_issue": "Kendala teknis saat membuka aplikasi",
+          "review_count": 20,
+          "pct": 0.03,
+          "avg_score": 4.85,
+          "total_thumbs_up": 0
+        },
+        {
+          "rank": 28,
+          "topic_id": 27,
+          "topic_name": "Alhmdulillah Alhamdllah Alkhamdulillah",
+          "business_category": "Ulasan Positif Pengguna",
+          "sub_issue": "Pengguna merasa terbantu dengan layanan aplikasi",
+          "review_count": 20,
+          "pct": 0.03,
+          "avg_score": 4.95,
+          "total_thumbs_up": 0
+        },
+        {
+          "rank": 29,
+          "topic_id": 28,
+          "topic_name": "Penting Diperhatikan Bagiku",
+          "business_category": "Peningkatan Kualitas Layanan",
+          "sub_issue": "Pentingnya pembaruan aplikasi secara berkala",
+          "review_count": 14,
+          "pct": 0.02,
+          "avg_score": 4.86,
+          "total_thumbs_up": 0
+        }
+      ],
+      "category_concentration": {
+        "top_3_categories": [
+          "Kepuasan Pengguna Umum",
+          "Masalah Akses Aplikasi",
+          "Layanan Informasi Saldo"
+        ],
+        "top_3_pct": 89.64
+      }
+    },
+    "negatif": {
+      "total_topics": 29,
+      "total_reviews": 16296,
+      "topics": [
+        {
+          "rank": 1,
+          "topic_id": 0,
+          "topic_name": "Sudah Tidak Di",
+          "business_category": "Masalah Akses Login",
+          "sub_issue": "Pengguna gagal masuk ke aplikasi setelah melakukan pembaruan",
+          "review_count": 5701,
+          "pct": 34.83,
+          "avg_score": 1.18,
+          "total_thumbs_up": 10911
+        },
+        {
+          "rank": 2,
+          "topic_id": 1,
+          "topic_name": "Bisa Tidak Buka",
+          "business_category": "Masalah Akses Aplikasi",
+          "sub_issue": "Aplikasi tidak dapat dibuka setelah proses pembaruan selesai",
+          "review_count": 4659,
+          "pct": 28.46,
+          "avg_score": 1.21,
+          "total_thumbs_up": 972
+        },
+        {
+          "rank": 3,
+          "topic_id": 2,
+          "topic_name": "Update Tiap Meminta",
+          "business_category": "Masalah Pembaruan Aplikasi",
+          "sub_issue": "Aplikasi terus menerus meminta pembaruan secara berulang",
+          "review_count": 1070,
+          "pct": 6.54,
+          "avg_score": 1.19,
+          "total_thumbs_up": 697
+        },
+        {
+          "rank": 4,
+          "topic_id": 3,
+          "topic_name": "Bisa Dibuka Tidak",
+          "business_category": "Masalah Akses Aplikasi",
+          "sub_issue": "Aplikasi mengalami kegagalan saat dibuka atau diakses",
+          "review_count": 878,
+          "pct": 5.36,
+          "avg_score": 1.15,
+          "total_thumbs_up": 103
+        },
+        {
+          "rank": 5,
+          "topic_id": 4,
+          "topic_name": "Sendiri Persulit Pemerintah",
+          "business_category": "Keluhan Layanan Pengguna",
+          "sub_issue": "Proses klaim hak peserta dirasakan sangat dipersulit",
+          "review_count": 444,
+          "pct": 2.71,
+          "avg_score": 1.04,
+          "total_thumbs_up": 182
+        },
+        {
+          "rank": 6,
+          "topic_id": 5,
+          "topic_name": "Lambat Ribet Buruk",
+          "business_category": "Kualitas Layanan Aplikasi",
+          "sub_issue": "Performa aplikasi dinilai buruk dan tidak stabil",
+          "review_count": 426,
+          "pct": 2.6,
+          "avg_score": 1.12,
+          "total_thumbs_up": 98
+        },
+        {
+          "rank": 7,
+          "topic_id": 6,
+          "topic_name": "Mental Mulu Terus",
+          "business_category": "Masalah Stabilitas Aplikasi",
+          "sub_issue": "Aplikasi tertutup otomatis saat mencoba dibuka",
+          "review_count": 368,
+          "pct": 2.25,
+          "avg_score": 1.17,
+          "total_thumbs_up": 123
+        },
+        {
+          "rank": 8,
+          "topic_id": 7,
+          "topic_name": "Susah Kagak Login",
+          "business_category": "Masalah Akses Login",
+          "sub_issue": "Pengguna mengalami kesulitan saat mencoba masuk ke aplikasi",
+          "review_count": 358,
+          "pct": 2.19,
+          "avg_score": 1.19,
+          "total_thumbs_up": 205
+        },
+        {
+          "rank": 9,
+          "topic_id": 8,
+          "topic_name": "Pengkinian Data Server",
+          "business_category": "Masalah Pengkinian Data",
+          "sub_issue": "Gagal terhubung ke server saat proses pengkinian data",
+          "review_count": 301,
+          "pct": 1.84,
+          "avg_score": 1.2,
+          "total_thumbs_up": 937
+        },
+        {
+          "rank": 10,
+          "topic_id": 9,
+          "topic_name": "Bagus Mantap Baik",
+          "business_category": "Kepuasan Pengguna",
+          "sub_issue": "Pengguna memberikan penilaian positif terhadap aplikasi",
+          "review_count": 297,
+          "pct": 1.81,
+          "avg_score": 1.3,
+          "total_thumbs_up": 16
+        },
+        {
+          "rank": 11,
+          "topic_id": 10,
+          "topic_name": "Sering Kebanyakan Terlalu",
+          "business_category": "Masalah Stabilitas Aplikasi",
+          "sub_issue": "Aplikasi sering mengalami error saat digunakan",
+          "review_count": 286,
+          "pct": 1.75,
+          "avg_score": 1.21,
+          "total_thumbs_up": 38
+        },
+        {
+          "rank": 12,
+          "topic_id": 11,
+          "topic_name": "Jht Klaim Pencairan",
+          "business_category": "Masalah Klaim JHT",
+          "sub_issue": "Proses pengajuan klaim JHT sering gagal dan lambat",
+          "review_count": 280,
+          "pct": 1.71,
+          "avg_score": 1.17,
+          "total_thumbs_up": 164
+        },
+        {
+          "rank": 13,
+          "topic_id": 12,
+          "topic_name": "Sampah Tolol Aplikasi",
+          "business_category": "Masalah Stabilitas Aplikasi",
+          "sub_issue": "Aplikasi mengalami error teknis secara umum",
+          "review_count": 253,
+          "pct": 1.55,
+          "avg_score": 1.06,
+          "total_thumbs_up": 128
+        },
+        {
+          "rank": 14,
+          "topic_id": 13,
+          "topic_name": "Buruk Pelayanan Sangat",
+          "business_category": "Kualitas Layanan Pengguna",
+          "sub_issue": "Pelayanan digital dinilai lambat dan kurang memuaskan",
+          "review_count": 121,
+          "pct": 0.74,
+          "avg_score": 1.11,
+          "total_thumbs_up": 18
+        },
+        {
+          "rank": 15,
+          "topic_id": 14,
+          "topic_name": "Mulu Update Updet",
+          "business_category": "Masalah Pembaruan Aplikasi",
+          "sub_issue": "Frekuensi pembaruan aplikasi yang terlalu sering",
+          "review_count": 116,
+          "pct": 0.71,
+          "avg_score": 1.19,
+          "total_thumbs_up": 47
+        },
+        {
+          "rank": 16,
+          "topic_id": 15,
+          "topic_name": "2026 Mei Tanggal",
+          "business_category": "Stabilitas Aplikasi",
+          "sub_issue": "Aplikasi tidak dapat dibuka dalam jangka waktu lama",
+          "review_count": 112,
+          "pct": 0.68,
+          "avg_score": 1.27,
+          "total_thumbs_up": 18
+        },
+        {
+          "rank": 17,
+          "topic_id": 16,
+          "topic_name": "Membantu Sangat Bermanfaat",
+          "business_category": "Kepuasan Pengguna",
+          "sub_issue": "Pengguna memberikan apresiasi positif terhadap manfaat aplikasi",
+          "review_count": 80,
+          "pct": 0.49,
+          "avg_score": 1.27,
+          "total_thumbs_up": 106
+        },
+        {
+          "rank": 18,
+          "topic_id": 17,
+          "topic_name": "Biometrik Foto Verifikasi",
+          "business_category": "Verifikasi Identitas",
+          "sub_issue": "Kegagalan proses verifikasi biometrik saat klaim JHT",
+          "review_count": 74,
+          "pct": 0.45,
+          "avg_score": 1.09,
+          "total_thumbs_up": 68
+        },
+        {
+          "rank": 19,
+          "topic_id": 18,
+          "topic_name": "Jmo Saya Buka",
+          "business_category": "Stabilitas Aplikasi",
+          "sub_issue": "Aplikasi mengalami kendala saat proses pembukaan",
+          "review_count": 66,
+          "pct": 0.4,
+          "avg_score": 1.2,
+          "total_thumbs_up": 10
+        },
+        {
+          "rank": 20,
+          "topic_id": 19,
+          "topic_name": "Force Close Closed",
+          "business_category": "Stabilitas Aplikasi",
+          "sub_issue": "Aplikasi tertutup secara otomatis saat digunakan",
+          "review_count": 65,
+          "pct": 0.4,
+          "avg_score": 1.03,
+          "total_thumbs_up": 69
+        },
+        {
+          "rank": 21,
+          "topic_id": 20,
+          "topic_name": "Pelayanan Sangat Agent",
+          "business_category": "Layanan Pelanggan",
+          "sub_issue": "Respon layanan pelanggan lambat dan kurang memuaskan",
+          "review_count": 53,
+          "pct": 0.32,
+          "avg_score": 1.09,
+          "total_thumbs_up": 25
+        },
+        {
+          "rank": 22,
+          "topic_id": 21,
+          "topic_name": "Jelas Pengaduan Tros",
+          "business_category": "Kualitas Layanan",
+          "sub_issue": "Ketidakpuasan umum terhadap performa aplikasi",
+          "review_count": 52,
+          "pct": 0.32,
+          "avg_score": 1.04,
+          "total_thumbs_up": 12
+        },
+        {
+          "rank": 23,
+          "topic_id": 22,
+          "topic_name": "Kepesertaan Memuat Data",
+          "business_category": "Manajemen Data Kepesertaan",
+          "sub_issue": "Data kepesertaan gagal dimuat atau tidak ditemukan",
+          "review_count": 49,
+          "pct": 0.3,
+          "avg_score": 1.16,
+          "total_thumbs_up": 217
+        },
+        {
+          "rank": 24,
+          "topic_id": 23,
+          "topic_name": "Berhenti Terus Menanggapi",
+          "business_category": "Stabilitas Aplikasi",
+          "sub_issue": "Aplikasi berhenti merespon saat proses login",
+          "review_count": 39,
+          "pct": 0.24,
+          "avg_score": 1.18,
+          "total_thumbs_up": 2
+        },
+        {
+          "rank": 25,
+          "topic_id": 24,
+          "topic_name": "Dikit Update Pembaruan",
+          "business_category": "Pembaruan Aplikasi",
+          "sub_issue": "Frekuensi pembaruan aplikasi yang terlalu sering",
+          "review_count": 33,
+          "pct": 0.2,
+          "avg_score": 1.24,
+          "total_thumbs_up": 45
+        },
+        {
+          "rank": 26,
+          "topic_id": 25,
+          "topic_name": "Lahir Tanggal Scroll",
+          "business_category": "Pengalaman Pengguna",
+          "sub_issue": "Kesulitan input tanggal lahir karena antarmuka tidak efisien",
+          "review_count": 31,
+          "pct": 0.19,
+          "avg_score": 1.26,
+          "total_thumbs_up": 20
+        },
+        {
+          "rank": 27,
+          "topic_id": 26,
+          "topic_name": "Tiba Hilang Gbisa",
+          "business_category": "Stabilitas Aplikasi",
+          "sub_issue": "Aplikasi keluar sendiri dan data saldo tidak muncul",
+          "review_count": 30,
+          "pct": 0.18,
+          "avg_score": 1.2,
+          "total_thumbs_up": 4
+        },
+        {
+          "rank": 28,
+          "topic_id": 27,
+          "topic_name": "Indak Tifak Bisa",
+          "business_category": "Stabilitas Aplikasi",
+          "sub_issue": "Aplikasi mengalami kendala teknis dan tidak bisa dibuka",
+          "review_count": 30,
+          "pct": 0.18,
+          "avg_score": 1.27,
+          "total_thumbs_up": 1
+        },
+        {
+          "rank": 29,
+          "topic_id": 28,
+          "topic_name": "Ra Ora Wae",
+          "business_category": "Stabilitas Aplikasi",
+          "sub_issue": "Kegagalan login dan aplikasi tertutup otomatis",
+          "review_count": 24,
+          "pct": 0.15,
+          "avg_score": 1.12,
+          "total_thumbs_up": 1
+        }
+      ],
+      "category_concentration": {
+        "top_3_categories": [
+          "Masalah Akses Login",
+          "Masalah Akses Aplikasi",
+          "Masalah Pembaruan Aplikasi"
+        ],
+        "top_3_pct": 78.44
+      }
+    },
+    "netral": {
+      "total_topics": 29,
+      "total_reviews": 3627,
+      "topics": [
+        {
+          "rank": 1,
+          "topic_id": 0,
+          "topic_name": "Bisa Tidak Di",
+          "business_category": "Stabilitas Aplikasi",
+          "sub_issue": "Aplikasi tidak dapat dibuka setelah melakukan pembaruan",
+          "review_count": 1646,
+          "pct": 44.27,
+          "avg_score": 3.0,
+          "total_thumbs_up": 1895
+        },
+        {
+          "rank": 2,
+          "topic_id": 1,
+          "topic_name": "Update Tiap Setiap",
+          "business_category": "Manajemen Pembaruan Aplikasi",
+          "sub_issue": "Aplikasi terus menerus meminta pembaruan saat akan dibuka",
+          "review_count": 253,
+          "pct": 6.8,
+          "avg_score": 3.0,
+          "total_thumbs_up": 12
+        },
+        {
+          "rank": 3,
+          "topic_id": 2,
+          "topic_name": "Buka Bisa Tidak",
+          "business_category": "Stabilitas Aplikasi",
+          "sub_issue": "Aplikasi mengalami kegagalan saat dibuka",
+          "review_count": 235,
+          "pct": 6.32,
+          "avg_score": 3.0,
+          "total_thumbs_up": 8
+        },
+        {
+          "rank": 4,
+          "topic_id": 3,
+          "topic_name": "Bagus Baik Sangat",
+          "business_category": "Kepuasan Pengguna",
+          "sub_issue": "Ulasan positif umum mengenai kualitas aplikasi",
+          "review_count": 199,
+          "pct": 5.35,
+          "avg_score": 3.0,
+          "total_thumbs_up": 2
+        },
+        {
+          "rank": 5,
+          "topic_id": 4,
+          "topic_name": "Bpjs Saya Klaim",
+          "business_category": "Layanan Klaim JHT",
+          "sub_issue": "Kegagalan klaim JHT dan kendala akses akun",
+          "review_count": 192,
+          "pct": 5.16,
+          "avg_score": 3.0,
+          "total_thumbs_up": 60
+        },
+        {
+          "rank": 6,
+          "topic_id": 5,
+          "topic_name": "Lambat Lumayan Kebanyakan",
+          "business_category": "Kepuasan Pengguna",
+          "sub_issue": "Ulasan positif mengenai manfaat aplikasi",
+          "review_count": 120,
+          "pct": 3.23,
+          "avg_score": 3.0,
+          "total_thumbs_up": 697
+        },
+        {
+          "rank": 7,
+          "topic_id": 6,
+          "topic_name": "Ok Good Oke",
+          "business_category": "Kepuasan Pengguna",
+          "sub_issue": "Ulasan positif singkat dari pengguna",
+          "review_count": 117,
+          "pct": 3.15,
+          "avg_score": 3.0,
+          "total_thumbs_up": 1
+        },
+        {
+          "rank": 8,
+          "topic_id": 7,
+          "topic_name": "Update Meminta Terus",
+          "business_category": "Manajemen Pembaruan Aplikasi",
+          "sub_issue": "Frekuensi pembaruan aplikasi yang terlalu sering",
+          "review_count": 113,
+          "pct": 3.04,
+          "avg_score": 3.0,
+          "total_thumbs_up": 6
+        },
+        {
+          "rank": 9,
+          "topic_id": 8,
+          "topic_name": "Eror Sering Susah",
+          "business_category": "Stabilitas Aplikasi",
+          "sub_issue": "Aplikasi sering mengalami error saat digunakan",
+          "review_count": 83,
+          "pct": 2.23,
+          "avg_score": 3.0,
+          "total_thumbs_up": 5
+        },
+        {
+          "rank": 10,
+          "topic_id": 9,
+          "topic_name": "Dibuka Tidak Bisa",
+          "business_category": "Stabilitas Aplikasi",
+          "sub_issue": "Aplikasi tidak dapat diakses atau dibuka",
+          "review_count": 78,
+          "pct": 2.1,
+          "avg_score": 3.0,
+          "total_thumbs_up": 1
+        },
+        {
+          "rank": 11,
+          "topic_id": 10,
+          "topic_name": "Pengkinian Data Gagal",
+          "business_category": "Pengelolaan Data Pengguna",
+          "sub_issue": "Kegagalan dalam proses pengkinian data",
+          "review_count": 74,
+          "pct": 1.99,
+          "avg_score": 3.0,
+          "total_thumbs_up": 284
+        },
+        {
+          "rank": 12,
+          "topic_id": 11,
+          "topic_name": "Mantap Puas Lumayan",
+          "business_category": "Kepuasan Pengguna",
+          "sub_issue": "Ulasan positif mengenai pengalaman pengguna",
+          "review_count": 73,
+          "pct": 1.96,
+          "avg_score": 3.0,
+          "total_thumbs_up": 1
+        },
+        {
+          "rank": 13,
+          "topic_id": 12,
+          "topic_name": "Membantu Sangat Bermanfaat",
+          "business_category": "Kepuasan Pengguna",
+          "sub_issue": "Ulasan positif mengenai manfaat aplikasi",
+          "review_count": 71,
+          "pct": 1.91,
+          "avg_score": 3.0,
+          "total_thumbs_up": 0
+        },
+        {
+          "rank": 14,
+          "topic_id": 13,
+          "topic_name": "Jht Saldo Klaim",
+          "business_category": "Layanan Klaim JHT",
+          "sub_issue": "Kendala dalam proses klaim dan pengecekan saldo JHT",
+          "review_count": 51,
+          "pct": 1.37,
+          "avg_score": 3.0,
+          "total_thumbs_up": 3
+        },
+        {
+          "rank": 15,
+          "topic_id": 14,
+          "topic_name": "Bintang Kasih Dulu",
+          "business_category": "Kepuasan Pengguna",
+          "sub_issue": "Pemberian rating sementara karena kendala teknis",
+          "review_count": 42,
+          "pct": 1.13,
+          "avg_score": 3.0,
+          "total_thumbs_up": 4
+        },
+        {
+          "rank": 16,
+          "topic_id": 15,
+          "topic_name": "Mudah Lebih Cepat",
+          "business_category": "Pengalaman Pengguna",
+          "sub_issue": "Aplikasi memberikan kemudahan dan kenyamanan penggunaan",
+          "review_count": 38,
+          "pct": 1.02,
+          "avg_score": 3.0,
+          "total_thumbs_up": 0
+        },
+        {
+          "rank": 17,
+          "topic_id": 16,
+          "topic_name": "Terima Kasih Terimakasih",
+          "business_category": "Pengalaman Pengguna",
+          "sub_issue": "Aplikasi sangat membantu dalam pengecekan jaminan",
+          "review_count": 37,
+          "pct": 1.0,
+          "avg_score": 3.0,
+          "total_thumbs_up": 1
+        },
+        {
+          "rank": 18,
+          "topic_id": 17,
+          "topic_name": "Redmi Note Os",
+          "business_category": "Masalah Teknis Perangkat",
+          "sub_issue": "Aplikasi mengalami force close pada perangkat Redmi",
+          "review_count": 27,
+          "pct": 0.73,
+          "avg_score": 3.0,
+          "total_thumbs_up": 78
+        },
+        {
+          "rank": 19,
+          "topic_id": 18,
+          "topic_name": "Semoga Cepat Lebih",
+          "business_category": "Pengalaman Pengguna",
+          "sub_issue": "Harapan pengguna untuk peningkatan kualitas aplikasi",
+          "review_count": 24,
+          "pct": 0.65,
+          "avg_score": 3.0,
+          "total_thumbs_up": 0
+        },
+        {
+          "rank": 20,
+          "topic_id": 19,
+          "topic_name": "Membantu Sangat Info",
+          "business_category": "Pengalaman Pengguna",
+          "sub_issue": "Aplikasi memudahkan akses informasi dan investasi",
+          "review_count": 22,
+          "pct": 0.59,
+          "avg_score": 3.0,
+          "total_thumbs_up": 53
+        },
+        {
+          "rank": 21,
+          "topic_id": 20,
+          "topic_name": "Verifikasi Otomatis Keluar",
+          "business_category": "Masalah Akses Akun",
+          "sub_issue": "Aplikasi keluar otomatis saat proses login",
+          "review_count": 21,
+          "pct": 0.56,
+          "avg_score": 3.0,
+          "total_thumbs_up": 2
+        },
+        {
+          "rank": 22,
+          "topic_id": 21,
+          "topic_name": "Mental Eror Terus",
+          "business_category": "Masalah Teknis Aplikasi",
+          "sub_issue": "Aplikasi tertutup sendiri setelah pembaruan",
+          "review_count": 21,
+          "pct": 0.56,
+          "avg_score": 3.0,
+          "total_thumbs_up": 0
+        },
+        {
+          "rank": 23,
+          "topic_id": 22,
+          "topic_name": "Terlalu Sering Lahir",
+          "business_category": "Manajemen Pembaruan Aplikasi",
+          "sub_issue": "Frekuensi pembaruan aplikasi dianggap terlalu sering",
+          "review_count": 20,
+          "pct": 0.54,
+          "avg_score": 3.0,
+          "total_thumbs_up": 1
+        },
+        {
+          "rank": 24,
+          "topic_id": 23,
+          "topic_name": "Tanggal Juni 12",
+          "business_category": "Manajemen Pembaruan Aplikasi",
+          "sub_issue": "Kewajiban pembaruan berulang dalam waktu singkat",
+          "review_count": 19,
+          "pct": 0.51,
+          "avg_score": 3.0,
+          "total_thumbs_up": 2
+        },
+        {
+          "rank": 25,
+          "topic_id": 24,
+          "topic_name": "Tingkatkan Keamanan Sedikit",
+          "business_category": "Pengalaman Pengguna",
+          "sub_issue": "Permintaan peningkatan kualitas layanan secara berkelanjutan",
+          "review_count": 12,
+          "pct": 0.32,
+          "avg_score": 3.0,
+          "total_thumbs_up": 15
+        },
+        {
+          "rank": 26,
+          "topic_id": 25,
+          "topic_name": "Mulu Ah Anehh",
+          "business_category": "Manajemen Pembaruan Aplikasi",
+          "sub_issue": "Keluhan pengguna terhadap frekuensi pembaruan yang tinggi",
+          "review_count": 12,
+          "pct": 0.32,
+          "avg_score": 3.0,
+          "total_thumbs_up": 1
+        },
+        {
+          "rank": 27,
+          "topic_id": 26,
+          "topic_name": "Loading Lama Proses",
+          "business_category": "Masalah Teknis Aplikasi",
+          "sub_issue": "Proses loading aplikasi berjalan sangat lambat",
+          "review_count": 11,
+          "pct": 0.3,
+          "avg_score": 3.0,
+          "total_thumbs_up": 49
+        },
+        {
+          "rank": 28,
+          "topic_id": 27,
+          "topic_name": "Tingkat Kendala Tolong",
+          "business_category": "Masalah Teknis Aplikasi",
+          "sub_issue": "Aplikasi tidak dapat dibuka setelah melakukan pembaruan",
+          "review_count": 10,
+          "pct": 0.27,
+          "avg_score": 3.0,
+          "total_thumbs_up": 0
+        },
+        {
+          "rank": 29,
+          "topic_id": 28,
+          "topic_name": "Pelayanan Orang Online",
+          "business_category": "Pengalaman Pengguna",
+          "sub_issue": "Kepuasan pengguna terhadap kualitas pelayanan",
+          "review_count": 6,
+          "pct": 0.16,
+          "avg_score": 3.0,
+          "total_thumbs_up": 4
+        }
+      ],
+      "category_concentration": {
+        "top_3_categories": [
+          "Stabilitas Aplikasi",
+          "Kepuasan Pengguna",
+          "Manajemen Pembaruan Aplikasi"
+        ],
+        "top_3_pct": 84.95
+      }
+    }
+  },
+  "business_categories": {
+    "by_sentiment": {
+      "positif": [
+        {
+          "category": "Kepuasan Pengguna Umum",
+          "review_count": 46890,
+          "pct": 77.44,
+          "avg_score": 4.93,
+          "share_confident": 0.9801
+        },
+        {
+          "category": "Masalah Akses Aplikasi",
+          "review_count": 5052,
+          "pct": 8.34,
+          "avg_score": 4.75,
+          "share_confident": 0.9871
+        },
+        {
+          "category": "Layanan Informasi Saldo",
+          "review_count": 2008,
+          "pct": 3.32,
+          "avg_score": 4.93,
+          "share_confident": 0.997
+        },
+        {
+          "category": "Kualitas Layanan Digital",
+          "review_count": 1834,
+          "pct": 3.03,
+          "avg_score": 4.94,
+          "share_confident": 0.9787
+        },
+        {
+          "category": "Masalah Layanan Klaim",
+          "review_count": 978,
+          "pct": 1.62,
+          "avg_score": 4.82,
+          "share_confident": 0.9693
+        },
+        {
+          "category": "Ulasan Positif Pengguna",
+          "review_count": 939,
+          "pct": 1.55,
+          "avg_score": 4.94,
+          "share_confident": 0.9776
+        },
+        {
+          "category": "Peningkatan Kualitas Layanan",
+          "review_count": 740,
+          "pct": 1.22,
+          "avg_score": 4.85,
+          "share_confident": 0.9892
+        },
+        {
+          "category": "Masalah Stabilitas Aplikasi",
+          "review_count": 635,
+          "pct": 1.05,
+          "avg_score": 4.69,
+          "share_confident": 0.9969
+        },
+        {
+          "category": "Masalah Pembaruan Aplikasi",
+          "review_count": 603,
+          "pct": 1.0,
+          "avg_score": 4.64,
+          "share_confident": 0.9934
+        },
+        {
+          "category": "Lain-lain / Noise",
+          "review_count": 364,
+          "pct": 0.6,
+          "avg_score": 4.9,
+          "share_confident": 0.0
+        },
+        {
+          "category": "Manfaat Layanan Jaminan",
+          "review_count": 237,
+          "pct": 0.39,
+          "avg_score": 4.96,
+          "share_confident": 1.0
+        },
+        {
+          "category": "Akses Informasi Layanan",
+          "review_count": 230,
+          "pct": 0.38,
+          "avg_score": 4.86,
+          "share_confident": 0.9913
+        },
+        {
+          "category": "Pengalaman Pengguna",
+          "review_count": 40,
+          "pct": 0.07,
+          "avg_score": 4.8,
+          "share_confident": 0.9
+        }
+      ],
+      "negatif": [
+        {
+          "category": "Masalah Akses Login",
+          "review_count": 6059,
+          "pct": 37.02,
+          "avg_score": 1.18,
+          "share_confident": 0.9906
+        },
+        {
+          "category": "Masalah Akses Aplikasi",
+          "review_count": 5537,
+          "pct": 33.83,
+          "avg_score": 1.2,
+          "share_confident": 0.9953
+        },
+        {
+          "category": "Masalah Pembaruan Aplikasi",
+          "review_count": 1186,
+          "pct": 7.25,
+          "avg_score": 1.19,
+          "share_confident": 0.9933
+        },
+        {
+          "category": "Masalah Stabilitas Aplikasi",
+          "review_count": 907,
+          "pct": 5.54,
+          "avg_score": 1.15,
+          "share_confident": 0.9967
+        },
+        {
+          "category": "Keluhan Layanan Pengguna",
+          "review_count": 444,
+          "pct": 2.71,
+          "avg_score": 1.04,
+          "share_confident": 0.9955
+        },
+        {
+          "category": "Kualitas Layanan Aplikasi",
+          "review_count": 426,
+          "pct": 2.6,
+          "avg_score": 1.12,
+          "share_confident": 0.9695
+        },
+        {
+          "category": "Kepuasan Pengguna",
+          "review_count": 377,
+          "pct": 2.3,
+          "avg_score": 1.29,
+          "share_confident": 0.9072
+        },
+        {
+          "category": "Stabilitas Aplikasi",
+          "review_count": 366,
+          "pct": 2.24,
+          "avg_score": 1.19,
+          "share_confident": 0.9973
+        },
+        {
+          "category": "Masalah Pengkinian Data",
+          "review_count": 301,
+          "pct": 1.84,
+          "avg_score": 1.2,
+          "share_confident": 0.9834
+        },
+        {
+          "category": "Masalah Klaim JHT",
+          "review_count": 280,
+          "pct": 1.71,
+          "avg_score": 1.17,
+          "share_confident": 0.9929
+        },
+        {
+          "category": "Kualitas Layanan Pengguna",
+          "review_count": 121,
+          "pct": 0.74,
+          "avg_score": 1.11,
+          "share_confident": 1.0
+        },
+        {
+          "category": "Verifikasi Identitas",
+          "review_count": 74,
+          "pct": 0.45,
+          "avg_score": 1.09,
+          "share_confident": 1.0
+        },
+        {
+          "category": "Lain-lain / Noise",
+          "review_count": 73,
+          "pct": 0.45,
+          "avg_score": 1.15,
+          "share_confident": 0.0
+        },
+        {
+          "category": "Layanan Pelanggan",
+          "review_count": 53,
+          "pct": 0.32,
+          "avg_score": 1.09,
+          "share_confident": 1.0
+        },
+        {
+          "category": "Kualitas Layanan",
+          "review_count": 52,
+          "pct": 0.32,
+          "avg_score": 1.04,
+          "share_confident": 1.0
+        },
+        {
+          "category": "Manajemen Data Kepesertaan",
+          "review_count": 49,
+          "pct": 0.3,
+          "avg_score": 1.16,
+          "share_confident": 1.0
+        },
+        {
+          "category": "Pembaruan Aplikasi",
+          "review_count": 33,
+          "pct": 0.2,
+          "avg_score": 1.24,
+          "share_confident": 1.0
+        },
+        {
+          "category": "Pengalaman Pengguna",
+          "review_count": 31,
+          "pct": 0.19,
+          "avg_score": 1.26,
+          "share_confident": 0.9677
+        }
+      ],
+      "netral": [
+        {
+          "category": "Stabilitas Aplikasi",
+          "review_count": 2042,
+          "pct": 54.92,
+          "avg_score": 3.0,
+          "share_confident": 0.9897
+        },
+        {
+          "category": "Kepuasan Pengguna",
+          "review_count": 622,
+          "pct": 16.73,
+          "avg_score": 3.0,
+          "share_confident": 0.9582
+        },
+        {
+          "category": "Manajemen Pembaruan Aplikasi",
+          "review_count": 417,
+          "pct": 11.22,
+          "avg_score": 3.0,
+          "share_confident": 0.9856
+        },
+        {
+          "category": "Layanan Klaim JHT",
+          "review_count": 243,
+          "pct": 6.54,
+          "avg_score": 3.0,
+          "share_confident": 0.9918
+        },
+        {
+          "category": "Pengalaman Pengguna",
+          "review_count": 139,
+          "pct": 3.74,
+          "avg_score": 3.0,
+          "share_confident": 0.9928
+        },
+        {
+          "category": "Lain-lain / Noise",
+          "review_count": 91,
+          "pct": 2.45,
+          "avg_score": 3.0,
+          "share_confident": 0.0
+        },
+        {
+          "category": "Pengelolaan Data Pengguna",
+          "review_count": 74,
+          "pct": 1.99,
+          "avg_score": 3.0,
+          "share_confident": 0.9595
+        },
+        {
+          "category": "Masalah Teknis Aplikasi",
+          "review_count": 42,
+          "pct": 1.13,
+          "avg_score": 3.0,
+          "share_confident": 0.9762
+        },
+        {
+          "category": "Masalah Teknis Perangkat",
+          "review_count": 27,
+          "pct": 0.73,
+          "avg_score": 3.0,
+          "share_confident": 1.0
+        },
+        {
+          "category": "Masalah Akses Akun",
+          "review_count": 21,
+          "pct": 0.56,
+          "avg_score": 3.0,
+          "share_confident": 1.0
+        }
+      ]
+    },
+    "cross_sentiment": [
+      {
+        "category": "Kepuasan Pengguna Umum",
+        "positif": 46890,
+        "negatif": 0,
+        "netral": 0,
+        "total": 46890,
+        "net_sentiment_ratio": 1.0
+      },
+      {
+        "category": "Masalah Akses Aplikasi",
+        "positif": 5052,
+        "negatif": 5537,
+        "netral": 0,
+        "total": 10589,
+        "net_sentiment_ratio": -0.0458
+      },
+      {
+        "category": "Masalah Akses Login",
+        "positif": 0,
+        "negatif": 6059,
+        "netral": 0,
+        "total": 6059,
+        "net_sentiment_ratio": -1.0
+      },
+      {
+        "category": "Stabilitas Aplikasi",
+        "positif": 0,
+        "negatif": 366,
+        "netral": 2042,
+        "total": 2408,
+        "net_sentiment_ratio": -0.152
+      },
+      {
+        "category": "Layanan Informasi Saldo",
+        "positif": 2008,
+        "negatif": 0,
+        "netral": 0,
+        "total": 2008,
+        "net_sentiment_ratio": 1.0
+      },
+      {
+        "category": "Kualitas Layanan Digital",
+        "positif": 1834,
+        "negatif": 0,
+        "netral": 0,
+        "total": 1834,
+        "net_sentiment_ratio": 1.0
+      },
+      {
+        "category": "Masalah Pembaruan Aplikasi",
+        "positif": 603,
+        "negatif": 1186,
+        "netral": 0,
+        "total": 1789,
+        "net_sentiment_ratio": -0.3259
+      },
+      {
+        "category": "Masalah Stabilitas Aplikasi",
+        "positif": 635,
+        "negatif": 907,
+        "netral": 0,
+        "total": 1542,
+        "net_sentiment_ratio": -0.1764
+      },
+      {
+        "category": "Kepuasan Pengguna",
+        "positif": 0,
+        "negatif": 377,
+        "netral": 622,
+        "total": 999,
+        "net_sentiment_ratio": -0.3774
+      },
+      {
+        "category": "Masalah Layanan Klaim",
+        "positif": 978,
+        "negatif": 0,
+        "netral": 0,
+        "total": 978,
+        "net_sentiment_ratio": 1.0
+      },
+      {
+        "category": "Ulasan Positif Pengguna",
+        "positif": 939,
+        "negatif": 0,
+        "netral": 0,
+        "total": 939,
+        "net_sentiment_ratio": 1.0
+      },
+      {
+        "category": "Peningkatan Kualitas Layanan",
+        "positif": 740,
+        "negatif": 0,
+        "netral": 0,
+        "total": 740,
+        "net_sentiment_ratio": 1.0
+      },
+      {
+        "category": "Lain-lain / Noise",
+        "positif": 364,
+        "negatif": 73,
+        "netral": 91,
+        "total": 528,
+        "net_sentiment_ratio": 0.5511
+      },
+      {
+        "category": "Keluhan Layanan Pengguna",
+        "positif": 0,
+        "negatif": 444,
+        "netral": 0,
+        "total": 444,
+        "net_sentiment_ratio": -1.0
+      },
+      {
+        "category": "Kualitas Layanan Aplikasi",
+        "positif": 0,
+        "negatif": 426,
+        "netral": 0,
+        "total": 426,
+        "net_sentiment_ratio": -1.0
+      },
+      {
+        "category": "Manajemen Pembaruan Aplikasi",
+        "positif": 0,
+        "negatif": 0,
+        "netral": 417,
+        "total": 417,
+        "net_sentiment_ratio": 0.0
+      },
+      {
+        "category": "Masalah Pengkinian Data",
+        "positif": 0,
+        "negatif": 301,
+        "netral": 0,
+        "total": 301,
+        "net_sentiment_ratio": -1.0
+      },
+      {
+        "category": "Masalah Klaim JHT",
+        "positif": 0,
+        "negatif": 280,
+        "netral": 0,
+        "total": 280,
+        "net_sentiment_ratio": -1.0
+      },
+      {
+        "category": "Layanan Klaim JHT",
+        "positif": 0,
+        "negatif": 0,
+        "netral": 243,
+        "total": 243,
+        "net_sentiment_ratio": 0.0
+      },
+      {
+        "category": "Manfaat Layanan Jaminan",
+        "positif": 237,
+        "negatif": 0,
+        "netral": 0,
+        "total": 237,
+        "net_sentiment_ratio": 1.0
+      },
+      {
+        "category": "Akses Informasi Layanan",
+        "positif": 230,
+        "negatif": 0,
+        "netral": 0,
+        "total": 230,
+        "net_sentiment_ratio": 1.0
+      },
+      {
+        "category": "Pengalaman Pengguna",
+        "positif": 40,
+        "negatif": 31,
+        "netral": 139,
+        "total": 210,
+        "net_sentiment_ratio": 0.0429
+      },
+      {
+        "category": "Kualitas Layanan Pengguna",
+        "positif": 0,
+        "negatif": 121,
+        "netral": 0,
+        "total": 121,
+        "net_sentiment_ratio": -1.0
+      },
+      {
+        "category": "Pengelolaan Data Pengguna",
+        "positif": 0,
+        "negatif": 0,
+        "netral": 74,
+        "total": 74,
+        "net_sentiment_ratio": 0.0
+      },
+      {
+        "category": "Verifikasi Identitas",
+        "positif": 0,
+        "negatif": 74,
+        "netral": 0,
+        "total": 74,
+        "net_sentiment_ratio": -1.0
+      },
+      {
+        "category": "Layanan Pelanggan",
+        "positif": 0,
+        "negatif": 53,
+        "netral": 0,
+        "total": 53,
+        "net_sentiment_ratio": -1.0
+      },
+      {
+        "category": "Kualitas Layanan",
+        "positif": 0,
+        "negatif": 52,
+        "netral": 0,
+        "total": 52,
+        "net_sentiment_ratio": -1.0
+      },
+      {
+        "category": "Manajemen Data Kepesertaan",
+        "positif": 0,
+        "negatif": 49,
+        "netral": 0,
+        "total": 49,
+        "net_sentiment_ratio": -1.0
+      },
+      {
+        "category": "Masalah Teknis Aplikasi",
+        "positif": 0,
+        "negatif": 0,
+        "netral": 42,
+        "total": 42,
+        "net_sentiment_ratio": 0.0
+      },
+      {
+        "category": "Pembaruan Aplikasi",
+        "positif": 0,
+        "negatif": 33,
+        "netral": 0,
+        "total": 33,
+        "net_sentiment_ratio": -1.0
+      },
+      {
+        "category": "Masalah Teknis Perangkat",
+        "positif": 0,
+        "negatif": 0,
+        "netral": 27,
+        "total": 27,
+        "net_sentiment_ratio": 0.0
+      },
+      {
+        "category": "Masalah Akses Akun",
+        "positif": 0,
+        "negatif": 0,
+        "netral": 21,
+        "total": 21,
+        "net_sentiment_ratio": 0.0
+      }
+    ]
+  },
+  "cs_performance": {
+    "overall": {
+      "total_negative_reviews": 16369,
+      "total_replied": 7708,
+      "avg_reply_rate": 47.09,
+      "median_reply_delay_hours": 24.74,
+      "avg_wa_redirect_rate": 74.26
+    },
+    "by_category": [
+      {
+        "category": "Masalah Akses Login",
+        "total_neg": 6059,
+        "replied": 3044,
+        "reply_rate": 50.24,
+        "delay_hours": 26.54,
+        "wa_redirect_rate": 77.79
+      },
+      {
+        "category": "Masalah Akses Aplikasi",
+        "total_neg": 5537,
+        "replied": 2436,
+        "reply_rate": 43.99,
+        "delay_hours": 17.16,
+        "wa_redirect_rate": 75.66
+      },
+      {
+        "category": "Masalah Pembaruan Aplikasi",
+        "total_neg": 1186,
+        "replied": 491,
+        "reply_rate": 41.4,
+        "delay_hours": 25.65,
+        "wa_redirect_rate": 69.04
+      },
+      {
+        "category": "Masalah Stabilitas Aplikasi",
+        "total_neg": 907,
+        "replied": 375,
+        "reply_rate": 41.35,
+        "delay_hours": 25.78,
+        "wa_redirect_rate": 63.47
+      },
+      {
+        "category": "Keluhan Layanan Pengguna",
+        "total_neg": 444,
+        "replied": 236,
+        "reply_rate": 53.15,
+        "delay_hours": 40.08,
+        "wa_redirect_rate": 66.1
+      },
+      {
+        "category": "Kualitas Layanan Aplikasi",
+        "total_neg": 426,
+        "replied": 206,
+        "reply_rate": 48.36,
+        "delay_hours": 22.13,
+        "wa_redirect_rate": 62.14
+      },
+      {
+        "category": "Kepuasan Pengguna",
+        "total_neg": 377,
+        "replied": 216,
+        "reply_rate": 57.29,
+        "delay_hours": 25.03,
+        "wa_redirect_rate": 56.02
+      },
+      {
+        "category": "Stabilitas Aplikasi",
+        "total_neg": 366,
+        "replied": 147,
+        "reply_rate": 40.16,
+        "delay_hours": 13.63,
+        "wa_redirect_rate": 76.19
+      },
+      {
+        "category": "Masalah Pengkinian Data",
+        "total_neg": 301,
+        "replied": 174,
+        "reply_rate": 57.81,
+        "delay_hours": 51.49,
+        "wa_redirect_rate": 79.89
+      },
+      {
+        "category": "Masalah Klaim JHT",
+        "total_neg": 280,
+        "replied": 125,
+        "reply_rate": 44.64,
+        "delay_hours": 32.45,
+        "wa_redirect_rate": 80.0
+      },
+      {
+        "category": "Kualitas Layanan Pengguna",
+        "total_neg": 121,
+        "replied": 61,
+        "reply_rate": 50.41,
+        "delay_hours": 43.85,
+        "wa_redirect_rate": 62.3
+      },
+      {
+        "category": "Verifikasi Identitas",
+        "total_neg": 74,
+        "replied": 59,
+        "reply_rate": 79.73,
+        "delay_hours": 88.97,
+        "wa_redirect_rate": 74.58
+      },
+      {
+        "category": "Lain-lain / Noise",
+        "total_neg": 73,
+        "replied": 27,
+        "reply_rate": 36.99,
+        "delay_hours": 23.49,
+        "wa_redirect_rate": 59.26
+      },
+      {
+        "category": "Layanan Pelanggan",
+        "total_neg": 53,
+        "replied": 24,
+        "reply_rate": 45.28,
+        "delay_hours": 24.96,
+        "wa_redirect_rate": 79.17
+      },
+      {
+        "category": "Kualitas Layanan",
+        "total_neg": 52,
+        "replied": 22,
+        "reply_rate": 42.31,
+        "delay_hours": 26.19,
+        "wa_redirect_rate": 63.64
+      },
+      {
+        "category": "Manajemen Data Kepesertaan",
+        "total_neg": 49,
+        "replied": 27,
+        "reply_rate": 55.1,
+        "delay_hours": 29.94,
+        "wa_redirect_rate": 77.78
+      },
+      {
+        "category": "Pembaruan Aplikasi",
+        "total_neg": 33,
+        "replied": 17,
+        "reply_rate": 51.52,
+        "delay_hours": 20.63,
+        "wa_redirect_rate": 82.35
+      },
+      {
+        "category": "Pengalaman Pengguna",
+        "total_neg": 31,
+        "replied": 21,
+        "reply_rate": 67.74,
+        "delay_hours": 25.63,
+        "wa_redirect_rate": 66.67
+      }
+    ],
+    "best_performers": {
+      "fastest_reply": {
+        "category": "Stabilitas Aplikasi",
+        "delay_hours": 13.63
+      },
+      "highest_reply_rate": {
+        "category": "Verifikasi Identitas",
+        "rate": 79.73
+      }
+    },
+    "worst_performers": {
+      "slowest_reply": {
+        "category": "Verifikasi Identitas",
+        "delay_hours": 88.97
+      },
+      "lowest_reply_rate": {
+        "category": "Lain-lain / Noise",
+        "rate": 36.99
+      }
+    }
+  },
+  "keyword_analysis": {
+    "positif": [
+      {
+        "keyword": "ok",
+        "topic_count": 2,
+        "weighted_review_count": 30470
+      },
+      {
+        "keyword": "keren",
+        "topic_count": 2,
+        "weighted_review_count": 30470
+      },
+      {
+        "keyword": "bagus",
+        "topic_count": 2,
+        "weighted_review_count": 24971
+      },
+      {
+        "keyword": "memuaskan",
+        "topic_count": 2,
+        "weighted_review_count": 24971
+      },
+      {
+        "keyword": "terbaik",
+        "topic_count": 2,
+        "weighted_review_count": 24532
+      },
+      {
+        "keyword": "good",
+        "topic_count": 1,
+        "weighted_review_count": 23776
+      },
+      {
+        "keyword": "oke",
+        "topic_count": 1,
+        "weighted_review_count": 23776
+      },
+      {
+        "keyword": "puas",
+        "topic_count": 1,
+        "weighted_review_count": 23776
+      },
+      {
+        "keyword": "membantu",
+        "topic_count": 2,
+        "weighted_review_count": 9933
+      },
+      {
+        "keyword": "bermanfaat",
+        "topic_count": 2,
+        "weighted_review_count": 8352
+      },
+      {
+        "keyword": "mantap",
+        "topic_count": 2,
+        "weighted_review_count": 7450
+      },
+      {
+        "keyword": "kasih",
+        "topic_count": 2,
+        "weighted_review_count": 7332
+      },
+      {
+        "keyword": "terimakasih",
+        "topic_count": 1,
+        "weighted_review_count": 7288
+      },
+      {
+        "keyword": "terima",
+        "topic_count": 1,
+        "weighted_review_count": 7288
+      },
+      {
+        "keyword": "berguna",
+        "topic_count": 1,
+        "weighted_review_count": 7288
+      },
+      {
+        "keyword": "mudah",
+        "topic_count": 3,
+        "weighted_review_count": 6787
+      },
+      {
+        "keyword": "mantab",
+        "topic_count": 1,
+        "weighted_review_count": 6694
+      },
+      {
+        "keyword": "pokoknya",
+        "topic_count": 1,
+        "weighted_review_count": 6694
+      },
+      {
+        "keyword": "josss",
+        "topic_count": 1,
+        "weighted_review_count": 6694
+      },
+      {
+        "keyword": "cepat",
+        "topic_count": 3,
+        "weighted_review_count": 5853
+      },
+      {
+        "keyword": "buka",
+        "topic_count": 2,
+        "weighted_review_count": 5032
+      },
+      {
+        "keyword": "dibuka",
+        "topic_count": 1,
+        "weighted_review_count": 4603
+      },
+      {
+        "keyword": "proses",
+        "topic_count": 3,
+        "weighted_review_count": 4455
+      },
+      {
+        "keyword": "ribet",
+        "topic_count": 1,
+        "weighted_review_count": 4019
+      },
+      {
+        "keyword": "praktis",
+        "topic_count": 1,
+        "weighted_review_count": 4019
+      },
+      {
+        "keyword": "akses",
+        "topic_count": 1,
+        "weighted_review_count": 4019
+      },
+      {
+        "keyword": "bpjs",
+        "topic_count": 3,
+        "weighted_review_count": 3093
+      },
+      {
+        "keyword": "jht",
+        "topic_count": 2,
+        "weighted_review_count": 2986
+      },
+      {
+        "keyword": "pekerja",
+        "topic_count": 1,
+        "weighted_review_count": 2645
+      },
+      {
+        "keyword": "klaim",
+        "topic_count": 2,
+        "weighted_review_count": 2131
+      },
+      {
+        "keyword": "saldo",
+        "topic_count": 2,
+        "weighted_review_count": 2115
+      },
+      {
+        "keyword": "cek",
+        "topic_count": 2,
+        "weighted_review_count": 2115
+      },
+      {
+        "keyword": "kantor",
+        "topic_count": 1,
+        "weighted_review_count": 2008
+      },
+      {
+        "keyword": "pengecekan",
+        "topic_count": 1,
+        "weighted_review_count": 2008
+      },
+      {
+        "keyword": "mengecek",
+        "topic_count": 1,
+        "weighted_review_count": 2008
+      },
+      {
+        "keyword": "pelayanan",
+        "topic_count": 2,
+        "weighted_review_count": 1511
+      },
+      {
+        "keyword": "semoga",
+        "topic_count": 2,
+        "weighted_review_count": 1474
+      },
+      {
+        "keyword": "kedepannya",
+        "topic_count": 2,
+        "weighted_review_count": 1474
+      },
+      {
+        "keyword": "lancar",
+        "topic_count": 2,
+        "weighted_review_count": 1377
+      },
+      {
+        "keyword": "update",
+        "topic_count": 3,
+        "weighted_review_count": 1252
+      },
+      {
+        "keyword": "ramah",
+        "topic_count": 1,
+        "weighted_review_count": 1195
+      },
+      {
+        "keyword": "pelayanannya",
+        "topic_count": 1,
+        "weighted_review_count": 1195
+      },
+      {
+        "keyword": "layanan",
+        "topic_count": 1,
+        "weighted_review_count": 1195
+      },
+      {
+        "keyword": "sukses",
+        "topic_count": 1,
+        "weighted_review_count": 1064
+      },
+      {
+        "keyword": "jaya",
+        "topic_count": 1,
+        "weighted_review_count": 1064
+      },
+      {
+        "keyword": "amanah",
+        "topic_count": 1,
+        "weighted_review_count": 1064
+      },
+      {
+        "keyword": "mudahan",
+        "topic_count": 1,
+        "weighted_review_count": 1064
+      },
+      {
+        "keyword": "ketenagakerjaan",
+        "topic_count": 1,
+        "weighted_review_count": 978
+      },
+      {
+        "keyword": "login",
+        "topic_count": 2,
+        "weighted_review_count": 839
+      },
+      {
+        "keyword": "nih",
+        "topic_count": 1,
+        "weighted_review_count": 756
+      },
+      {
+        "keyword": "susah",
+        "topic_count": 1,
+        "weighted_review_count": 756
+      },
+      {
+        "keyword": "masuk",
+        "topic_count": 1,
+        "weighted_review_count": 756
+      },
+      {
+        "keyword": "mntap",
+        "topic_count": 1,
+        "weighted_review_count": 648
+      },
+      {
+        "keyword": "mantul",
+        "topic_count": 1,
+        "weighted_review_count": 648
+      },
+      {
+        "keyword": "mantaf",
+        "topic_count": 1,
+        "weighted_review_count": 648
+      },
+      {
+        "keyword": "josjis",
+        "topic_count": 1,
+        "weighted_review_count": 648
+      },
+      {
+        "keyword": "jos",
+        "topic_count": 1,
+        "weighted_review_count": 648
+      },
+      {
+        "keyword": "jis",
+        "topic_count": 1,
+        "weighted_review_count": 648
+      },
+      {
+        "keyword": "gandos",
+        "topic_count": 1,
+        "weighted_review_count": 648
+      },
+      {
+        "keyword": "bguss",
+        "topic_count": 1,
+        "weighted_review_count": 648
+      },
+      {
+        "keyword": "mantp",
+        "topic_count": 1,
+        "weighted_review_count": 648
+      },
+      {
+        "keyword": "mantull",
+        "topic_count": 1,
+        "weighted_review_count": 648
+      },
+      {
+        "keyword": "respon",
+        "topic_count": 1,
+        "weighted_review_count": 639
+      },
+      {
+        "keyword": "aman",
+        "topic_count": 1,
+        "weighted_review_count": 639
+      },
+      {
+        "keyword": "akurat",
+        "topic_count": 1,
+        "weighted_review_count": 639
+      },
+      {
+        "keyword": "fast",
+        "topic_count": 1,
+        "weighted_review_count": 639
+      },
+      {
+        "keyword": "tanggap",
+        "topic_count": 1,
+        "weighted_review_count": 639
+      },
+      {
+        "keyword": "terpecaya",
+        "topic_count": 1,
+        "weighted_review_count": 639
+      },
+      {
+        "keyword": "responnya",
+        "topic_count": 1,
+        "weighted_review_count": 639
+      },
+      {
+        "keyword": "cair",
+        "topic_count": 1,
+        "weighted_review_count": 635
+      },
+      {
+        "keyword": "kadang",
+        "topic_count": 1,
+        "weighted_review_count": 635
+      },
+      {
+        "keyword": "eror",
+        "topic_count": 1,
+        "weighted_review_count": 635
+      },
+      {
+        "keyword": "bsu",
+        "topic_count": 1,
+        "weighted_review_count": 635
+      },
+      {
+        "keyword": "error",
+        "topic_count": 1,
+        "weighted_review_count": 635
+      },
+      {
+        "keyword": "gangguan",
+        "topic_count": 1,
+        "weighted_review_count": 635
+      },
+      {
+        "keyword": "pengkinian",
+        "topic_count": 1,
+        "weighted_review_count": 603
+      },
+      {
+        "keyword": "data",
+        "topic_count": 1,
+        "weighted_review_count": 603
+      },
+      {
+        "keyword": "foto",
+        "topic_count": 1,
+        "weighted_review_count": 603
+      },
+      {
+        "keyword": "membatu",
+        "topic_count": 1,
+        "weighted_review_count": 504
+      },
+      {
+        "keyword": "sngat",
+        "topic_count": 1,
+        "weighted_review_count": 504
+      },
+      {
+        "keyword": "sangan",
+        "topic_count": 1,
+        "weighted_review_count": 504
+      },
+      {
+        "keyword": "mmbantu",
+        "topic_count": 1,
+        "weighted_review_count": 504
+      },
+      {
+        "keyword": "sagat",
+        "topic_count": 1,
+        "weighted_review_count": 504
+      },
+      {
+        "keyword": "menbantu",
+        "topic_count": 1,
+        "weighted_review_count": 504
+      },
+      {
+        "keyword": "membntu",
+        "topic_count": 1,
+        "weighted_review_count": 504
+      },
+      {
+        "keyword": "at",
+        "topic_count": 1,
+        "weighted_review_count": 504
+      },
+      {
+        "keyword": "bermanpaat",
+        "topic_count": 1,
+        "weighted_review_count": 504
+      },
+      {
+        "keyword": "terbuka",
+        "topic_count": 1,
+        "weighted_review_count": 429
+      },
+      {
+        "keyword": "tolong",
+        "topic_count": 1,
+        "weighted_review_count": 410
+      },
+      {
+        "keyword": "permudah",
+        "topic_count": 1,
+        "weighted_review_count": 410
+      },
+      {
+        "keyword": "tingkatkan",
+        "topic_count": 1,
+        "weighted_review_count": 316
+      },
+      {
+        "keyword": "berfungsi",
+        "topic_count": 1,
+        "weighted_review_count": 316
+      },
+      {
+        "keyword": "ditingkatkan",
+        "topic_count": 1,
+        "weighted_review_count": 316
+      },
+      {
+        "keyword": "berjalan",
+        "topic_count": 1,
+        "weighted_review_count": 316
+      },
+      {
+        "keyword": "alhamdulillah",
+        "topic_count": 1,
+        "weighted_review_count": 313
+      },
+      {
+        "keyword": "bismillah",
+        "topic_count": 1,
+        "weighted_review_count": 313
+      },
+      {
+        "keyword": "alhamdulilah",
+        "topic_count": 1,
+        "weighted_review_count": 313
+      },
+      {
+        "keyword": "allah",
+        "topic_count": 1,
+        "weighted_review_count": 313
+      },
+      {
+        "keyword": "allhamdulillah",
+        "topic_count": 1,
+        "weighted_review_count": 313
+      },
+      {
+        "keyword": "bismillahirrahmanirrahim",
+        "topic_count": 1,
+        "weighted_review_count": 313
+      },
+      {
+        "keyword": "barakallah",
+        "topic_count": 1,
+        "weighted_review_count": 313
+      },
+      {
+        "keyword": "bismilah",
+        "topic_count": 1,
+        "weighted_review_count": 313
+      },
+      {
+        "keyword": "tua",
+        "topic_count": 1,
+        "weighted_review_count": 237
+      },
+      {
+        "keyword": "tabungan",
+        "topic_count": 1,
+        "weighted_review_count": 237
+      },
+      {
+        "keyword": "pensiun",
+        "topic_count": 1,
+        "weighted_review_count": 237
+      },
+      {
+        "keyword": "simpanan",
+        "topic_count": 1,
+        "weighted_review_count": 237
+      },
+      {
+        "keyword": "mempermudah",
+        "topic_count": 2,
+        "weighted_review_count": 230
+      },
+      {
+        "keyword": "informasi",
+        "topic_count": 1,
+        "weighted_review_count": 123
+      },
+      {
+        "keyword": "up",
+        "topic_count": 1,
+        "weighted_review_count": 123
+      },
+      {
+        "keyword": "date",
+        "topic_count": 1,
+        "weighted_review_count": 123
+      },
+      {
+        "keyword": "mengakses",
+        "topic_count": 1,
+        "weighted_review_count": 123
+      },
+      {
+        "keyword": "sosial",
+        "topic_count": 1,
+        "weighted_review_count": 107
+      },
+      {
+        "keyword": "kesehatan",
+        "topic_count": 1,
+        "weighted_review_count": 107
+      },
+      {
+        "keyword": "memudahkan",
+        "topic_count": 1,
+        "weighted_review_count": 107
+      },
+      {
+        "keyword": "jaminan",
+        "topic_count": 1,
+        "weighted_review_count": 107
+      },
+      {
+        "keyword": "goood",
+        "topic_count": 1,
+        "weighted_review_count": 58
+      },
+      {
+        "keyword": "goof",
+        "topic_count": 1,
+        "weighted_review_count": 58
+      },
+      {
+        "keyword": "go",
+        "topic_count": 1,
+        "weighted_review_count": 58
+      },
+      {
+        "keyword": "goooddd",
+        "topic_count": 1,
+        "weighted_review_count": 58
+      },
+      {
+        "keyword": "goooood",
+        "topic_count": 1,
+        "weighted_review_count": 58
+      },
+      {
+        "keyword": "job",
+        "topic_count": 1,
+        "weighted_review_count": 58
+      },
+      {
+        "keyword": "goid",
+        "topic_count": 1,
+        "weighted_review_count": 58
+      },
+      {
+        "keyword": "gooood",
+        "topic_count": 1,
+        "weighted_review_count": 58
+      },
+      {
+        "keyword": "goooooood",
+        "topic_count": 1,
+        "weighted_review_count": 58
+      },
+      {
+        "keyword": "godddddd",
+        "topic_count": 1,
+        "weighted_review_count": 58
+      },
+      {
+        "keyword": "biar",
+        "topic_count": 1,
+        "weighted_review_count": 44
+      },
+      {
+        "keyword": "berbicara",
+        "topic_count": 1,
+        "weighted_review_count": 44
+      },
+      {
+        "keyword": "bicara",
+        "topic_count": 1,
+        "weighted_review_count": 44
+      },
+      {
+        "keyword": "biarkan",
+        "topic_count": 1,
+        "weighted_review_count": 44
+      },
+      {
+        "keyword": "easy",
+        "topic_count": 1,
+        "weighted_review_count": 40
+      },
+      {
+        "keyword": "use",
+        "topic_count": 1,
+        "weighted_review_count": 40
+      },
+      {
+        "keyword": "great",
+        "topic_count": 1,
+        "weighted_review_count": 40
+      },
+      {
+        "keyword": "and",
+        "topic_count": 1,
+        "weighted_review_count": 40
+      },
+      {
+        "keyword": "all",
+        "topic_count": 1,
+        "weighted_review_count": 40
+      },
+      {
+        "keyword": "you",
+        "topic_count": 1,
+        "weighted_review_count": 40
+      },
+      {
+        "keyword": "helpful",
+        "topic_count": 1,
+        "weighted_review_count": 40
+      },
+      {
+        "keyword": "for",
+        "topic_count": 1,
+        "weighted_review_count": 40
+      },
+      {
+        "keyword": "we",
+        "topic_count": 1,
+        "weighted_review_count": 40
+      },
+      {
+        "keyword": "sae",
+        "topic_count": 1,
+        "weighted_review_count": 20
+      },
+      {
+        "keyword": "alus",
+        "topic_count": 1,
+        "weighted_review_count": 20
+      },
+      {
+        "keyword": "bin",
+        "topic_count": 1,
+        "weighted_review_count": 20
+      },
+      {
+        "keyword": "teh",
+        "topic_count": 1,
+        "weighted_review_count": 20
+      },
+      {
+        "keyword": "biken",
+        "topic_count": 1,
+        "weighted_review_count": 20
+      },
+      {
+        "keyword": "entar",
+        "topic_count": 1,
+        "weighted_review_count": 20
+      },
+      {
+        "keyword": "pisan",
+        "topic_count": 1,
+        "weighted_review_count": 20
+      },
+      {
+        "keyword": "agellll",
+        "topic_count": 1,
+        "weighted_review_count": 20
+      },
+      {
+        "keyword": "artos",
+        "topic_count": 1,
+        "weighted_review_count": 20
+      },
+      {
+        "keyword": "ges",
+        "topic_count": 1,
+        "weighted_review_count": 20
+      },
+      {
+        "keyword": "alhmdulillah",
+        "topic_count": 1,
+        "weighted_review_count": 20
+      },
+      {
+        "keyword": "alhamdllah",
+        "topic_count": 1,
+        "weighted_review_count": 20
+      },
+      {
+        "keyword": "alkhamdulillah",
+        "topic_count": 1,
+        "weighted_review_count": 20
+      },
+      {
+        "keyword": "alhmdullilah",
+        "topic_count": 1,
+        "weighted_review_count": 20
+      },
+      {
+        "keyword": "warahmatullahi",
+        "topic_count": 1,
+        "weighted_review_count": 20
+      },
+      {
+        "keyword": "alhamdlillah",
+        "topic_count": 1,
+        "weighted_review_count": 20
+      },
+      {
+        "keyword": "assalamualaikum",
+        "topic_count": 1,
+        "weighted_review_count": 20
+      },
+      {
+        "keyword": "hilang",
+        "topic_count": 1,
+        "weighted_review_count": 20
+      },
+      {
+        "keyword": "kartu",
+        "topic_count": 1,
+        "weighted_review_count": 20
+      },
+      {
+        "keyword": "alhmdlillah",
+        "topic_count": 1,
+        "weighted_review_count": 20
+      },
+      {
+        "keyword": "diperhatikan",
+        "topic_count": 1,
+        "weighted_review_count": 14
+      },
+      {
+        "keyword": "bagiku",
+        "topic_count": 1,
+        "weighted_review_count": 14
+      },
+      {
+        "keyword": "minggu",
+        "topic_count": 1,
+        "weighted_review_count": 14
+      },
+      {
+        "keyword": "mulu",
+        "topic_count": 1,
+        "weighted_review_count": 14
+      },
+      {
+        "keyword": "perbarui",
+        "topic_count": 1,
+        "weighted_review_count": 14
+      }
+    ],
+    "negatif": [
+      {
+        "keyword": "dibuka",
+        "topic_count": 6,
+        "weighted_review_count": 6358
+      },
+      {
+        "keyword": "update",
+        "topic_count": 5,
+        "weighted_review_count": 6164
+      },
+      {
+        "keyword": "buka",
+        "topic_count": 5,
+        "weighted_review_count": 6001
+      },
+      {
+        "keyword": "tolong",
+        "topic_count": 1,
+        "weighted_review_count": 5701
+      },
+      {
+        "keyword": "login",
+        "topic_count": 2,
+        "weighted_review_count": 5017
+      },
+      {
+        "keyword": "close",
+        "topic_count": 3,
+        "weighted_review_count": 2013
+      },
+      {
+        "keyword": "force",
+        "topic_count": 3,
+        "weighted_review_count": 2013
+      },
+      {
+        "keyword": "mulu",
+        "topic_count": 4,
+        "weighted_review_count": 1619
+      },
+      {
+        "keyword": "terbuka",
+        "topic_count": 2,
+        "weighted_review_count": 908
+      },
+      {
+        "keyword": "akses",
+        "topic_count": 1,
+        "weighted_review_count": 878
+      },
+      {
+        "keyword": "log",
+        "topic_count": 1,
+        "weighted_review_count": 878
+      },
+      {
+        "keyword": "buruk",
+        "topic_count": 4,
+        "weighted_review_count": 853
+      },
+      {
+        "keyword": "busuk",
+        "topic_count": 2,
+        "weighted_review_count": 679
+      },
+      {
+        "keyword": "susah",
+        "topic_count": 2,
+        "weighted_review_count": 638
+      },
+      {
+        "keyword": "bagus",
+        "topic_count": 3,
+        "weighted_review_count": 630
+      },
+      {
+        "keyword": "eror",
+        "topic_count": 2,
+        "weighted_review_count": 621
+      },
+      {
+        "keyword": "lambat",
+        "topic_count": 2,
+        "weighted_review_count": 547
+      },
+      {
+        "keyword": "persulit",
+        "topic_count": 1,
+        "weighted_review_count": 444
+      },
+      {
+        "keyword": "pemerintah",
+        "topic_count": 1,
+        "weighted_review_count": 444
+      },
+      {
+        "keyword": "hak",
+        "topic_count": 1,
+        "weighted_review_count": 444
+      },
+      {
+        "keyword": "ambil",
+        "topic_count": 1,
+        "weighted_review_count": 444
+      },
+      {
+        "keyword": "uang",
+        "topic_count": 1,
+        "weighted_review_count": 444
+      },
+      {
+        "keyword": "duit",
+        "topic_count": 1,
+        "weighted_review_count": 444
+      },
+      {
+        "keyword": "ribet",
+        "topic_count": 1,
+        "weighted_review_count": 426
+      },
+      {
+        "keyword": "payah",
+        "topic_count": 1,
+        "weighted_review_count": 426
+      },
+      {
+        "keyword": "bosok",
+        "topic_count": 1,
+        "weighted_review_count": 426
+      },
+      {
+        "keyword": "menyusahkan",
+        "topic_count": 1,
+        "weighted_review_count": 426
+      },
+      {
+        "keyword": "lumayan",
+        "topic_count": 1,
+        "weighted_review_count": 426
+      },
+      {
+        "keyword": "masuk",
+        "topic_count": 2,
+        "weighted_review_count": 397
+      },
+      {
+        "keyword": "mental",
+        "topic_count": 1,
+        "weighted_review_count": 368
+      },
+      {
+        "keyword": "kagak",
+        "topic_count": 1,
+        "weighted_review_count": 358
+      },
+      {
+        "keyword": "jht",
+        "topic_count": 2,
+        "weighted_review_count": 354
+      },
+      {
+        "keyword": "klaim",
+        "topic_count": 2,
+        "weighted_review_count": 354
+      },
+      {
+        "keyword": "data",
+        "topic_count": 2,
+        "weighted_review_count": 350
+      },
+      {
+        "keyword": "pembaruan",
+        "topic_count": 2,
+        "weighted_review_count": 319
+      },
+      {
+        "keyword": "pengkinian",
+        "topic_count": 1,
+        "weighted_review_count": 301
+      },
+      {
+        "keyword": "server",
+        "topic_count": 1,
+        "weighted_review_count": 301
+      },
+      {
+        "keyword": "kantor",
+        "topic_count": 1,
+        "weighted_review_count": 301
+      },
+      {
+        "keyword": "terhubung",
+        "topic_count": 1,
+        "weighted_review_count": 301
+      },
+      {
+        "keyword": "mantap",
+        "topic_count": 1,
+        "weighted_review_count": 297
+      },
+      {
+        "keyword": "ok",
+        "topic_count": 1,
+        "weighted_review_count": 297
+      },
+      {
+        "keyword": "good",
+        "topic_count": 1,
+        "weighted_review_count": 297
+      },
+      {
+        "keyword": "oke",
+        "topic_count": 1,
+        "weighted_review_count": 297
+      },
+      {
+        "keyword": "keren",
+        "topic_count": 1,
+        "weighted_review_count": 297
+      },
+      {
+        "keyword": "ter",
+        "topic_count": 1,
+        "weighted_review_count": 297
+      },
+      {
+        "keyword": "kebanyakan",
+        "topic_count": 1,
+        "weighted_review_count": 286
+      },
+      {
+        "keyword": "error",
+        "topic_count": 1,
+        "weighted_review_count": 286
+      },
+      {
+        "keyword": "terhenti",
+        "topic_count": 1,
+        "weighted_review_count": 286
+      },
+      {
+        "keyword": "keseringan",
+        "topic_count": 1,
+        "weighted_review_count": 286
+      },
+      {
+        "keyword": "pencairan",
+        "topic_count": 1,
+        "weighted_review_count": 280
+      },
+      {
+        "keyword": "proses",
+        "topic_count": 1,
+        "weighted_review_count": 280
+      },
+      {
+        "keyword": "bsu",
+        "topic_count": 1,
+        "weighted_review_count": 280
+      },
+      {
+        "keyword": "claim",
+        "topic_count": 1,
+        "weighted_review_count": 280
+      },
+      {
+        "keyword": "sampah",
+        "topic_count": 1,
+        "weighted_review_count": 253
+      },
+      {
+        "keyword": "tolol",
+        "topic_count": 1,
+        "weighted_review_count": 253
+      },
+      {
+        "keyword": "forclose",
+        "topic_count": 1,
+        "weighted_review_count": 253
+      },
+      {
+        "keyword": "rusak",
+        "topic_count": 1,
+        "weighted_review_count": 253
+      },
+      {
+        "keyword": "pelayanan",
+        "topic_count": 2,
+        "weighted_review_count": 174
+      },
+      {
+        "keyword": "layanan",
+        "topic_count": 2,
+        "weighted_review_count": 174
+      },
+      {
+        "keyword": "2025",
+        "topic_count": 2,
+        "weighted_review_count": 151
+      },
+      {
+        "keyword": "tanggal",
+        "topic_count": 2,
+        "weighted_review_count": 143
+      },
+      {
+        "keyword": "gagal",
+        "topic_count": 2,
+        "weighted_review_count": 123
+      },
+      {
+        "keyword": "puas",
+        "topic_count": 1,
+        "weighted_review_count": 121
+      },
+      {
+        "keyword": "memuaskan",
+        "topic_count": 1,
+        "weighted_review_count": 121
+      },
+      {
+        "keyword": "respon",
+        "topic_count": 1,
+        "weighted_review_count": 121
+      },
+      {
+        "keyword": "updet",
+        "topic_count": 1,
+        "weighted_review_count": 116
+      },
+      {
+        "keyword": "terusan",
+        "topic_count": 1,
+        "weighted_review_count": 116
+      },
+      {
+        "keyword": "menerus",
+        "topic_count": 1,
+        "weighted_review_count": 116
+      },
+      {
+        "keyword": "sikit",
+        "topic_count": 1,
+        "weighted_review_count": 116
+      },
+      {
+        "keyword": "mintak",
+        "topic_count": 1,
+        "weighted_review_count": 116
+      },
+      {
+        "keyword": "abdet",
+        "topic_count": 1,
+        "weighted_review_count": 116
+      },
+      {
+        "keyword": "2026",
+        "topic_count": 1,
+        "weighted_review_count": 112
+      },
+      {
+        "keyword": "mei",
+        "topic_count": 1,
+        "weighted_review_count": 112
+      },
+      {
+        "keyword": "minggu",
+        "topic_count": 1,
+        "weighted_review_count": 112
+      },
+      {
+        "keyword": "pengaduan",
+        "topic_count": 2,
+        "weighted_review_count": 105
+      },
+      {
+        "keyword": "membantu",
+        "topic_count": 1,
+        "weighted_review_count": 80
+      },
+      {
+        "keyword": "bermanfaat",
+        "topic_count": 1,
+        "weighted_review_count": 80
+      },
+      {
+        "keyword": "biometrik",
+        "topic_count": 1,
+        "weighted_review_count": 74
+      },
+      {
+        "keyword": "foto",
+        "topic_count": 1,
+        "weighted_review_count": 74
+      },
+      {
+        "keyword": "verifikasi",
+        "topic_count": 1,
+        "weighted_review_count": 74
+      },
+      {
+        "keyword": "kali",
+        "topic_count": 1,
+        "weighted_review_count": 74
+      },
+      {
+        "keyword": "membal",
+        "topic_count": 1,
+        "weighted_review_count": 66
+      },
+      {
+        "keyword": "negeri",
+        "topic_count": 1,
+        "weighted_review_count": 66
+      },
+      {
+        "keyword": "kebuka",
+        "topic_count": 1,
+        "weighted_review_count": 66
+      },
+      {
+        "keyword": "paswort",
+        "topic_count": 1,
+        "weighted_review_count": 66
+      },
+      {
+        "keyword": "closed",
+        "topic_count": 1,
+        "weighted_review_count": 65
+      },
+      {
+        "keyword": "forceclose",
+        "topic_count": 1,
+        "weighted_review_count": 65
+      },
+      {
+        "keyword": "audio",
+        "topic_count": 1,
+        "weighted_review_count": 65
+      },
+      {
+        "keyword": "camerax",
+        "topic_count": 1,
+        "weighted_review_count": 65
+      },
+      {
+        "keyword": "bufferedaudiostream",
+        "topic_count": 1,
+        "weighted_review_count": 65
+      },
+      {
+        "keyword": "agent",
+        "topic_count": 1,
+        "weighted_review_count": 53
+      },
+      {
+        "keyword": "bot",
+        "topic_count": 1,
+        "weighted_review_count": 53
+      },
+      {
+        "keyword": "wa",
+        "topic_count": 1,
+        "weighted_review_count": 53
+      },
+      {
+        "keyword": "tros",
+        "topic_count": 1,
+        "weighted_review_count": 52
+      },
+      {
+        "keyword": "upah",
+        "topic_count": 1,
+        "weighted_review_count": 52
+      },
+      {
+        "keyword": "ruwet",
+        "topic_count": 1,
+        "weighted_review_count": 52
+      },
+      {
+        "keyword": "gaji",
+        "topic_count": 1,
+        "weighted_review_count": 52
+      },
+      {
+        "keyword": "laporan",
+        "topic_count": 1,
+        "weighted_review_count": 52
+      },
+      {
+        "keyword": "akurat",
+        "topic_count": 1,
+        "weighted_review_count": 52
+      },
+      {
+        "keyword": "kepesertaan",
+        "topic_count": 1,
+        "weighted_review_count": 49
+      },
+      {
+        "keyword": "memuat",
+        "topic_count": 1,
+        "weighted_review_count": 49
+      },
+      {
+        "keyword": "status",
+        "topic_count": 1,
+        "weighted_review_count": 49
+      },
+      {
+        "keyword": "aktif",
+        "topic_count": 1,
+        "weighted_review_count": 49
+      },
+      {
+        "keyword": "temukan",
+        "topic_count": 1,
+        "weighted_review_count": 49
+      },
+      {
+        "keyword": "ditemukan",
+        "topic_count": 1,
+        "weighted_review_count": 49
+      },
+      {
+        "keyword": "berhenti",
+        "topic_count": 1,
+        "weighted_review_count": 39
+      },
+      {
+        "keyword": "menanggapi",
+        "topic_count": 1,
+        "weighted_review_count": 39
+      },
+      {
+        "keyword": "september",
+        "topic_count": 1,
+        "weighted_review_count": 39
+      },
+      {
+        "keyword": "serius",
+        "topic_count": 1,
+        "weighted_review_count": 39
+      },
+      {
+        "keyword": "dikit",
+        "topic_count": 1,
+        "weighted_review_count": 33
+      },
+      {
+        "keyword": "updte",
+        "topic_count": 1,
+        "weighted_review_count": 33
+      },
+      {
+        "keyword": "masyarakat",
+        "topic_count": 1,
+        "weighted_review_count": 33
+      },
+      {
+        "keyword": "anying",
+        "topic_count": 1,
+        "weighted_review_count": 33
+      },
+      {
+        "keyword": "komentar",
+        "topic_count": 1,
+        "weighted_review_count": 33
+      },
+      {
+        "keyword": "bentar",
+        "topic_count": 1,
+        "weighted_review_count": 33
+      },
+      {
+        "keyword": "lahir",
+        "topic_count": 1,
+        "weighted_review_count": 31
+      },
+      {
+        "keyword": "scroll",
+        "topic_count": 1,
+        "weighted_review_count": 31
+      },
+      {
+        "keyword": "umur",
+        "topic_count": 1,
+        "weighted_review_count": 31
+      },
+      {
+        "keyword": "ngisi",
+        "topic_count": 1,
+        "weighted_review_count": 31
+      },
+      {
+        "keyword": "kalender",
+        "topic_count": 1,
+        "weighted_review_count": 31
+      },
+      {
+        "keyword": "hilang",
+        "topic_count": 1,
+        "weighted_review_count": 30
+      },
+      {
+        "keyword": "gbisa",
+        "topic_count": 1,
+        "weighted_review_count": 30
+      },
+      {
+        "keyword": "detik",
+        "topic_count": 1,
+        "weighted_review_count": 30
+      },
+      {
+        "keyword": "diperbarui",
+        "topic_count": 1,
+        "weighted_review_count": 30
+      },
+      {
+        "keyword": "aneh",
+        "topic_count": 1,
+        "weighted_review_count": 30
+      },
+      {
+        "keyword": "kadang",
+        "topic_count": 1,
+        "weighted_review_count": 30
+      },
+      {
+        "keyword": "ngbug",
+        "topic_count": 1,
+        "weighted_review_count": 30
+      },
+      {
+        "keyword": "saldo",
+        "topic_count": 1,
+        "weighted_review_count": 30
+      },
+      {
+        "keyword": "indak",
+        "topic_count": 1,
+        "weighted_review_count": 30
+      },
+      {
+        "keyword": "tifak",
+        "topic_count": 1,
+        "weighted_review_count": 30
+      },
+      {
+        "keyword": "cuman",
+        "topic_count": 1,
+        "weighted_review_count": 30
+      },
+      {
+        "keyword": "cek",
+        "topic_count": 1,
+        "weighted_review_count": 30
+      },
+      {
+        "keyword": "worthit",
+        "topic_count": 1,
+        "weighted_review_count": 30
+      },
+      {
+        "keyword": "punyaan",
+        "topic_count": 1,
+        "weighted_review_count": 30
+      },
+      {
+        "keyword": "ra",
+        "topic_count": 1,
+        "weighted_review_count": 24
+      },
+      {
+        "keyword": "ora",
+        "topic_count": 1,
+        "weighted_review_count": 24
+      },
+      {
+        "keyword": "wae",
+        "topic_count": 1,
+        "weighted_review_count": 24
+      },
+      {
+        "keyword": "gawe",
+        "topic_count": 1,
+        "weighted_review_count": 24
+      },
+      {
+        "keyword": "iso",
+        "topic_count": 1,
+        "weighted_review_count": 24
+      },
+      {
+        "keyword": "asu",
+        "topic_count": 1,
+        "weighted_review_count": 24
+      },
+      {
+        "keyword": "seng",
+        "topic_count": 1,
+        "weighted_review_count": 24
+      },
+      {
+        "keyword": "ditutul",
+        "topic_count": 1,
+        "weighted_review_count": 24
+      },
+      {
+        "keyword": "po",
+        "topic_count": 1,
+        "weighted_review_count": 24
+      },
+      {
+        "keyword": "bendal",
+        "topic_count": 1,
+        "weighted_review_count": 24
+      }
+    ],
+    "netral": [
+      {
+        "keyword": "buka",
+        "topic_count": 3,
+        "weighted_review_count": 2134
+      },
+      {
+        "keyword": "login",
+        "topic_count": 2,
+        "weighted_review_count": 1724
+      },
+      {
+        "keyword": "update",
+        "topic_count": 5,
+        "weighted_review_count": 525
+      },
+      {
+        "keyword": "dibuka",
+        "topic_count": 2,
+        "weighted_review_count": 313
+      },
+      {
+        "keyword": "bagus",
+        "topic_count": 3,
+        "weighted_review_count": 310
+      },
+      {
+        "keyword": "mulu",
+        "topic_count": 2,
+        "weighted_review_count": 265
+      },
+      {
+        "keyword": "lumayan",
+        "topic_count": 3,
+        "weighted_review_count": 264
+      },
+      {
+        "keyword": "membantu",
+        "topic_count": 4,
+        "weighted_review_count": 250
+      },
+      {
+        "keyword": "klaim",
+        "topic_count": 2,
+        "weighted_review_count": 243
+      },
+      {
+        "keyword": "jht",
+        "topic_count": 2,
+        "weighted_review_count": 243
+      },
+      {
+        "keyword": "buruk",
+        "topic_count": 1,
+        "weighted_review_count": 199
+      },
+      {
+        "keyword": "terpecaya",
+        "topic_count": 1,
+        "weighted_review_count": 199
+      },
+      {
+        "keyword": "burik",
+        "topic_count": 1,
+        "weighted_review_count": 199
+      },
+      {
+        "keyword": "jaring",
+        "topic_count": 1,
+        "weighted_review_count": 199
+      },
+      {
+        "keyword": "kedepanya",
+        "topic_count": 1,
+        "weighted_review_count": 199
+      },
+      {
+        "keyword": "simple",
+        "topic_count": 1,
+        "weighted_review_count": 199
+      },
+      {
+        "keyword": "bpjs",
+        "topic_count": 1,
+        "weighted_review_count": 192
+      },
+      {
+        "keyword": "kantor",
+        "topic_count": 1,
+        "weighted_review_count": 192
+      },
+      {
+        "keyword": "oke",
+        "topic_count": 2,
+        "weighted_review_count": 188
+      },
+      {
+        "keyword": "susah",
+        "topic_count": 2,
+        "weighted_review_count": 157
+      },
+      {
+        "keyword": "pembaruan",
+        "topic_count": 2,
+        "weighted_review_count": 133
+      },
+      {
+        "keyword": "gagal",
+        "topic_count": 2,
+        "weighted_review_count": 125
+      },
+      {
+        "keyword": "lambat",
+        "topic_count": 1,
+        "weighted_review_count": 120
+      },
+      {
+        "keyword": "kebanyakan",
+        "topic_count": 1,
+        "weighted_review_count": 120
+      },
+      {
+        "keyword": "gangguan",
+        "topic_count": 1,
+        "weighted_review_count": 120
+      },
+      {
+        "keyword": "seringkali",
+        "topic_count": 1,
+        "weighted_review_count": 120
+      },
+      {
+        "keyword": "ok",
+        "topic_count": 1,
+        "weighted_review_count": 117
+      },
+      {
+        "keyword": "good",
+        "topic_count": 1,
+        "weighted_review_count": 117
+      },
+      {
+        "keyword": "best",
+        "topic_count": 1,
+        "weighted_review_count": 117
+      },
+      {
+        "keyword": "nice",
+        "topic_count": 1,
+        "weighted_review_count": 117
+      },
+      {
+        "keyword": "mntap",
+        "topic_count": 1,
+        "weighted_review_count": 117
+      },
+      {
+        "keyword": "the",
+        "topic_count": 1,
+        "weighted_review_count": 117
+      },
+      {
+        "keyword": "mtaaap",
+        "topic_count": 1,
+        "weighted_review_count": 117
+      },
+      {
+        "keyword": "eror",
+        "topic_count": 3,
+        "weighted_review_count": 116
+      },
+      {
+        "keyword": "dikit",
+        "topic_count": 1,
+        "weighted_review_count": 113
+      },
+      {
+        "keyword": "upgrade",
+        "topic_count": 1,
+        "weighted_review_count": 113
+      },
+      {
+        "keyword": "mantap",
+        "topic_count": 2,
+        "weighted_review_count": 111
+      },
+      {
+        "keyword": "tolong",
+        "topic_count": 3,
+        "weighted_review_count": 96
+      },
+      {
+        "keyword": "data",
+        "topic_count": 2,
+        "weighted_review_count": 95
+      },
+      {
+        "keyword": "bermanfaat",
+        "topic_count": 2,
+        "weighted_review_count": 95
+      },
+      {
+        "keyword": "mudah",
+        "topic_count": 2,
+        "weighted_review_count": 89
+      },
+      {
+        "keyword": "suka",
+        "topic_count": 1,
+        "weighted_review_count": 83
+      },
+      {
+        "keyword": "kebuka",
+        "topic_count": 1,
+        "weighted_review_count": 83
+      },
+      {
+        "keyword": "kadang",
+        "topic_count": 1,
+        "weighted_review_count": 83
+      },
+      {
+        "keyword": "logout",
+        "topic_count": 1,
+        "weighted_review_count": 83
+      },
+      {
+        "keyword": "ribet",
+        "topic_count": 1,
+        "weighted_review_count": 83
+      },
+      {
+        "keyword": "masuk",
+        "topic_count": 1,
+        "weighted_review_count": 83
+      },
+      {
+        "keyword": "error",
+        "topic_count": 1,
+        "weighted_review_count": 83
+      },
+      {
+        "keyword": "kasih",
+        "topic_count": 2,
+        "weighted_review_count": 79
+      },
+      {
+        "keyword": "perangkat",
+        "topic_count": 1,
+        "weighted_review_count": 78
+      },
+      {
+        "keyword": "sulit",
+        "topic_count": 1,
+        "weighted_review_count": 78
+      },
+      {
+        "keyword": "pengkinian",
+        "topic_count": 1,
+        "weighted_review_count": 74
+      },
+      {
+        "keyword": "datanya",
+        "topic_count": 1,
+        "weighted_review_count": 74
+      },
+      {
+        "keyword": "puas",
+        "topic_count": 1,
+        "weighted_review_count": 73
+      },
+      {
+        "keyword": "memuaskan",
+        "topic_count": 1,
+        "weighted_review_count": 73
+      },
+      {
+        "keyword": "keren",
+        "topic_count": 1,
+        "weighted_review_count": 73
+      },
+      {
+        "keyword": "mantab",
+        "topic_count": 1,
+        "weighted_review_count": 73
+      },
+      {
+        "keyword": "senang",
+        "topic_count": 1,
+        "weighted_review_count": 73
+      },
+      {
+        "keyword": "verifikasi",
+        "topic_count": 2,
+        "weighted_review_count": 72
+      },
+      {
+        "keyword": "kantornya",
+        "topic_count": 1,
+        "weighted_review_count": 71
+      },
+      {
+        "keyword": "sibuk",
+        "topic_count": 1,
+        "weighted_review_count": 71
+      },
+      {
+        "keyword": "cepat",
+        "topic_count": 2,
+        "weighted_review_count": 62
+      },
+      {
+        "keyword": "saldo",
+        "topic_count": 1,
+        "weighted_review_count": 51
+      },
+      {
+        "keyword": "cek",
+        "topic_count": 1,
+        "weighted_review_count": 51
+      },
+      {
+        "keyword": "persulit",
+        "topic_count": 1,
+        "weighted_review_count": 51
+      },
+      {
+        "keyword": "cair",
+        "topic_count": 1,
+        "weighted_review_count": 42
+      },
+      {
+        "keyword": "entar",
+        "topic_count": 1,
+        "weighted_review_count": 42
+      },
+      {
+        "keyword": "bintangnya",
+        "topic_count": 1,
+        "weighted_review_count": 42
+      },
+      {
+        "keyword": "tanggal",
+        "topic_count": 2,
+        "weighted_review_count": 39
+      },
+      {
+        "keyword": "alhmdulilah",
+        "topic_count": 1,
+        "weighted_review_count": 38
+      },
+      {
+        "keyword": "simpel",
+        "topic_count": 1,
+        "weighted_review_count": 38
+      },
+      {
+        "keyword": "berguna",
+        "topic_count": 1,
+        "weighted_review_count": 38
+      },
+      {
+        "keyword": "memudahkan",
+        "topic_count": 1,
+        "weighted_review_count": 38
+      },
+      {
+        "keyword": "terima",
+        "topic_count": 1,
+        "weighted_review_count": 37
+      },
+      {
+        "keyword": "terimakasih",
+        "topic_count": 1,
+        "weighted_review_count": 37
+      },
+      {
+        "keyword": "trimakasih",
+        "topic_count": 1,
+        "weighted_review_count": 37
+      },
+      {
+        "keyword": "2026",
+        "topic_count": 1,
+        "weighted_review_count": 37
+      },
+      {
+        "keyword": "proses",
+        "topic_count": 2,
+        "weighted_review_count": 35
+      },
+      {
+        "keyword": "redmi",
+        "topic_count": 1,
+        "weighted_review_count": 27
+      },
+      {
+        "keyword": "note",
+        "topic_count": 1,
+        "weighted_review_count": 27
+      },
+      {
+        "keyword": "os",
+        "topic_count": 1,
+        "weighted_review_count": 27
+      },
+      {
+        "keyword": "hp",
+        "topic_count": 1,
+        "weighted_review_count": 27
+      },
+      {
+        "keyword": "force",
+        "topic_count": 1,
+        "weighted_review_count": 27
+      },
+      {
+        "keyword": "poco",
+        "topic_count": 1,
+        "weighted_review_count": 27
+      },
+      {
+        "keyword": "close",
+        "topic_count": 1,
+        "weighted_review_count": 27
+      },
+      {
+        "keyword": "device",
+        "topic_count": 1,
+        "weighted_review_count": 27
+      },
+      {
+        "keyword": "sayah",
+        "topic_count": 1,
+        "weighted_review_count": 27
+      },
+      {
+        "keyword": "terbaru",
+        "topic_count": 1,
+        "weighted_review_count": 27
+      },
+      {
+        "keyword": "semoga",
+        "topic_count": 1,
+        "weighted_review_count": 24
+      },
+      {
+        "keyword": "amanah",
+        "topic_count": 1,
+        "weighted_review_count": 24
+      },
+      {
+        "keyword": "pensiun",
+        "topic_count": 1,
+        "weighted_review_count": 24
+      },
+      {
+        "keyword": "kali",
+        "topic_count": 1,
+        "weighted_review_count": 24
+      },
+      {
+        "keyword": "mambantu",
+        "topic_count": 1,
+        "weighted_review_count": 24
+      },
+      {
+        "keyword": "info",
+        "topic_count": 1,
+        "weighted_review_count": 22
+      },
+      {
+        "keyword": "investasi",
+        "topic_count": 1,
+        "weighted_review_count": 22
+      },
+      {
+        "keyword": "apllikasi",
+        "topic_count": 1,
+        "weighted_review_count": 22
+      },
+      {
+        "keyword": "berobat",
+        "topic_count": 1,
+        "weighted_review_count": 22
+      },
+      {
+        "keyword": "otomatis",
+        "topic_count": 1,
+        "weighted_review_count": 21
+      },
+      {
+        "keyword": "daftar",
+        "topic_count": 1,
+        "weighted_review_count": 21
+      },
+      {
+        "keyword": "kenapaya",
+        "topic_count": 1,
+        "weighted_review_count": 21
+      },
+      {
+        "keyword": "instansi",
+        "topic_count": 1,
+        "weighted_review_count": 21
+      },
+      {
+        "keyword": "mental",
+        "topic_count": 1,
+        "weighted_review_count": 21
+      },
+      {
+        "keyword": "diperbaruhi",
+        "topic_count": 1,
+        "weighted_review_count": 21
+      },
+      {
+        "keyword": "customer",
+        "topic_count": 1,
+        "weighted_review_count": 21
+      },
+      {
+        "keyword": "diupdate",
+        "topic_count": 1,
+        "weighted_review_count": 21
+      },
+      {
+        "keyword": "lahir",
+        "topic_count": 1,
+        "weighted_review_count": 20
+      },
+      {
+        "keyword": "aturan",
+        "topic_count": 1,
+        "weighted_review_count": 20
+      },
+      {
+        "keyword": "buang",
+        "topic_count": 1,
+        "weighted_review_count": 20
+      },
+      {
+        "keyword": "kuota",
+        "topic_count": 1,
+        "weighted_review_count": 20
+      },
+      {
+        "keyword": "juni",
+        "topic_count": 1,
+        "weighted_review_count": 19
+      },
+      {
+        "keyword": "12",
+        "topic_count": 1,
+        "weighted_review_count": 19
+      },
+      {
+        "keyword": "kemarin",
+        "topic_count": 1,
+        "weighted_review_count": 19
+      },
+      {
+        "keyword": "2025",
+        "topic_count": 1,
+        "weighted_review_count": 19
+      },
+      {
+        "keyword": "26",
+        "topic_count": 1,
+        "weighted_review_count": 19
+      },
+      {
+        "keyword": "orang",
+        "topic_count": 2,
+        "weighted_review_count": 16
+      },
+      {
+        "keyword": "tingkatkan",
+        "topic_count": 1,
+        "weighted_review_count": 12
+      },
+      {
+        "keyword": "keamanan",
+        "topic_count": 1,
+        "weighted_review_count": 12
+      },
+      {
+        "keyword": "download",
+        "topic_count": 1,
+        "weighted_review_count": 12
+      },
+      {
+        "keyword": "sistim",
+        "topic_count": 1,
+        "weighted_review_count": 12
+      },
+      {
+        "keyword": "kualitas",
+        "topic_count": 1,
+        "weighted_review_count": 12
+      },
+      {
+        "keyword": "mengurangi",
+        "topic_count": 1,
+        "weighted_review_count": 12
+      },
+      {
+        "keyword": "dijaga",
+        "topic_count": 1,
+        "weighted_review_count": 12
+      },
+      {
+        "keyword": "ah",
+        "topic_count": 1,
+        "weighted_review_count": 12
+      },
+      {
+        "keyword": "anehh",
+        "topic_count": 1,
+        "weighted_review_count": 12
+      },
+      {
+        "keyword": "ereor",
+        "topic_count": 1,
+        "weighted_review_count": 12
+      },
+      {
+        "keyword": "weelll",
+        "topic_count": 1,
+        "weighted_review_count": 12
+      },
+      {
+        "keyword": "susahhh",
+        "topic_count": 1,
+        "weighted_review_count": 12
+      },
+      {
+        "keyword": "ngeboot",
+        "topic_count": 1,
+        "weighted_review_count": 12
+      },
+      {
+        "keyword": "hehehe",
+        "topic_count": 1,
+        "weighted_review_count": 12
+      },
+      {
+        "keyword": "loading",
+        "topic_count": 1,
+        "weighted_review_count": 11
+      },
+      {
+        "keyword": "tttp",
+        "topic_count": 1,
+        "weighted_review_count": 11
+      },
+      {
+        "keyword": "notitnya",
+        "topic_count": 1,
+        "weighted_review_count": 11
+      },
+      {
+        "keyword": "haloo",
+        "topic_count": 1,
+        "weighted_review_count": 11
+      },
+      {
+        "keyword": "link",
+        "topic_count": 1,
+        "weighted_review_count": 11
+      },
+      {
+        "keyword": "restar",
+        "topic_count": 1,
+        "weighted_review_count": 11
+      },
+      {
+        "keyword": "wae",
+        "topic_count": 1,
+        "weighted_review_count": 11
+      },
+      {
+        "keyword": "memory",
+        "topic_count": 1,
+        "weighted_review_count": 11
+      },
+      {
+        "keyword": "tingkat",
+        "topic_count": 1,
+        "weighted_review_count": 10
+      },
+      {
+        "keyword": "kendala",
+        "topic_count": 1,
+        "weighted_review_count": 10
+      },
+      {
+        "keyword": "secepatnya",
+        "topic_count": 1,
+        "weighted_review_count": 10
+      },
+      {
+        "keyword": "perbaharui",
+        "topic_count": 1,
+        "weighted_review_count": 10
+      },
+      {
+        "keyword": "hemm",
+        "topic_count": 1,
+        "weighted_review_count": 10
+      },
+      {
+        "keyword": "buf",
+        "topic_count": 1,
+        "weighted_review_count": 10
+      },
+      {
+        "keyword": "jalankan",
+        "topic_count": 1,
+        "weighted_review_count": 10
+      },
+      {
+        "keyword": "pelayanan",
+        "topic_count": 1,
+        "weighted_review_count": 6
+      },
+      {
+        "keyword": "online",
+        "topic_count": 1,
+        "weighted_review_count": 6
+      },
+      {
+        "keyword": "gagalan",
+        "topic_count": 1,
+        "weighted_review_count": 6
+      },
+      {
+        "keyword": "keluhkan",
+        "topic_count": 1,
+        "weighted_review_count": 6
+      },
+      {
+        "keyword": "tingkatlan",
+        "topic_count": 1,
+        "weighted_review_count": 6
+      },
+      {
+        "keyword": "karenakan",
+        "topic_count": 1,
+        "weighted_review_count": 6
+      },
+      {
+        "keyword": "pegawai",
+        "topic_count": 1,
+        "weighted_review_count": 6
+      }
+    ]
+  },
+  "app_version_analysis": [
+    {
+      "version": "4.15.5",
+      "review_count": 15388,
+      "avg_score": 3.85,
+      "neg_pct": 25.18
+    },
+    {
+      "version": "Unknown",
+      "review_count": 11063,
+      "avg_score": 3.52,
+      "neg_pct": 33.99
+    },
+    {
+      "version": "4.15.19",
+      "review_count": 7680,
+      "avg_score": 4.31,
+      "neg_pct": 14.75
+    },
+    {
+      "version": "4.15.0",
+      "review_count": 7298,
+      "avg_score": 4.18,
+      "neg_pct": 17.27
+    },
+    {
+      "version": "4.15.14",
+      "review_count": 6492,
+      "avg_score": 4.41,
+      "neg_pct": 11.97
+    },
+    {
+      "version": "4.15.17",
+      "review_count": 6492,
+      "avg_score": 4.35,
+      "neg_pct": 13.42
+    },
+    {
+      "version": "4.15.15",
+      "review_count": 4785,
+      "avg_score": 4.5,
+      "neg_pct": 9.61
+    },
+    {
+      "version": "4.15.10",
+      "review_count": 4561,
+      "avg_score": 4.16,
+      "neg_pct": 17.61
+    },
+    {
+      "version": "4.15.16",
+      "review_count": 4190,
+      "avg_score": 4.3,
+      "neg_pct": 14.27
+    },
+    {
+      "version": "4.16.1",
+      "review_count": 3214,
+      "avg_score": 3.51,
+      "neg_pct": 33.11
+    }
+  ],
+  "spike_detection": {
+    "threshold": 142.65,
+    "spikes": [
+      {
+        "date": "2025-06-24",
+        "neg_count": 318,
+        "avg_score": 1.17,
+        "top_negative_topics": [
+          "Pengguna gagal masuk ke aplikasi setelah melakukan pembaruan",
+          "Aplikasi tidak dapat dibuka setelah proses pembaruan selesai",
+          "Aplikasi terus menerus meminta pembaruan secara berulang"
+        ]
+      },
+      {
+        "date": "2026-05-29",
+        "neg_count": 318,
+        "avg_score": 1.21,
+        "top_negative_topics": [
+          "Pengguna gagal masuk ke aplikasi setelah melakukan pembaruan",
+          "Aplikasi tidak dapat dibuka setelah proses pembaruan selesai",
+          "Aplikasi mengalami kegagalan saat dibuka atau diakses"
+        ]
+      },
+      {
+        "date": "2025-06-15",
+        "neg_count": 291,
+        "avg_score": 1.16,
+        "top_negative_topics": [
+          "Aplikasi terus menerus meminta pembaruan secara berulang",
+          "Aplikasi tidak dapat dibuka setelah proses pembaruan selesai",
+          "Pengguna gagal masuk ke aplikasi setelah melakukan pembaruan"
+        ]
+      },
+      {
+        "date": "2026-05-28",
+        "neg_count": 269,
+        "avg_score": 1.21,
+        "top_negative_topics": [
+          "Pengguna gagal masuk ke aplikasi setelah melakukan pembaruan",
+          "Aplikasi tidak dapat dibuka setelah proses pembaruan selesai",
+          "Aplikasi mengalami kegagalan saat dibuka atau diakses"
+        ]
+      },
+      {
+        "date": "2026-05-27",
+        "neg_count": 223,
+        "avg_score": 1.21,
+        "top_negative_topics": [
+          "Aplikasi tidak dapat dibuka setelah proses pembaruan selesai",
+          "Pengguna gagal masuk ke aplikasi setelah melakukan pembaruan",
+          "Aplikasi mengalami kegagalan saat dibuka atau diakses"
+        ]
+      }
+    ]
+  },
+  "monthly_sentiment_trend": [
+    {
+      "month": "2025-06",
+      "positif": 4164,
+      "negatif": 1622,
+      "netral": 386,
+      "total": 6172,
+      "net_sentiment_ratio": 0.4119
+    },
+    {
+      "month": "2025-07",
+      "positif": 6268,
+      "negatif": 1355,
+      "netral": 374,
+      "total": 7997,
+      "net_sentiment_ratio": 0.6144
+    },
+    {
+      "month": "2025-08",
+      "positif": 5610,
+      "negatif": 2535,
+      "netral": 542,
+      "total": 8687,
+      "net_sentiment_ratio": 0.354
+    },
+    {
+      "month": "2025-09",
+      "positif": 5251,
+      "negatif": 2077,
+      "netral": 453,
+      "total": 7781,
+      "net_sentiment_ratio": 0.4079
+    },
+    {
+      "month": "2025-10",
+      "positif": 6261,
+      "negatif": 1518,
+      "netral": 339,
+      "total": 8118,
+      "net_sentiment_ratio": 0.5843
+    },
+    {
+      "month": "2025-11",
+      "positif": 5519,
+      "negatif": 882,
+      "netral": 219,
+      "total": 6620,
+      "net_sentiment_ratio": 0.7005
+    },
+    {
+      "month": "2025-12",
+      "positif": 5363,
+      "negatif": 710,
+      "netral": 184,
+      "total": 6257,
+      "net_sentiment_ratio": 0.7436
+    },
+    {
+      "month": "2026-01",
+      "positif": 4511,
+      "negatif": 931,
+      "netral": 250,
+      "total": 5692,
+      "net_sentiment_ratio": 0.629
+    },
+    {
+      "month": "2026-02",
+      "positif": 3609,
+      "negatif": 799,
+      "netral": 157,
+      "total": 4565,
+      "net_sentiment_ratio": 0.6156
+    },
+    {
+      "month": "2026-03",
+      "positif": 3164,
+      "negatif": 443,
+      "netral": 105,
+      "total": 3712,
+      "net_sentiment_ratio": 0.733
+    },
+    {
+      "month": "2026-04",
+      "positif": 2840,
+      "negatif": 547,
+      "netral": 115,
+      "total": 3502,
+      "net_sentiment_ratio": 0.6548
+    },
+    {
+      "month": "2026-05",
+      "positif": 5459,
+      "negatif": 2282,
+      "netral": 446,
+      "total": 8187,
+      "net_sentiment_ratio": 0.3881
+    },
+    {
+      "month": "2026-06",
+      "positif": 2531,
+      "negatif": 668,
+      "netral": 148,
+      "total": 3347,
+      "net_sentiment_ratio": 0.5566
+    }
+  ]
+}

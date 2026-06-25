@@ -1,0 +1,51 @@
+sentiment,business_category,merge_group,review_count_all,review_count_confident,share_confident,avg_score,example_sub_issues
+negatif,Masalah Akses Login,LOGIN_FAILURE,6059,6002,0.9906,1.18,"Pengguna gagal masuk ke aplikasi setelah melakukan pembaruan, Pengguna mengalami kesulitan saat mencoba masuk ke aplikasi"
+negatif,Masalah Akses Aplikasi,APP_LAUNCH_FAILURE,5537,5511,0.9953,1.2,"Aplikasi tidak dapat dibuka setelah proses pembaruan selesai, Aplikasi mengalami kegagalan saat dibuka atau diakses"
+negatif,Masalah Pembaruan Aplikasi,UPDATE_LOOP_ERROR,1186,1178,0.9933,1.19,"Aplikasi terus menerus meminta pembaruan secara berulang, Frekuensi pembaruan aplikasi yang terlalu sering"
+negatif,Masalah Stabilitas Aplikasi,APP_PERFORMANCE_ISSUE,539,538,0.9981,1.14,"Aplikasi sering mengalami error saat digunakan, Aplikasi mengalami error teknis secara umum"
+negatif,Keluhan Layanan Pengguna,USER_DISSATISFACTION,444,442,0.9955,1.04,Proses klaim hak peserta dirasakan sangat dipersulit
+negatif,Kualitas Layanan Aplikasi,APP_PERFORMANCE_ISSUE,426,413,0.9695,1.12,Performa aplikasi dinilai buruk dan tidak stabil
+negatif,Kepuasan Pengguna,POSITIVE_FEEDBACK,377,342,0.9072,1.29,"Pengguna memberikan penilaian positif terhadap aplikasi, Pengguna memberikan apresiasi positif terhadap manfaat aplikasi"
+negatif,Masalah Stabilitas Aplikasi,FORCE_CLOSE_ERROR,368,366,0.9946,1.17,Aplikasi tertutup otomatis saat mencoba dibuka
+negatif,Masalah Pengkinian Data,SERVER_CONNECTION_ERROR,301,296,0.9834,1.2,Gagal terhubung ke server saat proses pengkinian data
+negatif,Stabilitas Aplikasi,APP_CRASH_STABILITY,301,300,0.9967,1.22,"Aplikasi tidak dapat dibuka dalam jangka waktu lama, Aplikasi mengalami kendala saat proses pembukaan, Aplikasi berhenti merespon saat proses login"
+negatif,Masalah Klaim JHT,CLAIM_PROCESS_FAILURE,280,278,0.9929,1.17,Proses pengajuan klaim JHT sering gagal dan lambat
+negatif,Kualitas Layanan Pengguna,SERVICE_QUALITY_ISSUE,121,121,1.0,1.11,Pelayanan digital dinilai lambat dan kurang memuaskan
+negatif,Verifikasi Identitas,BIOMETRIC_VERIFICATION_FAIL,74,74,1.0,1.09,Kegagalan proses verifikasi biometrik saat klaim JHT
+negatif,Lain-lain / Noise,OVERALL_SATISFACTION,73,0,0.0,1.15,Ulasan umum/noise
+negatif,Stabilitas Aplikasi,APP_FORCE_CLOSE,65,65,1.0,1.03,Aplikasi tertutup secara otomatis saat digunakan
+negatif,Layanan Pelanggan,CUSTOMER_SERVICE_ISSUE,53,53,1.0,1.09,Respon layanan pelanggan lambat dan kurang memuaskan
+negatif,Kualitas Layanan,GENERAL_DISSATISFACTION,52,52,1.0,1.04,Ketidakpuasan umum terhadap performa aplikasi
+negatif,Manajemen Data Kepesertaan,DATA_SYNC_ERROR,49,49,1.0,1.16,Data kepesertaan gagal dimuat atau tidak ditemukan
+negatif,Pembaruan Aplikasi,UPDATE_FREQUENCY_ISSUE,33,33,1.0,1.24,Frekuensi pembaruan aplikasi yang terlalu sering
+negatif,Pengalaman Pengguna,UI_UX_IMPROVEMENT,31,30,0.9677,1.26,Kesulitan input tanggal lahir karena antarmuka tidak efisien
+netral,Stabilitas Aplikasi,APP_CRASH_UPDATE,1959,1938,0.9893,3.0,"Aplikasi tidak dapat dibuka setelah melakukan pembaruan, Aplikasi mengalami kegagalan saat dibuka, Aplikasi tidak dapat diakses atau dibuka"
+netral,Kepuasan Pengguna,POSITIVE_FEEDBACK,580,555,0.9569,3.0,"Ulasan positif umum mengenai kualitas aplikasi, Ulasan positif mengenai manfaat aplikasi, Ulasan positif singkat dari pengguna"
+netral,Manajemen Pembaruan Aplikasi,FORCE_UPDATE_LOOP,366,361,0.9863,3.0,"Aplikasi terus menerus meminta pembaruan saat akan dibuka, Frekuensi pembaruan aplikasi yang terlalu sering"
+netral,Layanan Klaim JHT,CLAIM_JHT_ERROR,243,241,0.9918,3.0,"Kegagalan klaim JHT dan kendala akses akun, Kendala dalam proses klaim dan pengecekan saldo JHT"
+netral,Pengalaman Pengguna,POSITIVE_FEEDBACK,103,102,0.9903,3.0,"Aplikasi memberikan kemudahan dan kenyamanan penggunaan, Aplikasi sangat membantu dalam pengecekan jaminan, Aplikasi memudahkan akses informasi dan investasi"
+netral,Lain-lain / Noise,OVERALL_SATISFACTION,91,0,0.0,3.0,Ulasan umum/noise
+netral,Stabilitas Aplikasi,APP_STABILITY_ISSUE,83,83,1.0,3.0,Aplikasi sering mengalami error saat digunakan
+netral,Pengelolaan Data Pengguna,DATA_UPDATE_FAIL,74,71,0.9595,3.0,Kegagalan dalam proses pengkinian data
+netral,Manajemen Pembaruan Aplikasi,UPDATE_FREQUENCY,51,50,0.9804,3.0,"Frekuensi pembaruan aplikasi dianggap terlalu sering, Kewajiban pembaruan berulang dalam waktu singkat, Keluhan pengguna terhadap frekuensi pembaruan yang tinggi"
+netral,Kepuasan Pengguna,APP_STABILITY_ISSUE,42,41,0.9762,3.0,Pemberian rating sementara karena kendala teknis
+netral,Pengalaman Pengguna,FEATURE_REQUEST,36,36,1.0,3.0,"Harapan pengguna untuk peningkatan kualitas aplikasi, Permintaan peningkatan kualitas layanan secara berkelanjutan"
+netral,Masalah Teknis Aplikasi,APP_CRASH,31,30,0.9677,3.0,"Aplikasi tertutup sendiri setelah pembaruan, Aplikasi tidak dapat dibuka setelah melakukan pembaruan"
+netral,Masalah Teknis Perangkat,DEVICE_COMPATIBILITY_ISSUE,27,27,1.0,3.0,Aplikasi mengalami force close pada perangkat Redmi
+netral,Masalah Akses Akun,LOGIN_ERROR,21,21,1.0,3.0,Aplikasi keluar otomatis saat proses login
+netral,Masalah Teknis Aplikasi,PERFORMANCE_ISSUE,11,11,1.0,3.0,Proses loading aplikasi berjalan sangat lambat
+positif,Kepuasan Pengguna Umum,POSITIVE_FEEDBACK,46890,45957,0.9801,4.93,"Ulasan positif umum mengenai pengalaman pengguna, Aplikasi dianggap sangat membantu dan bermanfaat, Ulasan positif mengenai kualitas aplikasi"
+positif,Masalah Akses Aplikasi,APP_CRASH_OR_ACCESS,4603,4542,0.9867,4.75,Aplikasi tidak dapat dibuka atau diakses
+positif,Layanan Informasi Saldo,FEATURE_UTILITY,2008,2002,0.997,4.93,Kemudahan dalam pengecekan saldo JHT
+positif,Kualitas Layanan Digital,POSITIVE_FEEDBACK,1834,1795,0.9787,4.94,"Pelayanan aplikasi dinilai cepat dan memuaskan, Respon aplikasi dinilai cepat dan akurat"
+positif,Masalah Layanan Klaim,CLAIM_PROCESS_ERROR,978,948,0.9693,4.82,Kendala biometrik dan ketidaksesuaian data klaim JHT
+positif,Ulasan Positif Pengguna,POSITIVE_FEEDBACK,939,918,0.9776,4.94,"Pengguna merasa aplikasi sangat membantu kebutuhan mereka, Pengguna merasa puas dengan kelancaran proses aplikasi, Apresiasi umum terhadap kinerja aplikasi"
+positif,Peningkatan Kualitas Layanan,SYSTEM_IMPROVEMENT,740,732,0.9892,4.85,"Permintaan perbaikan sistem dan stabilitas aplikasi, Saran untuk terus meningkatkan kualitas pelayanan aplikasi, Pentingnya pembaruan aplikasi secara berkala"
+positif,Masalah Stabilitas Aplikasi,APP_STABILITY_ISSUE,635,633,0.9969,4.69,Aplikasi sering mengalami error atau gangguan teknis
+positif,Masalah Pembaruan Aplikasi,UPDATE_LOOP_ISSUE,603,599,0.9934,4.64,Aplikasi terus meminta pembaruan data secara berulang
+positif,Masalah Akses Aplikasi,LOGIN_ERROR,449,445,0.9911,4.8,"Aplikasi tidak dapat dibuka atau diakses oleh pengguna, Kendala teknis saat membuka aplikasi"
+positif,Lain-lain / Noise,OVERALL_SATISFACTION,364,0,0.0,4.9,Ulasan umum/noise
+positif,Manfaat Layanan Jaminan,FEATURE_BENEFIT,237,237,1.0,4.96,Aplikasi membantu pengelolaan tabungan hari tua
+positif,Akses Informasi Layanan,INFORMATION_ACCESS,123,123,1.0,4.84,Kemudahan mendapatkan informasi dan update data klaim
+positif,Akses Informasi Layanan,BALANCE_CHECK,107,105,0.9813,4.88,Kemudahan dalam melakukan pengecekan saldo jaminan
+positif,Pengalaman Pengguna,USER_EXPERIENCE,40,36,0.9,4.8,Aplikasi dinilai mudah digunakan dan bermanfaat

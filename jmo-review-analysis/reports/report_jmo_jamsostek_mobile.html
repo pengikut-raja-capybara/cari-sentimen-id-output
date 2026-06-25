@@ -1,0 +1,2695 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Analisis Sentimen Ulasan — CaRI Sentimen ID</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: rgba(17, 24, 39, 0.7);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+            --text-muted: #6b7280;
+            --text-title: #ffffff;
+            --accent-color: #3b82f6;
+            --accent-green: #10b981;
+            --accent-red: #ef4444;
+            --accent-yellow: #f59e0b;
+            --sidebar-width: 280px;
+        }
+        
+        [data-theme="light"] {
+            --bg-color: #f3f4f6;
+            --card-bg: rgba(255, 255, 255, 0.85);
+            --card-border: rgba(0, 0, 0, 0.08);
+            --text-primary: #1f2937;
+            --text-secondary: #4b5563;
+            --text-muted: #9ca3af;
+            --text-title: #111827;
+            --accent-color: #2563eb;
+            --accent-green: #059669;
+            --accent-red: #dc2626;
+            --accent-yellow: #d97706;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            overflow-x: hidden;
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            width: var(--sidebar-width);
+            background: var(--card-bg);
+            border-right: 1px solid var(--card-border);
+            backdrop-filter: blur(16px);
+            padding: 2rem 1.5rem;
+            position: fixed;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            z-index: 100;
+        }
+
+        .brand {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .brand-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.025em;
+        }
+
+        .brand-subtitle {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            list-style: none;
+            flex-grow: 1;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            color: var(--text-secondary);
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            gap: 0.75rem;
+        }
+
+        .nav-item:hover, .nav-item.active {
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        .theme-toggle-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 1rem;
+            border-top: 1px solid var(--card-border);
+        }
+
+        .theme-label {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 44px;
+            height: 24px;
+        }
+
+        .switch input { 
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: var(--text-muted);
+            transition: .4s;
+            border-radius: 24px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: var(--accent-color);
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(20px);
+        }
+
+        /* Main Content Styling */
+        .main-content {
+            margin-left: var(--sidebar-width);
+            padding: 2.5rem;
+            flex-grow: 1;
+            max-width: 1400px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 2.5rem;
+            border-bottom: 1px solid var(--card-border);
+            padding-bottom: 1.5rem;
+        }
+
+        .header-meta h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--text-title);
+            letter-spacing: -0.03em;
+            margin-bottom: 0.5rem;
+        }
+
+        .header-meta p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .download-btn-group {
+            display: flex;
+            gap: 0.50rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: white;
+            cursor: pointer;
+            border: none;
+            background-color: #374151;
+        }
+
+        .btn-excel { background-color: #16a34a; }
+        .btn-ppt { background-color: #d97706; }
+        .btn-pdf { background-color: #dc2626; }
+
+        /* Stat Cards Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-left: 4px solid var(--accent-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            backdrop-filter: blur(16px);
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card.pos-card { border-left-color: var(--accent-green); }
+        .stat-card.neg-card { border-left-color: var(--accent-red); }
+        .stat-card.neu-card { border-left-color: var(--accent-yellow); }
+        .stat-card.cs-card  { border-left-color: var(--accent-color); }
+
+        .stat-title {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .stat-value {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--text-title);
+        }
+
+        .stat-value.positif { color: var(--accent-green); }
+        .stat-value.negatif { color: var(--accent-red); }
+        .stat-value.cs { color: var(--accent-color); }
+
+        .stat-desc {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        /* Tab Panels Content */
+        .tab-panel {
+            display: none;
+        }
+
+        .tab-panel.active {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        /* Grid Layout components */
+        .row-grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .row-grid-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2rem;
+        }
+
+        @media (max-width: 1024px) {
+            .row-grid-2, .row-grid-3 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Doughnut center text positioning */
+        .doughnut-center-text {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;
+            z-index: 10;
+        }
+        
+        .doughnut-center-text .center-num {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--text-title);
+            line-height: 1.1;
+        }
+        
+        .doughnut-center-text .center-lbl {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Progress bars styling */
+        .rating-progress-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            padding-top: 0.25rem;
+        }
+
+        .progress-bar-item {
+            display: flex;
+            align-items: center;
+            font-size: 0.85rem;
+            gap: 0.75rem;
+        }
+
+        .pb-label {
+            width: 75px;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .pb-wrapper {
+            flex-grow: 1;
+            height: 10px;
+            background: rgba(156, 163, 175, 0.1);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .pb-fill {
+            height: 100%;
+            border-radius: 6px;
+        }
+        
+        .pb-fill.fill-pos { background: linear-gradient(90deg, var(--accent-green) 0%, #34d399 100%); }
+        .pb-fill.fill-pos-light { background: linear-gradient(90deg, #60a5fa 0%, var(--accent-color) 100%); }
+        .pb-fill.fill-neu { background: linear-gradient(90deg, #fbbf24 0%, var(--accent-yellow) 100%); }
+        .pb-fill.fill-neg-light { background: linear-gradient(90deg, #fb923c 0%, #f97316 100%); }
+        .pb-fill.fill-neg { background: linear-gradient(90deg, #f87171 0%, var(--accent-red) 100%); }
+
+        .pb-percent {
+            width: 45px;
+            text-align: right;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+
+        /* Gradient card & Highlights cards */
+        .bg-gradient-card {
+            background: linear-gradient(135deg, rgba(31, 41, 55, 0.4) 0%, rgba(17, 24, 39, 0.7) 100%);
+        }
+
+        .overview-highlight-box {
+            padding: 1.25rem;
+            border-radius: 8px;
+            background: rgba(156, 163, 175, 0.03);
+            border-left: 4px solid transparent;
+        }
+
+        .overview-highlight-box.border-pos {
+            border-left-color: var(--accent-green);
+        }
+
+        .overview-highlight-box.border-neg {
+            border-left-color: var(--accent-red);
+        }
+
+        .overview-highlight-box h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-title);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .overview-highlight-box p {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.55;
+        }
+
+
+        .panel-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 1.75rem;
+            backdrop-filter: blur(16px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .panel-card-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-title);
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--card-border);
+            padding-bottom: 0.75rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Narrative insights rendered Markdown */
+        .prose h1, .prose h2, .prose h3 {
+            font-family: 'Outfit', sans-serif;
+            color: var(--text-title);
+            margin-top: 1.75rem;
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+        }
+        .prose h2 { font-size: 1.4rem; border-bottom: 1px solid var(--card-border); padding-bottom: 0.5rem; }
+        .prose p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+        .prose ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1.25rem;
+            list-style-type: disc;
+        }
+        .prose li {
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+        .prose hr {
+            margin: 1.5rem 0;
+            border: 0;
+            border-top: 1px solid var(--card-border);
+        }
+        .prose blockquote {
+            border-left: 4px solid var(--accent-color);
+            padding: 0.5rem 1rem;
+            background: rgba(59, 130, 246, 0.05);
+            color: var(--text-secondary);
+            font-style: italic;
+            margin: 1rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        /* Tables design */
+        .table-responsive {
+            overflow-x: auto;
+            margin-top: 0.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.9rem;
+        }
+
+        th {
+            background: rgba(156, 163, 175, 0.05);
+            font-weight: 600;
+            color: var(--text-title);
+            padding: 0.75rem 1rem;
+            border-bottom: 2px solid var(--card-border);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--card-border);
+            color: var(--text-secondary);
+            max-width: 320px;
+            word-wrap: break-word;
+        }
+
+        tr:hover td {
+            background: rgba(156, 163, 175, 0.02);
+        }
+
+        /* Badges */
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .badge-pos { background: rgba(16, 185, 129, 0.1); color: var(--accent-green); }
+        .badge-neg { background: rgba(239, 68, 68, 0.1); color: var(--accent-red); }
+        .badge-neu { background: rgba(245, 158, 11, 0.1); color: var(--accent-yellow); }
+
+        /* Chart Visualizations Grid */
+        .charts-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .chart-img-container {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .chart-img-container img {
+            width: 100%;
+            height: 250px;
+            object-fit: contain;
+            background: rgba(0, 0, 0, 0.15);
+            border-radius: 6px;
+            border: 1px solid var(--card-border);
+        }
+
+        .chart-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-title);
+        }
+
+        .chart-desc {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <div class="brand">
+            <span class="brand-title">CaRI Sentimen ID</span>
+            <span class="brand-subtitle">Review Intelligence</span>
+        </div>
+        
+        <nav class="nav-links">
+            <a class="nav-item active" onclick="switchTab('ringkasan', this)">📋 Ringkasan Umum</a>
+            <a class="nav-item" onclick="switchTab('keluhan', this)">⚠️ Keluhan & Topik</a>
+            <a class="nav-item" onclick="switchTab('kinerja-cs', this)">💬 Kinerja CS</a>
+            <a class="nav-item" onclick="switchTab('narasi-ai', this)">💡 Narasi Insight</a>
+            <a class="nav-item" onclick="switchTab('ulasan-low', this)">🔍 Ulasan Ambigu</a>
+            <a class="nav-item" onclick="switchTab('galeri', this)">📊 Galeri Visualisasi</a>
+        </nav>
+        
+        <div class="theme-toggle-box">
+            <span class="theme-label">Mode Terang</span>
+            <label class="switch">
+                <input type="checkbox" id="theme-switch" onchange="toggleTheme(this)">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+        <!-- HEADER -->
+        <header>
+            <div class="header-meta">
+                <h1>JMO (Jamsostek Mobile)</h1>
+                <p>Periode Data: 2025-06-15 s/d 2026-06-15 | Dibuat otomatis oleh CaRI Sentimen ID</p>
+            </div>
+            <div class="download-btn-group">
+                <a class="btn btn-excel" href="report_jmo_jamsostek_mobile.xlsx" download>Excel Report</a>
+                <a class="btn btn-ppt" href="report_jmo_jamsostek_mobile.pptx" download>PPTX Deck</a>
+                <a class="btn btn-pdf" href="report_jmo_jamsostek_mobile.pdf" download>PDF Laporan</a>
+            </div>
+        </header>
+
+        <!-- STAT CARDS ROW -->
+        <div class="stats-grid">
+            <div class="stat-card cs-card">
+                <span class="stat-title">Total Ulasan Analisis</span>
+                <span class="stat-value">80,637</span>
+                <span class="stat-desc">Jumlah ulasan terklasifikasi</span>
+            </div>
+            <div class="stat-card pos-card">
+                <span class="stat-title">Tingkat Kepuasan</span>
+                <span class="stat-value positif">75.09%</span>
+                <span class="stat-desc">Kontribusi sentimen positif</span>
+            </div>
+            <div class="stat-card neg-card">
+                <span class="stat-title">Rasio Komplain</span>
+                <span class="stat-value negatif">20.3%</span>
+                <span class="stat-desc">Kontribusi sentimen negatif</span>
+            </div>
+            <div class="stat-card cs-card">
+                <span class="stat-title">Tingkat Keyakinan AI</span>
+                <span class="stat-value cs">97.7%</span>
+                <span class="stat-desc">Confidence score rata-rata</span>
+            </div>
+        </div>
+
+        <!-- DISCLAIMER BANNER -->
+        <div class="panel-card" style="margin-bottom: 2.5rem; border-left: 4px solid var(--accent-yellow); padding: 1.25rem 1.5rem; background: rgba(245, 158, 11, 0.05);">
+            <p style="font-size: 0.9rem; line-height: 1.5; color: var(--text-secondary); margin-bottom: 0;">
+                <strong>⚠️ Catatan Cakupan Data:</strong> Analisis ini hanya mencakup ulasan yang memiliki teks komentar. Ulasan dengan rating tanpa komentar tidak diikutsertakan, sehingga distribusi sentimen mencerminkan pengguna yang aktif memberikan pendapat dan dapat condong ke arah negatif dibanding populasi pengguna keseluruhan.
+            </p>
+        </div>
+
+        <!-- ---------------- TAB: RINGKASAN ---------------- -->
+        <div id="ringkasan" class="tab-panel active">
+            <div class="row-grid-3">
+                <div class="panel-card" style="display: flex; flex-direction: column; align-items: center; justify-content: space-between; position: relative;">
+                    <h2 class="panel-card-title" style="width:100%;">Proporsi Sentimen</h2>
+                    <div style="height: 220px; width: 100%; display: flex; justify-content: center; align-items: center; position: relative; padding: 10px 0;">
+                        <canvas id="chartSentimentDoughnut"></canvas>
+                        <!-- Center text inside Doughnut -->
+                        <div class="doughnut-center-text">
+                            <span class="center-num">75.09%</span>
+                            <span class="center-lbl">Positif</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+                    <h2 class="panel-card-title">Distribusi Rating Bintang</h2>
+                    <div style="height: 220px; width: 100%; display: flex; align-items: flex-end;">
+                        <canvas id="chartRatingBar" style="width: 100%; height: 100%;"></canvas>
+                    </div>
+                </div>
+                <div class="panel-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+                    <h2 class="panel-card-title">Rasio Rating Pengguna</h2>
+                    <div class="rating-progress-container">
+                        
+                        
+                        
+                        
+                        
+                        
+                        <div class="progress-bar-item">
+                            <div class="pb-label">5 ★</div>
+                            <div class="pb-wrapper"><div class="pb-fill fill-pos" style="width: 68.03%"></div></div>
+                            <div class="pb-percent">68.03%</div>
+                        </div>
+                        <div class="progress-bar-item">
+                            <div class="pb-label">4 ★</div>
+                            <div class="pb-wrapper"><div class="pb-fill fill-pos-light" style="width: 7.06%"></div></div>
+                            <div class="pb-percent">7.06%</div>
+                        </div>
+                        <div class="progress-bar-item">
+                            <div class="pb-label">3 ★</div>
+                            <div class="pb-wrapper"><div class="pb-fill fill-neu" style="width: 4.61%"></div></div>
+                            <div class="pb-percent">4.61%</div>
+                        </div>
+                        <div class="progress-bar-item">
+                            <div class="pb-label">2 ★</div>
+                            <div class="pb-wrapper"><div class="pb-fill fill-neg-light" style="width: 3.68%"></div></div>
+                            <div class="pb-percent">3.68%</div>
+                        </div>
+                        <div class="progress-bar-item">
+                            <div class="pb-label">1 ★</div>
+                            <div class="pb-wrapper"><div class="pb-fill fill-neg" style="width: 16.62%"></div></div>
+                            <div class="pb-percent">16.62%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="panel-card bg-gradient-card">
+                <h2 class="panel-card-title">🔍 Fakta Utama & Interpretasi Analisis</h2>
+                <div class="row-grid-2" style="gap: 2rem;">
+                    <div class="overview-highlight-box border-pos">
+                        <h3>📈 Loyalitas Pengguna & Brand Advocacy</h3>
+                        <p>Dominasi rating bintang 5 yang mencapai <strong>68.03%</strong> (54,854 ulasan) memperlihatkan tingkat apresiasi yang sangat tinggi terhadap fungsionalitas inti aplikasi. Hal ini menunjukkan kepuasan pengguna yang kuat dan merupakan aset utama dalam menjaga loyalitas pengguna.</p>
+                    </div>
+                    <div class="overview-highlight-box border-neg">
+                        <h3>⚠️ Titik Kritis Keluhan & Potensi Churn</h3>
+                        
+                        
+                            
+                                
+                                
+                                
+                                <p>Tingkat komplain bintang 1 yang berada di angka <strong>16.62%</strong> (13,402 ulasan) merupakan <em>critical path</em> yang memerlukan tindakan segera. Isu utama terdeteksi pada kategori <strong>Masalah Akses Login</strong> (terkait: Pengguna gagal masuk ke aplikasi setelah melakukan pembaruan, Pengguna mengalami kesulitan saat mencoba masuk ke aplikasi). Masalah ini menjadi pemicu utama ulasan negatif dan berpotensi meningkatkan tingkat churn pengguna secara signifikan.</p>
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                        
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+
+        <!-- ---------------- TAB: KELUHAN ---------------- -->
+        <div id="keluhan" class="tab-panel">
+            <div class="panel-card">
+                <h2 class="panel-card-title">Detail Kategori Isu (Berdasarkan Sentimen & Dampak)</h2>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Sentimen</th>
+                                <th>Kategori Bisnis</th>
+                                <th>Grup Isu</th>
+                                <th>Jumlah Ulasan</th>
+                                <th>Rata-rata Rating</th>
+                                <th>Contoh Isu</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td><strong>Masalah Akses Login</strong></td>
+                                <td><code>LOGIN_FAILURE</code></td>
+                                <td style="text-align: right;">6,059</td>
+                                <td style="text-align: right; font-weight: 600;">1.18 ★</td>
+                                <td>Pengguna gagal masuk ke aplikasi setelah melakukan pembaruan, Pengguna mengalami kesulitan saat mencoba masuk ke aplikasi</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td><strong>Masalah Akses Aplikasi</strong></td>
+                                <td><code>APP_LAUNCH_FAILURE</code></td>
+                                <td style="text-align: right;">5,537</td>
+                                <td style="text-align: right; font-weight: 600;">1.2 ★</td>
+                                <td>Aplikasi tidak dapat dibuka setelah proses pembaruan selesai, Aplikasi mengalami kegagalan saat dibuka atau diakses</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td><strong>Masalah Pembaruan Aplikasi</strong></td>
+                                <td><code>UPDATE_LOOP_ERROR</code></td>
+                                <td style="text-align: right;">1,186</td>
+                                <td style="text-align: right; font-weight: 600;">1.19 ★</td>
+                                <td>Aplikasi terus menerus meminta pembaruan secara berulang, Frekuensi pembaruan aplikasi yang terlalu sering</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td><strong>Masalah Stabilitas Aplikasi</strong></td>
+                                <td><code>APP_PERFORMANCE_ISSUE</code></td>
+                                <td style="text-align: right;">539</td>
+                                <td style="text-align: right; font-weight: 600;">1.14 ★</td>
+                                <td>Aplikasi sering mengalami error saat digunakan, Aplikasi mengalami error teknis secara umum</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td><strong>Keluhan Layanan Pengguna</strong></td>
+                                <td><code>USER_DISSATISFACTION</code></td>
+                                <td style="text-align: right;">444</td>
+                                <td style="text-align: right; font-weight: 600;">1.04 ★</td>
+                                <td>Proses klaim hak peserta dirasakan sangat dipersulit</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td><strong>Kualitas Layanan Aplikasi</strong></td>
+                                <td><code>APP_PERFORMANCE_ISSUE</code></td>
+                                <td style="text-align: right;">426</td>
+                                <td style="text-align: right; font-weight: 600;">1.12 ★</td>
+                                <td>Performa aplikasi dinilai buruk dan tidak stabil</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td><strong>Kepuasan Pengguna</strong></td>
+                                <td><code>POSITIVE_FEEDBACK</code></td>
+                                <td style="text-align: right;">377</td>
+                                <td style="text-align: right; font-weight: 600;">1.29 ★</td>
+                                <td>Pengguna memberikan penilaian positif terhadap aplikasi, Pengguna memberikan apresiasi positif terhadap manfaat aplikasi</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td><strong>Masalah Stabilitas Aplikasi</strong></td>
+                                <td><code>FORCE_CLOSE_ERROR</code></td>
+                                <td style="text-align: right;">368</td>
+                                <td style="text-align: right; font-weight: 600;">1.17 ★</td>
+                                <td>Aplikasi tertutup otomatis saat mencoba dibuka</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td><strong>Masalah Pengkinian Data</strong></td>
+                                <td><code>SERVER_CONNECTION_ERROR</code></td>
+                                <td style="text-align: right;">301</td>
+                                <td style="text-align: right; font-weight: 600;">1.2 ★</td>
+                                <td>Gagal terhubung ke server saat proses pengkinian data</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td><strong>Stabilitas Aplikasi</strong></td>
+                                <td><code>APP_CRASH_STABILITY</code></td>
+                                <td style="text-align: right;">301</td>
+                                <td style="text-align: right; font-weight: 600;">1.22 ★</td>
+                                <td>Aplikasi tidak dapat dibuka dalam jangka waktu lama, Aplikasi mengalami kendala saat proses pembukaan, Aplikasi berhenti merespon saat proses login</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td><strong>Masalah Klaim JHT</strong></td>
+                                <td><code>CLAIM_PROCESS_FAILURE</code></td>
+                                <td style="text-align: right;">280</td>
+                                <td style="text-align: right; font-weight: 600;">1.17 ★</td>
+                                <td>Proses pengajuan klaim JHT sering gagal dan lambat</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td><strong>Kualitas Layanan Pengguna</strong></td>
+                                <td><code>SERVICE_QUALITY_ISSUE</code></td>
+                                <td style="text-align: right;">121</td>
+                                <td style="text-align: right; font-weight: 600;">1.11 ★</td>
+                                <td>Pelayanan digital dinilai lambat dan kurang memuaskan</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td><strong>Verifikasi Identitas</strong></td>
+                                <td><code>BIOMETRIC_VERIFICATION_FAIL</code></td>
+                                <td style="text-align: right;">74</td>
+                                <td style="text-align: right; font-weight: 600;">1.09 ★</td>
+                                <td>Kegagalan proses verifikasi biometrik saat klaim JHT</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td><strong>Lain-lain / Noise</strong></td>
+                                <td><code>OVERALL_SATISFACTION</code></td>
+                                <td style="text-align: right;">73</td>
+                                <td style="text-align: right; font-weight: 600;">1.15 ★</td>
+                                <td>Ulasan umum/noise</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td><strong>Stabilitas Aplikasi</strong></td>
+                                <td><code>APP_FORCE_CLOSE</code></td>
+                                <td style="text-align: right;">65</td>
+                                <td style="text-align: right; font-weight: 600;">1.03 ★</td>
+                                <td>Aplikasi tertutup secara otomatis saat digunakan</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td><strong>Layanan Pelanggan</strong></td>
+                                <td><code>CUSTOMER_SERVICE_ISSUE</code></td>
+                                <td style="text-align: right;">53</td>
+                                <td style="text-align: right; font-weight: 600;">1.09 ★</td>
+                                <td>Respon layanan pelanggan lambat dan kurang memuaskan</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td><strong>Kualitas Layanan</strong></td>
+                                <td><code>GENERAL_DISSATISFACTION</code></td>
+                                <td style="text-align: right;">52</td>
+                                <td style="text-align: right; font-weight: 600;">1.04 ★</td>
+                                <td>Ketidakpuasan umum terhadap performa aplikasi</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td><strong>Manajemen Data Kepesertaan</strong></td>
+                                <td><code>DATA_SYNC_ERROR</code></td>
+                                <td style="text-align: right;">49</td>
+                                <td style="text-align: right; font-weight: 600;">1.16 ★</td>
+                                <td>Data kepesertaan gagal dimuat atau tidak ditemukan</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td><strong>Pembaruan Aplikasi</strong></td>
+                                <td><code>UPDATE_FREQUENCY_ISSUE</code></td>
+                                <td style="text-align: right;">33</td>
+                                <td style="text-align: right; font-weight: 600;">1.24 ★</td>
+                                <td>Frekuensi pembaruan aplikasi yang terlalu sering</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td><strong>Pengalaman Pengguna</strong></td>
+                                <td><code>UI_UX_IMPROVEMENT</code></td>
+                                <td style="text-align: right;">31</td>
+                                <td style="text-align: right; font-weight: 600;">1.26 ★</td>
+                                <td>Kesulitan input tanggal lahir karena antarmuka tidak efisien</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neu">
+                                        netral
+                                    </span>
+                                </td>
+                                <td><strong>Stabilitas Aplikasi</strong></td>
+                                <td><code>APP_CRASH_UPDATE</code></td>
+                                <td style="text-align: right;">1,959</td>
+                                <td style="text-align: right; font-weight: 600;">3.0 ★</td>
+                                <td>Aplikasi tidak dapat dibuka setelah melakukan pembaruan, Aplikasi mengalami kegagalan saat dibuka, Aplikasi tidak dapat diakses atau dibuka</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neu">
+                                        netral
+                                    </span>
+                                </td>
+                                <td><strong>Kepuasan Pengguna</strong></td>
+                                <td><code>POSITIVE_FEEDBACK</code></td>
+                                <td style="text-align: right;">580</td>
+                                <td style="text-align: right; font-weight: 600;">3.0 ★</td>
+                                <td>Ulasan positif umum mengenai kualitas aplikasi, Ulasan positif mengenai manfaat aplikasi, Ulasan positif singkat dari pengguna</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neu">
+                                        netral
+                                    </span>
+                                </td>
+                                <td><strong>Manajemen Pembaruan Aplikasi</strong></td>
+                                <td><code>FORCE_UPDATE_LOOP</code></td>
+                                <td style="text-align: right;">366</td>
+                                <td style="text-align: right; font-weight: 600;">3.0 ★</td>
+                                <td>Aplikasi terus menerus meminta pembaruan saat akan dibuka, Frekuensi pembaruan aplikasi yang terlalu sering</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neu">
+                                        netral
+                                    </span>
+                                </td>
+                                <td><strong>Layanan Klaim JHT</strong></td>
+                                <td><code>CLAIM_JHT_ERROR</code></td>
+                                <td style="text-align: right;">243</td>
+                                <td style="text-align: right; font-weight: 600;">3.0 ★</td>
+                                <td>Kegagalan klaim JHT dan kendala akses akun, Kendala dalam proses klaim dan pengecekan saldo JHT</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neu">
+                                        netral
+                                    </span>
+                                </td>
+                                <td><strong>Pengalaman Pengguna</strong></td>
+                                <td><code>POSITIVE_FEEDBACK</code></td>
+                                <td style="text-align: right;">103</td>
+                                <td style="text-align: right; font-weight: 600;">3.0 ★</td>
+                                <td>Aplikasi memberikan kemudahan dan kenyamanan penggunaan, Aplikasi sangat membantu dalam pengecekan jaminan, Aplikasi memudahkan akses informasi dan investasi</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neu">
+                                        netral
+                                    </span>
+                                </td>
+                                <td><strong>Lain-lain / Noise</strong></td>
+                                <td><code>OVERALL_SATISFACTION</code></td>
+                                <td style="text-align: right;">91</td>
+                                <td style="text-align: right; font-weight: 600;">3.0 ★</td>
+                                <td>Ulasan umum/noise</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neu">
+                                        netral
+                                    </span>
+                                </td>
+                                <td><strong>Stabilitas Aplikasi</strong></td>
+                                <td><code>APP_STABILITY_ISSUE</code></td>
+                                <td style="text-align: right;">83</td>
+                                <td style="text-align: right; font-weight: 600;">3.0 ★</td>
+                                <td>Aplikasi sering mengalami error saat digunakan</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neu">
+                                        netral
+                                    </span>
+                                </td>
+                                <td><strong>Pengelolaan Data Pengguna</strong></td>
+                                <td><code>DATA_UPDATE_FAIL</code></td>
+                                <td style="text-align: right;">74</td>
+                                <td style="text-align: right; font-weight: 600;">3.0 ★</td>
+                                <td>Kegagalan dalam proses pengkinian data</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neu">
+                                        netral
+                                    </span>
+                                </td>
+                                <td><strong>Manajemen Pembaruan Aplikasi</strong></td>
+                                <td><code>UPDATE_FREQUENCY</code></td>
+                                <td style="text-align: right;">51</td>
+                                <td style="text-align: right; font-weight: 600;">3.0 ★</td>
+                                <td>Frekuensi pembaruan aplikasi dianggap terlalu sering, Kewajiban pembaruan berulang dalam waktu singkat, Keluhan pengguna terhadap frekuensi pembaruan yang tinggi</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neu">
+                                        netral
+                                    </span>
+                                </td>
+                                <td><strong>Kepuasan Pengguna</strong></td>
+                                <td><code>APP_STABILITY_ISSUE</code></td>
+                                <td style="text-align: right;">42</td>
+                                <td style="text-align: right; font-weight: 600;">3.0 ★</td>
+                                <td>Pemberian rating sementara karena kendala teknis</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neu">
+                                        netral
+                                    </span>
+                                </td>
+                                <td><strong>Pengalaman Pengguna</strong></td>
+                                <td><code>FEATURE_REQUEST</code></td>
+                                <td style="text-align: right;">36</td>
+                                <td style="text-align: right; font-weight: 600;">3.0 ★</td>
+                                <td>Harapan pengguna untuk peningkatan kualitas aplikasi, Permintaan peningkatan kualitas layanan secara berkelanjutan</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neu">
+                                        netral
+                                    </span>
+                                </td>
+                                <td><strong>Masalah Teknis Aplikasi</strong></td>
+                                <td><code>APP_CRASH</code></td>
+                                <td style="text-align: right;">31</td>
+                                <td style="text-align: right; font-weight: 600;">3.0 ★</td>
+                                <td>Aplikasi tertutup sendiri setelah pembaruan, Aplikasi tidak dapat dibuka setelah melakukan pembaruan</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neu">
+                                        netral
+                                    </span>
+                                </td>
+                                <td><strong>Masalah Teknis Perangkat</strong></td>
+                                <td><code>DEVICE_COMPATIBILITY_ISSUE</code></td>
+                                <td style="text-align: right;">27</td>
+                                <td style="text-align: right; font-weight: 600;">3.0 ★</td>
+                                <td>Aplikasi mengalami force close pada perangkat Redmi</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neu">
+                                        netral
+                                    </span>
+                                </td>
+                                <td><strong>Masalah Akses Akun</strong></td>
+                                <td><code>LOGIN_ERROR</code></td>
+                                <td style="text-align: right;">21</td>
+                                <td style="text-align: right; font-weight: 600;">3.0 ★</td>
+                                <td>Aplikasi keluar otomatis saat proses login</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neu">
+                                        netral
+                                    </span>
+                                </td>
+                                <td><strong>Masalah Teknis Aplikasi</strong></td>
+                                <td><code>PERFORMANCE_ISSUE</code></td>
+                                <td style="text-align: right;">11</td>
+                                <td style="text-align: right; font-weight: 600;">3.0 ★</td>
+                                <td>Proses loading aplikasi berjalan sangat lambat</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td><strong>Kepuasan Pengguna Umum</strong></td>
+                                <td><code>POSITIVE_FEEDBACK</code></td>
+                                <td style="text-align: right;">46,890</td>
+                                <td style="text-align: right; font-weight: 600;">4.93 ★</td>
+                                <td>Ulasan positif umum mengenai pengalaman pengguna, Aplikasi dianggap sangat membantu dan bermanfaat, Ulasan positif mengenai kualitas aplikasi</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td><strong>Masalah Akses Aplikasi</strong></td>
+                                <td><code>APP_CRASH_OR_ACCESS</code></td>
+                                <td style="text-align: right;">4,603</td>
+                                <td style="text-align: right; font-weight: 600;">4.75 ★</td>
+                                <td>Aplikasi tidak dapat dibuka atau diakses</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td><strong>Layanan Informasi Saldo</strong></td>
+                                <td><code>FEATURE_UTILITY</code></td>
+                                <td style="text-align: right;">2,008</td>
+                                <td style="text-align: right; font-weight: 600;">4.93 ★</td>
+                                <td>Kemudahan dalam pengecekan saldo JHT</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td><strong>Kualitas Layanan Digital</strong></td>
+                                <td><code>POSITIVE_FEEDBACK</code></td>
+                                <td style="text-align: right;">1,834</td>
+                                <td style="text-align: right; font-weight: 600;">4.94 ★</td>
+                                <td>Pelayanan aplikasi dinilai cepat dan memuaskan, Respon aplikasi dinilai cepat dan akurat</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td><strong>Masalah Layanan Klaim</strong></td>
+                                <td><code>CLAIM_PROCESS_ERROR</code></td>
+                                <td style="text-align: right;">978</td>
+                                <td style="text-align: right; font-weight: 600;">4.82 ★</td>
+                                <td>Kendala biometrik dan ketidaksesuaian data klaim JHT</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td><strong>Ulasan Positif Pengguna</strong></td>
+                                <td><code>POSITIVE_FEEDBACK</code></td>
+                                <td style="text-align: right;">939</td>
+                                <td style="text-align: right; font-weight: 600;">4.94 ★</td>
+                                <td>Pengguna merasa aplikasi sangat membantu kebutuhan mereka, Pengguna merasa puas dengan kelancaran proses aplikasi, Apresiasi umum terhadap kinerja aplikasi</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td><strong>Peningkatan Kualitas Layanan</strong></td>
+                                <td><code>SYSTEM_IMPROVEMENT</code></td>
+                                <td style="text-align: right;">740</td>
+                                <td style="text-align: right; font-weight: 600;">4.85 ★</td>
+                                <td>Permintaan perbaikan sistem dan stabilitas aplikasi, Saran untuk terus meningkatkan kualitas pelayanan aplikasi, Pentingnya pembaruan aplikasi secara berkala</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td><strong>Masalah Stabilitas Aplikasi</strong></td>
+                                <td><code>APP_STABILITY_ISSUE</code></td>
+                                <td style="text-align: right;">635</td>
+                                <td style="text-align: right; font-weight: 600;">4.69 ★</td>
+                                <td>Aplikasi sering mengalami error atau gangguan teknis</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td><strong>Masalah Pembaruan Aplikasi</strong></td>
+                                <td><code>UPDATE_LOOP_ISSUE</code></td>
+                                <td style="text-align: right;">603</td>
+                                <td style="text-align: right; font-weight: 600;">4.64 ★</td>
+                                <td>Aplikasi terus meminta pembaruan data secara berulang</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td><strong>Masalah Akses Aplikasi</strong></td>
+                                <td><code>LOGIN_ERROR</code></td>
+                                <td style="text-align: right;">449</td>
+                                <td style="text-align: right; font-weight: 600;">4.8 ★</td>
+                                <td>Aplikasi tidak dapat dibuka atau diakses oleh pengguna, Kendala teknis saat membuka aplikasi</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td><strong>Lain-lain / Noise</strong></td>
+                                <td><code>OVERALL_SATISFACTION</code></td>
+                                <td style="text-align: right;">364</td>
+                                <td style="text-align: right; font-weight: 600;">4.9 ★</td>
+                                <td>Ulasan umum/noise</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td><strong>Manfaat Layanan Jaminan</strong></td>
+                                <td><code>FEATURE_BENEFIT</code></td>
+                                <td style="text-align: right;">237</td>
+                                <td style="text-align: right; font-weight: 600;">4.96 ★</td>
+                                <td>Aplikasi membantu pengelolaan tabungan hari tua</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td><strong>Akses Informasi Layanan</strong></td>
+                                <td><code>INFORMATION_ACCESS</code></td>
+                                <td style="text-align: right;">123</td>
+                                <td style="text-align: right; font-weight: 600;">4.84 ★</td>
+                                <td>Kemudahan mendapatkan informasi dan update data klaim</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td><strong>Akses Informasi Layanan</strong></td>
+                                <td><code>BALANCE_CHECK</code></td>
+                                <td style="text-align: right;">107</td>
+                                <td style="text-align: right; font-weight: 600;">4.88 ★</td>
+                                <td>Kemudahan dalam melakukan pengecekan saldo jaminan</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td><strong>Pengalaman Pengguna</strong></td>
+                                <td><code>USER_EXPERIENCE</code></td>
+                                <td style="text-align: right;">40</td>
+                                <td style="text-align: right; font-weight: 600;">4.8 ★</td>
+                                <td>Aplikasi dinilai mudah digunakan dan bermanfaat</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- ---------------- TAB: KINERJA CS ---------------- -->
+        <div id="kinerja-cs" class="tab-panel">
+            <div class="panel-card">
+                <h2 class="panel-card-title">Kinerja Penanganan Keluhan (Customer Service)</h2>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Kategori Bisnis</th>
+                                <th>Total Komplain</th>
+                                <th>Replied</th>
+                                <th>Reply Rate (%)</th>
+                                <th>Median Delay (Jam)</th>
+                                <th>Redirect (%)</th>
+                                <th>Template Balasan Admin</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td><strong>Masalah Akses Login</strong></td>
+                                <td style="text-align: right;">6,059</td>
+                                <td style="text-align: right;">3,044</td>
+                                <td style="text-align: right; color: var(--accent-green); font-weight: 600;">50.24%</td>
+                                <td style="text-align: right;">26.54 jam</td>
+                                <td style="text-align: right;">77.79%</td>
+                                <td style="max-width: 400px; font-size: 0.8rem; color: var(--text-muted); font-style: italic;">"Hi Bapak Wandi Davin, mohon maaf atas kendala aplikasi Jamsostek Mobile (JMO) yang tidak dapat dibuka. Kami sarankan untuk hapus memori (clear cach..."</td>
+                            </tr>
+                            
+                            <tr>
+                                <td><strong>Masalah Akses Aplikasi</strong></td>
+                                <td style="text-align: right;">5,537</td>
+                                <td style="text-align: right;">2,436</td>
+                                <td style="text-align: right; color: var(--accent-green); font-weight: 600;">43.99%</td>
+                                <td style="text-align: right;">17.16 jam</td>
+                                <td style="text-align: right;">75.66%</td>
+                                <td style="max-width: 400px; font-size: 0.8rem; color: var(--text-muted); font-style: italic;">"Hi Bapak Rian Firmansyah, mohon maaf atas kendala login pada aplikasi Jamsostek Mobile (JMO). Silakan memastikan email/akun dan kata sandi yang dig..."</td>
+                            </tr>
+                            
+                            <tr>
+                                <td><strong>Masalah Pembaruan Aplikasi</strong></td>
+                                <td style="text-align: right;">1,186</td>
+                                <td style="text-align: right;">491</td>
+                                <td style="text-align: right; color: var(--accent-green); font-weight: 600;">41.4%</td>
+                                <td style="text-align: right;">25.65 jam</td>
+                                <td style="text-align: right;">69.04%</td>
+                                <td style="max-width: 400px; font-size: 0.8rem; color: var(--text-muted); font-style: italic;">"Hi Bapak Giok Fatahilah, terima kasih atas ulasan yang diberikan. Mohon maaf atas kendala yang Bapak alami pada aplikasi Jamsostek Mobile (JMO). Si..."</td>
+                            </tr>
+                            
+                            <tr>
+                                <td><strong>Masalah Stabilitas Aplikasi</strong></td>
+                                <td style="text-align: right;">907</td>
+                                <td style="text-align: right;">375</td>
+                                <td style="text-align: right; color: var(--accent-green); font-weight: 600;">41.35%</td>
+                                <td style="text-align: right;">25.78 jam</td>
+                                <td style="text-align: right;">63.47%</td>
+                                <td style="max-width: 400px; font-size: 0.8rem; color: var(--text-muted); font-style: italic;">"Hi Bapak Dwi Prasetyo, terima kasih atas ulasan yang diberikan. Mohon maaf atas kendala akses aplikasi, kami memahami yang Bapak rasakan saat mengg..."</td>
+                            </tr>
+                            
+                            <tr>
+                                <td><strong>Keluhan Layanan Pengguna</strong></td>
+                                <td style="text-align: right;">444</td>
+                                <td style="text-align: right;">236</td>
+                                <td style="text-align: right; color: var(--accent-green); font-weight: 600;">53.15%</td>
+                                <td style="text-align: right;">40.08 jam</td>
+                                <td style="text-align: right;">66.1%</td>
+                                <td style="max-width: 400px; font-size: 0.8rem; color: var(--text-muted); font-style: italic;">"Hi Bapak/Ibu Peserta BPJS Ketenagakerjaan, terima kasih atas ulasan yang diberikan. Mohon maaf atas kendala akses aplikasi, kami memahami yang Bapa..."</td>
+                            </tr>
+                            
+                            <tr>
+                                <td><strong>Kualitas Layanan Aplikasi</strong></td>
+                                <td style="text-align: right;">426</td>
+                                <td style="text-align: right;">206</td>
+                                <td style="text-align: right; color: var(--accent-green); font-weight: 600;">48.36%</td>
+                                <td style="text-align: right;">22.13 jam</td>
+                                <td style="text-align: right;">62.14%</td>
+                                <td style="max-width: 400px; font-size: 0.8rem; color: var(--text-muted); font-style: italic;">"Hi Bpk/Ibu, mohon maaf atas kendala yang dialami pada aplikasi Jamsostek Mobile (JMO). Silakan coba menutup aplikasi, membersihkan cache, serta mem..."</td>
+                            </tr>
+                            
+                            <tr>
+                                <td><strong>Kepuasan Pengguna</strong></td>
+                                <td style="text-align: right;">377</td>
+                                <td style="text-align: right;">216</td>
+                                <td style="text-align: right; color: var(--accent-green); font-weight: 600;">57.29%</td>
+                                <td style="text-align: right;">25.03 jam</td>
+                                <td style="text-align: right;">56.02%</td>
+                                <td style="max-width: 400px; font-size: 0.8rem; color: var(--text-muted); font-style: italic;">"Hi Bapak Try Ardi, terima kasih atas feedback positifnya ya. Tks -MT"</td>
+                            </tr>
+                            
+                            <tr>
+                                <td><strong>Stabilitas Aplikasi</strong></td>
+                                <td style="text-align: right;">366</td>
+                                <td style="text-align: right;">147</td>
+                                <td style="text-align: right; color: var(--accent-green); font-weight: 600;">40.16%</td>
+                                <td style="text-align: right;">13.63 jam</td>
+                                <td style="text-align: right;">76.19%</td>
+                                <td style="max-width: 400px; font-size: 0.8rem; color: var(--text-muted); font-style: italic;">"Hi Bapak Dany Triprasetyo, terima kasih atas ulasan yang diberikan. Mohon maaf atas kendala login aplikasi Jamsostek Mobile (JMO). Kami sarankan un..."</td>
+                            </tr>
+                            
+                            <tr>
+                                <td><strong>Masalah Pengkinian Data</strong></td>
+                                <td style="text-align: right;">301</td>
+                                <td style="text-align: right;">174</td>
+                                <td style="text-align: right; color: var(--accent-green); font-weight: 600;">57.81%</td>
+                                <td style="text-align: right;">51.49 jam</td>
+                                <td style="text-align: right;">79.89%</td>
+                                <td style="max-width: 400px; font-size: 0.8rem; color: var(--text-muted); font-style: italic;">"Hi Bpk AGUS SURYANTO, mohon maaf atas pengalaman yang kurang menyenangkan saat menggunakan aplikasi Jamsostek Mobile (JMO). Kami sangat menghargai ..."</td>
+                            </tr>
+                            
+                            <tr>
+                                <td><strong>Masalah Klaim JHT</strong></td>
+                                <td style="text-align: right;">280</td>
+                                <td style="text-align: right;">125</td>
+                                <td style="text-align: right; color: var(--accent-green); font-weight: 600;">44.64%</td>
+                                <td style="text-align: right;">32.45 jam</td>
+                                <td style="text-align: right;">80.0%</td>
+                                <td style="max-width: 400px; font-size: 0.8rem; color: var(--text-muted); font-style: italic;">"Hi Bpk/Ibu, mohon maaf atas kendala lamanya proses klaim Jaminan Hari Tua (JHT). Apabila dana JHT belum diterima, silakan hubungi layanan Call Cent..."</td>
+                            </tr>
+                            
+                            <tr>
+                                <td><strong>Kualitas Layanan Pengguna</strong></td>
+                                <td style="text-align: right;">121</td>
+                                <td style="text-align: right;">61</td>
+                                <td style="text-align: right; color: var(--accent-green); font-weight: 600;">50.41%</td>
+                                <td style="text-align: right;">43.85 jam</td>
+                                <td style="text-align: right;">62.3%</td>
+                                <td style="max-width: 400px; font-size: 0.8rem; color: var(--text-muted); font-style: italic;">"Hi Bapak/Ibu, terima kasih atas ulasan yang diberikan. Mohon maaf atas kendala login aplikasi Jamsostek Mobile (JMO). Kami sarankan untuk memastika..."</td>
+                            </tr>
+                            
+                            <tr>
+                                <td><strong>Verifikasi Identitas</strong></td>
+                                <td style="text-align: right;">74</td>
+                                <td style="text-align: right;">59</td>
+                                <td style="text-align: right; color: var(--accent-green); font-weight: 600;">79.73%</td>
+                                <td style="text-align: right;">88.97 jam</td>
+                                <td style="text-align: right;">74.58%</td>
+                                <td style="max-width: 400px; font-size: 0.8rem; color: var(--text-muted); font-style: italic;">"Hi Bapak DJaya Suryaman, mohon maaf atas kendala klaim Jaminan Hari Tua (JHT). Agar dapat kami tindaklanjuti silakan hubungi layanan Call Center 17..."</td>
+                            </tr>
+                            
+                            <tr>
+                                <td><strong>Lain-lain / Noise</strong></td>
+                                <td style="text-align: right;">73</td>
+                                <td style="text-align: right;">27</td>
+                                <td style="text-align: right; color: var(--accent-green); font-weight: 600;">36.99%</td>
+                                <td style="text-align: right;">23.49 jam</td>
+                                <td style="text-align: right;">59.26%</td>
+                                <td style="max-width: 400px; font-size: 0.8rem; color: var(--text-muted); font-style: italic;">"Hi Bpk widadi fahmi, kami memahami yang Bpk rasakan. Jika Bpk berkenan menyampaikan detail kendala yang dialami, silakan menghubungi kami melalui l..."</td>
+                            </tr>
+                            
+                            <tr>
+                                <td><strong>Layanan Pelanggan</strong></td>
+                                <td style="text-align: right;">53</td>
+                                <td style="text-align: right;">24</td>
+                                <td style="text-align: right; color: var(--accent-green); font-weight: 600;">45.28%</td>
+                                <td style="text-align: right;">24.96 jam</td>
+                                <td style="text-align: right;">79.17%</td>
+                                <td style="max-width: 400px; font-size: 0.8rem; color: var(--text-muted); font-style: italic;">"Hi Bpk Reza Rezaldi, mohon maaf atas kendala klaim. Agar dapat kami tindaklanjuti silakan hubungi layanan Call Center 175 atau melalui kanal media ..."</td>
+                            </tr>
+                            
+                            <tr>
+                                <td><strong>Kualitas Layanan</strong></td>
+                                <td style="text-align: right;">52</td>
+                                <td style="text-align: right;">22</td>
+                                <td style="text-align: right; color: var(--accent-green); font-weight: 600;">42.31%</td>
+                                <td style="text-align: right;">26.19 jam</td>
+                                <td style="text-align: right;">63.64%</td>
+                                <td style="max-width: 400px; font-size: 0.8rem; color: var(--text-muted); font-style: italic;">"Hi Bapak Rudi, terima kasih atas ulasan Bapak terhadap aplikasi Jamsostek Mobile (JMO). Kami akan terus berupaya meningkatkan kualitas layanan agar..."</td>
+                            </tr>
+                            
+                            <tr>
+                                <td><strong>Manajemen Data Kepesertaan</strong></td>
+                                <td style="text-align: right;">49</td>
+                                <td style="text-align: right;">27</td>
+                                <td style="text-align: right; color: var(--accent-green); font-weight: 600;">55.1%</td>
+                                <td style="text-align: right;">29.94 jam</td>
+                                <td style="text-align: right;">77.78%</td>
+                                <td style="max-width: 400px; font-size: 0.8rem; color: var(--text-muted); font-style: italic;">"Hi Bapak Asep, terima kasih atas ulasan yang diberikan. Mohon maaf atas kendala memasukkan kartu kepesertaan, pastikan mengisi nomor yang sesuai ya..."</td>
+                            </tr>
+                            
+                            <tr>
+                                <td><strong>Pembaruan Aplikasi</strong></td>
+                                <td style="text-align: right;">33</td>
+                                <td style="text-align: right;">17</td>
+                                <td style="text-align: right; color: var(--accent-green); font-weight: 600;">51.52%</td>
+                                <td style="text-align: right;">20.63 jam</td>
+                                <td style="text-align: right;">82.35%</td>
+                                <td style="max-width: 400px; font-size: 0.8rem; color: var(--text-muted); font-style: italic;">"Hi Ibu Restu, terima kasih atas ulasan yang diberikan. Mohon maaf atas kendala pada aplikasi Jamsostek Mobile (JMO). Permintaan pembaruan aplikasi ..."</td>
+                            </tr>
+                            
+                            <tr>
+                                <td><strong>Pengalaman Pengguna</strong></td>
+                                <td style="text-align: right;">31</td>
+                                <td style="text-align: right;">21</td>
+                                <td style="text-align: right; color: var(--accent-green); font-weight: 600;">67.74%</td>
+                                <td style="text-align: right;">25.63 jam</td>
+                                <td style="text-align: right;">66.67%</td>
+                                <td style="max-width: 400px; font-size: 0.8rem; color: var(--text-muted); font-style: italic;">"Hi Bapak Suprayitno, terima kasih atas ulasan yang diberikan. Mohon maaf atas kendala daftar akun, kami memahami yang Bapak rasakan saat menggunaka..."</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- ---------------- TAB: NARASI INSIGHT ---------------- -->
+        <div id="narasi-ai" class="tab-panel">
+            <div class="panel-card">
+                <h2 class="panel-card-title">Laporan Analisis Insight (Hasil LLM Gemini)</h2>
+                <div class="prose">
+                    <h1>Laporan Insight Analisis Ulasan — JMO (Jamsostek Mobile)</h1>
+<blockquote>
+<p>Dibuat otomatis pada 2026-06-25 11:40:56 menggunakan gemini-3.1-flash-lite
+Sumber data: output/json/eda_summary.json
+⚠️ <strong>Catatan Cakupan Data:</strong> Analisis ini hanya mencakup ulasan yang memiliki teks komentar. Ulasan dengan rating tanpa komentar tidak diikutsertakan, sehingga distribusi sentimen mencerminkan pengguna yang aktif memberikan pendapat dan dapat condong ke arah negatif dibanding populasi pengguna keseluruhan.</p>
+</blockquote>
+<hr />
+<p>Berikut adalah laporan analisis data sentimen untuk aplikasi <strong>JMO (Jamsostek Mobile)</strong> berdasarkan data periode 15 Juni 2025 hingga 15 Juni 2026.</p>
+<hr />
+<h2>1. Ringkasan Umum</h2>
+<p>Aplikasi JMO menerima total <strong>80.637 ulasan</strong> dalam setahun terakhir. Distribusi sentimen menunjukkan dominasi <strong>sentimen positif sebesar 75,09% (60.550 ulasan)</strong>, diikuti oleh <strong>sentimen negatif 20,3% (16.369 ulasan)</strong>, dan <strong>sentimen netral 4,61% (3.718 ulasan)</strong>.</p>
+<p>Distribusi rating menunjukkan polarisasi yang kuat dengan <strong>68,02% ulasan memberikan rating bintang 5 (54.854 ulasan)</strong>. Sebaliknya, terdapat pula akumulasi rating bintang 1 yang signifikan sebanyak <strong>16,62% (13.402 ulasan)</strong>, menunjukkan adanya segmen pengguna yang sangat loyal berhadapan dengan kelompok yang mengalami kendala teknis krusial. Secara keseluruhan, model klasifikasi memiliki tingkat kepercayaan (<strong>confidence rate</strong>) yang sangat tinggi di angka <strong>97,7%</strong>.</p>
+<hr />
+<h2>2. Analisis Sentimen Negatif &amp; Korelasi Versi</h2>
+<p>Masalah utama yang mendominasi keluhan pengguna berkaitan erat dengan stabilitas sistem pasca-pembaruan. Berikut adalah <em>pain points</em> utama:</p>
+<ul>
+<li><strong>Pengguna gagal masuk ke aplikasi setelah melakukan pembaruan</strong>: 5.701 ulasan.</li>
+<li><strong>Aplikasi tidak dapat dibuka setelah proses pembaruan selesai</strong>: 4.659 ulasan.</li>
+<li><strong>Aplikasi terus menerus meminta pembaruan secara berulang</strong>: 1.070 ulasan.</li>
+</ul>
+<p>Kata kunci seperti <strong>"dibuka"</strong>, <strong>"update"</strong>, <strong>"buka"</strong>, <strong>"tolong"</strong>, dan <strong>"login"</strong> mendominasi keluhan, mencerminkan frustrasi pengguna yang terhambat aksesnya.
+<strong>Korelasi Versi:</strong> Versi <strong>4.15.5</strong> menjadi versi paling bermasalah dengan <strong>25,18% ulasan negatif</strong> dan rata-rata rating hanya <strong>3,85</strong>. Sebagai perbandingan, versi <strong>4.15.14</strong> jauh lebih stabil dengan persentase ulasan negatif yang jauh lebih rendah, yakni <strong>11,97%</strong>, dan rating rata-rata <strong>4,41</strong>.</p>
+<hr />
+<h2>3. Analisis Temporal &amp; Lonjakan (Spike Detection)</h2>
+<p>Tren bulanan menunjukkan fluktuasi stabilitas, di mana rasio sentimen bersih (net sentiment) anjlok ke titik terendah pada <strong>Mei 2026 (0,3881)</strong>, bertepatan dengan kenaikan tajam ulasan negatif.</p>
+<p><strong>Lonjakan ulasan negatif signifikan terjadi pada:</strong></p>
+<ul>
+<li><strong>24 Juni 2025:</strong> Terdapat <strong>318 ulasan negatif</strong> dengan rata-rata rating <strong>1,17</strong>. Isu utama adalah kegagalan masuk dan aplikasi yang tidak bisa dibuka setelah <em>update</em>.</li>
+<li><strong>29 Mei 2026:</strong> Terjadi lonjakan serupa sebanyak <strong>318 ulasan negatif</strong> dengan rata-rata rating <strong>1,21</strong>, didominasi oleh kendala akses aplikasi pasca-pembaruan.</li>
+</ul>
+<hr />
+<h2>4. Analisis Sentimen Positif</h2>
+<p>Pengguna sangat mengapresiasi efisiensi yang ditawarkan JMO. Topik positif yang paling disukai adalah:</p>
+<ul>
+<li><strong>Ulasan positif umum mengenai pengalaman pengguna</strong>: 23.776 ulasan.</li>
+<li><strong>Aplikasi dianggap sangat membantu dan bermanfaat</strong>: 7.288 ulasan.</li>
+<li><strong>Ulasan positif mengenai kualitas aplikasi</strong>: 6.694 ulasan.</li>
+</ul>
+<p>Kata kunci seperti <strong>"ok"</strong>, <strong>"keren"</strong>, <strong>"bagus"</strong>, dan <strong>"memuaskan"</strong> sering muncul. Khusus untuk topik <strong>"Kendala biometrik dan ketidaksesuaian data klaim JHT"</strong>, meskipun kategorinya teknis, ia memiliki <strong>7.674 total thumbs_up</strong>. Mengingat jumlah ulasannya 978, topik ini memiliki rasio <em>thumbs_up</em> per ulasan yang sangat tinggi (sekitar <strong>7,8x lebih banyak</strong> dibanding rata-rata ulasan lainnya), menandakan isu ini sangat krusial bagi komunitas pengguna.</p>
+<hr />
+<h2>5. Kinerja Customer Service</h2>
+<p>Performa CS mencatatkan <em>reply rate</em> rata-rata sebesar <strong>47,09%</strong> dengan waktu respon median <strong>24,74 jam</strong>. Tingkat redireksi ke kanal bantuan lain sangat tinggi, yakni <strong>74,26%</strong>.</p>
+<ul>
+<li><strong>Reply Rate:</strong> Kategori <strong>Keluhan Layanan Pengguna</strong> memiliki <em>reply rate</em> tertinggi (<strong>53,15%</strong>), sementara kategori <strong>Masalah Stabilitas Aplikasi</strong> memiliki <em>reply rate</em> terendah di antara kategori utama (<strong>41,35%</strong>).</li>
+<li><strong>Waktu Respon:</strong> Respon tercepat diberikan pada kategori <strong>Stabilitas Aplikasi</strong> (median <strong>13,63 jam</strong>), sedangkan respon paling lambat terjadi pada kategori <strong>Verifikasi Identitas</strong> (median <strong>88,97 jam</strong>).</li>
+</ul>
+<p><strong>Rekomendasi:</strong> CS perlu mempercepat waktu respon untuk isu verifikasi identitas dan meningkatkan konsistensi reply rate pada topik teknis (stabilitas aplikasi) guna menurunkan volume ulasan negatif yang berulang.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ---------------- TAB: ULASAN LOW CONFIDENCE ---------------- -->
+        <div id="ulasan-low" class="tab-panel">
+            <div class="panel-card">
+                <h2 class="panel-card-title">Top 50 Ulasan dengan Keyakinan Klasifikasi Rendah (Ambigu/Noise)</h2>
+                <div class="prose" style="margin-bottom: 1rem;">
+                    <p>Ulasan di bawah tergolong ambigu bagi model (misal ulasan berisi slang, simbol, typo berat, atau kalimat kontradiktif) sehingga tingkat probabilitas topik di bawah 0.5. Ulasan ini layak di-review manual oleh tim QA.</p>
+                </div>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Sentimen</th>
+                                <th>Isi Ulasan Pengguna</th>
+                                <th>Topik Terprediksi</th>
+                                <th>Kategori Bisnis</th>
+                                <th>Probabilitas Topik</th>
+                                <th>Topik Alternatif 1</th>
+                                <th>Probabilitas Alt 1</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">kenapa jmo saya tidak bisa</td>
+                                <td><code>Baik Awesome Biasa</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Buka Bisa Tidak</code></td>
+                                <td style="text-align: right;">0.7735</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">tenks</td>
+                                <td><code>Baik Awesome Biasa</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Mntap Mantul Mantaf</code></td>
+                                <td style="text-align: right;">0.8535</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">Tidak bisa diibuka</td>
+                                <td><code>Keluar Bad Aplikasi</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Bisa Dibuka Tidak</code></td>
+                                <td style="text-align: right;">0.7505</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">baik</td>
+                                <td><code>Baik Awesome Biasa</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Bagus Ok Baik</code></td>
+                                <td style="text-align: right;">0.9281</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">gmn sih apk nya, tetap g bisa di acces.</td>
+                                <td><code>Keluar Bad Aplikasi</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Bisa Tidak Buka</code></td>
+                                <td style="text-align: right;">0.8623</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">jmo gak guna penjilat</td>
+                                <td><code>Keluar Bad Aplikasi</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Lambat Ribet Buruk</code></td>
+                                <td style="text-align: right;">0.6426</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">Aplikasi keluar sendiri, belum bisa di gunakan</td>
+                                <td><code>Keluar Bad Aplikasi</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Bisa Tidak Buka</code></td>
+                                <td style="text-align: right;">0.8066</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">Cukup mumpuni</td>
+                                <td><code>Baik Awesome Biasa</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Bagus Ok Baik</code></td>
+                                <td style="text-align: right;">0.8076</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">jmo keluar sendiri</td>
+                                <td><code>Keluar Bad Aplikasi</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Lambat Ribet Buruk</code></td>
+                                <td style="text-align: right;">0.7481</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">konsentrasinya</td>
+                                <td><code>Keluar Bad Aplikasi</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Lambat Ribet Buruk</code></td>
+                                <td style="text-align: right;">0.774</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">jmo errorteruss knpa</td>
+                                <td><code>Baik Awesome Biasa</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Jmo Nih Susah</code></td>
+                                <td style="text-align: right;">0.7111</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">Aplikasinya Lemotttt</td>
+                                <td><code>Keluar Bad Aplikasi</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Lambat Ribet Buruk</code></td>
+                                <td style="text-align: right;">0.7879</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">aplikasi gak guna</td>
+                                <td><code>Keluar Bad Aplikasi</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Sampah Tolol Aplikasi</code></td>
+                                <td style="text-align: right;">0.8494</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">gmn ini aplikasi nya sampai skrg tidak bisa digunakan</td>
+                                <td><code>Keluar Bad Aplikasi</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>2026 Mei Tanggal</code></td>
+                                <td style="text-align: right;">0.8496</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">sangatlah baik</td>
+                                <td><code>Baik Awesome Biasa</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Bagus Ok Baik</code></td>
+                                <td style="text-align: right;">0.8622</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">ko apk y kembali ajh</td>
+                                <td><code>Baik Awesome Biasa</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Update Pengkinian Data</code></td>
+                                <td style="text-align: right;">0.7597</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">aplikasiii ga beresssssssssss!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</td>
+                                <td><code>Keluar Bad Aplikasi</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Mental Mulu Terus</code></td>
+                                <td style="text-align: right;">0.6988</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">gak bisa dibukk</td>
+                                <td><code>Keluar Bad Aplikasi</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Lambat Ribet Buruk</code></td>
+                                <td style="text-align: right;">0.7882</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">aplikasinya keluar sendiri</td>
+                                <td><code>Keluar Bad Aplikasi</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Lambat Ribet Buruk</code></td>
+                                <td style="text-align: right;">0.813</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">bintang 1dulu aja</td>
+                                <td><code>Keluar Bad Aplikasi</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Sering Kebanyakan Terlalu</code></td>
+                                <td style="text-align: right;">0.6196</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">baik</td>
+                                <td><code>Baik Awesome Biasa</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Bagus Ok Baik</code></td>
+                                <td style="text-align: right;">0.9281</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">seringerrot</td>
+                                <td><code>Baik Awesome Biasa</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Mntap Mantul Mantaf</code></td>
+                                <td style="text-align: right;">0.761</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">Baik</td>
+                                <td><code>Baik Awesome Biasa</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Bagus Ok Baik</code></td>
+                                <td style="text-align: right;">0.9281</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">Mantaafff 👍👍</td>
+                                <td><code>Baik Awesome Biasa</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Mntap Mantul Mantaf</code></td>
+                                <td style="text-align: right;">0.8097</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">APA APA DIPERSULITTTTT</td>
+                                <td><code>Keluar Bad Aplikasi</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Lambat Ribet Buruk</code></td>
+                                <td style="text-align: right;">0.6607</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">macetan</td>
+                                <td><code>Keluar Bad Aplikasi</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Lambat Ribet Buruk</code></td>
+                                <td style="text-align: right;">0.7643</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">baik</td>
+                                <td><code>Baik Awesome Biasa</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Bagus Ok Baik</code></td>
+                                <td style="text-align: right;">0.9281</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">knp si k updeted trus</td>
+                                <td><code>Baik Awesome Biasa</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Update Pengkinian Data</code></td>
+                                <td style="text-align: right;">0.7755</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">kenapa ya terlalu sering di apdute</td>
+                                <td><code>Baik Awesome Biasa</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Update Pengkinian Data</code></td>
+                                <td style="text-align: right;">0.7589</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">baik</td>
+                                <td><code>Baik Awesome Biasa</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Bagus Ok Baik</code></td>
+                                <td style="text-align: right;">0.9281</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">baik</td>
+                                <td><code>Baik Awesome Biasa</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Bagus Ok Baik</code></td>
+                                <td style="text-align: right;">0.9281</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">sering keluar sendiri</td>
+                                <td><code>Baik Awesome Biasa</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Bintang Sering Update</code></td>
+                                <td style="text-align: right;">0.6959</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">baik</td>
+                                <td><code>Baik Awesome Biasa</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Bagus Ok Baik</code></td>
+                                <td style="text-align: right;">0.9281</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">M A N T A P</td>
+                                <td><code>Baik Awesome Biasa</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Easy Use Great</code></td>
+                                <td style="text-align: right;">0.5527</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">Jmo semkin di dpn</td>
+                                <td><code>Baik Awesome Biasa</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Jmo Nih Susah</code></td>
+                                <td style="text-align: right;">0.7189</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">kenapa aplikasinya jmo keluar terus ya...??</td>
+                                <td><code>Baik Awesome Biasa</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Bisa Tidak Buka</code></td>
+                                <td style="text-align: right;">0.8098</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">luar biasa aplikasinya</td>
+                                <td><code>Baik Awesome Biasa</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Mantap Mantab Banget</code></td>
+                                <td style="text-align: right;">0.728</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">sering keluar sendiri</td>
+                                <td><code>Baik Awesome Biasa</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Bintang Sering Update</code></td>
+                                <td style="text-align: right;">0.6959</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">aplikasi nggak guna</td>
+                                <td><code>Keluar Bad Aplikasi</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Sampah Tolol Aplikasi</code></td>
+                                <td style="text-align: right;">0.8494</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">harus tau segalanya</td>
+                                <td><code>Baik Awesome Biasa</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Penting Diperhatikan Bagiku</code></td>
+                                <td style="text-align: right;">0.6986</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">aplikasi erorrrrrr</td>
+                                <td><code>Keluar Bad Aplikasi</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Lambat Ribet Buruk</code></td>
+                                <td style="text-align: right;">0.7807</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">bad</td>
+                                <td><code>Keluar Bad Aplikasi</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Bagus Mantap Baik</code></td>
+                                <td style="text-align: right;">0.8137</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">bintang yg bicara</td>
+                                <td><code>Keluar Bad Aplikasi</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Lambat Ribet Buruk</code></td>
+                                <td style="text-align: right;">0.6888</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">aplikasi nya kluar keluar sendri</td>
+                                <td><code>Keluar Bad Aplikasi</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Susah Kagak Login</code></td>
+                                <td style="text-align: right;">0.7959</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-neg">
+                                        negatif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">satu bintang dulu</td>
+                                <td><code>Keluar Bad Aplikasi</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Lambat Ribet Buruk</code></td>
+                                <td style="text-align: right;">0.7033</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">Aplikasi nya sudah lebih baik</td>
+                                <td><code>Baik Awesome Biasa</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Tingkatkan Berfungsi Ditingkatkan</code></td>
+                                <td style="text-align: right;">0.7537</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">pas</td>
+                                <td><code>Baik Awesome Biasa</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Bagus Ok Baik</code></td>
+                                <td style="text-align: right;">0.6926</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">kok updating trus yaa</td>
+                                <td><code>Baik Awesome Biasa</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Update Pengkinian Data</code></td>
+                                <td style="text-align: right;">0.7382</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">knp gak konek jmo ini udah 1 bulan</td>
+                                <td><code>Baik Awesome Biasa</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Update Pengkinian Data</code></td>
+                                <td style="text-align: right;">0.7722</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="badge badge-pos">
+                                        positif
+                                    </span>
+                                </td>
+                                <td style="font-size: 0.85rem;">BagusMbatu</td>
+                                <td><code>Baik Awesome Biasa</code></td>
+                                <td>Lain-lain / Noise</td>
+                                <td style="text-align: right;">0.0</td>
+                                <td><code>Bagus Ok Baik</code></td>
+                                <td style="text-align: right;">0.707</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- ---------------- TAB: GALERI GRAPHICS ---------------- -->
+        <div id="galeri" class="tab-panel">
+            <div class="charts-gallery-grid">
+                
+                <div class="chart-img-container">
+                    <span class="chart-title">Visualisasi #1: Distribusi Sentimen Pengguna</span>
+                    <img src="../charts/01_sentiment_distribution_pie.png" alt="Distribusi Sentimen Pengguna">
+                    <span class="chart-desc">Nama file: 01_sentiment_distribution_pie.png</span>
+                </div>
+                
+                <div class="chart-img-container">
+                    <span class="chart-title">Visualisasi #2: Distribusi Rating Ulasan Bintang</span>
+                    <img src="../charts/02_rating_distribution_raw.png" alt="Distribusi Rating Ulasan Bintang">
+                    <span class="chart-desc">Nama file: 02_rating_distribution_raw.png</span>
+                </div>
+                
+                <div class="chart-img-container">
+                    <span class="chart-title">Visualisasi #3: Kategori Ulasan Negatif Terpopuler</span>
+                    <img src="../charts/03_top_negative_categories.png" alt="Kategori Ulasan Negatif Terpopuler">
+                    <span class="chart-desc">Nama file: 03_top_negative_categories.png</span>
+                </div>
+                
+                <div class="chart-img-container">
+                    <span class="chart-title">Visualisasi #4: Kategori Ulasan Positif Terpopuler</span>
+                    <img src="../charts/04_top_positive_categories.png" alt="Kategori Ulasan Positif Terpopuler">
+                    <span class="chart-desc">Nama file: 04_top_positive_categories.png</span>
+                </div>
+                
+                <div class="chart-img-container">
+                    <span class="chart-title">Visualisasi #5: Rasio Sentimen Bersih Bulanan</span>
+                    <img src="../charts/05_net_sentiment_ratio.png" alt="Rasio Sentimen Bersih Bulanan">
+                    <span class="chart-desc">Nama file: 05_net_sentiment_ratio.png</span>
+                </div>
+                
+                <div class="chart-img-container">
+                    <span class="chart-title">Visualisasi #6: Topik Negatif Detail</span>
+                    <img src="../charts/06_top_negative_topics.png" alt="Topik Negatif Detail">
+                    <span class="chart-desc">Nama file: 06_top_negative_topics.png</span>
+                </div>
+                
+                <div class="chart-img-container">
+                    <span class="chart-title">Visualisasi #7: Topik Positif Detail</span>
+                    <img src="../charts/07_top_positive_topics.png" alt="Topik Positif Detail">
+                    <span class="chart-desc">Nama file: 07_top_positive_topics.png</span>
+                </div>
+                
+                <div class="chart-img-container">
+                    <span class="chart-title">Visualisasi #8: Hubungan Likes vs Jumlah Ulasan</span>
+                    <img src="../charts/08_thumbs_up_vs_review_scatter.png" alt="Hubungan Likes vs Jumlah Ulasan">
+                    <span class="chart-desc">Nama file: 08_thumbs_up_vs_review_scatter.png</span>
+                </div>
+                
+                <div class="chart-img-container">
+                    <span class="chart-title">Visualisasi #9: Tingkat Balasan CS Ulasan Negatif</span>
+                    <img src="../charts/09_cs_reply_rate.png" alt="Tingkat Balasan CS Ulasan Negatif">
+                    <span class="chart-desc">Nama file: 09_cs_reply_rate.png</span>
+                </div>
+                
+                <div class="chart-img-container">
+                    <span class="chart-title">Visualisasi #10: Latensi Balasan CS (Jam)</span>
+                    <img src="../charts/10_cs_reply_delay.png" alt="Latensi Balasan CS (Jam)">
+                    <span class="chart-desc">Nama file: 10_cs_reply_delay.png</span>
+                </div>
+                
+                <div class="chart-img-container">
+                    <span class="chart-title">Visualisasi #11: Persentase CS Mengarahkan ke Bantuan Eksternal</span>
+                    <img src="../charts/11_cs_support_redirect_rate.png" alt="Persentase CS Mengarahkan ke Bantuan Eksternal">
+                    <span class="chart-desc">Nama file: 11_cs_support_redirect_rate.png</span>
+                </div>
+                
+                <div class="chart-img-container">
+                    <span class="chart-title">Visualisasi #12: Kata Kunci Utama dalam Ulasan</span>
+                    <img src="../charts/12_top_keywords.png" alt="Kata Kunci Utama dalam Ulasan">
+                    <span class="chart-desc">Nama file: 12_top_keywords.png</span>
+                </div>
+                
+                <div class="chart-img-container">
+                    <span class="chart-title">Visualisasi #13: Tren Volume Ulasan Bulanan</span>
+                    <img src="../charts/13_monthly_trend.png" alt="Tren Volume Ulasan Bulanan">
+                    <span class="chart-desc">Nama file: 13_monthly_trend.png</span>
+                </div>
+                
+                <div class="chart-img-container">
+                    <span class="chart-title">Visualisasi #14: Analisis Sentimen per Versi Aplikasi</span>
+                    <img src="../charts/14_app_version_analysis.png" alt="Analisis Sentimen per Versi Aplikasi">
+                    <span class="chart-desc">Nama file: 14_app_version_analysis.png</span>
+                </div>
+                
+                <div class="chart-img-container">
+                    <span class="chart-title">Visualisasi #15: Deteksi Spike Komplain Bulanan</span>
+                    <img src="../charts/15_spike_detection.png" alt="Deteksi Spike Komplain Bulanan">
+                    <span class="chart-desc">Nama file: 15_spike_detection.png</span>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Tab switching logic
+        function switchTab(tabId, el) {
+            // Hide all tab-panels
+            document.querySelectorAll('.tab-panel').forEach(panel => {
+                panel.classList.remove('active');
+            });
+            // Show target tab-panel
+            document.getElementById(tabId).classList.add('active');
+
+            // Deactivate all nav items
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            // Activate clicked nav item
+            el.classList.add('active');
+        }
+
+        // Theme Toggle Logic
+        function toggleTheme(checkbox) {
+            if (checkbox.checked) {
+                document.documentElement.setAttribute('data-theme', 'light');
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+            }
+        }
+
+        // --- Render Chart.js Ringkasan ---
+        document.addEventListener("DOMContentLoaded", function() {
+            // Doughnut Chart Sentimen
+            const ctxDoughnut = document.getElementById('chartSentimentDoughnut').getContext('2d');
+            new Chart(ctxDoughnut, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Positif', 'Negatif', 'Netral'],
+                    datasets: [{
+                        data: [
+                            60550,
+                            16369,
+                            3718
+                        ],
+                        backgroundColor: ['#10b981', '#ef4444', '#f59e0b'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '72%',
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: { color: '#9ca3af', font: { family: 'Inter', size: 11 } }
+                        }
+                    }
+                }
+            });
+
+            // Bar Chart Rating Bintang
+            const ctxBar = document.getElementById('chartRatingBar').getContext('2d');
+            new Chart(ctxBar, {
+                type: 'bar',
+                data: {
+                    labels: ['1 ★', '2 ★', '3 ★', '4 ★', '5 ★'],
+                    datasets: [{
+                        label: 'Jumlah Ulasan',
+                        data: [
+                            13402,
+                            2967,
+                            3718,
+                            5696,
+                            54854
+                        ],
+                        backgroundColor: ['#ef4444', '#f97316', '#fbbf24', '#60a5fa', '#10b981'],
+                        borderRadius: 6,
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            grid: { color: 'rgba(255, 255, 255, 0.05)' },
+                            ticks: { color: '#9ca3af', font: { family: 'Inter' } }
+                        },
+                        x: {
+                            grid: { display: false },
+                            ticks: { color: '#9ca3af', font: { family: 'Inter' } }
+                        }
+                    },
+                    plugins: {
+                        legend: { display: false }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
