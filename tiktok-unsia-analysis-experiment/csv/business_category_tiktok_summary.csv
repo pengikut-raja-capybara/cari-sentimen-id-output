@@ -1,0 +1,24 @@
+﻿ai_sentiment,business_category,total_likes,total_replies,example_sub_issues,comment_count_all,comment_count_confident,share_confident
+Negatif,Keluhan Pengalaman Belajar,194,83,Diskusi mengenai beban tugas kuliah dan kesulitan akademik.,91,90,0.989
+Netral,Pertanyaan Program Studi,811,906,"Calon mahasiswa menanyakan ketersediaan jurusan S1 dan S2., Pertanyaan spesifik mengenai ketersediaan program S2.",1130,1117,0.9885
+Netral,Pertanyaan Pendaftaran,722,1103,"Calon mahasiswa menanyakan jadwal dan prosedur pendaftaran., Permintaan informasi mengenai tata cara pendaftaran.",931,920,0.9882
+Netral,Interaksi Umum,45,31,Audiens hanya menyimak atau memberikan reaksi singkat.,393,378,0.9618
+Netral,Pertanyaan Akademik,193,168,Pertanyaan mengenai metode pelaksanaan ujian dan wisuda.,256,255,0.9961
+Netral,Layanan Pelanggan,41,3,Admin mengarahkan audiens untuk berkomunikasi melalui DM.,173,172,0.9942
+Netral,Pertanyaan Lokasi Kampus,27,49,Audiens menanyakan lokasi fisik kampus Universitas Siber Asia.,82,81,0.9878
+Netral,Informasi Program Studi,46,17,Daftar program studi yang tersedia di Universitas Siber Asia.,56,55,0.9821
+Netral,Pertanyaan Jalur Masuk,21,4,Konfirmasi mengenai ketersediaan jalur konversi bagi calon mahasiswa.,54,54,1.0
+Netral,Lain-lain / Noise,10,9,Komentar umum/noise,40,0,0.0
+Netral,Interaksi Pengguna,7,1,Audiens menandai konten untuk dilihat kembali nanti.,36,35,0.9722
+Netral,Pertanyaan Biaya Kuliah,38,12,"Audiens menanyakan informasi mengenai biaya pendaftaran atau kuliah., Diskusi mengenai nominal biaya pendidikan di Universitas Siber Asia.",34,34,1.0
+Netral,Informasi Lokasi Kampus,11,2,Penjelasan detail alamat fisik kampus di Jakarta Selatan.,21,21,1.0
+Netral,Interaksi Mahasiswa Baru,2,5,Sapaan santai antar sesama mahasiswa baru program studi.,17,17,1.0
+Positif,Interaksi Umum,139,74,Respon konfirmasi atau persetujuan dari audiens.,468,462,0.9872
+Positif,Informasi Pendaftaran,264,58,"Pemberitahuan bahwa pendaftaran mahasiswa baru masih dibuka., Panduan pendaftaran melalui website resmi UNSIA., Promosi sistem pembelajaran online dan tautan pendaftaran resmi.",450,444,0.9867
+Positif,Apresiasi Konten,290,60,"Dukungan dan doa baik dari audiens untuk UNSIA., Ucapan terima kasih atas informasi yang diberikan., Komentar positif audiens terhadap konten yang dibagikan.",299,295,0.9866
+Positif,Minat Pendaftaran,67,43,Audiens menyatakan ketertarikan untuk mendaftar kuliah.,192,190,0.9896
+Positif,Informasi Biaya Kuliah,41,32,Informasi mengenai biaya UKT per semester.,88,88,1.0
+Positif,Informasi Metode Pembelajaran,415,57,Penjelasan mengenai sistem perkuliahan 100% full online learning.,67,66,0.9851
+Positif,Dukungan Sosial,16,5,Pemberian semangat antar sesama pengguna di kolom komentar.,17,17,1.0
+Positif,Harapan Calon Mahasiswa,153,13,Ekspresi keinginan audiens untuk mendaftar di tahun depan.,17,17,1.0
+Positif,Informasi Akreditasi,20,5,Penjelasan status akreditasi nasional BAN-PT dan internasional EAHEA.,13,13,1.0
