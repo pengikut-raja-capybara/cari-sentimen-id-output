@@ -1,45 +1,40 @@
-Berikut adalah laporan analisis data sentimen akun TikTok Universitas Siber Asia (UNSIA):
+Berikut adalah laporan analisis data sentimen untuk akun TikTok Universitas Siber Asia:
 
 ## 1. Ringkasan Sentimen & Interaksi (Overview)
-Dari total **4.925 komentar** yang dianalisis, distribusi sentimen didominasi oleh kategori **Netral (65,44%)**, diikuti oleh **Positif (32,71%)**, dan **Negatif (1,85%)**.
+Akun TikTok Universitas Siber Asia menerima total **4.925 komentar** dengan distribusi sentimen sebagai berikut:
+*   **Netral:** 3.223 komentar (65,44%)
+*   **Positif:** 1.611 komentar (32,71%)
+*   **Negatif:** 91 komentar (1,85%)
 
-*   **Netral:** 3.223 komentar (1.974 likes, rata-rata 0,61 like/komentar).
-*   **Positif:** 1.611 komentar (1.405 likes, rata-rata 0,87 like/komentar).
-*   **Negatif:** 91 komentar (194 likes, rata-rata **2,13 likes/komentar**).
-
-**Insight:** Meskipun sentimen negatif memiliki volume terkecil, kategori ini menghasilkan **rata-rata likes tertinggi (2,13 per komentar)**. Hal ini mengindikasikan bahwa komentar yang bernada kritik atau keluhan mendapatkan atensi yang jauh lebih besar dan cenderung lebih resonan atau disetujui oleh audiens dibandingkan komentar netral maupun positif.
+**Analisis Likes:** Meskipun sentimen negatif memiliki volume paling kecil, ia mencatatkan **rata-rata *likes* tertinggi yaitu 2,13 per komentar**, jauh melampaui sentimen positif (0,87) dan netral (0,61). Hal ini mengindikasikan bahwa komentar kritis atau keluhan cenderung lebih menarik perhatian audiens dan mendapatkan validasi (like) lebih besar daripada komentar lainnya.
 
 ## 2. Analisis Sentimen Negatif (Kritik & Keluhan)
-Terdapat satu kategori utama dalam sentimen negatif, yaitu **"Keluhan Pengalaman Belajar"** dengan total **91 komentar** dan **194 likes**. 
-
-*   **Topik Utama:** Diskusi mengenai beban tugas kuliah dan tingkat kesulitan akademik.
-*   **Konteks Kata Kunci:** Berdasarkan analisis kata kunci, terdapat penyebutan kata seperti **"umur"**, **"batasan"**, **"muda"**, dan **"semangat"**. Ini memberikan indikasi bahwa keluhan tersebut berkaitan dengan kekhawatiran audiens terkait batasan usia atau kemampuan dalam mengejar beban akademik yang dirasa menantang bagi kelompok umur tertentu atau mereka yang baru memulai kembali studi.
+Sentimen negatif mencakup 91 komentar dengan fokus utama pada isu "Keluhan Pengalaman Belajar" terkait beban tugas dan kesulitan akademik. Berdasarkan analisis *keyword* seperti "tugas", "umur", "batasan", dan "berpengalaman", audiens menunjukkan kekhawatiran terkait fleksibilitas sistem kuliah bagi mereka yang sudah bekerja. Analisis kata kunci tersebut memvalidasi adanya resistensi atau tantangan adaptasi mahasiswa terhadap metode perkuliahan yang diterapkan, terutama bagi profil mahasiswa yang memiliki batasan usia atau tanggung jawab profesional.
 
 ## 3. Analisis Keterlibatan Audiens (Engagement & Viralitas)
-Topik yang paling memicu diskusi intens (balasan terbanyak) adalah seputar **Pertanyaan Pendaftaran** dengan skor engagement **1,19** (841 komentar, 1.003 balasan) dan **Pertanyaan Program Studi** dengan skor **0,90** (890 komentar, 798 balasan).
+Topik yang paling memicu diskusi intens (balasan terbanyak) adalah:
+*   **Pertanyaan Pendaftaran:** Topik prosedur dan jadwal pendaftaran memiliki *engagement score* tertinggi (**1,19** dengan 1.003 balasan).
+*   **Pertanyaan Program Studi:** Diskusi mengenai ketersediaan jurusan S1 dan S2 mencatat *engagement score* **0,90** dengan 798 balasan.
+*   **Keluhan Pengalaman Belajar:** Memiliki *engagement score* **0,91** dengan 83 balasan, menunjukkan tingginya urgensi pembahasan terkait kendala teknis akademik.
 
 **Lonjakan Viral (Spike Detection):**
-*   **27 Januari 2026:** 72 komentar. Topik: Ketersediaan jurusan S1/S2 dan prosedur pendaftaran.
-*   **03 November 2025:** 70 komentar. Topik: Ketertarikan mendaftar kuliah.
-*   **16 Juli 2025:** 52 komentar. Topik: Jadwal/prosedur pendaftaran dan ketersediaan jurusan.
-*   **25 Januari 2026:** 47 komentar. Topik: Ketersediaan jurusan dan prosedur pendaftaran.
-*   **12 Januari 2026:** 43 komentar. Topik: Prosedur pendaftaran serta metode ujian dan wisuda.
+*   **27 Januari 2026:** Terjadi lonjakan **72 komentar**, dipicu oleh pertanyaan spesifik mengenai jurusan dan prosedur pendaftaran.
+*   **3 November 2025:** Terdapat **70 komentar** yang didominasi oleh ketertarikan calon mahasiswa untuk mendaftar.
 
 ## 4. Analisis Sentimen Positif (Apresiasi & Minat)
-Apresiasi audiens tertuju pada interaksi dan informasi yang informatif. Kategori positif teratas meliputi:
-*   **Interaksi Umum:** 468 komentar (139 likes).
-*   **Informasi Pendaftaran:** 450 komentar (264 likes).
-*   **Apresiasi Konten:** 299 komentar (290 likes).
-
-Penggunaan kata kunci seperti **"kakak"**, **"kak"**, **"aku"**, **"juga"**, dan **"dong"** mendominasi sentimen ini. Hal tersebut mencerminkan gaya bahasa kasual audiens yang merasa nyaman berinteraksi dengan akun, menunjukkan kedekatan personal antara calon mahasiswa dengan komunikator konten.
+Audiens menunjukkan apresiasi kuat terhadap "Informasi Metode Pembelajaran" (terutama sistem 100% *full online*). Kategori positif ini mengumpulkan 67 komentar dengan total **415 *likes*** (rata-rata *likes* tertinggi di kategori positif). Kata kunci seperti "kakak/kak", "banget", dan "bisa" yang muncul dominan dalam *keyword analysis* menunjukkan adanya komunikasi yang cair, informal, dan suportif antara audiens dengan pengelola akun, mencerminkan kesan universitas yang mudah diakses dan bersahabat.
 
 ## 5. Kinerja Respons Akun Resmi (Official Response & Reply Gap)
-Akun resmi mencatatkan total **813 komentar**, dengan rasio **16,51%** dari total interaksi audiens.
+Secara keseluruhan, akun resmi telah memberikan **813 balasan** dari total 4.925 komentar, dengan rasio respons sebesar **16,51%**.
 
-**Kesenjangan Respons (Reply Gap):**
-Terdapat 5 kategori topik dengan *engagement* yang cukup ramai namun tercatat memiliki **0 (nol) balasan resmi** dari akun:
-1.  **Lain-lain / Noise:** 40 komentar (0 likes).
-2.  **Interaksi Pengguna (Menandai konten untuk dilihat nanti):** 36 komentar (0 likes).
-3.  **Pertanyaan Biaya Kuliah:** 22 komentar (0 likes).
-4.  **Harapan Calon Mahasiswa (Keinginan mendaftar tahun depan):** 17 komentar (0 likes).
-5.  **Interaksi Mahasiswa Baru (Sapaan santai):** 17 komentar (0 likes).
+Terdapat *Reply Gap* atau kesenjangan respons pada topik-topik berikut yang memiliki jumlah komentar signifikan namun mencatatkan **0 balasan resmi** (official_comments = 0):
+
+| Sub-Issue | Total Komentar | Total Likes | Engagement Score |
+| :--- | :---: | :---: | :---: |
+| Komentar umum/noise | 40 | 0 | 0,22 |
+| Audiens menandai konten (*tag*) | 36 | 0 | 0,03 |
+| Pertanyaan Biaya Kuliah | 22 | 0 | 0,45 |
+| Harapan Calon Mahasiswa (Ingin daftar tahun depan) | 17 | 0 | 0,76 |
+| Sapaan santai antar mahasiswa baru | 17 | 0 | 0,29 |
+
+Data menunjukkan bahwa pertanyaan spesifik mengenai **biaya kuliah** dan **harapan pendaftaran** dari calon mahasiswa belum mendapatkan respons langsung dari akun resmi dalam periode analisis ini.
